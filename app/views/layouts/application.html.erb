@@ -8,6 +8,8 @@
 </head>
 <body>
 
+<%= render 'layouts/header' %>
+
 <% if notice %>
     <p class="alert alert-success"><%= notice %></p>
 <% end %>
@@ -16,6 +18,8 @@
 <% end %>
 
 <%= yield %>
+
+<%= render 'layouts/footer' %>
 
 </body>
 </html>

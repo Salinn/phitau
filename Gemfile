@@ -2,9 +2,6 @@ source 'https://rubygems.org'
 
 ruby '2.0.0'
 gem 'rails', '4.0.0'
-gem 'sass-rails', '~> 4.0.0'
-gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
@@ -14,15 +11,17 @@ gem 'bootstrap-sass', '2.3.2.0'
 gem "therubyracer"
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 gem "cancan"
-#gem 'survey', :git => 'git://github.com/runtimerevolution/survey.git'
 gem 'whenever', :require => false
 gem 'rails_admin'
 gem 'unicorn'
 gem 'capricorn'
 gem "rspec-rails", :group => [:development, :test]
 gem "capybara"
-gem "twitter-bootstrap-rails"
 gem 'sqlite3'
+gem 'sass-rails', '~> 4.0.0'
+gem 'coffee-rails', '~> 4.0.0'
+gem 'uglifier', '>= 1.3.0'
+gem 'twitter-bootstrap-rails'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

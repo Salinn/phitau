@@ -1,0 +1,42 @@
+class StaticPagesController < ApplicationController
+
+  def home
+
+  end
+
+  def about
+
+  end
+
+  def national_history
+
+  end
+
+  def national_fast_facts
+
+  end
+
+  def local_history
+
+  end
+
+  def local_fast_facts
+
+  end
+
+  def volunteer_opportunities
+
+  end
+
+  def parents_fund
+
+  end
+
+  def faq
+
+  end
+
+  def contact_us
+
+  end
+end

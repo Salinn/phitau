@@ -5,6 +5,7 @@ class UserController < ApplicationController
   end
 
   def new
+    @user.role = "user"
   end
 
   def show
