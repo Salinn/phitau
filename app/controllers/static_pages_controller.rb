@@ -39,4 +39,12 @@ class StaticPagesController < ApplicationController
   def contact_us
 
   end
+
+  def information_for_students
+
+  end
+
+  def information_for_parents
+
+  end
 end
