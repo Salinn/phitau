@@ -17,7 +17,6 @@ gem 'unicorn'
 gem 'capricorn'
 gem "rspec-rails", :group => [:development, :test]
 gem "capybara"
-gem 'sqlite3'
 gem 'sass-rails', '~> 4.0.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
@@ -34,6 +33,7 @@ group :development, :test do
   gem 'better_errors', '1.0.1'
   gem 'binding_of_caller', '0.7.2'
   gem 'factory_girl_rails'
+  gem 'sqlite3'
 end
 group :test do
   gem 'cucumber-rails', require: false
