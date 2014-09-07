@@ -1,4 +1,6 @@
 Phitau::Application.routes.draw do
+  resources :posts
+
   devise_for :users
   resources :user, :controller => "user"
 
