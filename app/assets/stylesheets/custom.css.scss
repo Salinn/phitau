@@ -1097,3 +1097,24 @@ article, aside, figure, figure img, footer, header, nav, section, .open > .dropd
 .clearfix::after, .controls-row::after, .form-actions::after, .form-horizontal .control-group::after, .modal-footer::after, .row::after, .image-container p.caption, .image-container address.caption, .image-container .copy dd.caption, .copy .image-container dd.caption {
   clear: both;
 }
+
+.card {
+  padding:1.5rem;
+  box-shadow:0 8px 16px #aaa;
+  background:white;
+  border-radius:3px;
+  user-select:none;
+  animation:fly-in-from-left .5s 1s ease both;
+  transform-origin:top left;
+  width: 70%;
+  margin: 0 auto;
+  background-color: lightgray;
+}
+
+.container {
+  max-width: 134rem;
+  width: 100%;
+  zoom: 1;
+  margin: 0px auto;
+  padding: 3rem 5rem;
+}

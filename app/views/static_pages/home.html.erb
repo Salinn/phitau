@@ -1,0 +1,12 @@
+<% @posts.each do |post| %>
+    <div class="card">
+      <h1 style="text-align:center; text-decoration: underline;"><%= post.title %></h1>
+      <div style="float: left; width: 40%">
+        <img src="http://phikappatau.org/images/stories/Phi_Kappa_Tau.jpg" style="width: 100px; height: auto;">
+      </div>
+      <div style="float: right; width: 60%">
+        <h3><%= post.content %></h3>
+      </div>
+      <div style="float: none; clear:both;"> </div>
+    </div>
+<% end %>
