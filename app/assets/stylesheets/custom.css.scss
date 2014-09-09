@@ -716,7 +716,6 @@ body {
   font-family: elena-web-basic, sans-serif;
   color: rgb(106, 106, 106);
   -webkit-font-smoothing: antialiased;
-  background: rgb(255, 255, 255);
 }
 
 .container {
@@ -1100,7 +1099,7 @@ article, aside, figure, figure img, footer, header, nav, section, .open > .dropd
 
 .card {
   padding:1.5rem;
-  box-shadow:0 8px 16px #aaa;
+  box-shadow:0 16px 32px #000000;
   background:white;
   border-radius:3px;
   user-select:none;
@@ -1108,13 +1107,14 @@ article, aside, figure, figure img, footer, header, nav, section, .open > .dropd
   transform-origin:top left;
   width: 70%;
   margin: 0 auto;
-  background-color: lightgray;
 }
 
-.container {
+.body-container {
   max-width: 134rem;
   width: 100%;
   zoom: 1;
   margin: 0px auto;
   padding: 3rem 5rem;
+  background: #cfb53b;
 }
+
