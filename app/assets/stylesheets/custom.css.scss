@@ -84,7 +84,6 @@ body {
   font-size: 14px;
   line-height: 20px;
   color: rgb(51, 51, 51);
-  background-color: rgb(255, 255, 255);
 }
 
 a {
@@ -716,6 +715,7 @@ body {
   font-family: elena-web-basic, sans-serif;
   color: rgb(106, 106, 106);
   -webkit-font-smoothing: antialiased;
+  background: #cfb53b;
 }
 
 .container {
@@ -749,6 +749,7 @@ header[role="banner"] .container {
   position: relative;
   z-index: 1;
   padding-top: 1rem;
+  padding-bottom: 4rem;
 }
 
 header[role="banner"] .brand {
@@ -1099,7 +1100,7 @@ article, aside, figure, figure img, footer, header, nav, section, .open > .dropd
 
 .card {
   padding:1.5rem;
-  box-shadow:0 16px 32px #000000;
+  box-shadow:0 16px 32px rgba(10,10,10,.6);
   background:white;
   border-radius:3px;
   user-select:none;
@@ -1115,6 +1116,5 @@ article, aside, figure, figure img, footer, header, nav, section, .open > .dropd
   zoom: 1;
   margin: 0px auto;
   padding: 3rem 5rem;
-  background: #cfb53b;
 }
 
