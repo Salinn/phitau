@@ -23,6 +23,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'twitter-bootstrap-rails'
 gem "rmagick"
 gem "carrierwave"
+gem 'fog'
+gem "mini_magick"
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
