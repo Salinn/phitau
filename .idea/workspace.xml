@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae899345-882d-409b-99e4-a99d321225de" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/initializers/s3.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/posts/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/posts/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/uploaders/image_uploader.rb" afterPath="$PROJECT_DIR$/app/uploaders/image_uploader.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/phitau.iml" afterPath="$PROJECT_DIR$/.idea/phitau.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/s3.rb" afterPath="$PROJECT_DIR$/config/initializers/s3.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="phitau.iws" />
@@ -34,7 +29,7 @@
       <file leaf-file-name="custom.css.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.9827585" vertical-offset="16483" max-vertical-offset="17760">
+            <state vertical-scroll-proportion="0.0" vertical-offset="16483" max-vertical-offset="17760">
               <caret line="1122" column="43" selection-start-line="1122" selection-start-column="43" selection-end-line="1122" selection-end-column="43" />
               <folding />
             </state>
@@ -44,14 +39,9 @@
       <file leaf-file-name="home.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/static_pages/home.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="285">
+            <state vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="285">
               <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="20" />
-              <folding>
-                <element signature="n#style#0;n#h1#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -59,17 +49,9 @@
       <file leaf-file-name="contact_us.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/static_pages/contact_us.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-22.5" vertical-offset="720" max-vertical-offset="1605">
+            <state vertical-scroll-proportion="0.0" vertical-offset="720" max-vertical-offset="1605">
               <caret line="84" column="23" selection-start-line="84" selection-start-column="23" selection-end-line="84" selection-end-column="23" />
-              <folding>
-                <element signature="n#style#0;n#img#0;n#span#0;n#span#0;n#label#0;n#li#0;n#ul#0;n#body#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#span#0;n#span#0;n#label#0;n#li#1;n#ul#0;n#body#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#span#0;n#span#0;n#label#0;n#li#2;n#ul#0;n#body#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#span#0;n#span#0;n#label#0;n#li#3;n#ul#0;n#body#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#span#0;n#span#0;n#label#0;n#li#4;n#ul#0;n#body#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#span#0;n#span#0;n#label#0;n#li#5;n#ul#0;n#body#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#body#0;n#!!top" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -77,7 +59,7 @@
       <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/posts/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="675">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="675">
               <caret line="0" column="19" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
               <folding />
             </state>
@@ -94,11 +76,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="image_uploader.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="image_uploader.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/uploaders/image_uploader.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.1790451" vertical-offset="0" max-vertical-offset="855">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="855">
               <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="environment.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/environment.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="165">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="s3.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/initializers/s3.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.198939" vertical-offset="0" max-vertical-offset="754">
+              <caret line="10" column="66" selection-start-line="10" selection-start-column="66" selection-end-line="10" selection-end-column="66" />
               <folding />
             </state>
           </provider>
@@ -107,11 +109,9 @@
       <file leaf-file-name="faq.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/static_pages/faq.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="4560">
+            <state vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="4560">
               <caret line="18" column="30" selection-start-line="15" selection-start-column="2" selection-end-line="18" selection-end-column="30" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#body#0;n#!!top" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -165,9 +165,9 @@
         <option value="$PROJECT_DIR$/app/views/static_pages/faq.html.erb" />
         <option value="$PROJECT_DIR$/app/views/static_pages/contact_us.html.erb" />
         <option value="$PROJECT_DIR$/Gemfile" />
-        <option value="$PROJECT_DIR$/config/initializers/s3.rb" />
         <option value="$PROJECT_DIR$/app/views/posts/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/uploaders/image_uploader.rb" />
+        <option value="$PROJECT_DIR$/config/initializers/s3.rb" />
       </list>
     </option>
   </component>
@@ -221,7 +221,7 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -400,7 +400,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="RailsProjectView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -603,7 +603,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32961586" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22779922" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23101673" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32961586" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -643,18 +643,10 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="420" max-vertical-offset="540">
-          <caret line="28" column="74" selection-start-line="28" selection-start-column="74" selection-end-line="28" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -720,7 +712,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.29840848" vertical-offset="0" max-vertical-offset="754">
           <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -765,7 +756,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.37798408" vertical-offset="0" max-vertical-offset="754">
           <caret line="19" column="33" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -773,7 +763,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="165">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -788,7 +777,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6748072" vertical-offset="0" max-vertical-offset="778">
           <caret line="35" column="27" selection-start-line="0" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -804,7 +792,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0596817" vertical-offset="0" max-vertical-offset="754">
           <caret line="3" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -812,7 +799,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.9589041" vertical-offset="80" max-vertical-offset="870">
           <caret line="52" column="26" selection-start-line="52" selection-start-column="26" selection-end-line="52" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -820,7 +806,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.35564855" vertical-offset="0" max-vertical-offset="717">
           <caret line="17" column="97" selection-start-line="17" selection-start-column="97" selection-end-line="17" selection-end-column="97" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -828,7 +813,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.49315068" vertical-offset="0" max-vertical-offset="730">
           <caret line="24" column="57" selection-start-line="24" selection-start-column="57" selection-end-line="24" selection-end-column="57" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -836,7 +820,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="240">
           <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -844,7 +827,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="270">
           <caret line="12" column="139" selection-start-line="12" selection-start-column="139" selection-end-line="12" selection-end-column="139" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -860,7 +842,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="754">
           <caret line="0" column="8" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -868,7 +849,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.13496144" vertical-offset="0" max-vertical-offset="778">
           <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -876,7 +856,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7287449" vertical-offset="0" max-vertical-offset="741">
           <caret line="36" column="64" selection-start-line="36" selection-start-column="64" selection-end-line="36" selection-end-column="64" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -884,7 +863,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.45755967" vertical-offset="0" max-vertical-offset="754">
           <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -892,7 +870,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="778">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -900,7 +877,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="778">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -908,7 +884,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="14.833333" vertical-offset="371" max-vertical-offset="1125">
           <caret line="1" column="27" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -934,7 +909,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
           <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -956,7 +930,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.9827585" vertical-offset="16483" max-vertical-offset="17760">
+        <state vertical-scroll-proportion="0.0" vertical-offset="16483" max-vertical-offset="17760">
           <caret line="1122" column="43" selection-start-line="1122" selection-start-column="43" selection-end-line="1122" selection-end-column="43" />
           <folding />
         </state>
@@ -988,48 +962,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/static_pages/home.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="285">
+        <state vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="285">
           <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="20" />
-          <folding>
-            <element signature="n#style#0;n#h1#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/static_pages/faq.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="4560">
+        <state vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="4560">
           <caret line="18" column="30" selection-start-line="15" selection-start-column="2" selection-end-line="18" selection-end-column="30" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/initializers/s3.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1591512" vertical-offset="0" max-vertical-offset="754">
-          <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/static_pages/contact_us.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-22.5" vertical-offset="720" max-vertical-offset="1605">
+        <state vertical-scroll-proportion="0.0" vertical-offset="720" max-vertical-offset="1605">
           <caret line="84" column="23" selection-start-line="84" selection-start-column="23" selection-end-line="84" selection-end-column="23" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#span#0;n#span#0;n#label#0;n#li#0;n#ul#0;n#body#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#span#0;n#span#0;n#label#0;n#li#1;n#ul#0;n#body#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#span#0;n#span#0;n#label#0;n#li#2;n#ul#0;n#body#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#span#0;n#span#0;n#label#0;n#li#3;n#ul#0;n#body#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#span#0;n#span#0;n#label#0;n#li#4;n#ul#0;n#body#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#span#0;n#span#0;n#label#0;n#li#5;n#ul#0;n#body#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#body#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1051,8 +1002,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/uploaders/image_uploader.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1790451" vertical-offset="0" max-vertical-offset="855">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="855">
           <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environment.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="754">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/initializers/s3.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.198939" vertical-offset="0" max-vertical-offset="754">
+          <caret line="10" column="66" selection-start-line="10" selection-start-column="66" selection-end-line="10" selection-end-column="66" />
           <folding />
         </state>
       </provider>
