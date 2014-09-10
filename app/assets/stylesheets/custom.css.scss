@@ -1120,56 +1120,54 @@ article, aside, figure, figure img, footer, header, nav, section, .open > .dropd
 
 
 
-.panel {
-  width: 300px;
-  height: 300px;
-  margin: auto;
-  float: left;
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-bottom: 20px;
+
+
+.flipping-cards li{position:relative; float:left; margin-right:10px;}
+.flipping-cards label{ display:block; width:200px; height:250px; cursor:pointer;}
+
+.flipping-cards .wrapper{
+  display:block; width:200px; height:250px;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+
+  -webkit-transition: all 2.50s;
+  -moz-transition: all .50s;
+  transition: all .50s;
+}
+.flipping-cards .wrapper span{
+  display:block;
+  width:200px;
+  height:250px;
+  position:absolute;
+  top:0;
+  left:0;
+  margin-left: 2px;
+  margin-right: 2px;
 }
 
-.card {
-  width: 100%;
-  height: 100%;
-  -o-transition: all .5s;
-  -ms-transition: all .5s;
-  -moz-transition: all .5s;
-  -webkit-transition: all .5s;
-  transition: all .5s;
-  -webkit-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  backface-visibility: hidden;
-  top: 0px;
-  left: 0px;
+.flipping-cards label .front{
+  -webkit-backface-visibility:hidden; /* Chrome and Safari */
+  -moz-backface-visibility:hidden; /* Firefox */
+  -ms-backface-visibility:hidden; /* Internet Explorer */
+  background-size: 70px 120px;
+  background-color: #fff;
 }
 
-.front {
-  z-index: 2;
+.flipping-cards label .back{
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  backface-visibility:hidden;
+  -webkit-backface-visibility:hidden; /* Chrome and Safari */
+  -moz-backface-visibility:hidden; /* Firefox */
+  -ms-backface-visibility:hidden; /* Internet Explorer */
+  background-color: #fff;
 }
 
-.back {
-  z-index: 1;
-  -webkit-transform: rotateX(-180deg);
-  -ms-transform: rotateX(-180deg);
-  -moz-transform: rotateX(-180deg);
-  transform: rotateX(-180deg);
+.flipping-cards input[type="checkbox"]:checked + label .wrapper{
+  transform: rotateY(-180deg);
+  -webkit-transform: rotateY(-180deg);
 }
 
-.panel:hover .front {
-  z-index: 1;
-  -webkit-transform: rotateX(180deg);
-  -ms-transform: rotateX(180deg);
-  -moz-transform: rotateX(180deg);
-  transform: rotateX(180deg);
-}
-
-.panel:hover .back {
-  z-index: 2;
-  -webkit-transform: rotateX(0deg);
-  -ms-transform: rotateX(0deg);
-  -moz-transform: rotateX(0deg);
-  transform: rotateX(0deg);
-}
+input[type="checkbox"]{display:none;}
+ul,li{list-style:none;padding:0;margin:0;}
