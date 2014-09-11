@@ -5,7 +5,7 @@
         <%= image_tag post.image_url(:thumb) if post.image? %>
       </div>
       <div style="float: right; width: 60%; padding-left: 20px;">
-        <p><%= post.content %></p>
+        <p><%= post.content.html_safe %></p>
       </div>
       <div style="float: none; clear:both;"> </div>
       <hr>
