@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae899345-882d-409b-99e4-a99d321225de" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/static_pages/contact_us.html.erb" afterPath="$PROJECT_DIR$/app/views/static_pages/contact_us.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/static_pages/information_for_students.html.erb" afterPath="$PROJECT_DIR$/app/views/static_pages/information_for_students.html.erb" />
     </list>
     <ignored path="phitau.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,10 +25,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="contact_us.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="contact_us.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/static_pages/contact_us.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.1392573" vertical-offset="0" max-vertical-offset="1965">
+            <state vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="1965">
               <caret line="7" column="105" selection-start-line="7" selection-start-column="105" selection-end-line="7" selection-end-column="105" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#span#0;n#span#0;n#label#0;n#li#0;n#ul#0;n#body#0;n#!!top" expanded="true" />
@@ -38,6 +38,26 @@
                 <element signature="n#style#0;n#img#0;n#span#0;n#span#0;n#label#0;n#li#4;n#ul#0;n#body#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#span#0;n#span#0;n#label#0;n#li#5;n#ul#0;n#body#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="information_for_students.html.erb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/static_pages/information_for_students.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0994695" vertical-offset="0" max-vertical-offset="754">
+              <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_footer.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/_footer.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-22.5" vertical-offset="0" max-vertical-offset="720">
+              <caret line="36" column="114" selection-start-line="33" selection-start-column="16" selection-end-line="36" selection-end-column="114" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -71,7 +91,6 @@
         <option value="$PROJECT_DIR$/db/schema.rb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/posts.css.scss" />
         <option value="$PROJECT_DIR$/app/views/layouts/_footer.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/static_pages/information_for_students.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/scaffolds.css.scss" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/flip.js" />
@@ -94,6 +113,7 @@
         <option value="$PROJECT_DIR$/app/views/static_pages/national_fast_facts.html.erb" />
         <option value="$PROJECT_DIR$/app/views/static_pages/local_fast_facts.html.erb" />
         <option value="$PROJECT_DIR$/app/views/static_pages/contact_us.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/static_pages/information_for_students.html.erb" />
       </list>
     </option>
   </component>
@@ -290,6 +310,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layouts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -637,6 +661,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="2.5805244" vertical-offset="12123" max-vertical-offset="18780">
           <caret line="946" column="22" selection-start-line="946" selection-start-column="22" selection-end-line="946" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -752,24 +777,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/static_pages/information_for_students.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="754">
-          <caret line="0" column="8" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/user_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.13496144" vertical-offset="0" max-vertical-offset="778">
           <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/_footer.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7287449" vertical-offset="0" max-vertical-offset="741">
-          <caret line="36" column="64" selection-start-line="36" selection-start-column="64" selection-end-line="36" selection-end-column="64" />
         </state>
       </provider>
     </entry>
@@ -968,7 +979,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/static_pages/contact_us.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1392573" vertical-offset="0" max-vertical-offset="1965">
+        <state vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="1965">
           <caret line="7" column="105" selection-start-line="7" selection-start-column="105" selection-end-line="7" selection-end-column="105" />
           <folding>
             <element signature="n#style#0;n#img#0;n#span#0;n#span#0;n#label#0;n#li#0;n#ul#0;n#body#0;n#!!top" expanded="true" />
@@ -978,6 +989,22 @@
             <element signature="n#style#0;n#img#0;n#span#0;n#span#0;n#label#0;n#li#4;n#ul#0;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#span#0;n#span#0;n#label#0;n#li#5;n#ul#0;n#body#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/_footer.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-22.5" vertical-offset="0" max-vertical-offset="720">
+          <caret line="36" column="114" selection-start-line="33" selection-start-column="16" selection-end-line="36" selection-end-column="114" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/static_pages/information_for_students.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0994695" vertical-offset="0" max-vertical-offset="754">
+          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
