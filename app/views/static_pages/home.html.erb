@@ -2,7 +2,7 @@
   <div class="card">
     <h1 style="text-align:center; text-decoration: underline;"><%= post.title %></h1>
       <div style="float: left; width: 40%">
-        <%= image_tag post.image_url(:thumb) if post.image? %>
+        <%= image_tag post.image_url if post.image? %>
       </div>
       <div style="float: right; width: 60%; padding-left: 20px;">
         <p><%= post.content.html_safe %></p>
