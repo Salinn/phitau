@@ -10,7 +10,7 @@ gem 'devise_ldap_authenticatable'
 gem 'bootstrap-sass', '2.3.2.0'
 gem "therubyracer"
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
-gem "cancan"
+gem "cancancan"
 gem 'whenever', :require => false
 gem 'rails_admin'
 gem 'unicorn'
