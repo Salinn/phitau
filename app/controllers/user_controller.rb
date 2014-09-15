@@ -12,6 +12,7 @@ class UserController < ApplicationController
   end
 
   def create
+    @user.role = "Nothing"
     if @user.save
       flash[:notice] = "Successfully created User." 
       redirect_to root_path

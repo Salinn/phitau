@@ -6,4 +6,7 @@
   <data-source source="LOCAL" name="Rails phitau: production" uuid="6542a6a8-064e-4b30-88eb-8f725b6e33c1">
     <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
   </data-source>
+  <data-source source="LOCAL" name="Rails phitau: test" uuid="21543ecb-54b0-4825-aaf5-4f6c81e64928">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
 </component>

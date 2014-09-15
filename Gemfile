@@ -25,6 +25,7 @@ gem "rmagick"
 gem "carrierwave"
 gem 'fog'
 gem "mini_magick"
+gem "roadie"
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
