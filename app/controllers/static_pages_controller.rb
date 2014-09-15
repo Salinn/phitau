@@ -1,7 +1,12 @@
 class StaticPagesController < ApplicationController
+  @posts = Post.all
+  @users = User.all
+  def admin
+    @users
+  end
 
   def home
-    @posts = Post.all
+    @posts
   end
 
   def about
