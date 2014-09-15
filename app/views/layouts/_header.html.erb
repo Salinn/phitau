@@ -14,6 +14,24 @@
       <li><%= link_to "Parents", information_for_parents_path, class: "nav-item" %></li>
       <li><%= link_to "FAQ", faq_path, class: "nav-item" %></li>
       <li><%= link_to "Contact", contact_us_path, class: "nav-item" %></li>
+      <% if user_signed_in?%>
+        <li><%= link_to "Sign-out", destroy_user_session_path, :method => :delete, class: "nav-item" %></li>
+      <% else %>
+        <li><a class="nav-item" href="#openModal">Sign-In</a></li>
+      <% end %>
     </ul>
   </div>
 </header>
+
+<div id="openModal" class="modalDialog">
+  <div style="margin-left: auto; margin-right: auto;">
+    <a href="#close" title="Close" class="close">X</a>
+    <%= form_for(:user, :url => session_path(:user)) do |f| %>
+      <div style="padding: 20px 10px 0px 10px"><%= f.text_field :email, :placeholder => "email", :tabindex => 1 %></div>
+      <div style="padding: 20px 10px 0px 10px"><%= f.password_field :password, :placeholder => "Password", :tabindex => 2%></div>
+      <div style="float: left; padding: 20px 0px 0px 10px"><%= f.submit 'Sign in', :tabindex => 3 %></div>
+      <div style="float: left; padding: 23px 50px 0px 15px; font-size: 20px" ><%= link_to('Register', new_user_registration_path)%></div>
+      <div style="float: none; clear:both;"> </div>
+    <% end %>
+  </div>
+</div>
