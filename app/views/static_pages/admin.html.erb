@@ -16,8 +16,8 @@
                     <%= f.submit "Accept" %>
                     <% end %></td>
           <td><%= form_for user do |f| %>
-                <%= f.hidden_field :role, :value => "not a member" %>
-                <%= f.submit "Deny" %>
+                    <%= f.hidden_field :role, :value => "not_a_member" %>
+                    <%= f.submit "Deny" %>
             <% end %></td>
         </tr>
       <% end %>

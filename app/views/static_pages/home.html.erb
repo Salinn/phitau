@@ -1,7 +1,12 @@
+<% if user_signed_in? and (current_user.role == nil or current_user.role == "not_a_member") %>
+  <div>
+    <%= form_for current_user do |f| %>
+      <%= f.hidden_field :role, :value => "requesting" %>
+      <%= f.submit "Request to be a member" %>
+    <% end %>
+  </div>
+<% end %>
 <% @posts.reverse_each do |post| %>
-  <% if user_signed_in?%>
-
-  <% end %>
   <div class="card">
     <h1 style="text-align:center; text-decoration: underline;"><%= post.title %></h1>
       <div style="float: left; width: 40%">
