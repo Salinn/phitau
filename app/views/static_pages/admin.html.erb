@@ -1,17 +1,26 @@
-<table>
-  <tr>
-  <th>User Email</th>
-          <th>User's DCE</th>
-          <th>Due Back</th>
-          <th>Check Bike In Link</th>
+<div>
+  <table>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email</th>
+    </tr>
+    <% @users.each do |user| %>
+      <% if user.role =="requesting" %>
+        <tr>
+          <td><%= user.first_name %></td>
+          <td><%= user.last_name %></td>
+          <td><%= user.email %></td>
+          <td><%= form_for user do |f| %>
+                    <%= f.hidden_field :role, :value => "member" %>
+                    <%= f.submit "Accept" %>
+                    <% end %></td>
+          <td><%= form_for user do |f| %>
+                <%= f.hidden_field :role, :value => "not a member" %>
+                <%= f.submit "Deny" %>
+            <% end %></td>
         </tr>
-        <% @checked_outs.each do |checked_out_bikes| %>
-            <tr>
-              <td><%= checked_out_bikes.bike_id %></td>
-              <% user = User.find( checked_out_bikes.user_id)%>
-              <td><%= user.login %></td>
-              <td><%= checked_out_bikes.checkout_time.strftime("%B %d, %I:%M") %></td>
-              <td><%= link_to 'Check Bike In', edit_checked_out_path(checked_out_bikes) %></td>
-            </tr>
-        <% end %>
-      </table>
+      <% end %>
+    <% end %>
+  </table>
+</div>
