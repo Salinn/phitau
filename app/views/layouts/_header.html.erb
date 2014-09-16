@@ -8,7 +8,7 @@
       <p style="margin-top: -15px; font-size: 1.7rem; color: #FFF ">Learning Leading Serving</p>
     </div>
     <ul class="nav-links">
-      <% if current_user == nil or current_user.role == nil %>
+      <% if current_user == nil or current_user.role == nil or current_user.role == "not_a_member"%>
         <li><%= link_to "Home", root_path, class: "nav-item" %></li>
         <li><%= link_to "About", about_path, class: "nav-item" %></li>
         <li><%= link_to "Students", information_for_students_path, class: "nav-item" %></li>
