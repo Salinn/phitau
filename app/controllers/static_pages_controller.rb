@@ -1,6 +1,7 @@
 class StaticPagesController < ApplicationController
 
   def admin
+    authorize! :admin, :controls
     @users = User.all
   end
 
