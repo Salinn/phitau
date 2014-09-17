@@ -17,7 +17,10 @@
         <li><%= link_to "Contact", contact_us_path, class: "nav-item" %></li>
       <% else %>
         <li><%= link_to "Home", root_path, class: "nav-item" %></li>
-        <li><%= link_to "Posts", posts_path, class: "nav-item" %></li>
+        <% if current_user.role == "writer" or current_user.role == "admin" %>
+          <li><%= link_to "Posts", posts_path, class: "nav-item" %></li>
+        <% end %>
+        <li><%=  link_to "Account", current_user, class: "nav-item"  %></li>
     <% end %>
       <% if user_signed_in?%>
           <li><%= link_to "Sign-out", destroy_user_session_path, :method => :delete, class: "nav-item" %></li>

@@ -1,4 +1,4 @@
-class UserController < ApplicationController
+class UsersController < ApplicationController
   load_and_authorize_resource
   def index
   end
@@ -8,6 +8,7 @@ class UserController < ApplicationController
   end
 
   def show
+    @user = User.find(params[:id])
   end
 
   def create
@@ -43,7 +44,7 @@ class UserController < ApplicationController
   def destroy
     if @user.destroy
       flash[:notice] = "Successfully deleted User."
-      redirect_to user_index_path
+      redirect_to root_path
     end
   end
 
@@ -53,6 +54,6 @@ class UserController < ApplicationController
   end
 
   def post_params
-    params.require(:user).permit(:role, :first_name, :last_name)
+    params.require(:user).permit(:role, :first_name, :last_name, :profile_picture)
   end
 end

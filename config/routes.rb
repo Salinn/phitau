@@ -2,7 +2,8 @@ Phitau::Application.routes.draw do
   resources :posts
 
   devise_for :users
-  resources :user, :controller => "user"
+  resources :users, :only => [:show]
+  resources :users, :controller => "users"
 
   StaticPagesController.action_methods.each do |action|
     get "/#{action}", to: "static_pages##{action}", as: "#{action}"
