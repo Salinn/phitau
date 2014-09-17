@@ -2,7 +2,7 @@ Phitau::Application.routes.draw do
   resources :posts
 
   devise_for :users
-  resources :users, :only => [:show]
+  resources :users, :only => [:show, :edit, :update ]
   resources :users, :controller => "users"
 
   StaticPagesController.action_methods.each do |action|
