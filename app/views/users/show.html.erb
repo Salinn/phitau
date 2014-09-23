@@ -1,9 +1,9 @@
-<div class="card">
+<div class="card" style="width: 50%">
   <h1 style="text-align:center; text-decoration: underline;">Your Info</h1>
-  <div style="float: left; width: 50%">
-    <%= image_tag @user.profile_picture if @user.profile_picture? %>
+  <div style="float: left; heigh: auto;%">
+    <%= image_tag @user.profile_picture_url if @user.profile_picture? %>
   </div>
-  <div style="float: right; width: 50%; padding-left: 20px;">
+  <div style="float: right; width: 63%; padding-left: 20px;">
     <p>Name: <%= @user.first_name if @user.first_name? %> <%= " " + @user.last_name if @user.last_name? %></p>
     <p>Email: <%= @user.email %></p>
     <p>Website Status: <%= @user.role.slice(0,1).capitalize if @user.role? %><%= @user.role.slice(1..-1) if @user.role? %></p>
