@@ -1,9 +1,8 @@
 <% if user_signed_in? and (current_user.role == nil or current_user.role == "not_a_member") %>
   <div>
-    <%= form_for current_user do |f| %>
+    <%= form_for current_user  do |f| %>
       <%= f.text_field :first_name, :placeholder => "First Name" %>
       <%= f.text_field :last_name, :placeholder => "Last Name" %>
-      <%= f.hidden_field :role, :value => "requesting" %>
       <%= f.submit "Request to be a member" %>
     <% end %>
   </div>

@@ -30,6 +30,9 @@ class UsersController < ApplicationController
   end
 
   def update
+    if @user.role.nil?
+      @user.role = "requesting"
+    end
     @user = User.find params[:id]
     respond_to do |format|
       if @user.update(post_params)
@@ -55,6 +58,6 @@ class UsersController < ApplicationController
   end
 
   def post_params
-    params.require(:user).permit(:role, :first_name, :last_name, :profile_picture, :remote_image_url)
+    params.require(:user).permit(:role, :first_name, :last_name, :profile_picture, :remote_profile_picture_url)
   end
 end

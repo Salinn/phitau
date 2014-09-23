@@ -2,6 +2,16 @@
   <h1 style="text-align:center; text-decoration: underline;">Your Info</h1>
     <div style="float: left; width: 50%">
       <%= image_tag @user.profile_picture if @user.profile_picture? %>
+      <%= form_for current_user, url: {action: "update"} do |f| %>
+      <div class="field">
+        <%= f.file_field :profile_picture %>
+      </div>
+      <div class="field">
+        <%= f.label :remote_profile_picture_url, "or image URL" %><br />
+        <%= f.text_field :remote_profile_picture_url %>
+      </div>
+          <%= f.submit "Update Information" %>
+          <% end %>
       <div class="field">
       </div>
     </div>
@@ -9,7 +19,6 @@
     <%= form_for current_user, url: {action: "update"} do |f| %>
         <%= f.text_field :first_name, :placeholder => "First Name" %>
         <%= f.text_field :last_name, :placeholder => "Last Name" %>
-        <%= f.text_field :email, :placeholder => "email" %>
     <%= f.submit "Update Information" %>
     <% end %>
   </div>
