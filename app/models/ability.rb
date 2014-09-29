@@ -12,6 +12,7 @@ class Ability
         can :admin, :controls
         can [:show, :update, :new, :read], Post
       end
+      
     end
   end
 end
