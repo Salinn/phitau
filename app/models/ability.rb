@@ -10,9 +10,9 @@ class Ability
       can :update, User, :id => user.id
       if user.user_role? "writer"
         can :admin, :controls
-        can [:show, :update, :new, :read], Post
+        can [:show, :update, :new, :read, :create], Post
       end
-      
+
     end
   end
 end
