@@ -10,7 +10,7 @@ gem 'devise_ldap_authenticatable'
 gem 'bootstrap-sass', '2.3.2.0'
 gem "therubyracer"
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
-gem "cancancan"
+gem 'cancancan'
 gem 'whenever', :require => false
 gem 'rails_admin'
 gem 'unicorn'
@@ -24,7 +24,8 @@ gem 'twitter-bootstrap-rails'
 gem "rmagick"
 gem "carrierwave"
 gem 'fog'
-gem "mini_magick"
+gem 'mini_magick'
+gem 'tinymce-rails'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
