@@ -1,13 +1,15 @@
 <div>
   <table>
     <tr>
-      <th>First Name</th>
-      <th>Last Name</th>
+      <th>ID    </th>
+      <th>First Name    </th>
+      <th>Last Name     </th>
       <th>Email</th>
     </tr>
     <% @users.each do |user| %>
       <% if user.role =="requesting" %>
         <tr>
+          <td><%= user.id %></td>
           <td><%= user.first_name %></td>
           <td><%= user.last_name %></td>
           <td><%= user.email %></td>

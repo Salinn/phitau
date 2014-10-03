@@ -26,6 +26,7 @@ gem "carrierwave"
 gem 'fog'
 gem 'mini_magick'
 gem 'tinymce-rails'
+gem "recaptcha", :require => "recaptcha/rails"
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

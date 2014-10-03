@@ -4,7 +4,7 @@
     <data-source source="LOCAL" name="Rails phitau: development" uuid="81bdf5e7-ffff-4d4e-98fe-ca0d5c230359">
       <driver-ref>sqlite.xerial</driver-ref>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/db/development.sqlite3</jdbc-url>
+      <jdbc-url>jdbc:sqlite:db/development.sqlite3</jdbc-url>
       <libraries />
     </data-source>
     <data-source source="LOCAL" name="Rails phitau: production" uuid="6542a6a8-064e-4b30-88eb-8f725b6e33c1">
@@ -16,7 +16,7 @@
     <data-source source="LOCAL" name="Rails phitau: test" uuid="21543ecb-54b0-4825-aaf5-4f6c81e64928">
       <driver-ref>sqlite.xerial</driver-ref>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/db/test.sqlite3</jdbc-url>
+      <jdbc-url>jdbc:sqlite:db/test.sqlite3</jdbc-url>
       <libraries />
     </data-source>
   </component>
