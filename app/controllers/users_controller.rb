@@ -58,6 +58,7 @@ class UsersController < ApplicationController
   end
 
   def post_params
-    params.require(:user).permit(:role, :first_name, :last_name, :profile_picture, :remote_profile_picture_url)
+    params.require(:user).permit(:role, :first_name, :last_name, :profile_picture, :remote_profile_picture_url,
+                                 :phone_number, :home_town, :state, :big_brother, :major, :pledge_class)
   end
 end

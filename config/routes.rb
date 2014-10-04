@@ -1,7 +1,7 @@
 Phitau::Application.routes.draw do
   resources :posts
 
-  devise_for :users, :controllers => { :registrations => "registration" }
+  devise_for :users, :controllers => { :registrations => "registration" }, :path_names => { :sign_up => "register"}
   resources :users, :only => [:show, :edit, :update ]
   resources :users, :controller => "users"
 

@@ -10,7 +10,7 @@
         <%= f.label :remote_profile_picture_url, "or image URL" %><br />
         <%= f.text_field :remote_profile_picture_url %>
       </div>
-          <%= f.submit "Update Information" %>
+          <%= f.submit "Update Picture" %>
           <% end %>
       <div class="field">
       </div>
@@ -19,6 +19,13 @@
     <%= form_for current_user, url: {action: "update"} do |f| %>
         <%= f.text_field :first_name, :placeholder => "First Name" %>
         <%= f.text_field :last_name, :placeholder => "Last Name" %>
+        <%= f.text_field :phone_number, :placeholder => "Phone Number" %>
+        <%= f.text_field :home_town, :placeholder => "Home Town" %>
+        <%= f.text_field :state, :placeholder => "State" %>
+        <%= f.text_field :big_brother, :placeholder => "Big Brother" %>
+        <%= f.text_field :major, :placeholder => "Major" %>
+        <%= f.text_field :pledge_class, :placeholder => "Pledge Class" %>
+        <div style="float: none; clear:both;"> </div>
     <%= f.submit "Update Information" %>
     <% end %>
   </div>
