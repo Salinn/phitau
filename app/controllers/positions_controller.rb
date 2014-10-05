@@ -67,6 +67,13 @@ class PositionsController < ApplicationController
       @position = Position.find(params[:id])
     end
 
+    def create_position_values
+      @position = Position.create
+      @position.user_id = Position.find_by_email(position_params[:user_id]).id
+      @position.position_name = position_params[:position_name]
+      @position.checkout_time = position_params[:role_permission]
+    end
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def position_params
       params.require(:position).permit(:user_id, :position_name,:role_permission)

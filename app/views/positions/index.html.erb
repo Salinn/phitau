@@ -3,6 +3,9 @@
 <table>
   <thead>
     <tr>
+      <th>user_id</th>
+      <th>position_name</th>
+      <th>role_permission</th>
       <th></th>
       <th></th>
       <th></th>
@@ -12,6 +15,9 @@
   <tbody>
     <% @positions.each do |position| %>
       <tr>
+        <td><%= position.user_id %></td>
+        <td><%= position.position_name %></td>
+        <td><%= position.role_permission %></td>
         <td><%= link_to 'Show', position %></td>
         <td><%= link_to 'Edit', edit_position_path(position) %></td>
         <td><%= link_to 'Destroy', position, method: :delete, data: { confirm: 'Are you sure?' } %></td>
