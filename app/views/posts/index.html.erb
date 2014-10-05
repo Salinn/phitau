@@ -21,7 +21,7 @@
         <td><%= post.published %></td>
         <td><%= post.author %></td>
         <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
+        <td><%= link_to 'Edit', edit_post_path(post), 'data-no-turbolink' => true  %></td>
         <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
   <% end %>
@@ -30,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New Post', new_post_path %>
+<%= link_to 'New Post', new_post_path, 'data-no-turbolink' => true  %>
