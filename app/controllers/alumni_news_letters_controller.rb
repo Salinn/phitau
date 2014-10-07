@@ -1,5 +1,6 @@
 class AlumniNewsLettersController < ApplicationController
   before_action :set_alumni_news_letter, only: [:show, :edit, :update, :destroy]
+  load_and_authorize_resource
 
   # GET /alumni_news_letters
   # GET /alumni_news_letters.json
