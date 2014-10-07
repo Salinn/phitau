@@ -1,5 +1,4 @@
 class RegistrationController < Devise::RegistrationsController
-  load_and_authorize_resource
   def create
     if verify_recaptcha
       super
