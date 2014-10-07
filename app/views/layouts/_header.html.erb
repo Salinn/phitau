@@ -11,11 +11,9 @@
       <% if current_user == nil or current_user.role == nil or current_user.role == "not_a_member"%>
         <li><%= link_to "Home", root_path, class: "nav-item" %></li>
         <li><%= link_to "About", about_path, class: "nav-item" %></li>
-        <li><%= link_to "Students", information_for_students_path, class: "nav-item" %></li>
-        <li><%= link_to "Parents", information_for_parents_path, class: "nav-item" %></li>
         <li><%= link_to "FAQ", faq_path, class: "nav-item" %></li>
-        <li><%= link_to "News-Letters", alumni_news_letters_path, class: "nav-item" %></li>
         <li><%= link_to "Contact", contact_us_path, class: "nav-item" %></li>
+        <li><%= link_to "News-Letters", alumni_news_letters_path, class: "nav-item" %></li>
       <% else %>
         <li><%= link_to "Home", root_path, class: "nav-item" %></li>
         <% if current_user.role == "writer" or current_user.role == "admin" %>
