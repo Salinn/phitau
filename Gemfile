@@ -6,27 +6,31 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'devise'
-gem 'devise_ldap_authenticatable'
-gem 'bootstrap-sass', '2.3.2.0'
 gem "therubyracer"
-gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 gem 'cancancan'
 gem 'whenever', :require => false
-gem 'rails_admin'
 gem 'unicorn'
 gem 'capricorn'
 gem "rspec-rails", :group => [:development, :test]
 gem "capybara"
-gem 'sass-rails', '~> 4.0.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
-gem 'twitter-bootstrap-rails'
+
+#add pictures to the website
 gem "rmagick"
 gem "carrierwave"
 gem 'fog'
 gem 'mini_magick'
+
+#text editor for those who don't know how to use css to format text
 gem 'tinymce-rails'
+
+#Stops bugs
 gem "recaptcha", :require => "recaptcha/rails"
+
+#bootstrap
+gem 'bootstrap-sass', '~> 3.2.0'
+gem 'autoprefixer-rails'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
