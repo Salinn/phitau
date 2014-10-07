@@ -1157,6 +1157,7 @@ hr {
   -webkit-backface-visibility:hidden; /* Chrome and Safari */
   -moz-backface-visibility:hidden; /* Firefox */
   -ms-backface-visibility:hidden; /* Internet Explorer */
+  backface-visibility:hidden;
   background-size: 70px 120px;
   background-color: #fff;
 }

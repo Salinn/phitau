@@ -1,4 +1,6 @@
 Phitau::Application.routes.draw do
+  resources :alumni_news_letters
+
   resources :positions
 
   resources :posts

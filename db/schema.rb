@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141005222124) do
+ActiveRecord::Schema.define(version: 20141006192728) do
+
+  create_table "alumni_news_letters", force: true do |t|
+    t.date     "released_date"
+    t.string   "alumni_new_letter_pdf"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "news_letter_html"
+  end
 
   create_table "positions", force: true do |t|
     t.integer  "user_id"

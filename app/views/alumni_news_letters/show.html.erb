@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Released date:</strong>
+  <%= @alumni_news_letter.released_date %>
+</p>
+
+<p>
+  <strong>Alumni new letter pdf:</strong>
+  <%= @alumni_news_letter.alumni_new_letter_pdf %>
+</p>
+
+<%= link_to 'Edit', edit_alumni_news_letter_path(@alumni_news_letter) %> |
+<%= link_to 'Back', alumni_news_letters_path %>

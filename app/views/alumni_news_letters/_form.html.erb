@@ -1,0 +1,32 @@
+<%= form_for(@alumni_news_letter) do |f| %>
+  <% if @alumni_news_letter.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@alumni_news_letter.errors.count, "error") %> prohibited this alumni_news_letter from being saved:</h2>
+
+      <ul>
+      <% @alumni_news_letter.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :released_date %><br>
+    <%= f.date_select :released_date %>
+  </div>
+    <div class="field">
+      <%= f.file_field :alumni_new_letter_pdf %>
+    </div>
+    <div class="field">
+      <%= f.label :remote_alumni_new_letter_pdf_url, "or image URL" %><br />
+      <%= f.text_field :remote_alumni_new_letter_pdf_url %>
+    </div>
+    <div class="field">
+      <%= f.label :news_letter_html, "or image URL" %><br />
+      <%= f.text_area :news_letter_html %>
+    </div>
+  <div class="actions">
+    <%= f.submit "Post News Letter" %>
+  </div>
+<% end %>
