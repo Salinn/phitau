@@ -9,7 +9,7 @@ class Ability
       can :show, User, :id => user.id
       can :update, User, :id => user.id
       if user.user_role? "writer"
-        can :admin, :controls
+        can [:show, :update, :new, :read, :create], AlumniNewsLetter
         can [:show, :update, :new, :read, :create], Post
       end
 
