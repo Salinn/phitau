@@ -14,4 +14,7 @@ Phitau::Application.routes.draw do
   end
 
   root :to => "static_pages#home"
+  
+  post 'twilio/voice' => 'twilio#voice'
+
 end
