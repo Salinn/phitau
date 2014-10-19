@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 ruby '2.0.0'
-gem 'rails', '4.0.0'
+gem 'rails', '4.1.6'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
@@ -31,6 +31,9 @@ gem "recaptcha", :require => "recaptcha/rails"
 #bootstrap
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
+
+#for texting
+gem 'twilio-ruby'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
