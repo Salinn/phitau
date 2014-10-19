@@ -14,8 +14,4 @@ Phitau::Application.routes.draw do
   end
 
   root :to => "static_pages#home"
-
-  #Twilio routes
-  post 'twilio/voice' => 'twilio#voice'
-  match 'twilio/process_sms' => 'twilio#process_sms'
 end
