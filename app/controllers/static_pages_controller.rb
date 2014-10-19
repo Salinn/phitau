@@ -52,4 +52,8 @@ class StaticPagesController < ApplicationController
   def information_for_parents
 
   end
+
+  def gamma_nu_50th_anniversary
+
+  end
 end

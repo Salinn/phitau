@@ -1,45 +1,61 @@
-<header role="banner">
-  <div class="container" role="navigation">
-    <div class="brand selected" style="width: 500px">
-      <a  style="color: #FFF;" href="/">
-        <img alt="Phi Kappa Tau" src="http://pktphichapter.org/wp-content/themes/PKTphichapter-201208/images/branding2012-crest.png">
-       Phi Kappa Tau
-      </a>
-      <p style="margin-top: -15px; font-size: 1.7rem; color: #FFF ">Learning Leading Serving</p>
-    </div>
-    <ul class="nav-links">
-      <% if current_user == nil or current_user.role == nil or current_user.role == "not_a_member"%>
-        <li><%= link_to "Home", root_path, class: "nav-item" %></li>
-        <li><%= link_to "About", about_path, class: "nav-item" %></li>
-        <li><%= link_to "FAQ", faq_path, class: "nav-item" %></li>
-        <li><%= link_to "News-Letters", alumni_news_letters_path, class: "nav-item" %></li>
-        <li><%= link_to "Contact", contact_us_path, class: "nav-item" %></li>
-      <% else %>
-        <li><%= link_to "Home", root_path, class: "nav-item" %></li>
-        <% if current_user.role == "writer" or current_user.role == "admin" %>
-          <li><%= link_to "Posts", posts_path, class: "nav-item" %></li>
-          <li><%= link_to "News-Letters", new_alumni_news_letter_path, class: "nav-item" %></li>
-        <% end %>
-        <li><%=  link_to "Account", current_user, class: "nav-item"  %></li>
-    <% end %>
-      <% if user_signed_in?%>
-          <li><%= link_to "Sign-out", destroy_user_session_path, :method => :delete, class: "nav-item" %></li>
-      <% else %>
-          <li><a class="nav-item" href="#openModal">Sign-In</a></li>
-      <% end %>
-    </ul>
+<div class="navbar" style="background-color: #5E0000">
+
+  <div class = "container">
+    <header role="banner">
+      <div class="container" role="navigation">
+        <div class="brand selected">
+          <a  style="color: #FFF;" href="/">
+            <img alt="Phi Kappa Tau" src="http://pktphichapter.org/wp-content/themes/PKTphichapter-201208/images/branding2012-crest.png">
+            Phi Kappa Tau
+          </a>
+          <p style="margin-top: -15px; font-size: 1.7rem; color: #FFF ">Learning Leading Serving</p>
+        </div>
+
+        <button class = "navbar-toggle" data-toggle = "collapse" data-target = ".navHeaderCollapse">
+          <span class = "icon-bar"></span>
+          <span class = "icon-bar"></span>
+          <span class = "icon-bar"></span>
+        </button>
+
+        <div class="collapse navbar-collapse ">
+          <ul class="nav-links nav navbar-nav">
+            <% if current_user == nil or current_user.role == nil or current_user.role == "not_a_member"%>
+                <li><%= link_to "Home", root_path, class: "nav-item" %></li>
+                <li><%= link_to "About", about_path, class: "nav-item" %></li>
+                <li><%= link_to "FAQ", faq_path, class: "nav-item" %></li>
+                <li><%= link_to "Contact", contact_us_path, class: "nav-item" %></li>
+                <li><%= link_to "News-Letters", alumni_news_letters_path, class: "nav-item" %></li>
+            <% else %>
+                <li><%= link_to "Home", root_path, class: "nav-item" %></li>
+                <% if current_user.role == "writer" or current_user.role == "admin" %>
+                    <li><%= link_to "Posts", posts_path, class: "nav-item" %></li>
+                    <li><%= link_to "News-Letters", new_alumni_news_letter_path, class: "nav-item" %></li>
+                <% end %>
+                <li><%=  link_to "Account", current_user, class: "nav-item"  %></li>
+            <% end %>
+            <% if user_signed_in?%>
+                <li><%= link_to "Sign-out", destroy_user_session_path, :method => :delete, class: "nav-item" %></li>
+            <% else %>
+                <li><a class="nav-item" href="#openModal">Sign-In</a></li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </header>
   </div>
-</header>
+</div>
 
 <div id="openModal" class="modalDialog">
   <div style="margin-left: auto; margin-right: auto;">
     <a href="#close" title="Close" class="close">X</a>
     <%= form_for(:user, :url => session_path(:user)) do |f| %>
-      <div style="padding: 20px 10px 0px 10px"><%= f.text_field :email, :placeholder => "email", :tabindex => 1 %></div>
-      <div style="padding: 20px 10px 0px 10px"><%= f.password_field :password, :placeholder => "Password", :tabindex => 2%></div>
-      <div style="float: left; padding: 20px 0px 0px 10px"><%= f.submit 'Sign in', :tabindex => 3 %></div>
-      <div style="float: left; padding: 23px 50px 0px 15px; font-size: 20px" ><%= link_to "Sign up", new_user_registration_path, "data-no-turbolink" => true %></div>
-      <div style="float: none; clear:both;"> </div>
+        <div style="padding: 20px 10px 0px 10px"><%= f.text_field :email, :placeholder => "email", :tabindex => 1 %></div>
+        <div style="padding: 20px 10px 0px 10px"><%= f.password_field :password, :placeholder => "Password", :tabindex => 2%></div>
+        <div style="float: left; padding: 20px 0px 0px 10px"><%= f.submit 'Sign in', :tabindex => 3 %></div>
+        <div style="float: left; padding: 23px 50px 0px 15px; font-size: 20px" ><%= link_to "Sign up", new_user_registration_path, "data-no-turbolink" => true %></div>
+        <div style="float: none; clear:both;"> </div>
     <% end %>
   </div>
 </div>
+
+<script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>

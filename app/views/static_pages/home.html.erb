@@ -7,6 +7,24 @@
     <% end %>
   </div>
 <% end %>
+
+<div class="card">
+  <h1 style="text-align:center; text-decoration: underline;">50th Anniversary!</h1>
+  <div style="float: left; width: 40%">
+    <img src="https://www.rit.edu/alumni/news/story/PHT.jpg"></src>
+  </div>
+  <div style="float: right; width: 60%; padding-left: 20px;">
+    <h2 style="color: #000000">Stop, Grab your calendar, and Save April 2nd 2016.</h2>
+
+    <p>We are excited to be announcing our 50th Anniversy and are hoping to see you there!&nbsp;</p>
+
+    <p>For more information about the 50th <%= link_to "click here!", gamma_nu_50th_anniversary_path %></p>
+  </div>
+  <div style="float: none; clear:both;"> </div>
+</div>
+
+<br>
+
 <% @posts.reverse_each do |post| %>
   <div class="card">
     <h1 style="text-align:center; text-decoration: underline;"><%= post.title %></h1>
