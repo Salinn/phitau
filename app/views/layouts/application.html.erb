@@ -3,10 +3,11 @@
 <head>
   <title>Phi Tau Gamma Nu</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
-<%= render 'layouts/header' %>
 <body>
+<%= render 'layouts/header' %>
 
 <div class="body-container">
   <% flash.each do |key, value| %>

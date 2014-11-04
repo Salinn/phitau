@@ -1,9 +1,8 @@
 source 'https://rubygems.org'
 
 ruby '2.0.0'
-gem 'rails', '4.1.6'
+gem 'rails', '4.0.0'
 gem 'jquery-rails'
-gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'devise'
 gem "therubyracer"
@@ -29,8 +28,10 @@ gem 'tinymce-rails'
 gem "recaptcha", :require => "recaptcha/rails"
 
 #bootstrap
-gem 'bootstrap-sass', '~> 3.2.0'
+gem 'bootstrap-sass', '~> 3.3.0'
+gem 'sass-rails', '>= 3.2'
 gem 'autoprefixer-rails'
+gem 'turbolinks'
 
 #for texting
 gem 'twilio-ruby'

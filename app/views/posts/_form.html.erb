@@ -1,3 +1,4 @@
+<body data-no-turbolink="true">
 <%= form_for @post, :html => {:multipart => true} do |f| %>
   <% if @post.errors.any? %>
     <div id="error_explanation">
@@ -17,8 +18,8 @@
   </div>
 
   <div class="field">
-    <%= f.label :content %><br>
-    <%= f.text_area :content, class: "tinymce"  %>
+    <%= f.label :content, "", :class => "tinymce", :rows => 40, :cols => 120 %><br>
+    <%= f.text_area :content, :class => "tinymce", :rows => 40, :cols => 120 %>
   </div>
 
   <div class="field">
@@ -39,3 +40,4 @@
 <% end %>
 
 <%= tinymce :plugins => ["wordcount", "paste"] %>
+</body>
