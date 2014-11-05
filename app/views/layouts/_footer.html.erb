@@ -1,45 +1,54 @@
-<footer role="contentinfo">
-  <nav class="footer-primary">
-    <div class="container">
-      <div class="brand">
-        <a class="logo selected" href="/"><img alt="Phi Kappa Tau" src="http://pktphichapter.org/wp-content/themes/PKTphichapter-201208/images/branding2012-crest.png"></a>
-        <div class="body row">
-          <div class="brand-body-top">
-            <a class="heading selected" href="/" style="margin-right: 4px; margin-left: 45px; margin-top: 25px; margin-bottom: 10px">Phi Kappa Tau</a>
-            <br><br>
-            <a href="https://www.facebook.com/RITPhiTau" style="margin-left: 41px"><img src="http://www.nationalbeautyinstitute.com/images/facebook.png" style="width:60px;height:60px;"></a>
-            <a href="https://twitter.com/gnpkt" style="margin-left: 15px"><img src="http://www.doctordigital.com.ar/main/images/twitter-logo-white.png" style="width:60px;height:60px;"></a>
-          </div>
-        </div>
+<nav class="navbar navbar-bottom" id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <a class="logo selected" href="/">
+          <img alt="Phi Kappa Tau" src="http://pktphichapter.org/wp-content/themes/PKTphichapter-201208/images/branding2012-crest.png">
+        </a>
+        <a href="https://www.facebook.com/RITPhiTau" style="margin-left: 41px">
+          <img src="http://www.nationalbeautyinstitute.com/images/facebook.png" style="width:60px;height:60px;">
+        </a>
+        <a href="https://twitter.com/gnpkt" style="margin-left: 15px">
+          <img src="http://www.doctordigital.com.ar/main/images/twitter-logo-white.png" style="width:60px;height:60px;">
+        </a>
       </div>
-
-      <ul class="footer-nav" role="navigation">
-        <li>
-          <ul>
-            <li><h2 style="color: #00A000">Reaching Out</h2></li>
-            <li><%= link_to "Contact Us", contact_us_path, class: "nav-item", :style=>'color:#FFF;' %></li>
-            <li><%= link_to "Alumni News Letters", alumni_news_letters_path, class: "nav-item", :style=>'color:#FFF;' %></li>
-            <li><%= link_to "Students", information_for_students_path, class: "nav-item", :style=>'color:#FFF';%></li>
-            <li><%= link_to "Parents", information_for_parents_path, class: "nav-item", :style=>'color:#FFF;' %></li>
-          </ul>
-        </li>
-        <li>
-          <ul>
-            <li><h2 style="color: #00A000">Giving Back</h2></li>
-            <li><%= link_to "Volunteer Opportunities", volunteer_opportunities_path, class: "nav-item", :style=>'color:#FFF;' %></li>
-            <li><%= link_to "Parents Fund", parents_fund_path, class: "nav-item", :style=>'color:#FFF;' %></li>
-          </ul>
-        </li>
-        <li>
-          <ul>
-            <li><h2 style="color: #00A000">Our Story</h2></li>
-            <li><%= link_to "Nation History", national_history_path, class: "nav-item", :style=>'color:#FFF;' %></li>
-            <li><%= link_to "National Fast Facts", national_fast_facts_path, class: "nav-item", :style=>'color:#FFF;' %></li>
-            <li><%= link_to "Local History", local_history_path, class: "nav-item", :style=>'color:#FFF;' %></li>
-            <li><%= link_to "Local Fast Facts", local_fast_facts_path, class: "nav-item", :style=>'color:#FFF;' %></li>
-          </ul>
-        </li>
-      </ul>
+      <div class="col-xs-12 col-sm-3">
+        <ul class="footer-nav">
+          <li>
+            <ul>
+              <li><h2 style="color: #00A000">Reaching Out</h2></li>
+              <li><%= link_to "Contact Us", contact_us_path, class: "nav-item", :style=>'color:#FFF;' %></li>
+              <li><%= link_to "Alumni News Letters", alumni_news_letters_path, class: "nav-item", :style=>'color:#FFF;' %></li>
+              <li><%= link_to "Students", information_for_students_path, class: "nav-item", :style=>'color:#FFF';%></li>
+              <li><%= link_to "Parents", information_for_parents_path, class: "nav-item", :style=>'color:#FFF;' %></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        <ul class="footer-nav">
+          <li>
+            <ul>
+              <li><h2 style="color: #00A000">Giving Back</h2></li>
+              <li><%= link_to "Volunteer Opportunities", volunteer_opportunities_path, class: "nav-item", :style=>'color:#FFF;' %></li>
+              <li><%= link_to "Parents Fund", parents_fund_path, class: "nav-item", :style=>'color:#FFF;' %></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        <ul class="footer-nav">
+          <li>
+            <ul>
+              <li><h2 style="color: #00A000">Our Story</h2></li>
+              <li><%= link_to "Nation History", national_history_path, class: "nav-item", :style=>'color:#FFF;' %></li>
+              <li><%= link_to "National Fast Facts", national_fast_facts_path, class: "nav-item", :style=>'color:#FFF;' %></li>
+              <li><%= link_to "Local History", local_history_path, class: "nav-item", :style=>'color:#FFF;' %></li>
+              <li><%= link_to "Local Fast Facts", local_fast_facts_path, class: "nav-item", :style=>'color:#FFF;' %></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </div>
-  </nav>
-</footer>
+  </div>
+</nav>

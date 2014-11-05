@@ -13,6 +13,7 @@ $grid-float-breakpoint: $screen-md-min;
 .navbar-default {
   background-color: $HarvardRed;
   border-color: $HarvardRed;
+  padding-bottom: 2rem;
 }
 .navbar-default .navbar-nav > li > a {
   color: $White;
@@ -21,6 +22,10 @@ $grid-float-breakpoint: $screen-md-min;
   display: inline-block;
 }
 
+//Div Display for Phi Kappa Tau \n Learning Leading Serving
+//Widith allows text to be seen in line on half the screen
+//inline-block and vertical middle help center the image and text
+//float left puts the text right next to it
 .phi_tau_text{
   width: 55%;
   display: inline-block;
@@ -45,6 +50,8 @@ $grid-float-breakpoint: $screen-md-min;
 .h1-header {
   color: $White;
   font-size: $H1_header;
+  position: relative;
+  top: 1rem;
 }
 .h3-header {
   color: $White;
@@ -53,18 +60,39 @@ $grid-float-breakpoint: $screen-md-min;
 
 .container > .navbar-header, .container > .navbar-collapse, .container-fluid > .navbar-header, .container-fluid > .navbar-collapse{
   display: inline-block !important;
+  vertical-align: middle;
   width: 50%;
 }
 .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
-  position: relative;
+  display: inline-block;
+  vertical-align: middle;
   width: 12rem;
 }
+//End of the header
+//Start of the footer
 
+.navbar-bottom {
+  min-height: 150px;
+  margin-top: 50px;
+  background-color: #161817;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: $White;
+}
+#footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+//End of the footer
+
+html,body{
+  height: 100%
+}
 //text alignment
 .navbar-right {
   float: right !important;
   display: inline-block;
-  padding-left: 20rem;
  }
 
 
