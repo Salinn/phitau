@@ -1,3 +1,4 @@
+
 <% if user_signed_in? and (current_user.role == nil or current_user.role == "not_a_member") %>
   <div>
     <%= form_for current_user  do |f| %>
@@ -8,33 +9,34 @@
   </div>
 <% end %>
 
-
-<!--<div class="card">
-  <h1 style="text-align:center; text-decoration: underline;">$50,000 For 50 Years Fundraiser!</h1>
-  <div style="float: left; width: 40%">
-    <img src="http://i.imgur.com/3Nvx0Q6.jpg">
+<div class="col-md-8 col-md-offset-2">
+  <div class="card">
+    <h1 class="post_header">$50,000 For 50 Years Fundraiser!</h1>
+    <div>
+      <img class="post_img" src="http://i.imgur.com/3Nvx0Q6.jpg">
+    </div>
+    <div class="post_text">
+      <p>Brothers –</p>
+      <p>50 Years. A golden anniversary. A milestone worthy of celebration.</p>
+      <p>Let that number to sink in for a minute. Think about what that means - for an organization, an institution, to celebrate 50 years?</p>
+      <p>For more information about the 50th <%= link_to "click here!", gamma_nu_50th_anniversary_path %></p>
+    </div>
+    <div class="clear"> </div>
   </div>
-  <div style="float: right; width: 60%; padding-left: 20px;">
-    <p>Brothers –</p>
-    <p>50 Years. A golden anniversary. A milestone worthy of celebration.</p>
-    <p>Let that number to sink in for a minute. Think about what that means - for an organization, an institution, to celebrate 50 years?</p>
-    <p>For more information about the 50th <%= link_to "click here!", gamma_nu_50th_anniversary_path %></p>
-  </div>
-  <div style="float: none; clear:both;"> </div>
-</div>-->
+</div>
 
-<br>
-
+<div class="col-md-8 col-md-offset-2">
 <% @posts.reverse_each do |post| %>
   <div class="card">
-    <h1 style="text-align:center; text-decoration: underline;"><%= post.title %></h1>
-      <div style="float: left; width: 40%">
-        <%= image_tag post.image_url if post.image? %>
+    <h1 class="post_header"><%= post.title %></h1>
+      <div>
+        <%= image_tag post.image_url, :class => "post_img" if post.image? %>
       </div>
-      <div style="float: right; width: 60%; padding-left: 20px;">
+      <div class="post_text">
         <p><%= post.content.html_safe %></p>
       </div>
-      <div style="float: none; clear:both;"> </div>
+      <div class="clear"> </div>
       <hr>
     </div>
 <% end %>
+</div>
