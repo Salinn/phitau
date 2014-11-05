@@ -13,7 +13,6 @@ $grid-float-breakpoint: $screen-md-min;
 .navbar-default {
   background-color: $HarvardRed;
   border-color: $HarvardRed;
-  padding-bottom: 2rem;
 }
 .navbar-default .navbar-nav > li > a {
   color: $White;
@@ -70,7 +69,9 @@ $grid-float-breakpoint: $screen-md-min;
 }
 //End of the header
 //Start of the footer
-
+a:hover{
+  background-color: transparent !important;
+}
 .navbar-bottom {
   min-height: 150px;
   margin-top: 50px;
@@ -81,8 +82,15 @@ $grid-float-breakpoint: $screen-md-min;
 }
 #footer{
   position: absolute;
-  bottom: 0;
   width: 100%;
+  margin-bottom: 0px;
+}
+
+.wrap {
+  min-height: 7.2%;
+  height: auto;
+  margin: 0 auto -40px;
+  padding: 0 0 68px;
 }
 //End of the footer
 
