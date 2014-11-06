@@ -1,42 +1,43 @@
-
-<% if user_signed_in? and (current_user.role == nil or current_user.role == "not_a_member") %>
-  <div>
-    <%= form_for current_user  do |f| %>
-      <%= f.text_field :first_name, :placeholder => "First Name" %>
-      <%= f.text_field :last_name, :placeholder => "Last Name" %>
-      <%= f.submit "Request to be a member" %>
-    <% end %>
-  </div>
-<% end %>
-
-<div class="col-md-8 col-md-offset-2">
-  <div class="card">
-    <h1 class="post_header">$50,000 For 50 Years Fundraiser!</h1>
-    <div>
-      <img class="post_img" src="http://i.imgur.com/3Nvx0Q6.jpg">
-    </div>
-    <div class="post_text">
-      <p>Brothers –</p>
-      <p>50 Years. A golden anniversary. A milestone worthy of celebration.</p>
-      <p>Let that number to sink in for a minute. Think about what that means - for an organization, an institution, to celebrate 50 years?</p>
-      <p>For more information about the 50th <%= link_to "click here!", gamma_nu_50th_anniversary_path %></p>
-    </div>
-    <div class="clear"> </div>
-  </div>
-</div>
-
-<div class="col-md-8 col-md-offset-2">
-<% @posts.reverse_each do |post| %>
-  <div class="card">
-    <h1 class="post_header"><%= post.title %></h1>
+<div class="row">
+    <% if user_signed_in? and (current_user.role == nil or current_user.role == "not_a_member") %>
       <div>
-        <%= image_tag post.image_url, :class => "post_img" if post.image? %>
+        <%= form_for current_user  do |f| %>
+          <%= f.text_field :first_name, :placeholder => "First Name" %>
+          <%= f.text_field :last_name, :placeholder => "Last Name" %>
+          <%= f.submit "Request to be a member" %>
+        <% end %>
       </div>
-      <div class="post_text">
-        <p><%= post.content.html_safe %></p>
+    <% end %>
+
+    <div class="col-md-8 col-md-offset-2 padding-bot">
+      <div class="card">
+        <h1 class="post_header">$50,000 For 50 Years Fundraiser!</h1>
+        <div>
+          <img class="post_img" src="http://i.imgur.com/3Nvx0Q6.jpg">
+        </div>
+        <div class="post_text">
+          <p>Brothers –</p>
+          <p>50 Years. A golden anniversary. A milestone worthy of celebration.</p>
+          <p>Let that number to sink in for a minute. Think about what that means - for an organization, an institution, to celebrate 50 years?</p>
+          <p>For more information about the 50th <%= link_to "click here!", gamma_nu_50th_anniversary_path %></p>
+        </div>
+        <div class="clear"> </div>
       </div>
-      <div class="clear"> </div>
-      <hr>
     </div>
-<% end %>
+
+    <div class="col-md-8 col-md-offset-2 padding-bot">
+    <% @posts.reverse_each do |post| %>
+      <div class="card">
+        <h1 class="post_header"><%= post.title %></h1>
+          <div>
+            <%= image_tag post.image_url, :class => "post_img" if post.image? %>
+          </div>
+          <div class="post_text">
+            <p><%= post.content.html_safe %></p>
+          </div>
+          <div class="clear"> </div>
+          <hr>
+        </div>
+    <% end %>
+    </div>
 </div>

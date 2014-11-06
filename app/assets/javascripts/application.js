@@ -15,4 +15,5 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require tinymce
+//= require jquery.flip.min
 //= require_tree .
