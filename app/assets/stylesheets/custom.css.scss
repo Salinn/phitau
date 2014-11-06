@@ -106,6 +106,19 @@ a:hover{
   float: none;
   clear:both;
 }
+//End of Home PAge
+//Start of cards for user account page
+.user_img{
+  width: 50%;
+  float: left;
+  height: auto;
+}
+
+.user_info{
+  float: right;
+  width: 50%;
+  padding-left: 20px;
+}
 //
 //text alignment
 
@@ -196,6 +209,10 @@ ________________________________________*/
   position: relative;
   margin: 60px auto;
   width: 80%;
+}
+
+.accordion:hover{
+  background-color: #5E0000 !important;
 }
 
 [id*="open-accordion"], [id*="close-accordion"] {

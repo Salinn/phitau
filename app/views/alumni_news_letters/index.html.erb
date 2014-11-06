@@ -1,7 +1,7 @@
 <body style="background-color: #e8ad2e">
 <h1 style="text-align: center">Alumni News Letters</h1>
 
-<div class="card">
+<div class="card col-md-8 col-md-offset-2">
   <h2 style="color: #000000; text-align: center">Past NewsLetters</h2>
   <% @alumni_news_letters.reverse_each do |alumni_news_letter| %>
       <p style="text-align: center"><%= link_to alumni_news_letter.released_date.strftime("%B %Y"), alumni_news_letter, class: "nav-item"%></p>
