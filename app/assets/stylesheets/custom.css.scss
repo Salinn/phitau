@@ -28,10 +28,10 @@ $grid-float-breakpoint: $screen-md-min;
 //inline-block and vertical middle help center the image and text
 //float left puts the text right next to it
 .phi_tau_text{
-  width: 55%;
   display: inline-block;
   vertical-align: middle;
   float: left;
+  position: absolute;
 }
 
 .header_img {
@@ -69,6 +69,12 @@ $grid-float-breakpoint: $screen-md-min;
   vertical-align: middle;
   width: 12rem;
 }
+.nav-collapse, .nav-collapse.collapse {
+  overflow: visible;
+}
+.navbar .btn-navbar {
+  display: none;
+}
 //End of the header
 //Start of the footer
 a:hover{
@@ -85,6 +91,8 @@ a:hover{
   background-color: $FooterBackground;
   padding-top: 1rem;
   padding-bottom: 2rem;
+  position: relative;
+  bottom: 0;
 }
 //End of the footer
 //Home Page
@@ -133,10 +141,6 @@ a:hover{
 
 
 //text alignment
-
-body {
-  min-height: 100%;
-}
 
 .navbar-right {
   float: right !important;
