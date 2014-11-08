@@ -9,6 +9,9 @@ Phitau::Application.routes.draw do
   resources :users, :only => [:show, :edit, :update ]
   resources :users, :controller => "users"
 
+  get 'twilio/send_text_message' => 'twilio#send_text_message'
+  get 'twilio/new_message' => 'twilio#new_message'
+
   StaticPagesController.action_methods.each do |action|
     get "/#{action}", to: "static_pages##{action}", as: "#{action}"
   end
