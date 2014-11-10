@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>To number:</strong>
+  <%= @text_message.to_number %>
+</p>
+
+<p>
+  <strong>User group:</strong>
+  <%= @text_message.user_group %>
+</p>
+
+<p>
+  <strong>Message:</strong>
+  <%= @text_message.message %>
+</p>
+
+<%= link_to 'Edit', edit_text_message_path(@text_message) %> |
+<%= link_to 'Back', text_messages_path %>
