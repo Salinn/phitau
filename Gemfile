@@ -50,7 +50,7 @@ group :development, :test do
   gem 'sqlite3'
 end
 group :test do
-  gem 'cucumber-rails', require: false
+  # gem 'cucumber-rails', require: false
   gem 'database_cleaner'
   gem 'selenium-webdriver'
 end

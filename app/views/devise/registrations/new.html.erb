@@ -15,8 +15,7 @@
 
   <div class="registration_space">
     <%= f.email_field :email,  :placeholder => "Email" %>
-    <%= f.text_field :pledge_class, autocomplete: "off", :placeholder => "Pledge Class" %>
-  </div>
+    <%= f.collection_select :role, User::SIGNUPROLES, :to_s, :to_s %>
   <div style="float: none; clear:both;"> </div>
 
   <br>
@@ -26,4 +25,5 @@
   <center><%= f.submit "Sign up" %></center>
 <% end %>
 </div>
+    </div>
 

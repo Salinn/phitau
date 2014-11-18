@@ -1,6 +1,5 @@
 class TextMessagesController < ApplicationController
   before_action :set_text_message, only: [:show, :edit, :update, :destroy]
-  load_and_authorize_resource
 
   def index
     @text_messages = TextMessage.all
@@ -17,9 +16,15 @@ class TextMessagesController < ApplicationController
   end
 
   def create
-    @text_message = TextMessage.new(text_message_params)
-    flash[:notice] = 'TextMessage was successfully created.' if @text_message.save
-    send_text_message @text_message
+    if params[:Body].nil?
+      @text_message = TextMessage.new(text_message_params)
+      flash[:notice] = 'TextMessage was successfully created.' if @text_message.save
+      send_text_message @text_message
+    else
+      @text_message = TextMessage.new(:message => params[:Body], :to_number => params[:From])
+      flash[:notice] = 'TextMessage was successfully created.' if @text_message.save
+    #   send a text or email to the recruitment chair
+    end
   end
 
   def update
@@ -46,6 +51,6 @@ class TextMessagesController < ApplicationController
     end
 
     def text_message_params
-      params.require(:text_message).permit(:to_number, :user_group, :message)
+      params.require(:text_message).permit(:to_number, :user_group, :message, :Body, :From)
     end
 end

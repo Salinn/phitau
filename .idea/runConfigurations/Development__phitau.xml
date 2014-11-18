@@ -2,12 +2,21 @@
   <configuration default="false" name="Development: phitau" type="RailsRunConfigurationType" factoryName="Rails">
     <predefined_log_file id="RUBY_RAILS_SERVER" enabled="true" />
     <module name="phitau" />
-    <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+    <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
     <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
     <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
     <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
     <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
-    <envs />
+    <envs>
+      <env name="S3_BUCKET" value="phitau" />
+      <env name="S3_KEY" value="AKIAIMEEN3BRHETUK3VQ" />
+      <env name="S3_SECRET" value="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" />
+      <env name="account_sid" value="ACe4cd78919d41293849b92bb1a65a3f77" />
+      <env name="auth_token" value="2caddf651d24a76379bb45c8e31f730f" />
+      <env name="private_key" value="6Le1Y_sSAAAAAL6q8Y0-l00dfZkyLfBnwsZ2NdiM" />
+      <env name="public_key" value="6Le1Y_sSAAAAAF5tS26eDrqyuhdrM0hPJ1GYT1yI" />
+      <env name="twilio_phone_number" value="15084553137" />
+    </envs>
     <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
     <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
     <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
@@ -20,9 +29,13 @@
     <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="PORT" VALUE="3000" />
     <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="IP" VALUE="0.0.0.0" />
     <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="DUMMY_APP" VALUE="test/dummy" />
-    <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="Default" />
+    <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="default" />
     <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ENVIRONMENT_TYPE" VALUE="development" />
     <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="LAUNCH_JS" VALUE="false" />
+    <RunnerSettings RunnerId="RubyDebugRunner" />
+    <RunnerSettings RunnerId="RubyRunner" />
+    <ConfigurationWrapper RunnerId="RubyDebugRunner" />
+    <ConfigurationWrapper RunnerId="RubyRunner" />
     <method />
   </configuration>
 </component>

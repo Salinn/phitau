@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   load_and_authorize_resource
+
   def index
   end
 
@@ -13,7 +14,6 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(post_params)
-    @user.role = "new_user"
     respond_to do |format|
       if @user.save
         format.html { redirect_to @user, notice: 'User was successfully created.' }

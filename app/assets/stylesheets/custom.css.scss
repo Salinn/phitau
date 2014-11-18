@@ -108,11 +108,14 @@ a:hover{
 }
 
 .footer {
-  background-color: $FooterBackground;
-  padding-top: 1rem;
-  padding-bottom: 2rem;
-  position: relative;
+  position: absolute;
+  right: 0;
   bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: $FooterBackground;
+  text-align: center;
+  height: 18rem;
 }
 //End of the footer
 //Home Page
@@ -165,6 +168,15 @@ a:hover{
 }
 //end body
 
+html, body {
+  margin:0;
+  padding:0;
+  min-height:100%;
+  position: relative;
+}
+body{
+  padding-bottom: 18rem;
+}
 //text alignment
 
 .navbar-right {

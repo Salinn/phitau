@@ -9,10 +9,24 @@ class ApplicationController < ActionController::Base
     redirect_to root_url
   end
 
+  before_action :configure_devise_permitted_parameters, if: :devise_controller?
+
+
   protected
   def configure_permitted_parameters
-    devise_parameter_sanitizer.for(:sign_up) << :first_name
-    devise_parameter_sanitizer.for(:sign_up) << :last_name
-    devise_parameter_sanitizer.for(:sign_up) << :pledge_class
+  end
+
+  def configure_devise_permitted_parameters
+    registration_params = [:first_name, :last_name, :email, :password, :password_confirmation, :role]
+
+    if params[:action] == 'update'
+      devise_parameter_sanitizer.for(:account_update) {
+          |u| u.permit(registration_params << :current_password)
+      }
+    elsif params[:action] == 'create'
+      devise_parameter_sanitizer.for(:sign_up) {
+          |u| u.permit(registration_params)
+      }
+    end
   end
 end
