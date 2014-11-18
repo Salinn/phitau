@@ -108,14 +108,10 @@ a:hover{
 }
 
 .footer {
-  position: absolute;
-  right: 0;
+  position: relative;
   bottom: 0;
-  left: 0;
-  padding: 1rem;
   background-color: $FooterBackground;
-  text-align: center;
-  height: 18rem;
+  width: 100%;
 }
 //End of the footer
 //Home Page
@@ -175,7 +171,7 @@ html, body {
   position: relative;
 }
 body{
-  padding-bottom: 18rem;
+  min-height: 100%;
 }
 //text alignment
 
@@ -401,8 +397,9 @@ ________________________________________*/
 
 //registration
 .registration_space{
-  margin: 0 auto;
+//  margin: 0 auto;
   margin-bottom: 1rem;
+  float: none;
 }
 
 .card_registration {
@@ -413,7 +410,17 @@ ________________________________________*/
   user-select:none;
   animation:fly-in-from-left .5s 1s ease both;
   transform-origin:top left;
-  margin: 0 auto;
+  text-align: center;
 }
 
 
+.sign_up_card{
+  width: 50%;
+  margin: 0 auto;
+}
+
+.center-block {float: none; margin: 0 auto;}
+
+.col-md-3{
+  float: none;
+}
