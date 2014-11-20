@@ -1,7 +1,8 @@
 class User < ActiveRecord::Base
   has_and_belongs_to_many :positions
 
-  SIGNUPROLES = ["admin", "Alumni", "Current Brother", "Potential New Member"]
+  SIGNUPROLES = ["Potential New Member", "Alumni", "Current Brother"]
+  ALLROLES = ["admin", "Alumni", "Current Brother", "Potential New Member"]
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable

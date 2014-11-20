@@ -5,7 +5,7 @@ class AlumniNewsLettersController < ApplicationController
   # GET /alumni_news_letters
   # GET /alumni_news_letters.json
   def index
-    @alumni_news_letters = AlumniNewsLetter.all
+    @alumni_news_letters = AlumniNewsLetter.all.page(params[:page]).per_page(1)
   end
 
   # GET /alumni_news_letters/1
@@ -70,6 +70,6 @@ class AlumniNewsLettersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def alumni_news_letter_params
-      params.require(:alumni_news_letter).permit(:released_date, :alumni_new_letter_pdf, :remote_alumni_new_letter_pdf_url, :news_letter_html)
+      params.require(:alumni_news_letter).permit(:released_date, :news_letter_html)
     end
 end

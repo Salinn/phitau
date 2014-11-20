@@ -1,4 +1,5 @@
-
+<div class="col-md-6 center-block row">
+  <div class="card" align="center">
 <%= form_for(@alumni_news_letter) do |f| %>
   <% if @alumni_news_letter.errors.any? %>
     <div id="error_explanation">
@@ -17,17 +18,12 @@
     <%= f.date_select :released_date %>
   </div>
     <div class="field">
-      <%= f.file_field :alumni_new_letter_pdf %>
-    </div>
-    <div class="field">
-      <%= f.label :remote_alumni_new_letter_pdf_url, "or image URL" %><br />
-      <%= f.text_field :remote_alumni_new_letter_pdf_url %>
-    </div>
-    <div class="field">
-      <%= f.label :news_letter_html, "or image URL" %><br />
+      <%= f.label :news_letter_html, "Alumni News Letter HTML" %><br />
       <%= f.text_area :news_letter_html %>
     </div>
   <div class="actions">
     <%= f.submit "Post News Letter" %>
   </div>
 <% end %>
+</div>
+    </div>

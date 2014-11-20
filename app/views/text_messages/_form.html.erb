@@ -1,3 +1,5 @@
+<div class="col-md-6 center-block row">
+  <div class="card">
 <%= form_for(@text_message) do |f| %>
   <% if @text_message.errors.any? %>
     <div id="error_explanation">
@@ -17,7 +19,7 @@
   </div>
   <div class="field">
     <%= f.label :user_group %><br>
-    <%= f.collection_select :user_group, User::SIGNUPROLES, :to_s, :to_s, :class => "col-md-3" %>
+    <%= f.collection_select :user_group, User::ALLROLES, :to_s, :to_s, :class => "col-md-3" %>
   </div>
   <div class="field">
     <%= f.label :message %><br>
@@ -27,3 +29,5 @@
     <%= f.submit %>
   </div>
 <% end %>
+</div>
+    </div>
