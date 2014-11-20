@@ -36,11 +36,27 @@ class TextMessagesController < ApplicationController
   end
 
   def send_text_message text_message
-    $twilio_client.account.messages.create(
-      :from => '+15084553137',
-      :to => "+#{text_message.to_number}",
-      :body => "#{text_message.message}"
-    )
+    if text_message.to_number != ""
+      $twilio_client.account.messages.create(
+        :from => '+15084553137',
+        :to => "+#{text_message.to_number}",
+        :body => "#{text_message.message}"
+      )
+    else
+      User.all.each do |user|
+        if user.role == text_message.user_group
+          first_name = user.first_name
+          line_break = line_break
+          message = text_message.message.gsub(/first_name/,first_name)
+          message = text_message.message.gsub(/line_break/,"\n")
+          $twilio_client.account.messages.create(
+            :from => '+15084553137',
+            :to => "+#{user.phone_number}",
+            :body => "#{message}"
+          )
+        end
+      end
+    end
 
     redirect_to root_path, notice: 'Your SMS has been sent' # This is the interrupt that will make it so it doesn't try to render the view
   end

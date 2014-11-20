@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   has_and_belongs_to_many :positions
 
-  SIGNUPROLES = ["Alumni", "Current Brother", "Potential New Member"]
+  SIGNUPROLES = ["admin", "Alumni", "Current Brother", "Potential New Member"]
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
