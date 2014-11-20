@@ -28,7 +28,6 @@ $grid-float-breakpoint: $screen-md-min;
   width: 50%;
   position: absolute;
   top: 38px;
-  right: 10px;
 }
 
 //Div Display for Phi Kappa Tau \n Learning Leading Serving
@@ -162,6 +161,7 @@ a:hover{
 .row {
   margin-left: 0px;
   margin-right: 0px;
+  padding-bottom: 3rem;
 }
 //end body
 
