@@ -36,6 +36,8 @@ GEM
       debug_inspector (>= 0.0.1)
     bootstrap-sass (3.3.0.1)
       sass (~> 3.2)
+    bootstrap-will_paginate (0.0.9)
+      will_paginate
     builder (3.1.4)
     cancancan (1.9.2)
     capricorn (0.2.25)
@@ -249,6 +251,7 @@ GEM
     websocket (1.2.1)
     whenever (0.9.4)
       chronic (>= 0.6.3)
+    will_paginate (3.0.4)
     xpath (2.0.0)
       nokogiri (~> 1.3)
 
@@ -260,6 +263,7 @@ DEPENDENCIES
   better_errors (= 1.0.1)
   binding_of_caller (= 0.7.2)
   bootstrap-sass (~> 3.3.0)
+  bootstrap-will_paginate (= 0.0.9)
   cancancan
   capricorn
   capybara
@@ -289,3 +293,4 @@ DEPENDENCIES
   uglifier (>= 1.3.0)
   unicorn
   whenever
+  will_paginate (= 3.0.4)

@@ -6,7 +6,8 @@ class StaticPagesController < ApplicationController
   end
 
   def home
-    @posts = Post.all
+    @posts = Post.all.page(params[:page]).per_page(3)
+    # @posts = Post.all
   end
 
   def about

@@ -35,6 +35,8 @@ gem 'turbolinks'
 
 #for texting
 gem 'twilio-ruby'
+gem 'will_paginate', '3.0.4'
+gem 'bootstrap-will_paginate', '0.0.9'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

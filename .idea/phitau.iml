@@ -146,6 +146,7 @@
     <orderEntry type="library" scope="PROVIDED" name="better_errors (v1.0.1, RVM: ruby-2.0.0-p481) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="binding_of_caller (v0.7.2, RVM: ruby-2.0.0-p481) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bootstrap-sass (v3.3.0.1, RVM: ruby-2.0.0-p481) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="bootstrap-will_paginate (v0.0.9, RVM: ruby-2.0.0-p481) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="builder (v3.1.4, RVM: ruby-2.0.0-p481) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bundler (v1.7.5, RVM: ruby-2.0.0-p481) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="cancancan (v1.9.2, RVM: ruby-2.0.0-p481) [gem]" level="application" />
@@ -241,6 +242,7 @@
     <orderEntry type="library" scope="PROVIDED" name="warden (v1.2.3, RVM: ruby-2.0.0-p481) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="websocket (v1.2.1, RVM: ruby-2.0.0-p481) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="whenever (v0.9.4, RVM: ruby-2.0.0-p481) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="will_paginate (v3.0.4, RVM: ruby-2.0.0-p481) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="xpath (v2.0.0, RVM: ruby-2.0.0-p481) [gem]" level="application" />
   </component>
   <component name="RModuleSettingsStorage">
