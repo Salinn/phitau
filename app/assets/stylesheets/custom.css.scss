@@ -9,25 +9,45 @@ $screen-sm-min: 400px;
 $screen-md-min: 800px;
 $screen-lg-min: 1200px;
 $grid-float-breakpoint: $screen-md-min;
+$bottomHeight: 20rem;
 
 // Header
 //Color of background of the header
-.navbar-default {
-  background-color: $HarvardRed;
-  border-color: $HarvardRed;
-}
-.navbar-default .navbar-nav > li > a {
-  color: $White;
-  font-family: inherit;
-  font-size: 1.7rem;
-  display: inline-block;
+body {
+  padding-top: 50px;
 }
 
-.navbar-nav
-{
-  width: 50%;
-  position: absolute;
-  top: 38px;
+.wide {
+  width:100%;
+  height:200px;
+  background-color: $HarvardRed;
+  background-size:cover;
+}
+
+.wide img {
+  width: 6rem;
+  height: auto;
+}
+.navbar-inverse .navbar-nav > li > a{
+  color: $White;
+  font-size: 2rem;
+}
+.logo {
+  color:#fff;
+  font-weight:800;
+  font-size:14pt;
+  padding:25px;
+  text-align:center;
+}
+
+.line {
+  padding-top:20px;
+  white-space:no-wrap;
+  overflow:hidden;
+  text-align:center;
+}
+.navbar{
+  background-color:  $HarvardRed;
 }
 
 //Div Display for Phi Kappa Tau \n Learning Leading Serving
@@ -41,19 +61,7 @@ $grid-float-breakpoint: $screen-md-min;
   position: absolute;
 }
 
-.header_img {
-  display: inline-block;
-  height: 14rem;
-  vertical-align: middle;
-  float: left;
-}
 
-.navbar-brand > img {
-  display: inline-block;
-  width: auto;
-  height: 12rem;
-  vertical-align: middle;
-}
 
 .h1-header {
   color: $White;
@@ -66,51 +74,18 @@ $grid-float-breakpoint: $screen-md-min;
   font-size: $H3_header;
 }
 
-.container > .navbar-header, .container > .navbar-collapse, .container-fluid > .navbar-header, .container-fluid > .navbar-collapse{
-  display: inline-block !important;
-  vertical-align: middle;
-  width: 50%;
-}
-
-@media only screen and (min-device-width: 768px)
-{
-  .navbar-header
-  {
-    width:100% !important;
-  }
-}
-.container-fluid > .navbar-collapse
-{
-}
-
-.navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
-  display: inline-block;
-  vertical-align: middle;
-  width: 12rem;
-}
 .nav-collapse, .nav-collapse.collapse {
   overflow: visible;
-}
-.navbar .btn-navbar {
-  display: none;
 }
 //End of the header
 //Start of the footer
 a:hover{
   background-color: transparent !important;
 }
-.navbar-bottom {
-  min-height: 2rem;
-  background-color: #161817;
-  padding-top: 0rem;
-  padding-bottom: 1rem;
-}
-
 .footer {
-  position: relative;
-  bottom: 0;
+  margin-top: 19rem;
+  padding-top: 5px;
   background-color: $FooterBackground;
-  width: 100%;
 }
 //End of the footer
 //Home Page
@@ -165,14 +140,10 @@ a:hover{
 }
 //end body
 
-html, body {
-  margin:0;
-  padding:0;
-  min-height:100%;
-  position: relative;
-}
+
 body{
   min-height: 100%;
+
 }
 //text alignment
 
@@ -424,4 +395,20 @@ ________________________________________*/
 
 .col-md-3{
   float: none;
+}
+
+.body-wrapper{
+  padding-top: $bottomHeight;
+}
+
+.alert {
+  /* Create the alert box */
+}
+.alert-success {
+  background:green;
+  border:1px solid darkgreen;
+}
+.alert-fail {
+  background:red;
+  border:1px solid darkred;
 }
