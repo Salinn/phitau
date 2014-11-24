@@ -148,10 +148,20 @@ body{
 //text alignment
 
 .navbar-right {
-  float: right !important;
   display: inline-block;
  }
+@media only screen and (min-width: 768px) {
+  .nav>li>a {
+    position: relative;
+    top: 30px;
+  }
+}
 
+@media (min-width: 768px) and (max-width: 1000px) {
+  .collapse {
+    display: none !important;
+  }
+}
 
 .card {
   padding:1.5rem;
