@@ -444,13 +444,16 @@ body {
 
 .nav-tabs {
   padding-bottom: 30px;
+  width: 300px;
+  margin: 0 auto;
+  border-bottom: none;
 }
 
 .panel-heading a,
 .panel-heading a:hover,
 .panel-heading a:focus {
   text-decoration: none;
-  color: #777777;
+  color: $FooterBackground;
 }
 
 .faq-cat-content .panel-heading:hover {
@@ -464,4 +467,8 @@ body {
 .panel-faq .panel-heading .panel-title span {
   font-size: 13px;
   font-weight: normal;
+}
+
+.nav-tabs li a:hover{
+  background-color: $FooterBackground !important;
 }
