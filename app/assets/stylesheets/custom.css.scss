@@ -423,6 +423,7 @@ ________________________________________*/
   border:1px solid darkred;
 }
 
+//faq
 body {
   padding-top: 30px;
 }
@@ -433,14 +434,17 @@ body {
 
 .faq-cat-tabs li a {
   padding: 15px 10px 15px 10px;
-  background-color: #ffffff;
-  border: 1px solid #dddddd;
-  color: #777777;
+  background-color: $FooterBackground;
+  color: $White;
 }
 
 .nav-tabs li a:focus,
 .panel-heading a:focus {
   outline: none;
+}
+
+.nav-tabs {
+  padding-bottom: 30px;
 }
 
 .panel-heading a,
@@ -451,7 +455,7 @@ body {
 }
 
 .faq-cat-content .panel-heading:hover {
-  background-color: #efefef;
+  background-color: $White;
 }
 
 .active-faq {
