@@ -1,3 +1,4 @@
+#This is used to save pictures to amazon web services
 CarrierWave.configure do |config|
   config.fog_credentials = {
         :provider               => 'AWS',
