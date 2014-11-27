@@ -13,6 +13,7 @@ gem 'uglifier', '>= 1.3.0'
 
 #User authetication
 gem 'devise'
+gem 'devise-encryptable'
 
 #Manages users abilities on the website
 gem 'cancancan'
