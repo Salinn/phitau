@@ -467,3 +467,14 @@ body {
 .nav-tabs li a:hover{
   background-color: $FooterBackground !important;
 }
+
+.card_alumni_newsletter {
+  padding:1.5rem;
+  box-shadow:0 10px 14px rgba(10,10,10,.6);
+  background: $White;
+  border-radius:3px;
+  animation:fly-in-from-left .5s 1s ease both;
+  transform-origin:top left;
+  margin: 0 auto;
+  padding-bottom: 3rem;
+}

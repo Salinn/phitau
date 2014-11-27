@@ -1,5 +1,5 @@
 
-<div class="col-md-6 center-block row">
+<div class="col-md-8 center-block row">
     <div align="center" style="text-align: center">
       <h3>
         <% if @alumni_news_letters.previous_page %>
@@ -11,15 +11,9 @@
         <% end %>
       </h3>
   </div>
-  <div class="card">
-    <body style="background-color: #e8ad2e">
+  <div class="card_alumni_newsletter">
 <h1 style="text-align: center"><%=  @alumni_news_letters.first.released_date.strftime("%B %Y") %></h1>
 
-<div>
-  <% @alumni_news_letters.reverse_each do |alumni_news_letter| %>
-  <%= alumni_news_letter.news_letter_html.html_safe %>
-<% end %>
-</div>
-</body>
+    <iframe src="http://us6.campaign-archive2.com/?u=ce08ce712bbaafa93211ec048&id=ddea17ad6e&e=[UNIQID]" width="700rem" height="700rem"></iframe>
 </div>
     </div>
