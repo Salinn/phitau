@@ -476,5 +476,26 @@ body {
   animation:fly-in-from-left .5s 1s ease both;
   transform-origin:top left;
   margin: 0 auto;
-  padding-bottom: 3rem;
+
+}
+
+.scroll-wrapper {
+  -webkit-overflow-scrolling: touch;
+  overflow-y: scroll;
+
+  /* important:  dimensions or positioning here! */
+}
+.demo-iframe-holder {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: scroll;
+}
+
+.demo-iframe-holder iframe {
+  height: 400px;
+  width: 100%;
 }
