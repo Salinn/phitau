@@ -15,14 +15,20 @@
     <div style="float: none; clear:both;"> </div>
 
     <div class="registration_space">
+      <%= f.text_field :phone_number, :placeholder => "Phone Number", :class => "col-md-3" %>
+      <%= f.text_field :major, :placeholder => "Major", :class => "col-md-3" %>
+    </div>
+
+    <div class="registration_space">
       <%= f.email_field :email,  :placeholder => "Email", :class => "col-md-3" %>
       <%= f.collection_select :role, User::SIGNUPROLES, :to_s, :to_s, :class => "col-md-3" %>
       <div style="float: none; clear:both;"> </div>
-
+    </div>
+      <div style="float: none; clear:both;"> </div>
       <br>
-        <div class="col-md-6 col-md-offset-3 registration_space"><%= recaptcha_tags %></div>
+        <div class="col-md-6 col-md-offset-2 registration_space"><%= recaptcha_tags %></div>
       <br>
-
+        <div>
       <%= f.submit "Sign up", :class => "col-md-6 col-md-offset-3" %>
       <% end %>
     <br>
