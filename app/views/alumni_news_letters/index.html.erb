@@ -11,8 +11,9 @@
         <% end %>
       </h3>
   </div>
+  <h1 style="text-align: center"><%=  @alumni_news_letters.first.released_date.strftime("%B %Y") %></h1>
   <div class="card scroll-wrapper">
-    <iframe src="http://us6.campaign-archive2.com/?u=ce08ce712bbaafa93211ec048&id=ddea17ad6e&e=[UNIQID]" height="800px" width="100%"></iframe>
+    <iframe src="<%= @alumni_news_letters.first.news_letter_html %>" height="800px" width="100%"></iframe>
   </div>
   <div style="float: none; clear:both;"> </div>
 </div>
