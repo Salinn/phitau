@@ -50,7 +50,7 @@ class TextMessagesController < ApplicationController
           message = text_message.message.gsub(/first_name/,first_name)
           message = text_message.message.gsub(/line_break/,"\n")
           $twilio_client.account.messages.create(
-            :from => '+15084553137',
+            :from => "+#{$twilio_phone_number}",
             :to => "+#{user.phone_number}",
             :body => "#{message}"
           )
