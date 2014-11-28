@@ -176,10 +176,9 @@ hr {
 }
 
 //Flipping Cards
-
-
+//http://codepen.io/elad2412/pen/jyiqw
 .flipping-cards li{position:relative; float:left; margin-right:10px;}
-.flipping-cards label{ display:block; width:200px; height:250px; cursor:pointer;}
+.flipping-cards label{  display:block; width:200px; height:250px; cursor:pointer;}
 
 .flipping-cards .wrapper{
   display:block; width:200px; height:250px;
@@ -198,28 +197,29 @@ hr {
   position:absolute;
   top:0;
   left:0;
-  margin-left: 2px;
-  margin-right: 2px;
-}
-
-.flipping-cards label .front{
-  -webkit-backface-visibility:hidden; /* Chrome and Safari */
-  -moz-backface-visibility:hidden; /* Firefox */
-  -ms-backface-visibility:hidden; /* Internet Explorer */
-  backface-visibility:hidden;
-  background-size: 70px 120px;
-  background-color: #fff;
 }
 
 .flipping-cards label .back{
+  border-radius:10px;
+  -webkit-backface-visibility:hidden; /* Chrome and Safari */
+  -moz-backface-visibility:hidden; /* Firefox */
+  -ms-backface-visibility:hidden; /* Internet Explorer */
+
+  background-image: repeating-linear-gradient(120deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px), repeating-linear-gradient(60deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px), linear-gradient(60deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1)), linear-gradient(120deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1));
+  background-size: 70px 120px;
+  background-color: #6d695c;
+}
+
+.flipping-cards label .image{
   transform: rotateY(180deg);
   -webkit-transform: rotateY(180deg);
   backface-visibility:hidden;
   -webkit-backface-visibility:hidden; /* Chrome and Safari */
   -moz-backface-visibility:hidden; /* Firefox */
   -ms-backface-visibility:hidden; /* Internet Explorer */
-  background-color: #fff;
 }
+
+
 
 .flipping-cards input[type="checkbox"]:checked + label .wrapper{
   transform: rotateY(-180deg);
@@ -228,6 +228,10 @@ hr {
 
 input[type="checkbox"]{display:none;}
 ul,li{list-style:none;padding:0;margin:0;}
+p{font-weight:bold;}
+footer{clear:both; padding-top:20px;font-weight:bold;}
+footer a{color:blue;}
+
 
 /*_________________  Accordion
 ________________________________________*/
