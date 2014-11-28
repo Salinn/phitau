@@ -38,7 +38,7 @@ class TextMessagesController < ApplicationController
   def send_text_message text_message
     if text_message.to_number != ""
       $twilio_client.account.messages.create(
-        :from => '+15084553137',
+        :from => "+#{$twilio_phone_number}",
         :to => "+#{text_message.to_number}",
         :body => "#{text_message.message}"
       )

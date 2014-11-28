@@ -24,7 +24,7 @@ class TwilioController < ApplicationController
 
   def send_text_message to_number, message
     $twilio_client.account.messages.create(
-        :from => '+15084553137',
+        :from => "+#{$twilio_phone_number}",
         :to => "+#{to_number}",
         :body => "#{message}"
     )
