@@ -3,7 +3,6 @@ source 'https://rubygems.org'
 ruby '2.0.0'
 gem 'rails', '4.0.0'
 gem 'capricorn'
-gem "capybara"
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 1.2'
@@ -61,9 +60,11 @@ group :development, :test do
 
   gem 'binding_of_caller', '0.7.2'
   gem 'factory_girl_rails'
-  gem "rspec-rails"
+  gem "rspec-rails" #http://www.relishapp.com/rspec/rspec-rails/docs/gettingstarted
   gem 'database_cleaner'
   gem 'selenium-webdriver'
+  gem 'capybara'
+  gem 'cucumber-rails'
 end
 
 #Gems used in production

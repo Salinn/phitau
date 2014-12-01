@@ -225,6 +225,11 @@ hr {
 .flipping-cards input[type="checkbox"]:checked + label .wrapper{
   transform: rotateY(-180deg);
   -webkit-transform: rotateY(-180deg);
+  
+}
+
+.flipping-cards input[type="checkbox"]:checked + label .image {
+  visibility: hidden;
 }
 
 input[type="checkbox"]{display:none;}
