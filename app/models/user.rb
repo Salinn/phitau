@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
   has_and_belongs_to_many :positions
+  has_many :attendances
+  has_many :meetings, :through => :attendances
 
   SIGNUPROLES = ["Potential New Member", "Alumni", "Current Brother"]
   ALLROLES = ["admin", "Alumni", "Current Brother", "Potential New Member"]

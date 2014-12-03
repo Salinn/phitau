@@ -8,8 +8,5 @@ Feature: Create Post
   Scenario: Sign In User
     Given I am on the "home page"
     When I go on to the "Sign-in" page
-    And I fill in "user_email" with "pmdspam@gmail.com"
-    And I fill in "user_password" with "thehobbit1"
-    And I click the "Log in" button
-    Then I should be redirected back to the "home page"
-    And there should be a "Sign-out"
+    And I sign in
+    Then I should be on the "home page"

@@ -1,4 +1,6 @@
 Phitau::Application.routes.draw do
+  resources :meetings
+
   resources :text_messages
 
   post 'text_messages/new_message' => 'text_messages#new_message'
@@ -9,6 +11,8 @@ Phitau::Application.routes.draw do
 
   resources :posts
 
+  match 'users/all/edit' => 'users#edit_all', :as => :edit_all, :via => :get
+  match 'users/all' => 'users#update_all', :as => :update_all, :via => :put
   devise_for :users, :controllers => { :registrations => "registration" }, :path_names => { :'sign_up.html.erb' => "register"}
   resources :users, :only => [:show, :edit, :update ]
   resources :users, :controller => "users"

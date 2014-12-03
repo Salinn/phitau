@@ -1,9 +1,8 @@
 require File.expand_path(File.join(File.dirname(__FILE__), "..", "support", "paths"))
 
-Then(/^I should be redirected back to the "([^"]*)"$/) do |page_name|
-  current_path.should == path_to(page_name)
-end
-
-And(/^there should be a "Sign\-out"$/) do |link_name|
-  pending
+Then(/^I should be on the "([^"]*)"$/) do |page_name|
+  puts path_to(page_name)
+  puts current_path
+  @current_user = cookies[:token] && User.find_by_token(cookies[:token])
+  puts @current_user.email
 end

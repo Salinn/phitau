@@ -29,6 +29,10 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
+  def edit_all
+    @users = User.find(:all)
+  end
+
   def update
     if @user.role.nil?
       @user.role = "requesting"
@@ -43,6 +47,14 @@ class UsersController < ApplicationController
         format.json { render json: @user.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def update_all
+    params['user'].keys.each do |id|
+      @user = User.find(id.to_i)
+      @user.update_attributes(user_params(id))
+    end
+    redirect_to(root_path)
   end
 
   def destroy
@@ -60,5 +72,8 @@ class UsersController < ApplicationController
   def post_params
     params.require(:user).permit(:role, :first_name, :last_name, :profile_picture, :remote_profile_picture_url,
                                  :phone_number, :home_town, :state, :big_brother, :major, :pledge_class)
+  end
+  def user_params(id)
+    params.require(:user).fetch(id).permit( :first_name, :last_name, :email )
   end
 end
