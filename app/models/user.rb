@@ -3,8 +3,8 @@ class User < ActiveRecord::Base
   has_many :attendances
   has_many :meetings, :through => :attendances
 
-  SIGNUPROLES = ["Potential New Member", "Alumni", "Current Brother"]
-  ALLROLES = ["admin", "Alumni", "Current Brother", "Potential New Member", "Recruitment Chair", "Writer"]
+  SIGNUPROLES = ["potential new member", "alumni", "current brother"]
+  ALLROLES = ["admin", "alumni", "current brother", "potential new member", "recruitment chair", "writer"]
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable

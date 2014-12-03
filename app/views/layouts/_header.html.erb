@@ -30,7 +30,7 @@
             <li><%= link_to "News-Letters", alumni_news_letters_path %></li>
         <% else %>
             <li><%= link_to "Home", root_path %></li>
-            <% if current_user.role == "Writer" or current_user.role == "Admin" %>
+            <% if current_user.role == "writer" or current_user.role == "admin" %>
                 <li><%= link_to "Posts", posts_path, class: "nav-item" %></li>
                 <li><%= link_to "News-Letters", new_alumni_news_letter_path %></li>
             <% end %>
