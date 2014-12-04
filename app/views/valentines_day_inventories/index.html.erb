@@ -1,0 +1,67 @@
+<h1>Listing valentines_day_inventories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Total red flowers</th>
+      <th>Total white flowers</th>
+      <th>Total pink flowers</th>
+      <th>Total large stuffed animials</th>
+      <th>Total medium stuffed animials</th>
+      <th>Total small stuffed animials</th>
+      <th>Red flower price</th>
+      <th>White flower price</th>
+      <th>Pink flower price</th>
+      <th>Large stuffed animial price</th>
+      <th>Medium stuffed animial price</th>
+      <th>Small stuffed animial price</th>
+      <th>Current year</th>
+      <th>Red total</th>
+      <th>White total</th>
+      <th>Pink total</th>
+      <th>Large total</th>
+      <th>Medium total</th>
+      <th>Small total</th>
+      <th>Total raised</th>
+      <th>Total cost</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @valentines_day_inventories.each do |valentines_day_inventory| %>
+      <tr>
+        <td><%= valentines_day_inventory.total_red_flowers %></td>
+        <td><%= valentines_day_inventory.total_white_flowers %></td>
+        <td><%= valentines_day_inventory.total_pink_flowers %></td>
+        <td><%= valentines_day_inventory.total_large_stuffed_animials %></td>
+        <td><%= valentines_day_inventory.total_medium_stuffed_animials %></td>
+        <td><%= valentines_day_inventory.total_small_stuffed_animials %></td>
+        <td><%= valentines_day_inventory.red_flower_price %></td>
+        <td><%= valentines_day_inventory.white_flower_price %></td>
+        <td><%= valentines_day_inventory.pink_flower_price %></td>
+        <td><%= valentines_day_inventory.large_stuffed_animial_price %></td>
+        <td><%= valentines_day_inventory.medium_stuffed_animial_price %></td>
+        <td><%= valentines_day_inventory.small_stuffed_animial_price %></td>
+        <td><%= valentines_day_inventory.current_year %></td>
+        <td><%= valentines_day_inventory.red_total %></td>
+        <td><%= valentines_day_inventory.white_total %></td>
+        <td><%= valentines_day_inventory.pink_total %></td>
+        <td><%= valentines_day_inventory.large_total %></td>
+        <td><%= valentines_day_inventory.medium_total %></td>
+        <td><%= valentines_day_inventory.small_total %></td>
+        <td><%= valentines_day_inventory.total_raised %></td>
+        <td><%= valentines_day_inventory.total_cost %></td>
+        <td><%= link_to 'Show', valentines_day_inventory %></td>
+        <td><%= link_to 'Edit', edit_valentines_day_inventory_path(valentines_day_inventory) %></td>
+        <td><%= link_to 'Destroy', valentines_day_inventory, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Valentines day inventory', new_valentines_day_inventory_path %>

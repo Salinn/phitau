@@ -1,0 +1,2 @@
+module ValentinesDayInventoriesHelper
+end
