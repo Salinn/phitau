@@ -1,0 +1,57 @@
+<h1>Listing valentines_day_delieveries</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Red flower quantity</th>
+      <th>White flower quantity</th>
+      <th>Pink flower quantity</th>
+      <th>Large stuffed animial quantity</th>
+      <th>Medium stuffed animial quantity</th>
+      <th>Small animial quantity</th>
+      <th>Buyer name</th>
+      <th>Buyer phone number</th>
+      <th>Recievers name</th>
+      <th>Recievers phone number</th>
+      <th>Delivery location</th>
+      <th>Delivery time</th>
+      <th>Delivery instructions</th>
+      <th>Payment</th>
+      <th>Paypal cost</th>
+      <th>Total price</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @valentines_day_delieveries.each do |valentines_day_delievery| %>
+      <tr>
+        <td><%= valentines_day_delievery.red_flower_quantity %></td>
+        <td><%= valentines_day_delievery.white_flower_quantity %></td>
+        <td><%= valentines_day_delievery.pink_flower_quantity %></td>
+        <td><%= valentines_day_delievery.large_stuffed_animial_quantity %></td>
+        <td><%= valentines_day_delievery.medium_stuffed_animial_quantity %></td>
+        <td><%= valentines_day_delievery.small_animial_quantity %></td>
+        <td><%= valentines_day_delievery.buyer_name %></td>
+        <td><%= valentines_day_delievery.buyer_phone_number %></td>
+        <td><%= valentines_day_delievery.recievers_name %></td>
+        <td><%= valentines_day_delievery.recievers_phone_number %></td>
+        <td><%= valentines_day_delievery.delivery_location %></td>
+        <td><%= valentines_day_delievery.delivery_time %></td>
+        <td><%= valentines_day_delievery.delivery_instructions %></td>
+        <td><%= valentines_day_delievery.payment %></td>
+        <td><%= valentines_day_delievery.paypal_cost %></td>
+        <td><%= valentines_day_delievery.total_price %></td>
+        <td><%= link_to 'Show', valentines_day_delievery %></td>
+        <td><%= link_to 'Edit', edit_valentines_day_delievery_path(valentines_day_delievery) %></td>
+        <td><%= link_to 'Destroy', valentines_day_delievery, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Valentines day delievery', new_valentines_day_delievery_path %>

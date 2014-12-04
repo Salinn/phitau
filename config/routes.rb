@@ -1,5 +1,5 @@
 Phitau::Application.routes.draw do
-  resources :flower_deliveries
+  resources :valentines_day_delieveries
 
   resources :meetings
 
