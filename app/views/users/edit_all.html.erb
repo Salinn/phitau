@@ -1,8 +1,10 @@
+<!--http://anthonylewis.com/2011/04/15/editing-multiple-records-in-rails/comment-page-1/#comment-1760-->
 <%= form_for :user, :url => update_all_path, :html => { :method => :put } do %>
     <table>
       <tr>
         <th>First Name</th>
         <th>Last Name</th>
+        <th>Email</th>
         <th>Role</th>
         <th></th>
       </tr>
@@ -11,6 +13,7 @@
               <tr>
                 <td><%= user_fields.text_field :first_name,:disabled => true %></td>
                 <td><%= user_fields.text_field :last_name,:disabled => true %></td>
+                <td><%= user_fields.email_field :email,:disabled => true %></td>
                 <td><%= user_fields.collection_select :role, User::ALLROLES, :to_s, :to_s, :class => "col-md-3" %></td>
               </tr>
           <% end %>
@@ -21,3 +24,17 @@
       <%= submit_tag %>
     </div>
 <% end %>
+
+<div class="col-md-6 center-block">
+  <div align="center">
+    <h3>
+      <% if @users.previous_page %>
+          <%= link_to "< Previous", params.merge(:page => @users.previous_page) %>
+      <% end %>
+      Page <%= @users.current_page %> of <%= @users.total_pages %>
+      <% if @users.next_page %>
+          <%= link_to "Next >", params.merge(:page => @users.next_page) %>
+      <% end %>
+    </h3>
+  </div>
+</div>

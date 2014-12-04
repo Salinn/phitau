@@ -45,6 +45,10 @@ gem 'twilio-ruby'
 gem 'will_paginate', '3.0.4'
 gem 'bootstrap-will_paginate', '0.0.9'
 
+#Searching
+gem 'elasticsearch'
+gem "searchkick"
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false

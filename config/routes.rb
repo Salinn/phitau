@@ -1,4 +1,6 @@
 Phitau::Application.routes.draw do
+  resources :flower_deliveries
+
   resources :meetings
 
   resources :text_messages

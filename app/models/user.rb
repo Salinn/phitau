@@ -3,6 +3,8 @@ class User < ActiveRecord::Base
   has_many :attendances
   has_many :meetings, :through => :attendances
 
+  searchkick
+
   SIGNUPROLES = ["potential new member", "alumni", "current brother"]
   ALLROLES = ["admin", "alumni", "current brother", "potential new member", "recruitment chair", "writer"]
 

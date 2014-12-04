@@ -1,0 +1,25 @@
+<h1>Listing flower_deliveries</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @flower_deliveries.each do |flower_delivery| %>
+      <tr>
+        <td><%= link_to 'Show', flower_delivery %></td>
+        <td><%= link_to 'Edit', edit_flower_delivery_path(flower_delivery) %></td>
+        <td><%= link_to 'Destroy', flower_delivery, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Flower delivery', new_flower_delivery_path %>

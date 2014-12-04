@@ -5,7 +5,15 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
+    if params[:query].present?
+      @posts = Post.search(params[:query], fields: [:title], page: params[:page])
+    else
+      @posts = Post.all.page params[:page]
+    end
+  end
+
+  def autocomplete
+    render json: Post.search(params[:query], autocomplete: true, fields: [:title],limit: 10).map { |post| post.title }
   end
 
   # GET /posts/1
