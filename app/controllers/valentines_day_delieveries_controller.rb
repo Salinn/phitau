@@ -1,5 +1,6 @@
 class ValentinesDayDelieveriesController < ApplicationController
   before_action :set_valentines_day_delievery, only: [:show, :edit, :update, :destroy]
+  respond_to :html, :xml, :json
 
   def index
     @valentines_day_delieveries = ValentinesDayDelievery.all

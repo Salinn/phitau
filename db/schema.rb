@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141203154802) do
+ActiveRecord::Schema.define(version: 20141204183904) do
 
   create_table "alumni_news_letters", force: true do |t|
     t.date     "released_date"
@@ -95,5 +95,52 @@ ActiveRecord::Schema.define(version: 20141203154802) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+
+  create_table "valentines_day_delieveries", force: true do |t|
+    t.integer  "red_flower_quantity"
+    t.integer  "white_flower_quantity"
+    t.integer  "pink_flower_quantity"
+    t.integer  "large_stuffed_animial_quantity"
+    t.integer  "medium_stuffed_animial_quantity"
+    t.integer  "small_animial_quantity"
+    t.string   "buyer_name"
+    t.string   "buyer_phone_number"
+    t.string   "recievers_name"
+    t.string   "recievers_phone_number"
+    t.string   "delivery_location"
+    t.time     "delivery_time"
+    t.string   "delivery_instructions"
+    t.string   "payment"
+    t.string   "paypal_cost"
+    t.string   "total_price"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "valentines_day_inventories", force: true do |t|
+    t.integer  "total_red_flowers"
+    t.integer  "total_white_flowers"
+    t.integer  "total_pink_flowers"
+    t.integer  "total_large_stuffed_animials"
+    t.integer  "total_medium_stuffed_animials"
+    t.integer  "total_small_stuffed_animials"
+    t.float    "red_flower_price"
+    t.float    "white_flower_price"
+    t.float    "pink_flower_price"
+    t.float    "large_stuffed_animial_price"
+    t.float    "medium_stuffed_animial_price"
+    t.float    "small_stuffed_animial_price"
+    t.string   "current_year"
+    t.integer  "red_total"
+    t.integer  "white_total"
+    t.integer  "pink_total"
+    t.integer  "large_total"
+    t.integer  "medium_total"
+    t.integer  "small_total"
+    t.float    "total_raised"
+    t.float    "total_cost"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
