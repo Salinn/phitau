@@ -13,19 +13,23 @@ class ValentinesDayDelieveriesController < ApplicationController
 
   def new
     @valentines_day_delievery = ValentinesDayDelievery.new
+    @valentines_day_inventory = ValentinesDayInventory.where(current_year: Time.now.year.to_s).first
     respond_with(@valentines_day_delievery)
   end
 
   def edit
+    @valentines_day_inventory = ValentinesDayInventory.where(current_year: Time.now.year.to_s).first
   end
 
   def create
+    @valentines_day_inventory = ValentinesDayInventory.where(current_year: Time.now.year.to_s).first
     @valentines_day_delievery = ValentinesDayDelievery.new(valentines_day_delievery_params)
     flash[:notice] = 'ValentinesDayDelievery was successfully created.' if @valentines_day_delievery.save
     respond_with(@valentines_day_delievery)
   end
 
   def update
+    @valentines_day_inventory = ValentinesDayInventory.where(current_year: Time.now.year.to_s).first
     flash[:notice] = 'ValentinesDayDelievery was successfully updated.' if @valentines_day_delievery.update(valentines_day_delievery_params)
     respond_with(@valentines_day_delievery)
   end
@@ -37,6 +41,7 @@ class ValentinesDayDelieveriesController < ApplicationController
 
   private
     def set_valentines_day_delievery
+      @valentines_day_inventory = ValentinesDayInventory.where(current_year: Time.now.year.to_s).first
       @valentines_day_delievery = ValentinesDayDelievery.find(params[:id])
     end
 

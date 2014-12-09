@@ -16,16 +16,16 @@
 
           <div align="center">
             <h3>Pick your flowers</h3>
-            <%= f.number_field :red_flower_quantity,autocomplete: "off", :placeholder => "Red" %>
-            <%= f.number_field :white_flower_quantity,autocomplete: "off", :placeholder => "White" %>
-            <%= f.number_field :pink_flower_quantity,autocomplete: "off", :placeholder => "Pink" %>
+            <%= f.number_field :red_flower_quantity,autocomplete: "off", :placeholder => "#{@valentines_day_inventory.total_red_flowers} Red Flowers Left" %>
+            <%= f.number_field :white_flower_quantity,autocomplete: "off", :placeholder => "#{@valentines_day_inventory.total_white_flowers} White Flowers Left" %>
+            <%= f.number_field :pink_flower_quantity,autocomplete: "off", :placeholder => "#{@valentines_day_inventory.total_pink_flowers} Pink Flowers Left" %>
           </div>
           <div style="clear: both"></div>
           <div align="center">
             <h3>Pick your stuffed animial</h3>
-            <%= f.number_field :large_stuffed_animial_quantity,autocomplete: "off", :placeholder => "Large" %>
-            <%= f.number_field :medium_stuffed_animial_quantity,autocomplete: "off", :placeholder => "Medium" %>
-            <%= f.number_field :small_animial_quantity,autocomplete: "off", :placeholder => "Small" %>
+            <%= f.number_field :large_stuffed_animial_quantity,autocomplete: "off", :placeholder => "#{@valentines_day_inventory.total_large_stuffed_animials} Large Stuffed Animals" %>
+            <%= f.number_field :medium_stuffed_animial_quantity,autocomplete: "off", :placeholder => "#{@valentines_day_inventory.total_medium_stuffed_animials} Medium Stuffed Animals" %>
+            <%= f.number_field :small_animial_quantity,autocomplete: "off", :placeholder => "#{@valentines_day_inventory.total_small_stuffed_animials} Small Stuffed Animals" %>
           </div>
           <div style="clear: both"></div>
           <div align="center">
@@ -52,11 +52,12 @@
           <div align="center">
             <h3>Pick your type of payment</h3>
             <%= f.collection_select :payment, ValentinesDayDelievery::PAYMENTMETHODS, :to_s, :to_s %>
-            <%= f.text_field :paypal_cost,:disabled=>true %>
-            <%= f.label :total_price %><br>
+            <%= f.text_field :paypal_cost,:disabled=>true %><br>
+            <%= f.label :total_price %>
             <%= f.text_field :total_price,:disabled => true %>
           </div>
-          <div class="actions">
+          <br>
+          <div class="actions" align="center">
             <%= f.submit %>
           </div>
           <div style="clear: both"></div>
@@ -116,10 +117,12 @@
         }
 
         var totalPrice = 0;
-        totalPrice += (red + white + pink) * 2;
-        totalPrice += lg * 4;
-        totalPrice += md * 3;
-        totalPrice += sm * 2;
+        totalPrice += red * <%= @valentines_day_inventory.red_flower_price %>;
+        totalPrice += white * <%= @valentines_day_inventory.white_flower_price %>;
+        totalPrice += pink * <%= @valentines_day_inventory.pink_flower_price %>;
+        totalPrice += lg * <%= @valentines_day_inventory.large_stuffed_animial_price %>;
+        totalPrice += md * <%= @valentines_day_inventory.medium_stuffed_animial_price %>;
+        totalPrice += sm * <%= @valentines_day_inventory.small_stuffed_animial_price %>;
         if(payment == "PayPal"){
             totalPrice = paypal_charge(totalPrice);
         } else {
