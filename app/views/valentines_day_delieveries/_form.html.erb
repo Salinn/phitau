@@ -96,22 +96,22 @@
         var sm = parseInt($("#valentines_day_delievery_small_animial_quantity").val());
         var payment = $("#valentines_day_delievery_payment").val();
 
-        if(isNaN(red)){
+        if(isNaN(red) || red < 0){
             red = 0;
         }
-        if(isNaN(white)){
+        if(isNaN(white) || white < 0){
             white = 0;
         }
-        if(isNaN(pink)){
+        if(isNaN(pink) || pink < 0){
             pink = 0;
         }
-        if(isNaN(lg)){
+        if(isNaN(lg) || lg < 0){
             lg = 0;
         }
-        if(isNaN(md)){
+        if(isNaN(md) || md < 0){
             md = 0;
         }
-        if(isNaN(sm)){
+        if(isNaN(sm)|| sm < 0){
             sm = 0;
         }
 
