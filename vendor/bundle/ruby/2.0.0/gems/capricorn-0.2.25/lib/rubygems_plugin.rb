@@ -1,0 +1,1 @@
+require 'capricorn/extentions/rubygems_plugin'

@@ -1,81 +1,137 @@
-<%= form_for(@valentines_day_delievery) do |f| %>
-  <% if @valentines_day_delievery.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@valentines_day_delievery.errors.count, "error") %> prohibited this valentines_day_delievery from being saved:</h2>
+<div class="row">
+  <div class="col-md-8 col-md-offset-2 padding-bot">
+    <div class="card">
+      <%= form_for(@valentines_day_delievery) do |f| %>
+          <% if @valentines_day_delievery.errors.any? %>
+              <div id="error_explanation">
+                <h2><%= pluralize(@valentines_day_delievery.errors.count, "error") %> prohibited this valentines_day_delievery from being saved:</h2>
 
-      <ul>
-      <% @valentines_day_delievery.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
+                <ul>
+                  <% @valentines_day_delievery.errors.full_messages.each do |msg| %>
+                      <li><%= msg %></li>
+                  <% end %>
+                </ul>
+              </div>
+          <% end %>
+
+          <div align="center">
+            <h3>Pick your flowers</h3>
+            <%= f.number_field :red_flower_quantity,autocomplete: "off", :placeholder => "Red" %>
+            <%= f.number_field :white_flower_quantity,autocomplete: "off", :placeholder => "White" %>
+            <%= f.number_field :pink_flower_quantity,autocomplete: "off", :placeholder => "Pink" %>
+          </div>
+          <div style="clear: both"></div>
+          <div align="center">
+            <h3>Pick your stuffed animial</h3>
+            <%= f.number_field :large_stuffed_animial_quantity,autocomplete: "off", :placeholder => "Large" %>
+            <%= f.number_field :medium_stuffed_animial_quantity,autocomplete: "off", :placeholder => "Medium" %>
+            <%= f.number_field :small_animial_quantity,autocomplete: "off", :placeholder => "Small" %>
+          </div>
+          <div style="clear: both"></div>
+          <div align="center">
+            <h3>Buyer Info</h3>
+            <%= f.text_field :buyer_name,autocomplete: "off", :placeholder => "Buyer Name" %>
+            <%= f.text_field :buyer_phone_number,autocomplete: "off", :placeholder => "Buyer Phone Number" %>
+          </div>
+          <div style="clear: both"></div>
+          <div align="center">
+            <h3>Receivers Info</h3>
+            <%= f.text_field :recievers_name,autocomplete: "off", :placeholder => "Receivers Name" %>
+            <%= f.text_field :recievers_phone_number,autocomplete: "off", :placeholder => "Receivers Phone Number" %>
+          </div>
+          <div style="clear: both"></div>
+          <div align="center">
+            <h3>Delivery time</h3>
+            <%= f.text_field :delivery_location,autocomplete: "off", :placeholder => "Delivery Location" %>
+            <%= f.text_field :delivery_instructions,autocomplete: "off", :placeholder => "Special Instructions" %>
+            <p >Delivery time </p>
+            <%= f.time_select :delivery_time, :ampm => true%>
+
+          </div>
+          <div style="clear: both"></div>
+          <div align="center">
+            <h3>Pick your type of payment</h3>
+            <%= f.collection_select :payment, ValentinesDayDelievery::PAYMENTMETHODS, :to_s, :to_s %>
+            <%= f.text_field :paypal_cost,:disabled=>true %>
+            <%= f.label :total_price %><br>
+            <%= f.text_field :total_price,:disabled => true %>
+          </div>
+          <div class="actions">
+            <%= f.submit %>
+          </div>
+          <div style="clear: both"></div>
       <% end %>
-      </ul>
     </div>
-  <% end %>
+  </div>
+</div>
 
-  <div class="field">
-    <%= f.label :red_flower_quantity %><br>
-    <%= f.number_field :red_flower_quantity %>
-  </div>
-  <div class="field">
-    <%= f.label :white_flower_quantity %><br>
-    <%= f.number_field :white_flower_quantity %>
-  </div>
-  <div class="field">
-    <%= f.label :pink_flower_quantity %><br>
-    <%= f.number_field :pink_flower_quantity %>
-  </div>
-  <div class="field">
-    <%= f.label :large_stuffed_animial_quantity %><br>
-    <%= f.number_field :large_stuffed_animial_quantity %>
-  </div>
-  <div class="field">
-    <%= f.label :medium_stuffed_animial_quantity %><br>
-    <%= f.number_field :medium_stuffed_animial_quantity %>
-  </div>
-  <div class="field">
-    <%= f.label :small_animial_quantity %><br>
-    <%= f.number_field :small_animial_quantity %>
-  </div>
-  <div class="field">
-    <%= f.label :buyer_name %><br>
-    <%= f.text_field :buyer_name %>
-  </div>
-  <div class="field">
-    <%= f.label :buyer_phone_number %><br>
-    <%= f.text_field :buyer_phone_number %>
-  </div>
-  <div class="field">
-    <%= f.label :recievers_name %><br>
-    <%= f.text_field :recievers_name %>
-  </div>
-  <div class="field">
-    <%= f.label :recievers_phone_number %><br>
-    <%= f.text_field :recievers_phone_number %>
-  </div>
-  <div class="field">
-    <%= f.label :delivery_location %><br>
-    <%= f.text_field :delivery_location %>
-  </div>
-  <div class="field">
-    <%= f.label :delivery_time %><br>
-    <%= f.time_select :delivery_time %>
-  </div>
-  <div class="field">
-    <%= f.label :delivery_instructions %><br>
-    <%= f.text_field :delivery_instructions %>
-  </div>
-  <div class="field">
-    <%= f.label :payment %><br>
-    <%= f.text_field :payment %>
-  </div>
-  <div class="field">
-    <%= f.label :paypal_cost %><br>
-    <%= f.text_field :paypal_cost %>
-  </div>
-  <div class="field">
-    <%= f.label :total_price %><br>
-    <%= f.text_field :total_price %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+<script>
+    $( "#valentines_day_delievery_red_flower_quantity" ).change(function() {
+        $("#valentines_day_delievery_total_price").val(prices());
+    });
+    $( "#valentines_day_delievery_white_flower_quantity" ).change(function() {
+        $("#valentines_day_delievery_total_price").val(prices());
+    });
+    $( "#valentines_day_delievery_pink_flower_quantity" ).change(function() {
+        $("#valentines_day_delievery_total_price").val(prices());
+    });
+    $( "#valentines_day_delievery_large_stuffed_animial_quantity" ).change(function() {
+        $("#valentines_day_delievery_total_price").val(prices());
+    });
+    $( "#valentines_day_delievery_medium_stuffed_animial_quantity" ).change(function() {
+        $("#valentines_day_delievery_total_price").val(prices());
+    });
+    $( "#valentines_day_delievery_small_animial_quantity" ).change(function() {
+        $("#valentines_day_delievery_total_price").val(prices());
+    });
+    $("#valentines_day_delievery_payment").change(function() {
+        $("#valentines_day_delievery_total_price").val(prices());
+    });
+    function prices(){
+        var red = parseInt($("#valentines_day_delievery_red_flower_quantity").val());
+        var white = parseInt($("#valentines_day_delievery_white_flower_quantity").val());
+        var pink = parseInt($("#valentines_day_delievery_pink_flower_quantity").val());
+        var lg = parseInt($("#valentines_day_delievery_large_stuffed_animial_quantity").val());
+        var md = parseInt($("#valentines_day_delievery_medium_stuffed_animial_quantity").val());
+        var sm = parseInt($("#valentines_day_delievery_small_animial_quantity").val());
+        var payment = $("#valentines_day_delievery_payment").val();
+
+        if(isNaN(red)){
+            red = 0;
+        }
+        if(isNaN(white)){
+            white = 0;
+        }
+        if(isNaN(pink)){
+            pink = 0;
+        }
+        if(isNaN(lg)){
+            lg = 0;
+        }
+        if(isNaN(md)){
+            md = 0;
+        }
+        if(isNaN(sm)){
+            sm = 0;
+        }
+
+        var totalPrice = 0;
+        totalPrice += (red + white + pink) * 2;
+        totalPrice += lg * 4;
+        totalPrice += md * 3;
+        totalPrice += sm * 2;
+        if(payment == "PayPal"){
+            totalPrice = paypal_charge(totalPrice);
+        } else {
+            $("#valentines_day_delievery_paypal_cost").val(0);
+        }
+
+        return totalPrice.toFixed(2);
+    }
+    function paypal_charge(total){
+        var total_paypal_tax = .32 + (total *.029);
+        var total_price = (total + total_paypal_tax);
+        $("#valentines_day_delievery_paypal_cost").val(total_paypal_tax.toFixed(2));
+        return total_price;
+    }
+</script>
