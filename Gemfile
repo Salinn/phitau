@@ -68,7 +68,7 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'selenium-webdriver'
   gem 'capybara'
-  gem 'cucumber-rails'
+  gem 'cucumber-rails', :require => false
 end
 
 #Gems used in production

@@ -28,7 +28,7 @@
   <% end %>
 
     <div class="col-md-8 col-md-offset-2 padding-bot">
-    <% @posts.reverse_each do |post| %>
+    <% @posts.each do |post| %>
       <div class="card">
         <h1 class="post_header"><%= post.title %></h1>
           <div>

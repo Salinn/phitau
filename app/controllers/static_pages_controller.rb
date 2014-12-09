@@ -1,4 +1,5 @@
 class StaticPagesController < ApplicationController
+  require 'will_paginate/array'
 
   def admin
     authorize! :admin, :controls
@@ -6,7 +7,7 @@ class StaticPagesController < ApplicationController
   end
 
   def home
-    @posts = Post.all.page(params[:page]).per_page(3)
+    @posts = Post.all.reverse.paginate(:page => params[:page], :per_page => 3)
   end
 
   def about
