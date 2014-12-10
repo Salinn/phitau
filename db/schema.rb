@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141204183904) do
+ActiveRecord::Schema.define(version: 20141210195002) do
 
   create_table "alumni_news_letters", force: true do |t|
     t.date     "released_date"
@@ -24,6 +24,21 @@ ActiveRecord::Schema.define(version: 20141204183904) do
   create_table "attendances", force: true do |t|
     t.integer  "user_id"
     t.integer  "meeting_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "faq_categories", force: true do |t|
+    t.string   "title"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "faq_questions", force: true do |t|
+    t.string   "title"
+    t.text     "content"
+    t.integer  "faq_category_id"
+    t.integer  "order"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -77,6 +92,9 @@ ActiveRecord::Schema.define(version: 20141204183904) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.integer  "failed_attempts",        default: 3,  null: false
+    t.string   "unlock_token"
+    t.datetime "locked_at"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "role"

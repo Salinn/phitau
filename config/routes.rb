@@ -1,4 +1,8 @@
 Phitau::Application.routes.draw do
+  resources :faq_categories
+
+  resources :faq_questions
+
   resources :valentines_day_inventories
 
   resources :valentines_day_delieveries
