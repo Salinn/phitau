@@ -39,7 +39,7 @@ class StaticPagesController < ApplicationController
   end
 
   def faq
-
+    @faq_categories = FaqCategory.all
   end
 
   def contact_us

@@ -1,456 +1,58 @@
 <div class="container">
   <h1 style="width: 41%; margin: 0 auto;">
-    Frequrently Asked Questions
+    Frequently Asked Questions
   </h1>
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    <!-- Nav tabs category -->
-    <ul class="nav nav-tabs faq-cat-tabs">
-      <li class="active"><a href="#faq-cat-1" data-toggle="tab">General</a></li>
-      <li><a href="#faq-cat-2" data-toggle="tab">Rushing</a></li>
-      <li><a href="#faq-cat-3" data-toggle="tab">Why Us?</a></li>
-      <li><a href="#faq-cat-3" data-toggle="tab">Benefits</a></li>
-    </ul>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <!-- Nav tabs category -->
+      <ul class="nav nav-tabs faq-cat-tabs">
+        <li class="active"><a href="#faq-cat-1" data-toggle="tab"><%= @faq_categories.first.title %></a></li>
+        <% @faq_categories.each do |category| %>
+            <% next if category.id == 1 %>
+            <li><a href="#faq-cat-<%= category.id %>" data-toggle="tab"><%= category.title %></a></li>
+        <% end %>
+      </ul>
 
-    <!-- Tab panes -->
-    <div class="tab-content faq-cat-content">
-      <div class="tab-pane active in fade" id="faq-cat-1">
-        <div class="panel-group" id="accordion-cat-1">
-          <div class="panel panel-default panel-faq">
-            <div class="panel-heading">
-              <a data-toggle="collapse" data-parent="#accordion-cat-1" href="#faq-cat-1-sub-1">
-                <h4 class="panel-title">
-                  Doesn't everyone in your chapter talk, dress and act the same?
-                  <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
-                </h4>
-              </a>
-            </div>
-            <div id="faq-cat-1-sub-1" class="panel-collapse collapse">
-              <div class="panel-body">
-                We pride ourselves on the fact that we are different. That is what holds us together.
-                There is no single characteristic that makes us Phi Taus. You can't say "Phi Tau, they're
-                all jocks" or "Phi Tau, they only care about school". We do a little bit of everything and
-                do it well. We have Brothers from all over the nation and from all different majors, races,
-                and creeds. We are all different and we like it that way.
+      <!-- Tab panes -->
+      <div class="tab-content faq-cat-content">
+        <% @faq_categories.each do |category| %>
+            <div class="tab-pane active in fade" id="faq-cat-<%= category.id %>">
+              <div class="panel-group" id="accordion-cat-<%= category.id %>">
+                <% category.faq_questions.each do |question| %>
+                    <div class="panel panel-default panel-faq">
+                      <div class="panel-heading">
+                        <a data-toggle="collapse" data-parent="#accordion-cat-<%= category.id %>" href="#faq-cat-<%= category.id %>-sub-<%= question.id %>">
+                          <h4 class="panel-title">
+                            <%= question.title %>
+                            <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
+                          </h4>
+                        </a>
+                      </div>
+                      <div id="faq-cat-<%= category.id %>-sub-<%= question.id %>" class="panel-collapse collapse">
+                        <div class="panel-body"><%= question.content %>
+                        </div>
+                      </div>
+                    </div>
+                <% end %>
               </div>
             </div>
-          </div>
-          <div class="panel panel-default panel-faq">
-            <div class="panel-heading">
-              <a data-toggle="collapse" data-parent="#accordion-cat-1" href="#faq-cat-1-sub-2">
-                <h4 class="panel-title">
-                  Isn't paying dues like paying for your friends?
-                  <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
-                </h4>
-              </a>
-            </div>
-            <div id="faq-cat-1-sub-2" class="panel-collapse collapse">
-              <div class="panel-body">
-                Absolutely not. This could not be any less true. The $30 a week that we pay funds our
-                events and our college experience. If you didn't join a fraternity, wouldn't you spend $30
-                or more on a weekend anyway? But even if you wanted to think of it like that we have about
-                80,000 living alumni so with some quick math that comes out to about $0.01 per friend per
-                year. Pretty cheap if you ask us!
-              </div>
-            </div>
-          </div>
-          <div class="panel panel-default panel-faq">
-            <div class="panel-heading">
-              <a data-toggle="collapse" data-parent="#accordion-cat-1" href="#faq-cat-1-sub-3">
-                <h4 class="panel-title">
-                  Isn't that a lot of money for dues?
-                  <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
-                </h4>
-              </a>
-            </div>
-            <div id="faq-cat-1-sub-3" class="panel-collapse collapse">
-              <div class="panel-body">
-                Dues are $450 a semester. At first glance, that may seem like a lot, but when we break it
-                down, you can see where the money is going. Some of the money goes into insurance provided by
-                our National Organization. If anything happens to any of us while with the fraternity, we are
-                covered. Some of the money funds our events. When we have dinners every other week or social
-                events with sororities, we don't charge for attendance. You can think of it as prepaying for
-                your weekend activities. The rest of the money goes towards items that are beneficial for the
-                entire house, such as furniture, TVs, paper towels, and Brotherhood dinners.
-              </div>
-            </div>
-          </div>
-          <div class="panel panel-default panel-faq">
-            <div class="panel-heading">
-              <a data-toggle="collapse" data-parent="#accordion-cat-1" href="#faq-cat-1-sub-4">
-                <h4 class="panel-title">
-                  What are the advantages of fraternity membership?
-                  <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
-                </h4>
-              </a>
-            </div>
-            <div id="faq-cat-1-sub-4" class="panel-collapse collapse">
-              <div class="panel-body">
-                In a nutshell, Phi Tau helps with time management, scholarship, athletics, philanthropy,
-                community service, social experience, job placement, and friendly connections. You become a
-                member of a 80,000 man organization nation-wide, and a 500+ man organization here at RIT.
-              </div>
-            </div>
-          </div>
-          <div class="panel panel-default panel-faq">
-            <div class="panel-heading">
-              <a data-toggle="collapse" data-parent="#accordion-cat-1" href="#faq-cat-1-sub-5">
-                <h4 class="panel-title">
-                  What is Phi Kappa Tau doing about alcohol and substance abuse?
-                  <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
-                </h4>
-              </a>
-            </div>
-            <div id="faq-cat-1-sub-5" class="panel-collapse collapse">
-              <div class="panel-body">
-                By focusing its efforts on character building, Phi Kappa Tau hopes to equip brothers to make
-                healthy and intelligent choices for themselves and others. Phi Tau is addressing alcohol
-                abuse at the core of the issue by providing its men with the skills and knowledge needed to
-                make responsible decisions. When brothers make unwise choices, Phi Tau holds them accountable
-                at the chapter and national level.
-              </div>
-            </div>
-          </div>
-          <div class="panel panel-default panel-faq">
-            <div class="panel-heading">
-              <a data-toggle="collapse" data-parent="#accordion-cat-1" href="#faq-cat-1-sub-6">
-                <h4 class="panel-title">
-                  What is the difference between this fraternity and a drinking club?
-                  <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
-                </h4>
-              </a>
-            </div>
-            <div id="faq-cat-1-sub-6" class="panel-collapse collapse">
-              <div class="panel-body">
-                Drinking clubs focus on drinking. We don't. Yes, we drink. Yes, we know how to have fun.
-                But our primary focus is being the best group of guys we can be. We focus on academics,
-                athletics, philanthropy, community service, and social life all at the same time. The reason
-                we are here is because we care about more than drinking. We care about improving ourselves
-                and those around us.
-              </div>
-            </div>
-          </div>
-          <div class="panel panel-default panel-faq">
-            <div class="panel-heading">
-              <a data-toggle="collapse" data-parent="#accordion-cat-1" href="#faq-cat-1-sub-7">
-                <h4 class="panel-title">
-                  What are the purposes and objectives of Phi Kappa Tau?
-                  <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
-                </h4>
-              </a>
-            </div>
-            <div id="faq-cat-1-sub-7" class="panel-collapse collapse">
-              <div class="panel-body">
-                Purposes
-                To instill the fundamentals of wholesome living and vigorous thinking
-                To provide energetic participation in all collegiate activities: scholastic, social,
-                athletic, and forensic.
-                To provide opportunities for close association with individuals of diverse backgrounds
-                and personalities thus advancing human relation skills.
-                To offer undergraduate members experiences in management of their living environment as
-                valuable preparation for post fraternal life
-                To bind chapters into a National Fraternity so that a synergistic integration is formed
-                To be supportive of and cooperative with the goals of the educational institutions where
-                chapters of Phi Kappa Tau are located
-                Objectives
-                To develop and maintain membership programs which compliment the mission of universities
-                and colleges where chapters are located
-                To assist new students in their orientation to the demands of higher education
-                To furnish a living and learning experience in a democratic setting
-                To expose members to the importance of social awareness and to assist them in learning
-                proper conduct in everyday situations
-                To provide an opportunity for men to live, work and think with other men toward
-                worthwhile pursuits
-                To keep open the lines of communication between undergraduates and alumni members
-                To encourage the "total man" concept, encompassing spiritual, mental and physical
-                well-being through Fellowship.
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="tab-pane fade" id="faq-cat-2">
-        <div class="panel-group" id="accordion-cat-2">
-          <div class="panel panel-default panel-faq">
-            <div class="panel-heading">
-              <a data-toggle="collapse" data-parent="#accordion-cat-2" href="#faq-cat-2-sub-1">
-                <h4 class="panel-title">
-                  How does Phi Kappa Tau rank compared to other Fraternities?
-                  <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
-                </h4>
-              </a>
-            </div>
-            <div id="faq-cat-2-sub-1" class="panel-collapse collapse">
-              <div class="panel-body">
-                Ranking Phi Kappa Tau, or any fraternity for that matter, depends on any number of
-                variables. Typically, the question begs to the issue of how many chapters the organization
-                has and/or how many alumni are on the record books with good addresses. There are presently
-                66 men's social fraternities that are members of the North-American Inter fraternity
-                Conference. In terms of numbers of active chapters and total living alumni, Phi Kappa Tau
-                ranks in the top 25 of the NIC member groups.
-              </div>
-            </div>
-          </div>
-          <div class="panel panel-default panel-faq">
-            <div class="panel-heading">
-              <a data-toggle="collapse" data-parent="#accordion-cat-2" href="#faq-cat-2-sub-2">
-                <h4 class="panel-title">
-                  How would you describe the other fraternities here on campus?
-                  <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
-                </h4>
-              </a>
-            </div>
-            <div id="faq-cat-2-sub-2" class="panel-collapse collapse">
-              <div class="panel-body">
-                We respect every other house on campus. The best way to explain it is that if you value
-                academics, athletics, leadership, philanthropy, community service, and social life, you
-                should be Greek. What house you belong in is a different story. Every house has a different
-                personality. We all share the same goals and visions - we just have different personalities.
-                If you think you fit in at our house then you may be Phi Tau material and we would love to
-                have you here, but there is no way to know until you check out the other houses.
-              </div>
-            </div>
-          </div>
-          <div class="panel panel-default panel-faq">
-            <div class="panel-heading">
-              <a data-toggle="collapse" data-parent="#accordion-cat-2" href="#faq-cat-2-sub-3">
-                <h4 class="panel-title">
-                  What is Phi Kappa Tau doing about hazing?
-                  <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
-                </h4>
-              </a>
-            </div>
-            <div id="faq-cat-2-sub-3" class="panel-collapse collapse">
-              <div class="panel-body">
-                Phi Kappa Tau seeks to build character in its brothers. Hazing has no place in the
-                character-building process and will not be tolerated by the Fraternity. Chapters and brothers
-                who haze will be held accountable for their actions at every level. Because Phi Tau seeks to
-                guide brothers in the wise decision-making process and openly discusses hazing and its
-                dangerous and harmful effects during all educational programs. The new member education
-                program, entitled Mark of Distinction uses the Creed as a Foundation for building better
-                men.
-              </div>
-            </div>
-          </div>
-          <div class="panel panel-default panel-faq">
-            <div class="panel-heading">
-              <a data-toggle="collapse" data-parent="#accordion-cat-2" href="#faq-cat-2-sub-4">
-                <h4 class="panel-title">
-                  What would be expected of me in terms of finances, time and personal obligations?
-                  <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
-                </h4>
-              </a>
-            </div>
-            <div id="faq-cat-2-sub-4" class="panel-collapse collapse">
-              <div class="panel-body">
-                Dues are $450 a semester or $30 a week. The minimum amount of time required is about an hour
-                or two a week for meetings and a few hours a quarter for community service. The maximum
-                amount of time you can put in is about 24 hours a day, 7 days a week. You can put in as much
-                time as you desire. We understand that academics and family come first. If you have class or
-                a personal obligation, you are not required to attend events. We only ask that you let us
-                know so if we need to, we can get a hold of you.
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="tab-pane fade" id="faq-cat-3">
-        <div class="panel-group" id="accordion-cat-3">
-          <div class="panel panel-default panel-faq">
-            <div class="panel-heading">
-              <a data-toggle="collapse" data-parent="#accordion-cat-3" href="#faq-cat-3-sub-1">
-                <h4 class="panel-title">
-                  How does membership in Phi Kappa Tau prepare an individual to be successful later in life?
-                  <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
-                </h4>
-              </a>
-            </div>
-            <div id="faq-cat-3-sub-1" class="panel-collapse collapse">
-              <div class="panel-body">
-                The leadership experience you receive when in a fraternity is invaluable. Although we do know
-                how to have fun, we also know how to get work done. Time management is crucial to your
-                college career and Phi Kappa Tau can assist you in this. The ability to balance academics,
-                social life, philanthropy, and sleep in order to get the most out of your college experience
-                is the single greatest gift Phi Kappa Tau can give you. However, this is not the only way in
-                which Phi Tau prepares its members. It is no coincidence that so many Phi Taus end up with
-                rewarding jobs; the people you meet and the connections you form make it easier to find
-                better co-ops while in school and better jobs after graduation. In addition, the social
-                skills you develop provide you with the required skills for job interviews and meeting
-                people.
-              </div>
-            </div>
-          </div>
-          <div class="panel panel-default panel-faq">
-            <div class="panel-heading">
-              <a data-toggle="collapse" data-parent="#accordion-cat-3" href="#faq-cat-3-sub-2">
-                <h4 class="panel-title">
-                  What is meant by "Building Men of Character" or "Honor and Credit"?
-                  <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
-                </h4>
-              </a>
-            </div>
-            <div id="faq-cat-3-sub-2" class="panel-collapse collapse">
-              <div class="panel-body">
-                Phi Kappa Tau is a values-based organization. We strive to make the most out of our members
-                through the experiences we live. There is a strong focus on character and developing that
-                character during your experience with Phi Kappa Tau. Do you know the six pillars of
-                character? If you answered no, then Phi Tau may be a good place for you. We pride ourselves
-                on a hazing-free new member program. Instead of humiliating our new members, we teach them
-                character. We are building men of character. We strive to bring honor and credit to our
-                organization through the lives we lead.
-              </div>
-            </div>
-          </div>
-          <div class="panel panel-default panel-faq">
-            <div class="panel-heading">
-              <a data-toggle="collapse" data-parent="#accordion-cat-3" href="#faq-cat-3-sub-3">
-                <h4 class="panel-title">
-                  What sets Phi Tau apart from other fraternities?
-                  <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
-                </h4>
-              </a>
-            </div>
-            <div id="faq-cat-3-sub-3" class="panel-collapse collapse">
-              <div class="panel-body">
-                Three areas set Phi Kappa Tau apart from other social organizations:
-                Support - Through the volunteer and staff structure Phi Tau provides more frequent, more
-                effective and better quality support than anyone. Chapters have the resources to be
-                successful.
-                Programming - The Foundation enables Phi Tau to provide better educational programming and
-                more educational dollars per member than any other men's Fraternity.
-                Philanthropic efforts - The opportunities available through Phi Tau's involvement with the
-                Hole in the Wall Gang Camps are second to none. The hands-on interaction with these
-                chronically ill children provides a powerful service-learning environment that builds
-                better men.
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-      <div class="tab-pane fade" id="faq-cat-4">
-        <div class="panel-group" id="accordion-cat-4">
-          <div class="panel panel-default panel-faq">
-            <div class="panel-heading">
-              <a data-toggle="collapse" data-parent="#accordion-cat-4" href="#faq-cat-4-sub-1">
-                <h4 class="panel-title">
-                  How does involvement in service projects, social programs and intramurals help an individual?
-                  <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
-                </h4>
-              </a>
-            </div>
-            <div id="faq-cat-4-sub-1" class="panel-collapse collapse">
-              <div class="panel-body">
-                The feelings that you experience when helping others are indescribable. Knowing that
-                YOU made a difference is a feeling that cannot be achieved any other way. Still skeptical?
-                Ask one of us when we are doing a community service event and come along with us. Or if you
-                want something simpler, ask any one of us to see the Hole in the Wall DVD - watching that
-                is the next best thing to experiencing it first hand. Intramural sports are available every
-                quarter for people interested in athletics. Greek intramurals are a totally different
-                experience because of the bond you have with your teammates and the friendly rivalries we
-                have with other houses.
-              </div>
-            </div>
-          </div>
-          <div class="panel panel-default panel-faq">
-            <div class="panel-heading">
-              <a data-toggle="collapse" data-parent="#accordion-cat-4" href="#faq-cat-4-sub-2">
-                <h4 class="panel-title">
-                  How does Phi Kappa Tau promote scholarship, and how will it help me when I go looking for a job?
-                  <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
-                </h4>
-              </a>
-            </div>
-            <div id="faq-cat-4-sub-2" class="panel-collapse collapse">
-              <div class="panel-body">
-                Academics come first in Phi Tau. We have members in just about every major at RIT. For example, if you are an
-                Electrical Engineering major, we have older Electrical Engineering majors that can help you study. They have
-                taken the classes you will take. They have had the professors you will have. They know about co-ops.
-                They know about finals. They know the ins and outs to the 10-week quarter system.
-                We teach each other here and that is priceless. When you apply for a job, being a Phi Tau
-                can work to your advantage. Your social experience has prepared you for your job interview.
-                Your GPA and other academic achievements will be excellent because of our focus on scholarship.
-                You will have been involved in philanthropy and community service, which is a crucial part of job
-                placement. We have Phi Taus involved at RIT that can provide excellent letters of recommendation.
-                And finally, we know lots of people all over the nation - Phi Taus like to hire other Phi Taus!
-              </div>
-            </div>
-          </div>
-          <div class="panel panel-default panel-faq">
-            <div class="panel-heading">
-              <a data-toggle="collapse" data-parent="#accordion-cat-4" href="#faq-cat-4-sub-3">
-                <h4 class="panel-title">
-                  How many scholarships does the Phi Kappa Tau Foundation provide?
-                  <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
-                </h4>
-              </a>
-            </div>
-            <div id="faq-cat-4-sub-3" class="panel-collapse collapse">
-              <div class="panel-body">
-                Currently, the Foundation provides the following scholarship for academic work:
-
-                6 Paul A. Elfers Omega Scholarships for $2,250 each
-                9 Named Scholarships for $1,250 each
-                2 Parents Fund Scholarships for $1,000 each
-                3 Inter fraternity Educational Fellowships for $2,000 each
-
-                As the cost of education rises, more scholarships and scholarships in larger amounts will be
-                critical in helping students meet their educational expenses. Scholarships are made available
-                to both graduate and undergraduate students.
-              </div>
-            </div>
-          </div>
-          <div class="panel panel-default panel-faq">
-            <div class="panel-heading">
-              <a data-toggle="collapse" data-parent="#accordion-cat-4" href="#faq-cat-4-sub-4">
-                <h4 class="panel-title">
-                  What are some general facts about members of Greek letter organizations?
-                  <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
-                </h4>
-              </a>
-            </div>
-            <div id="faq-cat-4-sub-4" class="panel-collapse collapse">
-              <div class="panel-body">
-                Fraternity and Sorority Alumni are much more likely than nonmembers to participate in community service activities after graduation
-                Forty-three of the 100 members of the U.S. Senate are members of a fraternity or sorority
-                29% of the U.S. House of Representatives are Greek affiliated
-                Of North America's 50 largest corporations, 43 are headed by Greek men and women
-                7 out of 10 people listed in "Who's Who?" are Greek
-                85% of Fortune 500 executives are Greek
-                40 of 47 U.S. Supreme Court Justices are Greek
-                All but two Presidents and two Vice-Presidents, born after the founding of the first social fraternity in 1825, were fraternity members
-                63% of all U.S. Cabinet members since 1900 have been Greek
-                All of the Apollo 11 astronauts were Greek
-                Only 2% of the population are members of Greek organizations
-                A U.S. Government study shows that over 70% of Greeks graduate, while under 50% of non-Greeks graduate
-                A study by the University of Missouri found that Greeks throughout the US and Canada are more involved on their campuses and rate their overall university experience better
-                The same Missouri study found Greeks are more financially successful after they graduate than independents, are more involved in their communities, and give more generously to their alma matters
-                Greeks not only participate in their own fraternity or sorority leadership, but are also involved in the same extracurricular activities as non affiliated students
-                As undergraduates, Greeks raise approximately $7 million per year for charities
-                As undergraduates, Greeks give approximately 850,000 volunteer hours per year
-                Greek alumni are more satisfied with the social and cultural aspects of the college experience than non affiliated students
-                Greek affiliation has a significant impact on the current income of alumni
-                Employers consider 18 key factors in evaluating job interviews...the Greek community provides opportunity to develop 12 of those key factors: Real-World Experience, Leadership Qualities, Personal Presentation, Attitude, Communication Skills, Problem Solving, Community Service Orientation, Adaptability-Drive-Initiative, Proven Track Record, Ability to Learn, Preparation for Interviews
-              </div>
-            </div>
-          </div>
-        </div>
+        <% end %>
       </div>
     </div>
   </div>
 </div>
-</div>
 <script>
-$(document).ready(function() {
-$('.collapse').on('show.bs.collapse', function() {
-var id = $(this).attr('id');
-$('a[href="#' + id + '"]').closest('.panel-heading').addClass('active-faq');
-$('a[href="#' + id + '"] .panel-title span').html('<i class="glyphicon glyphicon-minus"></i>');
-});
-$('.collapse').on('hide.bs.collapse', function() {
-var id = $(this).attr('id');
-$('a[href="#' + id + '"]').closest('.panel-heading').removeClass('active-faq');
-$('a[href="#' + id + '"] .panel-title span').html('<i class="glyphicon glyphicon-plus"></i>');
-});
-});
+    $(document).ready(function() {
+        $('.collapse').on('show.bs.collapse', function() {
+            var id = $(this).attr('id');
+            $('a[href="#' + id + '"]').closest('.panel-heading').addClass('active-faq');
+            $('a[href="#' + id + '"] .panel-title span').html('<i class="glyphicon glyphicon-minus"></i>');
+        });
+        $('.collapse').on('hide.bs.collapse', function() {
+            var id = $(this).attr('id');
+            $('a[href="#' + id + '"]').closest('.panel-heading').removeClass('active-faq');
+            $('a[href="#' + id + '"] .panel-title span').html('<i class="glyphicon glyphicon-plus"></i>');
+        });
+    });
 </script>
+
