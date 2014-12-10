@@ -1,3 +1,4 @@
+
 <div class="container">
   <h1 style="width: 41%; margin: 0 auto;">
     Frequently Asked Questions
@@ -15,10 +16,10 @@
 
       <!-- Tab panes -->
       <div class="tab-content faq-cat-content">
-        <% @faq_categories.each do |category| %>
-            <div class="tab-pane active in fade" id="faq-cat-<%= category.id %>">
-              <div class="panel-group" id="accordion-cat-<%= category.id %>">
-                <% category.faq_questions.each do |question| %>
+            <% @faq_categories.each_with_index do |category, index| %>
+                <div class="tab-pane<% if index == 0 %>active in fade<% end %>" id="faq-cat-<%= category.id %>">
+                  <div class="panel-group" id="accordion-cat-<%= category.id %>">
+                    <% category.faq_questions.each do |question| %>
                     <div class="panel panel-default panel-faq">
                       <div class="panel-heading">
                         <a data-toggle="collapse" data-parent="#accordion-cat-<%= category.id %>" href="#faq-cat-<%= category.id %>-sub-<%= question.id %>">
