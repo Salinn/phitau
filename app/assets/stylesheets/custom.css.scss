@@ -434,9 +434,9 @@ ________________________________________*/
 }
 
 //faq
-.nav > li > a:focus {
-  background-color: $FooterBackground;
-  border-color: $FooterBackground;
+a.not-active:hover{
+  background-color: $FooterBackground !important;
+  border-color: $FooterBackground !important;
 }
 body {
   padding-top: 30px;
