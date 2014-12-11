@@ -16,8 +16,8 @@
     <%= f.text_field :title %>
   </div>
   <div class="field">
-    <%= f.label :content %><br>
-    <%= f.text_area :content %>
+    <%= f.label :content,"", :class => "tinymce", :rows => 15, :cols => 120 %><br>
+    <%= f.text_area :content, :class => "tinymce", :rows => 15, :cols => 120 %>
   </div>
   <div class="field">
     <%= f.label :faq_category_id %><br>
@@ -31,3 +31,5 @@
     <%= f.submit %>
   </div>
 <% end %>
+
+<%= tinymce :plugins => ["wordcount", "paste"] %>

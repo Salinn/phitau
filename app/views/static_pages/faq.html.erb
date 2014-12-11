@@ -30,7 +30,7 @@
                         </a>
                       </div>
                       <div id="faq-cat-<%= category.id %>-sub-<%= question.id %>" class="panel-collapse collapse">
-                        <div class="panel-body"><%= question.content %>
+                        <div class="panel-body"><%= question.content.html_safe %>
                         </div>
                       </div>
                     </div>
