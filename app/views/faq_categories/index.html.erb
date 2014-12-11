@@ -14,9 +14,7 @@
     <% @faq_categories.each do |faq_category| %>
       <tr>
         <td><%= faq_category.title %></td>
-        <td><%= link_to 'Show', faq_category %></td>
         <td><%= link_to 'Edit', edit_faq_category_path(faq_category) %></td>
-        <td><%= link_to 'Destroy', faq_category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
