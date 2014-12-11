@@ -1,6 +1,7 @@
 class FaqCategoriesController < ApplicationController
   before_action :set_faq_category, only: [:show, :edit, :update, :destroy]
   respond_to :html, :xml, :json
+  load_and_authorize_resource
 
   def index
     @faq_categories = FaqCategory.all
