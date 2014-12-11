@@ -17,7 +17,7 @@
       <!-- Tab panes -->
       <div class="tab-content faq-cat-content">
             <% @faq_categories.each_with_index do |category, index| %>
-                <div class="tab-pane<% if index == 0 %>active in fade<% end %>" id="faq-cat-<%= category.id %>">
+                <div class="tab-pane<% if index == 0 %> active in fade<% end %>" id="faq-cat-<%= category.id %>">
                   <div class="panel-group" id="accordion-cat-<%= category.id %>">
                     <% category.faq_questions.each do |question| %>
                     <div class="panel panel-default panel-faq">
