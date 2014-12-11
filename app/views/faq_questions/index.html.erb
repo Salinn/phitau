@@ -1,4 +1,6 @@
-<h1>Listing faq_questions</h1>
+<h1>All of the faq questions</h1>
+
+<%= link_to 'New Faq question', new_faq_question_path %>
 
 <table>
   <thead>
@@ -20,14 +22,10 @@
         <td><%= faq_question.content %></td>
         <td><%= faq_question.faq_category_id %></td>
         <td><%= faq_question.order %></td>
-        <td><%= link_to 'Show', faq_question %></td>
         <td><%= link_to 'Edit', edit_faq_question_path(faq_question) %></td>
-        <td><%= link_to 'Destroy', faq_question, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <!--<td><%= link_to 'Destroy', faq_question, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
-
-<%= link_to 'New Faq question', new_faq_question_path %>

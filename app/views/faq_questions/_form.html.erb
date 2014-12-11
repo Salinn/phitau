@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :faq_category_id %><br>
-    <%= f.number_field :faq_category_id %>
+    <%= f.collection_select :faq_category_id, FaqCategory.all.order(:title), :id, :title %>
   </div>
   <div class="field">
     <%= f.label :order %><br>
