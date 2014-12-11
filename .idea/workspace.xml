@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a595ba0-4bc1-4285-94ea-1699f878f13d" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/_footer.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/_footer.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" />
     </list>
     <ignored path="phitau.iws" />
@@ -85,12 +86,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="custom.css.scss" pinned="false" current-in-tab="true">
+      <file leaf-file-name="custom.css.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.72432435" vertical-offset="5959" max-vertical-offset="7740">
-              <caret line="433" column="1" selection-start-line="433" selection-start-column="1" selection-end-line="433" selection-end-column="1" />
+            <state vertical-scroll-proportion="-6.2" vertical-offset="919" max-vertical-offset="7830">
+              <caret line="84" column="1" selection-start-line="82" selection-start-column="6" selection-end-line="84" selection-end-column="1" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_footer.html.erb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/_footer.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.17928287" vertical-offset="0" max-vertical-offset="855">
+              <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_header.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/_header.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="1650">
+              <caret line="11" column="28" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="28" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h1#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h3#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -100,26 +126,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="675">
               <caret line="16" column="61" selection-start-line="16" selection-start-column="61" selection-end-line="16" selection-end-column="75" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="show.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/faq_questions/show.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="450">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="new.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/faq_questions/new.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="165">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -163,7 +169,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/views/alumni_news_letters/index.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/twilio_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/text_messages_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/static_pages/contact_us.html.erb" />
@@ -214,6 +219,7 @@
         <option value="$PROJECT_DIR$/app/views/faq_questions/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/faq_categories/index.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" />
+        <option value="$PROJECT_DIR$/app/views/layouts/_footer.html.erb" />
       </list>
     </option>
   </component>
@@ -313,7 +319,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="users" />
+              <option name="myItemId" value="layouts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -328,68 +334,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="faq_categories" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phitau" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phitau" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phitau" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phitau" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stylesheets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phitau" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phitau" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -408,7 +352,7 @@
     <property name="options.searchVisible" value="true" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="FullScreen" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="appl&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/vendor/bundle/ruby/2.0.0/gems/rails-4.0.0/guides/code/getting_started/app/assets/stylesheets/application.css&#10;custom&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/app/assets/stylesheets/custom.css.scss&#10;abil&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/app/models/ability.rb&#10;user&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/app/models/user.rb&#10;abi&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/app/models/ability.rb&#10;static&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/app/controllers/static_pages_controller.rb&#10;faq.h&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/app/views/static_pages/faq.html.erb&#10;sche&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/db/schema.rb&#10;valent&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/app/controllers/valentines_day_inventories_controller.rb&#10;_form&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/app/views/valentines_day_delieveries/_form.html.erb&#10;schem&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/db/schema.rb&#10;stat&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/app/controllers/static_pages_controller.rb" />
+    <property name="SearchEverywhereHistoryKey" value="_header&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/vendor/bundle/ruby/2.0.0/gems/erubis-2.7.0/benchmark/templates/_header.html&#10;appl&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/vendor/bundle/ruby/2.0.0/gems/rails-4.0.0/guides/code/getting_started/app/assets/stylesheets/application.css&#10;custom&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/app/assets/stylesheets/custom.css.scss&#10;abil&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/app/models/ability.rb&#10;user&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/app/models/user.rb&#10;abi&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/app/models/ability.rb&#10;static&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/app/controllers/static_pages_controller.rb&#10;faq.h&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/app/views/static_pages/faq.html.erb&#10;sche&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/db/schema.rb&#10;valent&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/app/controllers/valentines_day_inventories_controller.rb&#10;_form&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/app/views/valentines_day_delieveries/_form.html.erb&#10;schem&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/db/schema.rb&#10;stat&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/app/controllers/static_pages_controller.rb" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -730,27 +674,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/static_pages/home.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47808766" vertical-offset="90" max-vertical-offset="945">
-          <caret line="30" column="18" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/bundle/ruby/2.0.0/gems/activerecord-4.0.0/lib/active_record/attribute_methods/read.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="696" max-vertical-offset="1695">
-          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/bundle/ruby/2.0.0/gems/actionpack-4.0.0/lib/action_view/renderer/partial_renderer.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="4551" max-vertical-offset="7470">
-          <caret line="310" column="0" selection-start-line="310" selection-start-column="0" selection-end-line="310" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/bundle/ruby/2.0.0/gems/actionpack-4.0.0/lib/action_view/buffers.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="66" max-vertical-offset="825">
@@ -1119,10 +1042,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/bundle/ruby/2.0.0/gems/erubis-2.7.0/benchmark/templates/_header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="870">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/_header.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="1650">
+          <caret line="11" column="28" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="28" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h1#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.72432435" vertical-offset="5959" max-vertical-offset="7740">
-          <caret line="433" column="1" selection-start-line="433" selection-start-column="1" selection-end-line="433" selection-end-column="1" />
+        <state vertical-scroll-proportion="-6.2" vertical-offset="919" max-vertical-offset="7830">
+          <caret line="84" column="1" selection-start-line="82" selection-start-column="6" selection-end-line="84" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/_footer.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17928287" vertical-offset="0" max-vertical-offset="855">
+          <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
           <folding />
         </state>
       </provider>

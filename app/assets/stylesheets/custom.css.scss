@@ -74,7 +74,13 @@ body {
 }
 //End of the header
 //Start of the footer
-a:hover{
+a.wide.img:hover{
+  background-color: transparent !important;
+}
+a.nav-item:hover{
+background-color: transparent !important;
+}
+a.logo:hover{
   background-color: transparent !important;
 }
 .footer {
@@ -428,7 +434,7 @@ ________________________________________*/
 }
 
 //faq
-.nav > li > a:hover, .nav > li > a:focus {
+.nav > li > a:focus {
   background-color: $FooterBackground;
   border-color: $FooterBackground;
 }
