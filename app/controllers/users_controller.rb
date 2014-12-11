@@ -30,7 +30,7 @@ class UsersController < ApplicationController
   end
 
   def edit_all
-    @users = User.all.page(params[:page]).per_page(2)
+    @users = User.all.page(params[:page]).per_page(15)
   end
 
   def update
