@@ -75,7 +75,7 @@ body {
 //End of the header
 //Start of the footer
 a:hover{
-  background-color: transparent !important;
+  //background-color: transparent !important;
 }
 .footer {
   margin-top: 19rem;
@@ -461,6 +461,11 @@ body {
   color: $FooterBackground;
 }
 
+.nav > li > a:hover, .nav > li > a:focus {
+  background-color: $FooterBackground;
+  border-color: $FooterBackground;
+}
+
 .faq-cat-content .panel-heading:hover {
   background-color: $White;
 }
@@ -472,10 +477,6 @@ body {
 .panel-faq .panel-heading .panel-title span {
   font-size: 13px;
   font-weight: normal;
-}
-
-.nav-tabs li a:hover{
-  background-color: $FooterBackground !important;
 }
 
 .card_alumni_newsletter {
