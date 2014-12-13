@@ -8,8 +8,8 @@ class User < ActiveRecord::Base
   SIGNUPROLES = ["potential new member", "alumni", "current brother"]
   ALLROLES = ["alumni", "current brother", "potential new member", "dummy",
               "president","first_vp","second_vp","treasurer","sergeant","chaplain",
-              "recruitment", "alumni relations", "web_master","brotherhood","social","community service",
-              "philanthropy","business ops",
+              "recruitment", "alumni_relations", "web_master","brotherhood","social","community_service",
+              "philanthropy","business_ops",
               "admin", "writer"]
 
   # Include default devise modules. Others available are:
