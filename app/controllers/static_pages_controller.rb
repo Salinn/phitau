@@ -65,7 +65,7 @@ class StaticPagesController < ApplicationController
 
     recruitment=users.where(role: "recruitment").blank? ? nil : users.where(role: "recruitment")
     alumni_relations=users.where(role: "alumni_relations").blank? ? nil : users.where(role: "alumni relations")
-    web_master=users.where(role: "web_master").blank? ? nil : users.where(role: "web master")
+    web_master=users.where(role: "admin").blank? ? nil : users.where(role: "admin")
     brotherhood=users.where(role: "brotherhood").blank? ? nil : users.where(role: "brotherhood")
     social=users.where(role: "social").blank? ? nil : users.where(role: "social")
     community_service=users.where(role: "community_service").blank? ? nil : users.where(role: "community service")
