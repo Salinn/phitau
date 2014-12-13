@@ -1,3 +1,4 @@
+<!--Requiered to help scalling-->
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <div class="navbar navbar-inverse navbar-fixed-top">
   <div class="container">
@@ -7,98 +8,52 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <div class="header_img">
-        <div style="float: left; color: #ffffff">
+      <div>
+        <div class="header_style">
           <a class="wide img" href="/">
+            <!--This fetches the phi tau crest from the stored files-->
             <%= image_tag "phitau_crest.png" %>
           </a>
         </div>
-        <div style="float: left; color: #ffffff">
-          <h1 style="padding-left: 10px;">Phi Kappa Tau</h1>
-          <h3 style="padding-left: 10px; margin-top: 0px;">Learning Leading Serving</h3>
+        <div class="header_style">
+          <h1 class="phitau_named">Phi Kappa Tau</h1>
+          <h3 class="tag_line">Learning Leading Serving</h3>
         </div>
       </div>
-      <!--<a class="navbar-brand" href="#">Learning Leading Serving</a>-->
     </div>
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav navbar-right">
+        <!--This section gives links based of users rights or permissions -->
         <% if current_user == nil or current_user.role == nil or current_user.role == "not_a_member"%>
-            <li><%= link_to "Home", root_path %></li>
+          <li><%= link_to "Home", root_path %></li>
+          <li><%= link_to "About", about_path %></li>
+          <li><%= link_to "FAQ", faq_path %></li>
+          <li><%= link_to "Contact", contact_us_path %></li>
+        <% else %>
+          <li><%= link_to "Home", root_path %></li>
+          <% if current_user.role == "writer" %>
+            <li><%= link_to "Posts", posts_path, class: "nav-item" %></li>
+          <% elsif  current_user.role == "potential new member" %>
             <li><%= link_to "About", about_path %></li>
             <li><%= link_to "FAQ", faq_path %></li>
             <li><%= link_to "Contact", contact_us_path %></li>
+          <% elsif  current_user.role == "admin" %>
+            <li><%= link_to "Posts", posts_path, class: "nav-item" %></li>
+            <li><%= link_to "News-Letters", new_alumni_news_letter_path %></li>
+          <% elsif  current_user.role == "president" %>
+            <li><%= link_to "Posts", posts_path, class: "nav-item" %></li>
+            <li><%= link_to "News-Letters", new_alumni_news_letter_path %></li>
+          <% else %>
             <li><%= link_to "News-Letters", alumni_news_letters_path %></li>
-        <% else %>
-            <li><%= link_to "Home", root_path %></li>
-            <% if current_user.role == "writer" or current_user.role == "admin" %>
-                <li><%= link_to "Posts", posts_path, class: "nav-item" %></li>
-                <li><%= link_to "News-Letters", new_alumni_news_letter_path %></li>
-            <% end %>
-            <li><%=  link_to "Account", current_user  %></li>
+          <% end %>
+          <li><%=  link_to "Account", current_user  %></li>
         <% end %>
         <% if user_signed_in?%>
-            <li><%= link_to "Sign-out", destroy_user_session_path, :method => :delete, class: "nav-item" %></li>
+          <li><%= link_to "Sign-out", destroy_user_session_path, :method => :delete, class: "nav-item" %></li>
         <% else %>
-            <li><%= link_to "Sign-in", new_user_session_path %>
+          <li><%= link_to "Sign-in", new_user_session_path %>
         <% end %>
       </ul>
-    </div><!--/.nav-collapse -->
+    </div>
   </div>
 </div>
-
-
-
-
-
-
-
-
-<!--<nav class="navbar navbar-default" role="navigation">-->
-  <!--<div class="container-fluid">-->
-    <!--&lt;!&ndash; Brand and toggle get grouped for better mobile display &ndash;&gt;-->
-    <!--<div class="navbar-header">-->
-      <!--<div class="header_img">-->
-        <!--<div>-->
-          <!--<a class="navbar-brand" href="/">-->
-            <!--<img src="http://pktphichapter.org/wp-content/themes/PKTphichapter-201208/images/branding2012-crest.png">-->
-          <!--</a>-->
-        <!--</div>-->
-      <!--</div>-->
-      <!--<div class="phi_tau_text">-->
-        <!--<h1 class="h1-header">Phi Kappa Tau</h1>-->
-        <!--<h3 class="h3-header">Learning Leading Serving</h3>-->
-      <!--</div>-->
-      <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">-->
-        <!--<span class="sr-only">Toggle navigation</span>-->
-        <!--<span class="icon-bar"></span>-->
-        <!--<span class="icon-bar"></span>-->
-        <!--<span class="icon-bar"></span>-->
-      <!--</button>-->
-    <!--</div>-->
-
-    <!--&lt;!&ndash; Collect the nav links, forms, and other content for toggling &ndash;&gt;-->
-    <!--<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">-->
-      <!--<ul class="nav navbar-nav navbar-right">-->
-        <!--<% if current_user == nil or current_user.role == nil or current_user.role == "not_a_member"%>-->
-          <!--<li><%= link_to "Home", root_path, class: "nav-item" %></li>-->
-          <!--<li><%= link_to "About", about_path, class: "nav-item" %></li>-->
-          <!--<li><%= link_to "FAQ", faq_path, class: "nav-item" %></li>-->
-          <!--<li><%= link_to "Contact", contact_us_path, class: "nav-item" %></li>-->
-          <!--<li><%= link_to "News-Letters", alumni_news_letters_path, class: "nav-item" %></li>-->
-        <!--<% else %>-->
-          <!--<li><%= link_to "Home", root_path, class: "nav-item" %></li>-->
-          <!--<% if current_user.role == "writer" or current_user.role == "admin" %>-->
-            <!--<li><%= link_to "Posts", posts_path, class: "nav-item" %></li>-->
-            <!--<li><%= link_to "News-Letters", new_alumni_news_letter_path, class: "nav-item" %></li>-->
-          <!--<% end %>-->
-          <!--<li><%=  link_to "Account", current_user, class: "nav-item"  %></li>-->
-        <!--<% end %>-->
-        <!--<% if user_signed_in?%>-->
-          <!--<li><%= link_to "Sign-out", destroy_user_session_path, :method => :delete, class: "nav-item" %></li>-->
-        <!--<% else %>-->
-            <li><%= link_to "Sign-in", new_user_session_path, class: "nav-item" %>
-        <!--<% end %>-->
-      <!--</ul>-->
-    <!--</div>&lt;!&ndash; /.navbar-collapse &ndash;&gt;-->
-  <!--</div>&lt;!&ndash; /.container-fluid &ndash;&gt;-->
-<!--</nav>-->
