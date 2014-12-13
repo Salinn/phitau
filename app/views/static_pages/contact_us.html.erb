@@ -10,7 +10,7 @@
           <span class="image">
             <h3 style="position: absolute; bottom: -5px; left: 5px; color: #ffffff; background-color: #5E0000;"><%= position.first.role.slice(0,1).capitalize if position.first.role? %><%= position.first.role.slice(1..-1) if position.first.role? %></h3>
             <img style="width: auto; height: 30px; position: absolute; bottom: 5px; right: 5px;" src="http://png-3.findicons.com/files/icons/1963/colorcons_blue/128/info.png">
-            <%= image_tag position.first.profile_picture_url, :class => "user_img", :style => "width: auto; height: 247px; display: block; margin-left: auto; margin-right: auto" if position.first.profile_picture? %>
+            <%= image_tag position.first.profile_picture_url, :class => "user_img", :style => "width: auto; height: 250px; display: block; margin-left: auto; margin-right: auto" if position.first.profile_picture? %>
           </span>
           <span class="back" style="text-align: center; color: #ffffff; background-color: #5E0000;word-wrap: break-word;">
             <h2><%= position.first.role.slice(0,1).capitalize %><%= position.first.role.slice(1..-1) %></h2>
@@ -36,7 +36,7 @@
           <span class="image">
             <h3 style="position: absolute; bottom: -5px; left: 5px; color: #ffffff; background-color: #5E0000;"><%= position.first.role == "admin" ? "Web Master": position.first.role.slice(0,1).capitalize %> <%= position.first.role == "admin" ? "" : position.first.role.slice(1..-1) %></h3>
             <img style="width: auto; height: 30px; position: absolute; bottom: 5px; right: 5px;" src="http://png-3.findicons.com/files/icons/1963/colorcons_blue/128/info.png">
-            <%= image_tag position.first.profile_picture_url, :class => "user_img", :style => "width: auto; height: 247px; display: block; margin-left: auto; margin-right: auto" if position.first.profile_picture? %>
+            <%= image_tag position.first.profile_picture_url, :class => "user_img", :style => "width: auto; height: 250px; display: block; margin-left: auto; margin-right: auto" if position.first.profile_picture? %>
           </span>
           <span class="back" style="text-align: center; color: #ffffff; background-color: #5E0000;word-wrap: break-word;">
             <h2><%= position.first.role == "admin" ? "Web Master" : position.first.role.slice(0,1).capitalize %> <%= position.first.role == "admin" ? "" : position.first.role.slice(1..-1)%></h2>
