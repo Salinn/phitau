@@ -1,3 +1,5 @@
+$White: #FFFFFF;
+
 body {
   background-color: #e8ad2e;
   color: #333;
@@ -21,7 +23,7 @@ pre {
 a {
   color: #000;
   &:visited {
-    color: #666;
+//    color: $White;
   }
   &:hover {
     color: #fff;

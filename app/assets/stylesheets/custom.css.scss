@@ -58,18 +58,46 @@ a.logo:hover{
 background-color: transparent !important;
 }
 
+//Sets the footer size and color
 .footer {
 margin-top: 19rem;
 padding-top: 5px;
 background-color: $FooterBackground;
 }
+
+//Color of the bottom title
+.footer_title{
+  color: #00A000;
+}
+
+//Sets the height and width of facebook and twitter logo
+.facebook_twitter_logo {
+  width:60px;
+  height:60px;
+}
+
+//Sets how far away the facebook link is from the phi tau crest
+.facebook_link {
+  margin-left: 10px;
+}
+
+//Sets how far away the twitter link is from the facebook link
+.twitter_link{
+  margin-left: 15px;
+}
+
+//sets footer links color
+.footer a {
+  color: $White;
+}
+
 //End of the footer
+
 //Home Page
 .post_img{
 width: 40%;
 float: left;
 height: auto;
-
 }
 
 .post_text{
@@ -212,7 +240,7 @@ background-image: url("http://americanmuslimconsumer.com/wp-content/uploads/2013
 .flipping-cards input[type="checkbox"]:checked + label .wrapper{
   transform: rotateY(-180deg);
   -webkit-transform: rotateY(-180deg);
-  
+
 }
 
 .flipping-cards input[type="checkbox"]:checked + label .image {
