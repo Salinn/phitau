@@ -71,6 +71,7 @@ class StaticPagesController < ApplicationController
     community_service=users.where(role: "community_service").blank? ? nil : users.where(role: "community service")
     philanthropy=users.where(role: "philanthropy").blank? ? nil : users.where(role: "philanthropy")
     business_ops=users.where(role: "business_ops").blank? ? nil : users.where(role: "business_ops")
+    housing_manager=users.where(role: "housing_manager").blank? ? nil : users.where(role: "housing_manager")
 
     @chairs.push(recruitment) unless recruitment.nil?
     @chairs.push(alumni_relations) unless alumni_relations.nil?
@@ -80,6 +81,7 @@ class StaticPagesController < ApplicationController
     @chairs.push(community_service) unless community_service.nil?
     @chairs.push(philanthropy) unless philanthropy.nil?
     @chairs.push(business_ops) unless business_ops.nil?
+    @chairs.push(housing_manager) unless housing_manager.nil?
 
   end
 

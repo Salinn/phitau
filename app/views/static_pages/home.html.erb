@@ -1,16 +1,6 @@
 <div class="row">
-    <% if user_signed_in? and (current_user.role == nil or current_user.role == "not_a_member") %>
-      <div>
-        <%= form_for current_user  do |f| %>
-          <%= f.text_field :first_name, :placeholder => "First Name" %>
-          <%= f.text_field :last_name, :placeholder => "Last Name" %>
-          <%= f.submit "Request to be a member" %>
-        <% end %>
-      </div>
-    <% end %>
-
   <% unless @posts.previous_page %>
-    <div class="col-md-8 col-md-offset-2 padding-bot">
+    <div class="col-md-8 col-md-offset-2 top-card-padding">
       <div class="card">
         <h1 class="post_header">$50,000 For 50 Years Fundraiser!</h1>
         <div>
@@ -22,37 +12,37 @@
           <p>Let that number to sink in for a minute. Think about what that means - for an organization, an institution, to celebrate 50 years?</p>
           <p>For more information about the 50th <%= link_to "click here!", gamma_nu_50th_anniversary_path %></p>
         </div>
-        <div class="clear"> </div>
+        <div class="clear"></div>
       </div>
     </div>
   <% end %>
 
-    <div class="col-md-8 col-md-offset-2 padding-bot">
+  <div class="col-md-8 col-md-offset-2">
     <% @posts.each do |post| %>
       <div class="card">
         <h1 class="post_header"><%= post.title %></h1>
-          <div>
-            <%= image_tag post.image_url, :class => "post_img" if post.image? %>
-          </div>
-          <div class="post_text">
-            <p><%= post.content.html_safe %></p>
-          </div>
-          <div class="clear"> </div>
-          <hr>
+        <div>
+          <%= image_tag post.image_url, :class => "post_img" if post.image? %>
         </div>
+        <div class="post_text">
+          <p><%= post.content.html_safe %></p>
+        </div>
+        <div class="clear"> </div>
+        <hr>
+      </div>
     <% end %>
-    </div>
+  </div>
 </div>
-<div class="col-md-6 center-block">
+<div class="col-md-6 center-paginate">
   <div align="center">
     <h3>
-  <% if @posts.previous_page %>
-      <%= link_to "< Previous", params.merge(:page => @posts.previous_page) %>
-  <% end %>
-  Page <%= @posts.current_page %> of <%= @posts.total_pages %>
-  <% if @posts.next_page %>
-      <%= link_to "Next >", params.merge(:page => @posts.next_page) %>
-  <% end %>
+      <% if @posts.previous_page %>
+          <%= link_to "< Previous", params.merge(:page => @posts.previous_page) %>
+      <% end %>
+      Page <%= @posts.current_page %> of <%= @posts.total_pages %>
+      <% if @posts.next_page %>
+          <%= link_to "Next >", params.merge(:page => @posts.next_page) %>
+      <% end %>
     </h3>
   </div>
 </div>
