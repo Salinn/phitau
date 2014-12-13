@@ -6,7 +6,11 @@ class User < ActiveRecord::Base
   searchkick
 
   SIGNUPROLES = ["potential new member", "alumni", "current brother"]
-  ALLROLES = ["admin", "alumni", "current brother", "potential new member", "recruitment chair", "writer", "president"]
+  ALLROLES = ["alumni", "current brother", "potential new member", "dummy",
+              "president","first_vp","second_vp","treasurer","sergeant","chaplain",
+              "recruitment", "alumni relations", "web_master","brotherhood","social","community service",
+              "philanthropy","business ops",
+              "admin", "writer"]
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable

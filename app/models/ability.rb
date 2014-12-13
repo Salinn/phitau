@@ -17,6 +17,6 @@ class Ability
         can [:show, :update, :new, :read, :create], FaqCategory
         can [:show, :update, :new, :read, :create], FaqQuestion
       end
-      end
+    end
   end
 end
