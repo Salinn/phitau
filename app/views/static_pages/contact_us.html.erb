@@ -9,17 +9,16 @@
           <span class="wrapper">
             <span class="image">
               <h3 class="postition-front-title">
-                <%= position.first.role.slice(0,1).capitalize %><%= position.first.role.slice(1..-1) %>
+                <%= title(position.first.role) %>
               </h3>
               <%= image_tag "info.png", class: "postition-front-flip-icon" %>
               <%= image_tag position.first.profile_picture_url, class:"user_img contact_img" if position.first.profile_picture? %>
             </span>
             <span class="back contact-back-background" >
               <h2>
-                <%= position.first.role.slice(0,1).capitalize %><%= position.first.role.slice(1..-1) %>
+                <%= title(position.first.role) %>
               </h2>
               <h3>
-                <%= position.first.position_display %>
                 <%= position.first.first_name if position.first.first_name? %> <%= " " + position.first.last_name if position.first.last_name? %>
               </h3>
               <h2>Email</h2>
@@ -34,7 +33,7 @@
   </ul>
   <div style="float: none; clear:both;"> </div>
 
-  <h2 style="text-align: center;">Executive Board</h2>
+  <h2 style="text-align: center;">Chairs</h2>
   <hr>
   <ul class="flipping-cards">
     <% @chairs.each do |position| %>
@@ -44,14 +43,14 @@
           <span class="wrapper">
             <span class="image">
               <h3 class="postition-front-title">
-                <%= position.first.role.slice(0,1).capitalize %><%= position.first.role.slice(1..-1) %>
+                <%= title(position.first.role) %>
               </h3>
               <%= image_tag "info.png", class: "postition-front-flip-icon" %>
               <%= image_tag position.first.profile_picture_url, class:"user_img contact_img" if position.first.profile_picture? %>
             </span>
             <span class="back contact-back-background" >
               <h2>
-                <%= position.first.role.slice(0,1).capitalize %><%= position.first.role.slice(1..-1) %>
+                <%= title(position.first.role) %>
               </h2>
               <h3>
                 <%= position.first.first_name if position.first.first_name? %> <%= " " + position.first.last_name if position.first.last_name? %>
