@@ -1,35 +1,41 @@
-<div class="col-md-6 center-block row">
-  <div class="card">
-  <h1 style="text-align:center; text-decoration: underline;">Your Info</h1>
-    <div class="user_img">
-      <%= image_tag @user.profile_picture, :class => "user_img" if @user.profile_picture? %>
-      <%= form_for current_user, url: {action: "update"} do |f| %>
-      <div class="field">
-        <%= f.file_field :profile_picture %>
+<!--You can only update one or the other currently-->
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3 top-card-padding">
+    <div class="card">
+      <h1 class="card_header">Your Info</h1>
+      <!--Users picture-->
+      <div class="user_img">
+        <%= image_tag @user.profile_picture, :class => "user_img" if @user.profile_picture? %>
+        <%= form_for current_user, url: {action: "update"} do |f| %>
+            <div class="field">
+              <%= f.file_field :profile_picture %>
+            </div>
+            <div class="field">
+              <%= f.label :remote_profile_picture_url, "or image URL" %><br />
+              <%= f.text_field :remote_profile_picture_url %>
+            </div>
+            <%= f.submit "Update Picture" %>
+        <% end %>
+        <div class="field">
+        </div>
       </div>
-      <div class="field">
-        <%= f.label :remote_profile_picture_url, "or image URL" %><br />
-        <%= f.text_field :remote_profile_picture_url %>
+      <!--makes sure everything stays on the page-->
+      <div class="user_info">
+        <%= form_for current_user, url: {action: "update"} do |f| %>
+            <%= f.text_field :first_name, :placeholder => "First Name" %>
+            <%= f.text_field :last_name, :placeholder => "Last Name" %>
+            <%= f.text_field :phone_number, :placeholder => "Phone Number" %>
+            <%= f.text_field :home_town, :placeholder => "Home Town" %>
+            <%= f.text_field :state, :placeholder => "State" %>
+            <%= f.text_field :big_brother, :placeholder => "Big Brother" %>
+            <%= f.text_field :major, :placeholder => "Major" %>
+            <%= f.text_field :pledge_class, :placeholder => "Pledge Class" %>
+            <div class="clear"> </div>
+            <%= f.submit "Update Information" %>
+        <% end %>
       </div>
-          <%= f.submit "Update Picture" %>
-          <% end %>
-      <div class="field">
-      </div>
+      <div class="clear"></div>
     </div>
-  <div class="user_info">
-    <%= form_for current_user, url: {action: "update"} do |f| %>
-        <%= f.text_field :first_name, :placeholder => "First Name" %>
-        <%= f.text_field :last_name, :placeholder => "Last Name" %>
-        <%= f.text_field :phone_number, :placeholder => "Phone Number" %>
-        <%= f.text_field :home_town, :placeholder => "Home Town" %>
-        <%= f.text_field :state, :placeholder => "State" %>
-        <%= f.text_field :big_brother, :placeholder => "Big Brother" %>
-        <%= f.text_field :major, :placeholder => "Major" %>
-        <%= f.text_field :pledge_class, :placeholder => "Pledge Class" %>
-        <div style="float: none; clear:both;"> </div>
-    <%= f.submit "Update Information" %>
-    <% end %>
   </div>
-  <div style="float: none; clear:both;"> </div>
 </div>
-    </div>

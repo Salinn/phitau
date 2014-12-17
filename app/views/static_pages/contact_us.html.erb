@@ -1,53 +1,70 @@
-<body>
-<h2 style="text-align: center;">Executive Board</h2>
-<hr>
+<div class="row">
+  <h2 style="text-align: center;">Executive Board</h2>
+  <hr>
   <ul class="flipping-cards">
     <% @eboard.each do |position| %>
-    <li>
-      <input type="checkbox" id="item<%= position.first.id %>">
-      <label for="item<%= position.first.id %>">
-        <span class="wrapper">
-          <span class="image">
-            <h3 style="position: absolute; bottom: -5px; left: 5px; color: #ffffff; background-color: #5E0000;"><%= position.first.role.slice(0,1).capitalize if position.first.role? %><%= position.first.role.slice(1..-1) if position.first.role? %></h3>
-            <img style="width: auto; height: 30px; position: absolute; bottom: 5px; right: 5px;" src="http://png-3.findicons.com/files/icons/1963/colorcons_blue/128/info.png">
-            <%= image_tag position.first.profile_picture_url, :class => "user_img", :style => "width: auto; height: 250px; display: block; margin-left: auto; margin-right: auto" if position.first.profile_picture? %>
+      <li>
+        <input type="checkbox" id="item<%= position.first.id %>">
+        <label for="item<%= position.first.id %>">
+          <span class="wrapper">
+            <span class="image">
+              <h3 class="postition-front-title">
+                <%= position.first.role.slice(0,1).capitalize %><%= position.first.role.slice(1..-1) %>
+              </h3>
+              <%= image_tag "info.png", class: "postition-front-flip-icon" %>
+              <%= image_tag position.first.profile_picture_url, class:"user_img contact_img" if position.first.profile_picture? %>
+            </span>
+            <span class="back contact-back-background" >
+              <h2>
+                <%= position.first.role.slice(0,1).capitalize %><%= position.first.role.slice(1..-1) %>
+              </h2>
+              <h3>
+                <%= position.first.position_display %>
+                <%= position.first.first_name if position.first.first_name? %> <%= " " + position.first.last_name if position.first.last_name? %>
+              </h3>
+              <h2>Email</h2>
+              <h3>
+                <%= mail_to position.first.email %>
+              </h3>
+            </span>
           </span>
-          <span class="back" style="text-align: center; color: #ffffff; background-color: #5E0000;word-wrap: break-word;">
-            <h2><%= position.first.role.slice(0,1).capitalize %><%= position.first.role.slice(1..-1) %></h2>
-            <h3><%= position.first.first_name if position.first.first_name? %> <%= " " + position.first.last_name if position.first.last_name? %></h3>
-            <h2>Email</h2>
-            <h3><%= mail_to position.first.email %></h3>
-          </span>
-        </span>
-      </label>
-    </li>
+        </label>
+      </li>
     <% end %>
   </ul>
   <div style="float: none; clear:both;"> </div>
 
-<h2 style="text-align: center;">Executive Board</h2>
-<hr>
-<ul class="flipping-cards">
-  <% @chairs.each do |position| %>
-      <li>
-        <input type="checkbox" id="item<%= position.first.id %>">
-        <label for="item<%= position.first.id %>">
-        <span class="wrapper">
-          <span class="image">
-            <h3 style="position: absolute; bottom: -5px; left: 5px; color: #ffffff; background-color: #5E0000;"><%= position.first.role == "admin" ? "Web Master": position.first.role.slice(0,1).capitalize %> <%= position.first.role == "admin" ? "" : position.first.role.slice(1..-1) %></h3>
-            <img style="width: auto; height: 30px; position: absolute; bottom: 5px; right: 5px;" src="http://png-3.findicons.com/files/icons/1963/colorcons_blue/128/info.png">
-            <%= image_tag position.first.profile_picture_url, :class => "user_img", :style => "width: auto; height: 250px; display: block; margin-left: auto; margin-right: auto" if position.first.profile_picture? %>
+  <h2 style="text-align: center;">Executive Board</h2>
+  <hr>
+  <ul class="flipping-cards">
+    <% @chairs.each do |position| %>
+        <li>
+          <input type="checkbox" id="item<%= position.first.id %>">
+          <label for="item<%= position.first.id %>">
+          <span class="wrapper">
+            <span class="image">
+              <h3 class="postition-front-title">
+                <%= position.first.role.slice(0,1).capitalize %><%= position.first.role.slice(1..-1) %>
+              </h3>
+              <%= image_tag "info.png", class: "postition-front-flip-icon" %>
+              <%= image_tag position.first.profile_picture_url, class:"user_img contact_img" if position.first.profile_picture? %>
+            </span>
+            <span class="back contact-back-background" >
+              <h2>
+                <%= position.first.role.slice(0,1).capitalize %><%= position.first.role.slice(1..-1) %>
+              </h2>
+              <h3>
+                <%= position.first.first_name if position.first.first_name? %> <%= " " + position.first.last_name if position.first.last_name? %>
+              </h3>
+              <h2>Email</h2>
+              <h3>
+                <%= mail_to position.first.email %>
+              </h3>
+            </span>
           </span>
-          <span class="back" style="text-align: center; color: #ffffff; background-color: #5E0000;word-wrap: break-word;">
-            <h2><%= position.first.role == "admin" ? "Web Master" : position.first.role.slice(0,1).capitalize %> <%= position.first.role == "admin" ? "" : position.first.role.slice(1..-1)%></h2>
-            <h3><%= position.first.first_name if position.first.first_name? %> <%= position.first.last_name if position.first.last_name? %></h3>
-            <h2>Email</h2>
-            <h3 style="color: #ffffff !important;"><%= mail_to position.first.email %></h3>
-          </span>
-        </span>
-        </label>
-      </li>
-  <% end %>
-</ul>
-<div style="float: none; clear:both;"> </div>
-</body>
+          </label>
+        </li>
+    <% end %>
+  </ul>
+  <div class="clear"> </div>
+</div>

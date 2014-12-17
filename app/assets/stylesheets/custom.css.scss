@@ -115,7 +115,7 @@ padding-left: 20px;
 }
 
 //Title formatting
-.post_header{
+.card_header{
 text-align:center;
 text-decoration: underline;
 }
@@ -131,7 +131,7 @@ clear:both;
   float: none;
   margin: 0 auto;
 }
-//End of Home PAge
+//End of Home Page
 //Start of cards for user account page
 .user_img{
 width: 50%;
@@ -144,7 +144,52 @@ float: right;
 width: 50%;
 padding-left: 20px;
 }
+//Push user edit info link to the right
+.push_link_right{
+  float: right;
+}
+//end user account page
+//Start devise section
+//registration
+.registration_space{
+  //  margin: 0 auto;
+  margin-bottom: 1rem;
+  float: none;
+}
+//end devise section
+//Start of contact page
 
+.postition-front-title{
+  position: absolute;
+  bottom: -5px;
+  left: 5px;
+  color: #ffffff;
+  background-color: #5E0000;
+}
+
+.postition-front-flip-icon{
+  width: auto;
+  height: 30px;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+}
+
+.contact_img{
+  width: auto;
+  height: 250px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+
+.contact-back-background{
+  text-align: center;
+  color: #ffffff;
+  background-color: #5E0000;
+  word-wrap: break-word;
+}
+//end of contact page
 //text changes
 .black_h2{
 color: $Black;
@@ -408,13 +453,6 @@ ________________________________________*/
 }
 
 .close:hover { background: #00d9ff; }
-
-//registration
-.registration_space{
-//  margin: 0 auto;
-  margin-bottom: 1rem;
-  float: none;
-}
 
 .card_registration {
   padding:1.5rem;

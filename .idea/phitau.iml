@@ -20,8 +20,8 @@
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
       <envs>
         <env name="S3_BUCKET" value="phitau" />
-        <env name="S3_KEY" value="AKIAIMEEN3BRHETUK3VQ" />
-        <env name="S3_SECRET" value="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" />
+        <env name="S3_KEY" value="AKIAJOGBSR2MU6Y2JC7Q" />
+        <env name="S3_SECRET" value="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" />
         <env name="account_sid" value="ACe4cd78919d41293849b92bb1a65a3f77" />
         <env name="auth_token" value="2caddf651d24a76379bb45c8e31f730f" />
         <env name="private_key" value="6Le1Y_sSAAAAAL6q8Y0-l00dfZkyLfBnwsZ2NdiM" />

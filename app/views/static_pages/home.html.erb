@@ -2,7 +2,7 @@
   <% unless @posts.previous_page %>
     <div class="col-md-8 col-md-offset-2 top-card-padding">
       <div class="card">
-        <h1 class="post_header">$50,000 For 50 Years Fundraiser!</h1>
+        <h1 class="card_header">$50,000 For 50 Years Fundraiser!</h1>
         <div>
           <img class="post_img" src="http://i.imgur.com/3Nvx0Q6.jpg">
         </div>
@@ -20,7 +20,7 @@
   <div class="col-md-8 col-md-offset-2">
     <% @posts.each do |post| %>
       <div class="card">
-        <h1 class="post_header"><%= post.title %></h1>
+        <h1 class="card_header"><%= post.title %></h1>
         <div>
           <%= image_tag post.image_url, :class => "post_img" if post.image? %>
         </div>
