@@ -15,7 +15,7 @@
   <tbody>
     <% @images.each do |image| %>
       <tr>
-        <td><%= image.name %></td>
+        <td><%= image_tag image.name %></td>
         <td><%= image.width %></td>
         <td><%= image.height %></td>
         <td><%= link_to 'Show', image %></td>
