@@ -1,4 +1,6 @@
 Phitau::Application.routes.draw do
+  resources :images
+
   resources :faq_categories
 
   resources :faq_questions

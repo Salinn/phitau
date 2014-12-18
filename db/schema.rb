@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141210195002) do
+ActiveRecord::Schema.define(version: 20141218175744) do
 
   create_table "alumni_news_letters", force: true do |t|
     t.date     "released_date"
@@ -39,6 +39,14 @@ ActiveRecord::Schema.define(version: 20141210195002) do
     t.text     "content"
     t.integer  "faq_category_id"
     t.integer  "order"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "images", force: true do |t|
+    t.string   "name"
+    t.integer  "width"
+    t.integer  "height"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
