@@ -1,9 +1,14 @@
 <h1 align="center">Photo Galleries</h1>
+
+<% if can? :create, :galleries %>
+  <%= (link_to 'New Gallery', new_gallery_path, "data-no-turbolink" => true)%>
+<% end %>
+<div>
 <% @galleries.each do |gallery| %>
     <div style="float: left; padding-right: 1rem">
     <p><%= link_to (image_tag gallery.images.first.name), gallery_path(gallery.id), class: "gallery_images" %></p>
-    <p><%= link_to gallery.name, gallery_path(gallery.id) %></p>
+    <p align="center"><%= link_to gallery.name, gallery_path(gallery.id) %></p>
     </div>
     <% end %>
-
+</div>
 <br>

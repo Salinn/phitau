@@ -1,27 +1,17 @@
 <h1>Listing images</h1>
+<div class="clear">
+<% if can? :create, :galleries %>
+    <%= link_to 'New Image', new_image_path %>
+<% end %>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @images.each do |image| %>
-      <tr>
-        <td><%= image_tag image.name %></td>
-        <td><%= image.width %></td>
-        <td><%= image.height %></td>
-        <td><%= link_to 'Destroy', image, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<% @images.each do |image| %>
+  <div class="clear">
+    <%= image_tag image.name %>
+    <%= link_to 'Edit', edit_image_path(image), 'data-no-turbolink' => true  %>
+    <%= link_to 'Destroy', image, method: :delete, data: { confirm: 'Are you sure?' } %>
+  </div>
+<% end %>
 
 <br>
 
-<%= link_to 'New Image', new_image_path %>
