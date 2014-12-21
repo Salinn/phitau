@@ -1,7 +1,7 @@
 <h1>Galleries</h1>
 <% @galleries.each do |gallery| %>
     <div style="float: left; padding-right: 1rem">
-    <p><%=  image_tag gallery.images.first.name, :style => "width: 200px; height: 200px;"%></p>
+    <p><%= link_to (image_tag gallery.images.first.name), gallery_path(gallery.id), class: "gallery_images" %></p>
     <p><%= link_to gallery.name, gallery_path(gallery.id) %></p>
     </div>
     <% end %>

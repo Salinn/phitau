@@ -596,3 +596,15 @@ body {
 //  background-color: $HarvardRed;
 //  background-size:cover;
 //}
+.gallery_images img{
+  width: 25rem;
+  height: auto;
+  padding-left: .5rem;
+  padding-bottom: .5rem;
+}
+a.gallery_imges img:hover{
+  background-color: transparent !important;
+}
+a:hover{
+  background-color: transparent !important;
+}

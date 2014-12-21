@@ -1,14 +1,27 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
+<div>
+<h1 align="center">
   <%= @gallery.name %>
-</p>
+</h1>
+</div>
+<div style="float: left;">
+<% @gallery.images.each do |image| %>
+   <%= link_to (image_tag image.name), image_path(image.id), class: "gallery_iamges" %>
+<% end %>
+</div>
 
-<p>
-  <strong>Private:</strong>
-  <%= @gallery.private %>
-</p>
-
-<%= link_to 'Edit', edit_gallery_path(@gallery) %> |
-<%= link_to 'Back', galleries_path %>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
