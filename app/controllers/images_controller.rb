@@ -1,6 +1,7 @@
 class ImagesController < ApplicationController
   before_action :set_image, only: [:show, :edit, :update, :destroy]
   respond_to :html, :xml, :json
+  load_and_authorize_resource
 
   def index
     @images = Image.all

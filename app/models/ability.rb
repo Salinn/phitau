@@ -9,6 +9,8 @@ class Ability
       can :show, User, :id => user.id
       can :update, User, :id => user.id
       can :read, AlumniNewsLetter
+      can :show, Image
+      can [:show, :read], Gallery
       if user.user_role? "writer"
         can [:show, :update, :new, :read, :create], AlumniNewsLetter
         can [:show, :update, :new, :read, :create], Post
