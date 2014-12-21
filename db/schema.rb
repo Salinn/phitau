@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141218191319) do
+ActiveRecord::Schema.define(version: 20141221211124) do
 
   create_table "alumni_news_letters", force: true do |t|
     t.date     "released_date"
@@ -82,6 +82,7 @@ ActiveRecord::Schema.define(version: 20141218191319) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "image"
+    t.boolean  "top_card"
   end
 
   create_table "text_messages", force: true do |t|

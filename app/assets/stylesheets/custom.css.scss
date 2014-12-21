@@ -443,7 +443,6 @@ ________________________________________*/
   top: -10px;
   width: 24px;
   text-decoration: none;
-  font-weight: bold;
   -webkit-border-radius: 12px;
   -moz-border-radius: 12px;
   border-radius: 12px;
@@ -607,4 +606,8 @@ a.gallery_imges img:hover{
 }
 a:hover{
   background-color: transparent !important;
+}
+
+p {
+  font-weight: normal;
 }
