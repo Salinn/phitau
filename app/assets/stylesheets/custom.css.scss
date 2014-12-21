@@ -611,3 +611,9 @@ a:hover{
 p {
   font-weight: normal;
 }
+
+.posts_checkboxes{
+  input[type="checkbox"] {
+    display: inline;
+  }
+}

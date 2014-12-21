@@ -5,7 +5,7 @@
   <tr>
     <th>Title</th>
     <th>Content</th>
-    <th>Published?</th>
+    <th>Top Card?</th>
     <th>Author</th>
     <th></th>
     <th></th>
@@ -18,7 +18,7 @@
       <tr>
         <td><%= post.title %></td>
         <td><%= post.content %></td>
-        <td><%= post.published %></td>
+        <td><%= post.top_card %></td>
         <td><%= post.author %></td>
         <td><%= link_to 'Show', post %></td>
         <td><%= link_to 'Edit', edit_post_path(post), 'data-no-turbolink' => true  %></td>

@@ -1,18 +1,15 @@
 <div class="row">
-  <% unless @posts.previous_page %>
+  <% unless @posts.previous_page or @top_card.nil? %>
     <div class="col-md-8 col-md-offset-2 top-card-padding">
       <div class="card">
-        <h1 class="card_header">$50,000 For 50 Years Fundraiser!</h1>
+        <h1 class="card_header"><%= @top_card.title %></h1>
         <div>
-          <img class="post_img" src="http://i.imgur.com/3Nvx0Q6.jpg">
+          <%= image_tag @top_card.image_url, :class => "post_img" if @top_card.image? %>
         </div>
         <div class="post_text">
-          <p>Brothers –</p>
-          <p>50 Years. A golden anniversary. A milestone worthy of celebration.</p>
-          <p>Let that number to sink in for a minute. Think about what that means - for an organization, an institution, to celebrate 50 years?</p>
-          <p>For more information about the 50th <%= link_to "click here!", gamma_nu_50th_anniversary_path %></p>
+            <%= @top_card.content.html_safe %>
         </div>
-        <div class="clear"></div>
+        <div class="clear"> </div>
       </div>
     </div>
   <% end %>

@@ -35,6 +35,8 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
 
+    top_card_check_and_fix
+
     respond_to do |format|
       if @post.save
         #UserMailer.signup_confirmation(current_user).deliver
@@ -51,6 +53,7 @@ class PostsController < ApplicationController
   # PATCH/PUT /posts/1.json
   def update
     respond_to do |format|
+      top_card_check_and_fix
       if @post.update(post_params)
         format.html { redirect_to @post, notice: 'Post was successfully updated.' }
         format.json { head :no_content }
@@ -79,6 +82,14 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title,:content,:published, :image, :remote_image_url)
+      params.require(:post).permit(:title,:content,:published, :image, :remote_image_url, :top_card)
+    end
+
+    def top_card_check_and_fix
+      a = Post.find_by(top_card: true)
+      unless a.nil?
+        a.top_card = nil
+        a.save
+      end
     end
 end

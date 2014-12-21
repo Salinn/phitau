@@ -31,11 +31,14 @@
     <%= f.label :remote_image_url, "or image URL" %><br />
     <%= f.text_field :remote_image_url %>
   </div>
-  <div class="field">
+  <div class="field posts_checkboxes">
     <%= f.label :published %><br>
     <%= f.check_box :published %>
   </div>
-
+    <div class="field posts_checkboxes">
+      <%= f.label :top_card %><br>
+      <%= f.check_box :top_card %>
+    </div>
   <div class="actions">
     <%= f.submit %>
   </div>
