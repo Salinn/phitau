@@ -13,10 +13,12 @@ class ImagesController < ApplicationController
 
   def new
     @image = Image.new
+    @galleries = Gallery.all.each
     respond_with(@image)
   end
 
   def edit
+    @galleries = Gallery.all
   end
 
   def create
@@ -41,6 +43,6 @@ class ImagesController < ApplicationController
     end
 
     def image_params
-      params.require(:image).permit(:name, :width, :height, :remote_name_url)
+      params.require(:image).permit(:name, :width, :height, :remote_name_url, :gallery_id)
     end
 end

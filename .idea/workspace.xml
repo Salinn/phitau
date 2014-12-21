@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a595ba0-4bc1-4285-94ea-1699f878f13d" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/images/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/images/_form.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/galleries_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/galleries_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/gallery.rb" afterPath="$PROJECT_DIR$/app/models/gallery.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/images_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/images_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/galleries/index.html.erb" afterPath="$PROJECT_DIR$/app/views/galleries/index.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/images/index.html.erb" afterPath="$PROJECT_DIR$/app/views/images/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="phitau.iws" />
@@ -19,7 +24,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/phitau@Development__phitau.coverage" NAME="Development: phitau Coverage Results" MODIFIED="1418928352647" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="phitau" />
+    <SUITE FILE_PATH="coverage/phitau@Development__phitau.coverage" NAME="Development: phitau Coverage Results" MODIFIED="1419180683611" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="phitau" />
     <SUITE FILE_PATH="coverage/phitau@example.coverage" NAME="example Coverage Results" MODIFIED="1416846201013" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.." MODULE_NAME="phitau" />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -46,85 +51,27 @@
     <favorites_list name="phitau" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.55148005">
+    <splitter split-orientation="horizontal" split-proportion="0.4890605">
       <split-first>
         <leaf>
           <file leaf-file-name="_form.html.erb" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/views/images/_form.html.erb">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-13.125" vertical-offset="0" max-vertical-offset="405">
-                  <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="user.rb" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/models/user.rb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
-                  <caret line="11" column="63" selection-start-line="11" selection-start-column="63" selection-end-line="11" selection-end-column="63" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="image.rb" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/models/image.rb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
-                  <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Gemfile" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Gemfile">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-13.064516" vertical-offset="0" max-vertical-offset="1305">
-                  <caret line="27" column="19" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="19" />
+                <state vertical-scroll-proportion="-9.708333" vertical-offset="7" max-vertical-offset="420">
+                  <caret line="16" column="51" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
           <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/views/images/index.html.erb">
+            <entry file="file://$PROJECT_DIR$/app/views/galleries/index.html.erb">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.6174334" vertical-offset="0" max-vertical-offset="555">
-                  <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="application.css.scss" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="360">
-                  <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="images.js.coffee" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/assets/javascripts/images.js.coffee">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="240">
-                  <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="posts.js.coffee" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/assets/javascripts/posts.js.coffee">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-1.875" vertical-offset="0" max-vertical-offset="135">
-                  <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-                  <folding />
+                <state vertical-scroll-proportion="0.14527845" vertical-offset="0" max-vertical-offset="413">
+                  <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+                  <folding>
+                    <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -133,31 +80,31 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="post.rb" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/models/post.rb">
+          <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/views/images/index.html.erb">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
-                  <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="2" selection-end-column="38" />
+                <state vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="495">
+                  <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="posts_controller.rb" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/controllers/posts_controller.rb">
+          <file leaf-file-name="galleries_controller.rb" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/controllers/galleries_controller.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="1.4393593" vertical-offset="586" max-vertical-offset="1350">
-                  <caret line="81" column="88" selection-start-line="81" selection-start-column="72" selection-end-line="81" selection-end-column="88" />
+                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="780">
+                  <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="_form.html.erb" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/views/posts/_form.html.erb">
+          <file leaf-file-name="schema.rb" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/db/schema.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-16.375" vertical-offset="12" max-vertical-offset="765">
-                  <caret line="27" column="21" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="21" />
+                <state vertical-scroll-proportion="0.3089245" vertical-offset="465" max-vertical-offset="2790">
+                  <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
                   <folding />
                 </state>
               </provider>
@@ -183,9 +130,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/models/post.rb" />
-        <option value="$PROJECT_DIR$/app/views/posts/_form.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/posts_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/posts/index.html.erb" />
         <option value="$PROJECT_DIR$/db/migrate/20141204184029_add_brother_who_sold_valentines_day_delievery.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20141204184215_add_brother_who_sold_valentines_day_delieveries.rb" />
@@ -224,16 +168,19 @@
         <option value="$PROJECT_DIR$/app/controllers/users_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/static_pages/contact_us.html.erb" />
         <option value="$PROJECT_DIR$/app/helpers/application_helper.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/images_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/images/_form.html.erb" />
-        <option value="$PROJECT_DIR$/app/models/image.rb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/images.js.coffee" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/posts.js.coffee" />
         <option value="$PROJECT_DIR$/Gemfile" />
-        <option value="$PROJECT_DIR$/app/views/images/index.html.erb" />
         <option value="$PROJECT_DIR$/db/migrate/20141218191237_add_gallery_to_image.rb" />
+        <option value="$PROJECT_DIR$/app/views/images/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/galleries_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/images_controller.rb" />
+        <option value="$PROJECT_DIR$/app/models/image.rb" />
+        <option value="$PROJECT_DIR$/app/models/gallery.rb" />
+        <option value="$PROJECT_DIR$/app/views/images/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/galleries/index.html.erb" />
       </list>
     </option>
   </component>
@@ -307,38 +254,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="db" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phitau" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phitau" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="db" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migrate" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phitau" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phitau" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -365,7 +280,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
+              <option name="myItemId" value="galleries" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -380,6 +295,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="phitau" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="phitau" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -399,10 +332,11 @@
     <property name="options.searchVisible" value="true" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="FullScreen" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="abil&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/app/models/ability.rb&#10;show&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/app/views/users/show.html.erb&#10;schem&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/db/schema.rb&#10;stati&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/app/controllers/static_pages_controller.rb&#10;_header&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/vendor/bundle/ruby/2.0.0/gems/erubis-2.7.0/benchmark/templates/_header.html&#10;appl&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/vendor/bundle/ruby/2.0.0/gems/rails-4.0.0/guides/code/getting_started/app/assets/stylesheets/application.css&#10;custom&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/app/assets/stylesheets/custom.css.scss&#10;user&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/app/models/user.rb&#10;abi&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/app/models/ability.rb&#10;static&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/app/controllers/static_pages_controller.rb&#10;faq.h&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/app/views/static_pages/faq.html.erb&#10;sche&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/db/schema.rb&#10;valent&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/app/controllers/valentines_day_inventories_controller.rb&#10;_form&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/app/views/valentines_day_delieveries/_form.html.erb&#10;stat&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/app/controllers/static_pages_controller.rb" />
+    <property name="SearchEverywhereHistoryKey" value="schema&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/db/schema.rb&#10;schem&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/db/schema.rb&#10;abil&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/app/models/ability.rb&#10;show&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/app/views/users/show.html.erb&#10;stati&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/app/controllers/static_pages_controller.rb&#10;_header&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/vendor/bundle/ruby/2.0.0/gems/erubis-2.7.0/benchmark/templates/_header.html&#10;appl&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/vendor/bundle/ruby/2.0.0/gems/rails-4.0.0/guides/code/getting_started/app/assets/stylesheets/application.css&#10;custom&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/app/assets/stylesheets/custom.css.scss&#10;user&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/app/models/user.rb&#10;abi&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/app/models/ability.rb&#10;static&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/app/controllers/static_pages_controller.rb&#10;faq.h&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/app/views/static_pages/faq.html.erb&#10;sche&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/db/schema.rb&#10;valent&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/app/controllers/valentines_day_inventories_controller.rb&#10;_form&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/app/views/valentines_day_delieveries/_form.html.erb&#10;stat&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/app/controllers/static_pages_controller.rb" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/views/galleries" />
       <recent name="$PROJECT_DIR$/app/views/devise/registrations" />
     </key>
   </component>
@@ -670,7 +604,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32961586" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.40520447" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30483273" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27541828" sideWeight="0.4993804" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27541828" sideWeight="0.4993804" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947233" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32961586" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24967825" sideWeight="0.4993804" order="1" side_tool="false" content_ui="tabs" />
@@ -711,7 +645,7 @@
           <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="11" />
+      <option name="time" value="12" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="RailsRunConfigurationType">
@@ -721,63 +655,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/users/edit_all.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="675">
-          <caret line="16" column="61" selection-start-line="16" selection-start-column="61" selection-end-line="16" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/faq_categories/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3187251" vertical-offset="0" max-vertical-offset="753">
-          <caret line="16" column="76" selection-start-line="16" selection-start-column="76" selection-end-line="16" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/faq_categories/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="777">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/faq_categories/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="777">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/faq_questions/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25742576" vertical-offset="110" max-vertical-offset="615">
-          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/schema.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1335" max-vertical-offset="2550">
-          <caret line="113" column="31" selection-start-line="113" selection-start-column="31" selection-end-line="113" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6911197" vertical-offset="663" max-vertical-offset="1530">
-          <caret line="80" column="73" selection-start-line="80" selection-start-column="73" selection-end-line="80" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/bundle/ruby/2.0.0/gems/rdoc-4.1.2/lib/rdoc/generator/template/darkfish/_head.rhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="777">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/bundle/ruby/2.0.0/gems/erubis-2.7.0/benchmark/templates/_header.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="870">
@@ -970,14 +847,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/images_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="343" max-vertical-offset="780">
-          <caret line="43" column="72" selection-start-line="43" selection-start-column="72" selection-end-line="43" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/uploaders/image_uploader.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="855">
@@ -998,62 +867,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="740">
           <caret line="0" column="27" selection-start-line="0" selection-start-column="24" selection-end-line="0" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
-          <caret line="11" column="63" selection-start-line="11" selection-start-column="63" selection-end-line="11" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/posts_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.4393593" vertical-offset="586" max-vertical-offset="1350">
-          <caret line="81" column="88" selection-start-line="81" selection-start-column="72" selection-end-line="81" selection-end-column="88" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/images/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.125" vertical-offset="0" max-vertical-offset="405">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/image.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="360">
-          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/images.js.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="240">
-          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/posts.js.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.875" vertical-offset="0" max-vertical-offset="135">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1106,11 +919,141 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/users/edit_all.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="675">
+          <caret line="16" column="114" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="114" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/posts_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="586" max-vertical-offset="1350">
+          <caret line="54" column="25" selection-start-line="54" selection-start-column="25" selection-end-line="54" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/galleries/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="777">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/galleries/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="764">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.096525095" vertical-offset="0" max-vertical-offset="777">
+          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/posts.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.059760958" vertical-offset="0" max-vertical-offset="753">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/images.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1992032" vertical-offset="0" max-vertical-offset="753">
+          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21912351" vertical-offset="0" max-vertical-offset="753">
+          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/meetings_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="780">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/images_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.73938227" vertical-offset="292" max-vertical-offset="810">
+          <caret line="45" column="89" selection-start-line="45" selection-start-column="89" selection-end-line="45" selection-end-column="89" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/gallery.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="135">
+          <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/image.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.033333335" vertical-offset="0" max-vertical-offset="450">
+          <caret line="1" column="21" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/images/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6174334" vertical-offset="0" max-vertical-offset="555">
-          <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+        <state vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="495">
+          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/galleries_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="780">
+          <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/schema.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3089245" vertical-offset="465" max-vertical-offset="2790">
+          <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/images/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.708333" vertical-offset="7" max-vertical-offset="420">
+          <caret line="16" column="51" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/galleries/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14527845" vertical-offset="0" max-vertical-offset="413">
+          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

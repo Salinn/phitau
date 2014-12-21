@@ -1,29 +1,9 @@
-<h1>Listing galleries</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Private</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @galleries.each do |gallery| %>
-      <tr>
-        <td><%= gallery.name %></td>
-        <td><%= gallery.private %></td>
-        <td><%= link_to 'Show', gallery %></td>
-        <td><%= link_to 'Edit', edit_gallery_path(gallery) %></td>
-        <td><%= link_to 'Destroy', gallery, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+<h1>Galleries</h1>
+<% @galleries.each do |gallery| %>
+    <div style="float: left; padding-right: 1rem">
+    <p><%=  image_tag gallery.images.first.name, :style => "width: 200px; height: 200px;"%></p>
+    <p><%= link_to gallery.name, gallery_path(gallery.id) %></p>
+    </div>
     <% end %>
-  </tbody>
-</table>
 
 <br>
-
-<%= link_to 'New Gallery', new_gallery_path %>

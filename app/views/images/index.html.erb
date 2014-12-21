@@ -4,8 +4,6 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>Width</th>
-      <th>Height</th>
       <th></th>
       <th></th>
       <th></th>
@@ -18,8 +16,6 @@
         <td><%= image_tag image.name %></td>
         <td><%= image.width %></td>
         <td><%= image.height %></td>
-        <td><%= link_to 'Show', image %></td>
-        <td><%= link_to 'Edit', edit_image_path(image) %></td>
         <td><%= link_to 'Destroy', image, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
