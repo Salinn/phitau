@@ -6,7 +6,7 @@
 </div>
 <div style="float: left;">
 <% @gallery.images.each do |image| %>
-   <%= (link_to (image_tag image.picture_url), image_path(image.id), class: 'gallery_images') if(!image.empty? and image.picture?) %>
+   <%= (link_to (image_tag image.picture_url), image_path(image.id), class: 'gallery_images') if(image.picture?) %>
 <% end %>
 </div>
 

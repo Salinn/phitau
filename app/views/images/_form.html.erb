@@ -25,5 +25,5 @@
 <% end %>
 
 <div style="float: right">
-  <%= (image_tag @image.picture_url, style: 'width: auto; height: 30rem;') if @image.picture.nil? %>
+  <%= (image_tag @image.picture_url, style: 'width: auto; height: 30rem;') if @image.picture? %>
 </div>
