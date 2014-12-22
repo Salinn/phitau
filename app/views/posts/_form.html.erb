@@ -23,13 +23,8 @@
     <%= f.label :content, "", :class => "tinymce", :rows => 15, :cols => 120 %><br>
     <%= f.text_area :content, :class => "tinymce", :rows => 15, :cols => 120 %>
   </div>
-
   <div class="field">
-     <%= f.file_field :image %>
-  </div>
-  <div class="field">
-    <%= f.label :remote_image_url, "or image URL" %><br />
-    <%= f.text_field :remote_image_url %>
+    <%= f.text_field :image %>
   </div>
   <div class="field posts_checkboxes">
     <%= f.label :published %><br>
