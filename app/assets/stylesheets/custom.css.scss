@@ -506,6 +506,10 @@ body {
   margin-top: 25px;
 }
 
+.faq-cat-content a:hover{
+  background-color: $FooterBackground;
+}
+
 .faq-cat-tabs li a {
   padding: 15px 10px 15px 10px;
   background-color: $FooterBackground;
@@ -609,12 +613,17 @@ body {
   padding-left: .5rem;
   padding-bottom: .5rem;
 }
-a.gallery_imges img:hover{
+.gallery_imges a.img:hover{
   background-color: transparent !important;
 }
-a:hover{
-  background-color: transparent !important;
+.nav-tabs > li > a:hover{
+  background-color: $FooterBackground;
+  color: $White;
 }
+
+//a:hover{
+//  background-color: transparent !important;
+//}
 
 p {
   font-weight: normal;
