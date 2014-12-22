@@ -11,7 +11,6 @@
 // about supported directives.
 //
 //= require jquery
-//= require fancybox
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets

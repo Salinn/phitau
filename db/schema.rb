@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141222043959) do
+ActiveRecord::Schema.define(version: 20141222044504) do
 
   create_table "alumni_news_letters", force: true do |t|
     t.date     "released_date"
@@ -59,6 +59,7 @@ ActiveRecord::Schema.define(version: 20141222043959) do
     t.datetime "updated_at"
     t.integer  "gallery_id"
     t.integer  "post_id"
+    t.string   "image_url"
   end
 
   create_table "meetings", force: true do |t|

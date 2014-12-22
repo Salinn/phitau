@@ -1,7 +1,7 @@
 <%= form_for @image, :html => {:multipart => true} do |f| %>
   <% if @image.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@image.errors.count, "error") %> prohibited this image from being saved:</h2>
+      <h2><%= pluralize(@image.errors.count, 'error') %> prohibited this image from being saved:</h2>
 
       <ul>
       <% @image.errors.full_messages.each do |msg| %>
@@ -12,9 +12,11 @@
   <% end %>
 
   <div class="field">
-    <%= f.file_field :name %>
-    <%= f.text_field :remote_name_url %>
-    <%= f.collection_select :gallery_id, @galleries, :id, :name, :class => "col-md-3" %>
+    <%= f.text_field :name, placeholder: 'Picture Name' %>
+    <%= f.file_field :image_url, placeholder: 'Image File' %>
+    <%= f.text_field :remote_image_url_url, placeholder: 'Or input url of photo' %>
+    <%= f.collection_select :post_id, @posts.reverse, :id, :title, :include_blank => true, class: 'col-md-3' %>
+    <%= f.collection_select :gallery_id, @galleries.reverse, :id, :name, :include_blank => true, class: 'col-md-3' %>
   </div>
   <div class="actions">
     <%= f.submit %>
