@@ -6,7 +6,7 @@
 <div>
 <% @galleries.each do |gallery| %>
     <div style="float: left; padding-right: 1rem">
-    <p><%= link_to (image_tag gallery.images.first.picture_url), gallery_path(gallery.id), class: "gallery_images" %></p>
+    <p><%= (link_to (image_tag gallery.images.first.picture_url), gallery_path(gallery.id), class: "gallery_images") if(!gallery.images.empty? and gallery.images.first.picture?) %></p>
     <p align="center"><%= link_to gallery.name, gallery_path(gallery.id) %></p>
     </div>
     <% end %>

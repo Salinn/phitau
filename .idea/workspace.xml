@@ -45,7 +45,7 @@
     <favorites_list name="phitau" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.45881596">
+    <splitter split-orientation="horizontal" split-proportion="0.23801066">
       <split-first>
         <leaf>
           <file leaf-file-name="_form.html.erb" pinned="false" current-in-tab="true">
@@ -89,36 +89,16 @@
             <entry file="file://$PROJECT_DIR$/app/views/static_pages/home.html.erb">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="-13.125" vertical-offset="0" max-vertical-offset="765">
-                  <caret line="21" column="127" selection-start-line="21" selection-start-column="127" selection-end-line="21" selection-end-column="127" />
+                  <caret line="21" column="177" selection-start-line="21" selection-start-column="123" selection-end-line="21" selection-end-column="177" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="schema.rb" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/db/schema.rb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="636" max-vertical-offset="2850">
-                  <caret line="61" column="23" selection-start-line="61" selection-start-column="16" selection-end-line="61" selection-end-column="23" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/views/images/index.html.erb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-10.625" vertical-offset="0" max-vertical-offset="345">
-                  <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="_form.html.erb" pinned="false" current-in-tab="true">
+          <file leaf-file-name="_form.html.erb" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/views/galleries/_form.html.erb">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="753">
+                <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="465">
                   <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
                   <folding />
                 </state>
@@ -128,18 +108,18 @@
           <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/views/galleries/index.html.erb">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="300">
-                  <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+                <state vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="300">
+                  <caret line="8" column="117" selection-start-line="8" selection-start-column="117" selection-end-line="8" selection-end-column="117" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="show.html.erb" pinned="false" current-in-tab="false">
+          <file leaf-file-name="show.html.erb" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/views/galleries/show.html.erb">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="480">
-                  <caret line="8" column="43" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
+                <state vertical-scroll-proportion="0.16216215" vertical-offset="0" max-vertical-offset="740">
+                  <caret line="8" column="120" selection-start-line="8" selection-start-column="120" selection-end-line="8" selection-end-column="120" />
                   <folding />
                 </state>
               </provider>
@@ -214,8 +194,8 @@
         <option value="$PROJECT_DIR$/app/models/image.rb" />
         <option value="$PROJECT_DIR$/app/views/images/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/static_pages/home.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/galleries/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/galleries/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/galleries/show.html.erb" />
       </list>
     </option>
   </component>
@@ -702,7 +682,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32961586" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33333334" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30483273" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27541828" sideWeight="0.4993804" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27541828" sideWeight="0.4993804" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947233" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32961586" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24967825" sideWeight="0.4993804" order="1" side_tool="false" content_ui="tabs" />
@@ -1085,22 +1065,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/schema.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="636" max-vertical-offset="2850">
-          <caret line="61" column="23" selection-start-line="61" selection-start-column="16" selection-end-line="61" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/images/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.625" vertical-offset="0" max-vertical-offset="345">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/images_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="78" max-vertical-offset="855">
@@ -1136,26 +1100,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/images/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33864543" vertical-offset="0" max-vertical-offset="753">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/schema.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35907337" vertical-offset="636" max-vertical-offset="2850">
+          <caret line="61" column="23" selection-start-line="61" selection-start-column="16" selection-end-line="61" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/static_pages/home.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-13.125" vertical-offset="0" max-vertical-offset="765">
-          <caret line="21" column="127" selection-start-line="21" selection-start-column="127" selection-end-line="21" selection-end-column="127" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/galleries/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="480">
-          <caret line="8" column="43" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/galleries/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="300">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <caret line="21" column="177" selection-start-line="21" selection-start-column="123" selection-end-line="21" selection-end-column="177" />
           <folding />
         </state>
       </provider>
@@ -1164,6 +1128,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="764">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/galleries/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="300">
+          <caret line="8" column="117" selection-start-line="8" selection-start-column="117" selection-end-line="8" selection-end-column="117" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/galleries/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16216215" vertical-offset="0" max-vertical-offset="740">
+          <caret line="8" column="120" selection-start-line="8" selection-start-column="120" selection-end-line="8" selection-end-column="120" />
           <folding />
         </state>
       </provider>
