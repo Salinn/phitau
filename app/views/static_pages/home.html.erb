@@ -4,7 +4,7 @@
       <div class="card">
         <h1 class="card_header"><%= @top_card.title %></h1>
         <div>
-          <%= link_to (image_tag @top_card.image), post_path(@top_card.id), :class => "post_img" if @top_card.image?  %>
+          <%= link_to (image_tag @top_card.image), @top_card.image, :class => "post_img" if @top_card.image?  %>
         </div>
         <div class="post_text">
             <%= @top_card.content.html_safe %>
@@ -19,7 +19,7 @@
       <div class="card">
         <h1 class="card_header"><%= post.title %></h1>
         <div>
-          <%= link_to (image_tag post.image), post_path(post.id), :class => "post_img" if post.image?  %>
+          <%= link_to (image_tag post.image), post.image, :class => "post_img" if post.image?  %>
         </div>
         <div class="post_text">
           <%= post.content.html_safe %>
