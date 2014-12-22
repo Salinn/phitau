@@ -10,7 +10,7 @@
       </ul>
     </div>
   <% end %>
-
+    <div style="float: left; width: 50%">
   <div class="field">
     <%= f.text_field :name, placeholder: 'Picture Name' %>
     <%= f.file_field :image_url, placeholder: 'Image File' %>
@@ -21,4 +21,9 @@
   <div class="actions">
     <%= f.submit %>
   </div>
+        </div>
 <% end %>
+
+<div style="float: right">
+  <%= (image_tag @image.image_url, style: 'width: auto; height: 30rem;') if @image.image_url.nil? %>
+</div>
