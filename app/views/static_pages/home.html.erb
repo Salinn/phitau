@@ -19,7 +19,7 @@
       <div class="card">
         <h1 class="card_header"><%= post.title %></h1>
         <div>
-          <%= link_to (image_tag post.image), post.image, :class => "post_img" if post.image?  %>
+          <%= link_to (image_tag post.image), image, :class => "post_img" if post.image?  %>
         </div>
         <div class="post_text">
           <%= post.content.html_safe %>
