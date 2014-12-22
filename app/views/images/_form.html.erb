@@ -13,8 +13,8 @@
     <div style="float: left; width: 50%">
   <div class="field">
     <%= f.text_field :name, placeholder: 'Picture Name' %>
-    <%= f.file_field :image_url, placeholder: 'Image File' %>
-    <%= f.text_field :remote_image_url_url, placeholder: 'Or input url of photo' %>
+    <%= f.file_field :picture, placeholder: 'Image File' %>
+    <%= f.text_field :remote_picture_url, placeholder: 'Or input url of photo' %>
     <%= f.collection_select :post_id, @posts.reverse, :id, :title, :include_blank => true, class: 'col-md-3' %>
     <%= f.collection_select :gallery_id, @galleries.reverse, :id, :name, :include_blank => true, class: 'col-md-3' %>
   </div>
@@ -25,5 +25,5 @@
 <% end %>
 
 <div style="float: right">
-  <%= (image_tag @image.image_url, style: 'width: auto; height: 30rem;') if @image.image_url.nil? %>
+  <%= (image_tag @image.picture_url, style: 'width: auto; height: 30rem;') if @image.picture.nil? %>
 </div>
