@@ -53,7 +53,7 @@ class PostsController < ApplicationController
   # PATCH/PUT /posts/1.json
   def update
     respond_to do |format|
-      top_card_check_and_fix
+      top_card_check_and_fix unless params[:post][:top_card]
       if @post.update(post_params)
         format.html { redirect_to @post, notice: 'Post was successfully updated.' }
         format.json { head :no_content }
@@ -86,10 +86,10 @@ class PostsController < ApplicationController
     end
 
     def top_card_check_and_fix
-      a = Post.find_by(top_card: true)
-      unless a.nil?
-        a.top_card = nil
-        a.save
+      old_top_post = Post.find_by(top_card: true)
+      unless old_top_post.nil?
+        old_top_post.top_card = nil
+        old_top_post.save
       end
     end
 end

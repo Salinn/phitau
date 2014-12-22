@@ -1,4 +1,7 @@
 <p id="notice"><%= notice %></p>
+<% if can? :create, :images %>
+    <%= @image.name%>
+<% end %>
 <div align="center">
-  <%= image_tag @image.name %>
+  <%= image_tag @image.name, style: "width: auto; height: 30rem;"%>
 </div>
