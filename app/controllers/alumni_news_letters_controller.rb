@@ -1,74 +1,47 @@
 class AlumniNewsLettersController < ApplicationController
   before_action :set_alumni_news_letter, only: [:show, :edit, :update, :destroy]
+  respond_to :html, :xml, :json
   load_and_authorize_resource
 
-  # GET /alumni_news_letters
-  # GET /alumni_news_letters.json
   def index
     @alumni_news_letters = AlumniNewsLetter.all.reverse.paginate(:page => params[:page], :per_page => 1)
+    respond_with(@alumni_news_letters)
   end
 
-  # GET /alumni_news_letters/1
-  # GET /alumni_news_letters/1.json
   def show
+    respond_with(@alumni_news_letter)
   end
 
-  # GET /alumni_news_letters/new
   def new
     @alumni_news_letter = AlumniNewsLetter.new
+    respond_with(@alumni_news_letter)
   end
 
-  # GET /alumni_news_letters/1/edit
   def edit
   end
 
-  # POST /alumni_news_letters
-  # POST /alumni_news_letters.json
   def create
     @alumni_news_letter = AlumniNewsLetter.new(alumni_news_letter_params)
 
-    respond_to do |format|
-      if @alumni_news_letter.save
-        format.html { redirect_to @alumni_news_letter, notice: 'Alumni news letter was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @alumni_news_letter }
-      else
-        format.html { render action: 'new' }
-        format.json { render json: @alumni_news_letter.errors, status: :unprocessable_entity }
-      end
-    end
+    flash[:notice] = 'Alumni news lette was successfully created.' if @alumni_news_letter.save
+    respond_with(@alumni_news_letter)
   end
 
-  # PATCH/PUT /alumni_news_letters/1
-  # PATCH/PUT /alumni_news_letters/1.json
   def update
-    respond_to do |format|
-      if @alumni_news_letter.update(alumni_news_letter_params)
-        format.html { redirect_to @alumni_news_letter, notice: 'Alumni news letter was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: 'edit' }
-        format.json { render json: @alumni_news_letter.errors, status: :unprocessable_entity }
-      end
-    end
+    flash[:notice] = 'Alumni news letter was successfully updated.' if @alumni_news_letter.update(alumni_news_letter_params)
+    respond_with(@alumni_news_letter)
   end
 
-  # DELETE /alumni_news_letters/1
-  # DELETE /alumni_news_letters/1.json
   def destroy
     @alumni_news_letter.destroy
-    respond_to do |format|
-      format.html { redirect_to alumni_news_letters_url }
-      format.json { head :no_content }
-    end
+    respond_with(@alumni_news_letter)
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_alumni_news_letter
       @alumni_news_letter = AlumniNewsLetter.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def alumni_news_letter_params
       params.require(:alumni_news_letter).permit(:released_date, :news_letter_html)
     end
