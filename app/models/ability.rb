@@ -5,11 +5,16 @@ class Ability
     user ||= User.new # guest user
     if user.user_role? "admin"
       can :manage, :all
-    else
+    end
+
+    can :show, Image
+    can [:show, :read], Gallery
+    if user.role != nil
       can :show, User, :id => user.id
       can :update, User, :id => user.id
-      can :show, Image
-      can [:show, :read], Gallery
+      if user.confirmed_brother?
+        can [:show, :read], AlumniNewsLetter
+      end
       if user.user_role? "writer"
         can [:show, :update, :new, :read, :create], AlumniNewsLetter
         can [:show, :update, :new, :read, :create], Post

@@ -74,6 +74,6 @@ class UsersController < ApplicationController
                                  :phone_number, :home_town, :state, :big_brother, :major, :pledge_class)
   end
   def user_params(id)
-    params.require(:user).fetch(id).permit(:role)
+    params.require(:user).fetch(id).permit(:role, :confirmed_brother)
   end
 end
