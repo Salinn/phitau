@@ -1,13 +1,13 @@
-
-<div class="col-md-8 center-block row" style="border-top: 10rem">
+<div class="row">
+  <div class="col-md-8 col-md-offset-2 top-card-padding">
     <div align="center" style="text-align: center">
       <h3>
         <% if @alumni_news_letters.previous_page %>
-            <%= link_to "< Previous", params.merge(:page => @alumni_news_letters.previous_page) %>
+            <%= link_to '< Previous', params.merge(:page => @alumni_news_letters.previous_page) %>
         <% end %>
         News Letter <%= @alumni_news_letters.current_page %> of <%= @alumni_news_letters.total_pages %>
         <% if @alumni_news_letters.next_page %>
-            <%= link_to "Next >", params.merge(:page => @alumni_news_letters.next_page) %>
+            <%= link_to 'Next >', params.merge(:page => @alumni_news_letters.next_page) %>
         <% end %>
       </h3>
   </div>
@@ -16,4 +16,5 @@
     <iframe src="<%= @alumni_news_letters.first.news_letter_html %>" height="800px" width="100%"></iframe>
   </div>
   <div style="float: none; clear:both;"> </div>
+</div>
 </div>
