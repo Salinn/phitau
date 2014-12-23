@@ -8,7 +8,6 @@ class Ability
     else
       can :show, User, :id => user.id
       can :update, User, :id => user.id
-      can :read, AlumniNewsLetter
       can :show, Image
       can [:show, :read], Gallery
       if user.user_role? "writer"

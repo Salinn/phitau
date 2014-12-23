@@ -634,3 +634,22 @@ p {
     display: inline;
   }
 }
+
+//alerts
+.alert-info {
+  background-color: indianred;
+  border-color: $Black;
+  color: $White;
+}
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.notice-info {
+  background-color: #428f50;
+  border-color: $Black;
+  color: $White;
+}
