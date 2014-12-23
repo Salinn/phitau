@@ -5,7 +5,7 @@ class AlumniNewsLettersController < ApplicationController
   # GET /alumni_news_letters
   # GET /alumni_news_letters.json
   def index
-    @alumni_news_letters = AlumniNewsLetter.all.page(params[:page]).per_page(1)
+    @alumni_news_letters = AlumniNewsLetter.all.reverse.paginate(:page => params[:page], :per_page => 1)
   end
 
   # GET /alumni_news_letters/1
