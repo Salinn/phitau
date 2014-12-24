@@ -57,6 +57,10 @@ class UsersController < ApplicationController
     redirect_to(root_path)
   end
 
+  def potential_new_members
+    @potentials = User.where(role: "potential new member")
+  end
+
   def destroy
     if @user.destroy
       flash[:notice] = "Successfully deleted User."

@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a595ba0-4bc1-4285-94ea-1699f878f13d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/valentines_day_delievery.rb" afterPath="$PROJECT_DIR$/app/models/valentines_day_delievery.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/users/potential_new_members.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="phitau.iws" />
@@ -45,43 +48,65 @@
     <favorites_list name="phitau" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.35456887">
-      <split-first>
-        <leaf>
-          <file leaf-file-name="galleries_controller.rb" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/controllers/galleries_controller.rb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.019633507" vertical-offset="0" max-vertical-offset="795">
-                  <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="valentines_day_delievery.rb" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/models/valentines_day_delievery.rb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.7421466" vertical-offset="18" max-vertical-offset="795">
-                  <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-                  <folding>
-                    <element signature="e#1932#2251#0" expanded="false" />
-                    <element signature="e#2254#2586#0" expanded="false" />
-                    <element signature="e#2589#2916#0" expanded="false" />
-                    <element signature="e#2919#3313#0" expanded="false" />
-                    <element signature="e#3316#3717#0" expanded="false" />
-                    <element signature="e#3720#4098#0" expanded="false" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file leaf-file-name="valentines_day_delievery.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/valentines_day_delievery.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="18" max-vertical-offset="795">
+              <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+              <folding>
+                <element signature="e#1932#2251#0" expanded="false" />
+                <element signature="e#2254#2586#0" expanded="false" />
+                <element signature="e#2589#2916#0" expanded="false" />
+                <element signature="e#2919#3313#0" expanded="false" />
+                <element signature="e#3316#3717#0" expanded="false" />
+                <element signature="e#3720#4098#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="custom.css.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-27.083334" vertical-offset="9220" max-vertical-offset="9960">
+              <caret line="658" column="0" selection-start-line="658" selection-start-column="0" selection-end-line="658" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="potential_new_members.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/users/potential_new_members.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="120">
+              <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="users_controller.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-13.32258" vertical-offset="427" max-vertical-offset="1320">
+              <caret line="56" column="26" selection-start-line="56" selection-start-column="26" selection-end-line="56" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routes.rb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/routes.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.54289544" vertical-offset="0" max-vertical-offset="750">
+              <caret line="27" column="57" selection-start-line="27" selection-start-column="57" selection-end-line="27" selection-end-column="57" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -99,8 +124,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/views/devise/shared/_links.erb" />
-        <option value="$PROJECT_DIR$/app/views/layouts/_header.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/_footer.html.erb" />
         <option value="$PROJECT_DIR$/app/views/devise/passwords/new.html.erb" />
         <option value="$PROJECT_DIR$/app/models/user.rb" />
@@ -141,15 +164,17 @@
         <option value="$PROJECT_DIR$/app/views/alumni_news_letters/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/_messages.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" />
         <option value="$PROJECT_DIR$/app/views/users/edit_all.html.erb" />
         <option value="$PROJECT_DIR$/app/models/ability.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/users_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/alumni_news_letters_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/galleries_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/posts_controller.rb" />
         <option value="$PROJECT_DIR$/app/models/valentines_day_delievery.rb" />
+        <option value="$PROJECT_DIR$/app/views/users/potential_new_members.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/users_controller.rb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
       </list>
     </option>
   </component>
@@ -164,7 +189,8 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="896" />
+    <option name="x" value="1600" />
+    <option name="y" value="-4" />
     <option name="width" value="1600" />
     <option name="height" value="904" />
   </component>
@@ -264,6 +290,28 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="users" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="phitau" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="phitau" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -279,7 +327,7 @@
     <property name="options.searchVisible" value="true" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="FullScreen" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="custo&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/app/assets/stylesheets/custom.css.scss&#10;sc&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/db/schema.rb&#10;sche&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/db/schema.rb&#10;cust&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/app/assets/stylesheets/custom.css.scss&#10;schem&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/db/schema.rb&#10;schema&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/db/schema.rb&#10;abil&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/app/models/ability.rb&#10;show&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/app/views/users/show.html.erb&#10;stati&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/app/controllers/static_pages_controller.rb&#10;_header&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/vendor/bundle/ruby/2.0.0/gems/erubis-2.7.0/benchmark/templates/_header.html&#10;appl&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/vendor/bundle/ruby/2.0.0/gems/rails-4.0.0/guides/code/getting_started/app/assets/stylesheets/application.css&#10;custom&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/app/assets/stylesheets/custom.css.scss&#10;user&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/app/models/user.rb&#10;abi&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/app/models/ability.rb&#10;static&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/app/controllers/static_pages_controller.rb&#10;faq.h&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/app/views/static_pages/faq.html.erb&#10;valent&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/app/controllers/valentines_day_inventories_controller.rb&#10;_form&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/app/views/valentines_day_delieveries/_form.html.erb&#10;stat&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/app/controllers/static_pages_controller.rb" />
+    <property name="SearchEverywhereHistoryKey" value="cust&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/app/assets/stylesheets/custom.css.scss&#10;routes.rb&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/config/routes.rb&#10;custo&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/app/assets/stylesheets/custom.css.scss&#10;sc&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/db/schema.rb&#10;sche&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/db/schema.rb&#10;schem&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/db/schema.rb&#10;schema&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/db/schema.rb&#10;abil&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/app/models/ability.rb&#10;show&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/app/views/users/show.html.erb&#10;stati&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/app/controllers/static_pages_controller.rb&#10;_header&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/vendor/bundle/ruby/2.0.0/gems/erubis-2.7.0/benchmark/templates/_header.html&#10;appl&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/vendor/bundle/ruby/2.0.0/gems/rails-4.0.0/guides/code/getting_started/app/assets/stylesheets/application.css&#10;custom&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/app/assets/stylesheets/custom.css.scss&#10;user&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/app/models/user.rb&#10;abi&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/app/models/ability.rb&#10;static&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/app/controllers/static_pages_controller.rb&#10;faq.h&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/app/views/static_pages/faq.html.erb&#10;valent&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/app/controllers/valentines_day_inventories_controller.rb&#10;_form&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/app/views/valentines_day_delieveries/_form.html.erb&#10;stat&#9;FILE&#9;file:///home/salinn/dev/ruby/phitau/app/controllers/static_pages_controller.rb" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -540,11 +588,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="896" width="1600" height="904" extended-state="6" />
-    <editor active="false" />
+    <frame x="1600" y="-4" width="1600" height="904" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32961586" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27541828" sideWeight="0.4993804" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27541828" sideWeight="0.4993804" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32961586" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5786865" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -602,29 +650,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/db/migrate/20141218191237_add_gallery_to_image.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="165">
-          <caret line="2" column="45" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20141218191319_create_galleries.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/posts.js.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.059760958" vertical-offset="0" max-vertical-offset="753">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/meetings_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="780">
@@ -752,6 +777,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="736" max-vertical-offset="2850">
           <caret line="61" column="24" selection-start-line="61" selection-start-column="24" selection-end-line="61" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -858,13 +884,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.038610037" vertical-offset="0" max-vertical-offset="777">
           <caret line="2" column="41" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.096525095" vertical-offset="0" max-vertical-offset="777">
-          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -872,14 +892,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="555">
           <caret line="21" column="60" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="4324" max-vertical-offset="9900">
-          <caret line="306" column="1" selection-start-line="306" selection-start-column="1" selection-end-line="306" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -896,14 +908,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.27027026" vertical-offset="0" max-vertical-offset="855">
           <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.84555984" vertical-offset="438" max-vertical-offset="1260">
-          <caret line="73" column="103" selection-start-line="73" selection-start-column="103" selection-end-line="73" selection-end-column="103" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -973,7 +977,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/valentines_day_delievery.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7421466" vertical-offset="18" max-vertical-offset="795">
+        <state vertical-scroll-proportion="0.0" vertical-offset="18" max-vertical-offset="795">
           <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
           <folding>
             <element signature="e#1932#2251#0" expanded="false" />
@@ -983,6 +987,54 @@
             <element signature="e#3316#3717#0" expanded="false" />
             <element signature="e#3720#4098#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.13743456" vertical-offset="0" max-vertical-offset="764">
+          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/users/potential_new_members.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="120">
+          <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.32258" vertical-offset="427" max-vertical-offset="1320">
+          <caret line="56" column="26" selection-start-line="56" selection-start-column="26" selection-end-line="56" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/bundle/ruby/2.0.0/gems/railties-4.0.0/lib/rails/generators/rails/scaffold/templates/scaffold.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="930">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-27.083334" vertical-offset="9220" max-vertical-offset="9960">
+          <caret line="658" column="0" selection-start-line="658" selection-start-column="0" selection-end-line="658" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.54289544" vertical-offset="0" max-vertical-offset="750">
+          <caret line="27" column="57" selection-start-line="27" selection-start-column="57" selection-end-line="27" selection-end-column="57" />
+          <folding />
         </state>
       </provider>
     </entry>

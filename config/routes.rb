@@ -25,9 +25,11 @@ Phitau::Application.routes.draw do
 
   match 'users/all/edit' => 'users#edit_all', :as => :edit_all, :via => :get
   match 'users/all' => 'users#update_all', :as => :update_all, :via => :put
-  devise_for :users, :controllers => { :registrations => "registration" }, :path_names => { :'sign_up.html.erb' => "register"}
+  get 'users/potentials' => 'users#potential_new_members'
+  devise_for :users do get '/users/sign_out' => 'devise/sessions#destroy'
+  devise_for :users, :controllers => { :registrations => 'registration' }, :path_names => { :'sign_up.html.erb' => 'register'}
   resources :users, :only => [:show, :edit, :update ]
-  resources :users, :controller => "users"
+  resources :users, :controller => 'users'
 
   get 'twilio/send_text_message' => 'twilio#send_text_message'
   get 'twilio/new_message' => 'twilio#new_message'
@@ -38,5 +40,5 @@ Phitau::Application.routes.draw do
     get "/#{action}", to: "static_pages##{action}", as: "#{action}"
   end
 
-  root :to => "static_pages#home"
+  root :to => 'static_pages#home'
 end
