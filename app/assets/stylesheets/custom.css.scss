@@ -213,17 +213,17 @@ min-height: 100%;
 .navbar-right {
 display: inline-block;
 }
-@media only screen and (min-width: 768px) {
-.nav>li>a {
-  position: relative;
-//  top: 30px;
-}
+@media only screen and (min-width: 1001px) {
+  .nav>li>a {
+    position: relative;
+    top: 30px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1000px) {
-.collapse {
-  display: none !important;
-}
+  .collapse {
+    display: none !important;
+  }
 }
 
 .card {
