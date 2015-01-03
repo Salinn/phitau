@@ -174,7 +174,7 @@ ActiveRecord::Schema.define(version: 20141223030942) do
     t.integer  "white_total"
     t.integer  "pink_total"
     t.integer  "large_total"
-    t.integer  "medium_total"
+   t.integer  "medium_total"
     t.integer  "small_total"
     t.float    "total_raised"
     t.float    "total_cost"

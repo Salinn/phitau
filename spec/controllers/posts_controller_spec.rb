@@ -24,11 +24,19 @@ RSpec.describe PostsController, :type => :controller do
   # Post. As you add validations to Post, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+    {
+        title: 'Fall Clean Up',
+        content: 'This year Phi Tau helped out at the 4th Annual Fall Clean Up.',
+        image: 'http://gammanu.org/images/7'
+    }
   }
 
   let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
+    {
+        title: nil,
+        content: nil,
+        image: nil
+    }
   }
 
   # This should return the minimal set of values that should be in the session
@@ -103,7 +111,11 @@ RSpec.describe PostsController, :type => :controller do
   describe "PUT update" do
     describe "with valid params" do
       let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
+        {
+            title: 'Fall Clean Up Updated',
+            content: 'This year Phi Tau helped out at the 5th Annual Fall Clean Up.',
+            image: 'http://gammanu.org/images/7'
+        }
       }
 
       it "updates the requested post" do

@@ -58,7 +58,10 @@ class UsersController < ApplicationController
   end
 
   def potential_new_members
-    @potentials = User.where(role: "potential new member")
+    @potentials = User.where(role: "potential new member").page(params[:page]).per_page(15)
+  end
+
+  def new_potential_member
   end
 
   def destroy
