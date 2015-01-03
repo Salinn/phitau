@@ -24,11 +24,19 @@ RSpec.describe ImagesController, :type => :controller do
   # Image. As you add validations to Image, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+    {
+        name: 'Fall Cleanup 2014',
+        gallery_id: '1',
+        picture: 'http://gammanu.org/images/13'
+    }
   }
 
   let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
+    {
+        name: nil,
+        gallery_id: nil,
+        picture: nil
+    }
   }
 
   # This should return the minimal set of values that should be in the session
@@ -103,7 +111,11 @@ RSpec.describe ImagesController, :type => :controller do
   describe "PUT update" do
     describe "with valid params" do
       let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
+        {
+            name: 'Fall Cleanup 2014',
+            gallery_id: '2',
+            picture: 'http://gammanu.org/images/13'
+        }
       }
 
       it "updates the requested image" do

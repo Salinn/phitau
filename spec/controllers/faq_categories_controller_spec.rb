@@ -24,11 +24,15 @@ RSpec.describe FaqCategoriesController, :type => :controller do
   # FaqCategory. As you add validations to FaqCategory, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+    {
+        title: 'General',
+    }
   }
 
   let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
+    {
+        title: nil,
+    }
   }
 
   # This should return the minimal set of values that should be in the session
@@ -103,7 +107,9 @@ RSpec.describe FaqCategoriesController, :type => :controller do
   describe "PUT update" do
     describe "with valid params" do
       let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
+        {
+            title: 'Rushing',
+        }
       }
 
       it "updates the requested faq_category" do

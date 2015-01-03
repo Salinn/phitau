@@ -24,11 +24,45 @@ RSpec.describe ValentinesDayDelieveriesController, :type => :controller do
   # ValentinesDayDelievery. As you add validations to ValentinesDayDelievery, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+    {
+        red_flower_quantity: 2,
+        white_flower_quantity: 0,
+        pink_flower_quantity: 1,
+        large_stuffed_animial_quantity: 0,
+        medium_stuffed_animial_quantity: 1,
+        small_animial_quantity: 2,
+        buyer_name: 'Paul Darragh',
+        buyer_phone_number: '15088388579',
+        recievers_name: 'Lori Darragh',
+        recievers_phone_number: '15088388580',
+        delivery_location: 'UC 14-01',
+        delivery_time: '9 pm',
+        delivery_instructions: '',
+        payment: 'cash',
+        paypal_cost: '15.00',
+        total_price: '15.00'
+    }
   }
 
   let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
+    {
+        red_flower_quantity: nil,
+        white_flower_quantity: nil,
+        pink_flower_quantity: nil,
+        large_stuffed_animial_quantity: nil,
+        medium_stuffed_animial_quantity: nil,
+        small_animial_quantity: nil,
+        buyer_name: nil,
+        buyer_phone_number: nil,
+        recievers_name: nil,
+        recievers_phone_number: nil,
+        delivery_location: nil,
+        delivery_time: nil,
+        delivery_instructions: nil,
+        payment: nil,
+        paypal_cost: nil,
+        total_price: nil
+    }
   }
 
   # This should return the minimal set of values that should be in the session
@@ -103,7 +137,24 @@ RSpec.describe ValentinesDayDelieveriesController, :type => :controller do
   describe "PUT update" do
     describe "with valid params" do
       let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
+        {
+            red_flower_quantity: 2,
+            white_flower_quantity: 1,
+            pink_flower_quantity: 1,
+            large_stuffed_animial_quantity: 0,
+            medium_stuffed_animial_quantity: 1,
+            small_animial_quantity: 2,
+            buyer_name: 'Paul Darragh',
+            buyer_phone_number: '15088388579',
+            recievers_name: 'Lori Darragh',
+            recievers_phone_number: '15088388580',
+            delivery_location: 'UC 14-01',
+            delivery_time: '9 pm',
+            delivery_instructions: '',
+            payment: 'cash',
+            paypal_cost: '17.00',
+            total_price: '17.00'
+        }
       }
 
       it "updates the requested valentines_day_delievery" do

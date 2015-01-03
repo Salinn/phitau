@@ -24,11 +24,17 @@ RSpec.describe GalleriesController, :type => :controller do
   # Gallery. As you add validations to Gallery, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+    {
+        name: '50th Pictures',
+        post_id: '2'
+    }
   }
 
   let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
+    {
+        name: nil,
+        post_id: nil
+    }
   }
 
   # This should return the minimal set of values that should be in the session
@@ -103,7 +109,10 @@ RSpec.describe GalleriesController, :type => :controller do
   describe "PUT update" do
     describe "with valid params" do
       let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
+        {
+            name: '50th Pictures',
+            post_id: '1'
+        }
       }
 
       it "updates the requested gallery" do

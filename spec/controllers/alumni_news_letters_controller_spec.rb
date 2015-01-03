@@ -24,11 +24,17 @@ RSpec.describe AlumniNewsLettersController, :type => :controller do
   # AlumniNewsLetter. As you add validations to AlumniNewsLetter, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+    {
+        released_date: Date.now,
+        news_letter_html: 'some link'
+    }
   }
 
   let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
+    {
+        released_date: nil,
+        news_letter_html: nil
+    }
   }
 
   # This should return the minimal set of values that should be in the session
@@ -103,7 +109,10 @@ RSpec.describe AlumniNewsLettersController, :type => :controller do
   describe "PUT update" do
     describe "with valid params" do
       let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
+        {
+            released_date: Date.now,
+            news_letter_html: 'some other link'
+        }
       }
 
       it "updates the requested alumni_news_letter" do

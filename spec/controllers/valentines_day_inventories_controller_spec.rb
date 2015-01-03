@@ -24,11 +24,41 @@ RSpec.describe ValentinesDayInventoriesController, :type => :controller do
   # ValentinesDayInventory. As you add validations to ValentinesDayInventory, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+    {
+        total_red_flowers: 50,
+        total_white_flowers: 50,
+        total_pink_flowers: 50,
+        total_large_stuffed_animials: 20,
+        total_medium_stuffed_animials: 30,
+        total_small_stuffed_animials: 40,
+        red_flower_price: 2,
+        white_flower_price: 2,
+        pink_flower_price: 2,
+        large_stuffed_animial_price: 4,
+        medium_stuffed_animial_price: 3,
+        small_stuffed_animial_price: 2,
+        current_year: '2014',
+        total_cost: '0'
+    }
   }
 
   let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
+    {
+        total_red_flowers: nil,
+        total_white_flowers: nil,
+        total_pink_flowers: nil,
+        total_large_stuffed_animials: nil,
+        total_medium_stuffed_animials: nil,
+        total_small_stuffed_animials: nil,
+        red_flower_price: nil,
+        white_flower_price: nil,
+        pink_flower_price: nil,
+        large_stuffed_animial_price: nil,
+        medium_stuffed_animial_price: nil,
+        small_stuffed_animial_price: nil,
+        current_year: nil,
+        total_cost: nil
+    }
   }
 
   # This should return the minimal set of values that should be in the session
@@ -103,7 +133,22 @@ RSpec.describe ValentinesDayInventoriesController, :type => :controller do
   describe "PUT update" do
     describe "with valid params" do
       let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
+        {
+            total_red_flowers: 50,
+            total_white_flowers: 50,
+            total_pink_flowers: 50,
+            total_large_stuffed_animials: 10,
+            total_medium_stuffed_animials: 20,
+            total_small_stuffed_animials: 40,
+            red_flower_price: 2,
+            white_flower_price: 2,
+            pink_flower_price: 2,
+            large_stuffed_animial_price: 4,
+            medium_stuffed_animial_price: 3,
+            small_stuffed_animial_price: 2,
+            current_year: '2014',
+            total_cost: '0'
+        }
       }
 
       it "updates the requested valentines_day_inventory" do

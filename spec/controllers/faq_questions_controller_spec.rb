@@ -24,11 +24,19 @@ RSpec.describe FaqQuestionsController, :type => :controller do
   # FaqQuestion. As you add validations to FaqQuestion, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+    {
+        title: 'Does everyone in your chapter talk, dress and act the same?',
+        content: 'We pride ourselves on',
+        faq_category_id: 1
+    }
   }
 
   let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
+    {
+        title: nil,
+        content: nil,
+        faq_category_id: nil
+    }
   }
 
   # This should return the minimal set of values that should be in the session
@@ -103,7 +111,11 @@ RSpec.describe FaqQuestionsController, :type => :controller do
   describe "PUT update" do
     describe "with valid params" do
       let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
+        {
+            title: 'Does everyone in your chapter talk, dress and act the same?',
+            content: 'We pride ourselves on',
+            faq_category_id: 2,
+        }
       }
 
       it "updates the requested faq_question" do

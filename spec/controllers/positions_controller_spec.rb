@@ -24,11 +24,19 @@ RSpec.describe PositionsController, :type => :controller do
   # Position. As you add validations to Position, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+    {
+        user_id: '1',
+        position_name: 'web developer',
+        role_permission: 'admin'
+    }
   }
 
   let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
+    {
+        user_id: nil,
+        position_name: nil,
+        role_permission: nil
+    }
   }
 
   # This should return the minimal set of values that should be in the session
@@ -103,7 +111,11 @@ RSpec.describe PositionsController, :type => :controller do
   describe "PUT update" do
     describe "with valid params" do
       let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
+        {
+            user_id: '2',
+            position_name: 'president',
+            role_permission: 'president'
+        }
       }
 
       it "updates the requested position" do

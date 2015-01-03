@@ -216,7 +216,7 @@ display: inline-block;
 @media only screen and (min-width: 768px) {
 .nav>li>a {
   position: relative;
-  top: 30px;
+//  top: 30px;
 }
 }
 
@@ -752,3 +752,12 @@ and (max-device-width : 480px) {
   }
 }
 //end of resizeable table
+
+@media (max-width: 1000px) {
+
+
+  .collapse.in{
+    display:block !important;
+    overflow: hidden;
+  }
+}
