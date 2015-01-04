@@ -43,9 +43,7 @@ RSpec.describe PostsController, :type => :controller do
   # in order to pass any filters (e.g. authentication) defined in
   # PostsController. Be sure to keep this updated too.
   let(:valid_session) {
-    {
-        user_id: 1
-    }
+
   }
 
   describe "GET index" do

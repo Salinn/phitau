@@ -1,5 +1,5 @@
 require File.expand_path(File.join(File.dirname(__FILE__), "..", "support", "paths"))
 
-Given /^I am on (.+)$/ do |page_name|
-  visit path_to(page_name)
+Given(/^there's a post titled "(.*?)" with "(.*?)" content$/) do |title, content|
+  @post = FactoryGirl.create(:post, title: title, content: content)
 end
