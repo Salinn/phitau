@@ -1,6 +1,9 @@
-<h1>Editing post</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @post, 'data-no-turbolink' => true  %> |
-<%= link_to 'Back', posts_path, 'data-no-turbolink' => true  %>
+<div class="row">
+  <div class="col-md-8 col-md-offset-2 top-card-padding">
+    <div class="card">
+      <h1>Editing current post</h1>
+      <%= render 'form' %>
+      <%= link_to 'Back', posts_path, 'data-no-turbolink' => true  %>
+    </div>
+  </div>
+</div>

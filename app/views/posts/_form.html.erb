@@ -1,49 +1,43 @@
-
-<div class="top-card-padding">
-  <body data-no-turbolink="true">
+<body data-no-turbolink="true">
   <%= form_for @post, :html => {:multipart => true} do |f| %>
-      <% if @post.errors.any? %>
-          <div id="error_explanation">
-            <h2>
-              <%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:
-            </h2>
-            <ul>
-              <% @post.errors.full_messages.each do |msg| %>
-                <li><%= msg %></li>
-              <% end %>
-            </ul>
-          </div>
-      <% end %>
-
-      <div class="field">
-        <%= f.label :title %><br>
-        <%= f.text_field :title %>
+    <% if @post.errors.any? %>
+      <div id="error_explanation">
+        <h2>
+          <%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:
+        </h2>
+        <ul>
+          <% @post.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
       </div>
+    <% end %>
 
-      <div class="field">
-        <%= f.label :content, "", :class => "tinymce", :rows => 15, :cols => 120 %><br>
-        <%= f.text_area :content, :class => "tinymce", :rows => 15, :cols => 120 %>
-      </div>
+    <div class="field">
+      <%= f.label :title %><br>
+      <%= f.text_field :title %>
+    </div>
 
-      <div class="field">
-        <%= f.text_field :image %>
-      </div>
+    <div class="field">
+      <%= f.label :content, "", :class => "tinymce", :rows => 15, :cols => 120 %><br>
+      <%= f.text_area :content, :class => "tinymce", :rows => 15, :cols => 120 %>
+    </div>
 
-      <div class="field posts_checkboxes">
+      <div class="field posts_checkboxes" style="float: left">
         <%= f.label :published %><br>
         <%= f.check_box :published %>
       </div>
 
-      <div class="field posts_checkboxes">
+      <div class="field posts_checkboxes" style="float: left; padding-left: 10px;">
         <%= f.label :top_card %><br>
         <%= f.check_box :top_card %>
       </div>
 
-      <div class="actions">
+      <div class="clear"></div>
+      <div class="actions" align="center">
         <%= f.submit %>
       </div>
 <% end %>
 
 <%= tinymce :plugins => ["wordcount", "paste"] %>
 </body>
-</div>
