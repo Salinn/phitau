@@ -9,23 +9,20 @@
   <%= favicon_link_tag "favicon.ico" %>>
 </head>
 
-<body>
-  <%= render 'layouts/header' %>
-  <br><br>
-  <br><br>
-  <div class="container">
+<div id="container">
+  <div id="header"><%= render 'layouts/header' %></div>
+  <div id="body">
     <% flash.each do |name, msg| %>
-      <br><br>
       <% if name == :alert %>
         <%= content_tag :div, msg, class: "alert alert-info" %>
       <% else %>
         <%= content_tag :div, msg, class: "alert notice-info" %>
       <% end %>
     <% end %>
-  <%= yield %>
+    <%= yield %>
   </div>
-  <%= render 'layouts/footer' %>
-</body>
+  <div id="footer"><%= render 'layouts/footer' %></div>
+</div>
 </html>
 
 

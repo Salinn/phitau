@@ -17,6 +17,7 @@
 
 # Ignore all .idea files
 **/.idea/workspace.xml **/.idea/tasks.xml
-
+/.idea/
+.idea/workspace.xml
 #Ignore the seceret.yml file
 config/secrets.yml

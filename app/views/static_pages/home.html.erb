@@ -1,6 +1,7 @@
 <div class="row">
+  <div class="top-card-padding">
   <% unless @posts.previous_page or @top_card.nil? %>
-    <div class="col-md-8 col-md-offset-2 top-card-padding">
+        <div class="col-md-8 col-md-offset-2" >
       <div class="card">
         <h1 class="card_header"><%= @top_card.title %></h1>
         <div>
@@ -11,35 +12,41 @@
         </div>
         <div class="clear"> </div>
       </div>
-    </div>
-  <% end %>
-
-  <div class="col-md-8 col-md-offset-2">
-    <% @posts.each do |post| %>
-      <div class="card">
-        <h1 class="card_header"><%= post.title %></h1>
-        <div>
-          <%= (link_to (image_tag post.images.first.picture_url ), image_path(post.images.first.id), :class => "post_img") if(!post.images.empty? and post.images.first.picture?) %>
         </div>
-        <div class="post_text">
-          <%= post.content.html_safe %>
-        </div>
-        <div class="clear"> </div>
-        <hr>
-      </div>
     <% end %>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="col-md-8 col-md-offset-2">
+      <% @posts.each do |post| %>
+        <div class="card">
+          <h1 class="card_header"><%= post.title %></h1>
+          <div>
+            <%= (link_to (image_tag post.images.first.picture_url ), image_path(post.images.first.id), :class => "post_img") if(!post.images.empty? and post.images.first.picture?) %>
+          </div>
+          <div class="post_text">
+            <%= post.content.html_safe %>
+          </div>
+          <div class="clear"> </div>
+          <hr>
+        </div>
+      <% end %>
+    </div>
   </div>
-</div>
-<div class="col-md-6 center-paginate">
-  <div align="center">
-    <h3>
-      <% if @posts.previous_page %>
-          <%= link_to "< Previous", params.merge(:page => @posts.previous_page) %>
-      <% end %>
-      Page <%= @posts.current_page %> of <%= @posts.total_pages %>
-      <% if @posts.next_page %>
-          <%= link_to "Next >", params.merge(:page => @posts.next_page) %>
-      <% end %>
-    </h3>
+
+  <div class="col-md-6 center-paginate">
+    <div align="center">
+      <h3>
+        <% if @posts.previous_page %>
+            <%= link_to "< Previous", params.merge(:page => @posts.previous_page) %>
+        <% end %>
+        Page <%= @posts.current_page %> of <%= @posts.total_pages %>
+        <% if @posts.next_page %>
+            <%= link_to "Next >", params.merge(:page => @posts.next_page) %>
+        <% end %>
+      </h3>
+    </div>
   </div>
 </div>
