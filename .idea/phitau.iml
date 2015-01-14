@@ -138,7 +138,7 @@
     </content>
     <orderEntry type="jdk" jdkName="RVM: ruby-2.0.0-p598 [global]" jdkType="RUBY_SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" scope="PROVIDED" name="bundler (v1.7.8, RVM: ruby-2.0.0-p598 [global]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="bundler (v1.7.6, RVM: ruby-2.0.0-p598 [global]) [gem]" level="application" />
   </component>
   <component name="RModuleSettingsStorage">
     <LOAD_PATH number="0" />
