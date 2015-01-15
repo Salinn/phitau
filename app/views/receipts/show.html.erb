@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Total spent:</strong>
+  <%= @receipt.total_spent %>
+</p>
+
+<p>
+  <strong>Picture of receipt:</strong>
+  <%= @receipt.picture_of_receipt %>
+</p>
+
+<p>
+  <strong>Brother who sumbitted:</strong>
+  <%= @receipt.brother_who_sumbitted %>
+</p>
+
+<p>
+  <strong>Seen receipt:</strong>
+  <%= @receipt.seen_receipt %>
+</p>
+
+<%= link_to 'Edit', edit_receipt_path(@receipt) %> |
+<%= link_to 'Back', receipts_path %>

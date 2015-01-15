@@ -1,4 +1,6 @@
 Phitau::Application.routes.draw do
+  resources :receipts
+
   resources :galleries
 
   resources :images
