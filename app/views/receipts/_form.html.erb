@@ -17,11 +17,12 @@
   </div>
   <div class="field">
     <%= f.label :picture_of_receipt %><br>
-    <%= f.text_field :picture_of_receipt %>
+    <%= f.file_field :picture_of_receipt ,placeholder: 'Image File' %>
+    <%= f.text_field :remote_picture_of_receipt, placeholder: 'Or input url of photo' %>
   </div>
   <div class="field">
-    <%= f.label :brother_who_sumbitted %><br>
-    <%= f.text_field :brother_who_sumbitted %>
+    <%= f.label :brother_who_submitted %><br>
+    <%= f.text_field :brother_who_submitted %>
   </div>
   <div class="field">
     <%= f.label :seen_receipt %><br>

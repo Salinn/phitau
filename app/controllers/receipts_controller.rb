@@ -1,5 +1,7 @@
 class ReceiptsController < ApplicationController
   before_action :set_receipt, only: [:show, :edit, :update, :destroy]
+  respond_to :html, :xml, :json
+  load_and_authorize_resource
 
   def index
     @receipts = Receipt.all
@@ -40,6 +42,6 @@ class ReceiptsController < ApplicationController
     end
 
     def receipt_params
-      params.require(:receipt).permit(:total_spent, :picture_of_receipt, :brother_who_sumbitted, :seen_receipt)
+      params.require(:receipt).permit(:total_spent, :picture_of_receipt, :remote_picture_of_receipt, :brother_who_submitted, :seen_receipt)
     end
 end
