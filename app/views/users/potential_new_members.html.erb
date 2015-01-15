@@ -1,45 +1,46 @@
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
 <div class="row">
-  <div id="page-wrap">
-    <table>
-      <thead>
-      <tr>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Phone Number</th>
-        <th>Email</th>
-        <th>City</th>
-        <th>State</th>
-      </tr>
-      </thead>
-      <tbody>
-      <% @potentials.each do |potential| %>
+  <div class="col-md-6 col-md-offset-3 top-card-padding">
+    <div class="card">
+      <div id="page-wrap">
+        <table>
+          <thead>
           <tr>
-            <td><%= potential.first_name? ? potential.first_name : 'N/A' %></td>
-            <td><%= potential.last_name? ? potential.last_name : 'N/A' %></td>
-            <td><%= potential.phone_number? ? potential.phone_number : 'N/A' %></td>
-            <td><%= potential.email? ? potential.email : 'N/A' %></td>
-            <td><%= potential.home_town? ? potential.home_town : 'N/A' %></td>
-            <td><%= potential.state? ? potential.state : 'N/A' %></td>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Phone Number</th>
+            <th>Email</th>
+            <th>City</th>
+            <th>State</th>
           </tr>
-      <% end %>
-      </tbody>
-    </table>
-
-  </div>
-  <div class="col-md-6 center-block">
-    <div align="center">
-      <h3>
-        <% if @potentials.previous_page %>
-          <%= link_to "< Previous", params.merge(:page => @potentials.previous_page) %>
-        <% end %>
-        Page <%= @potentials.current_page %> of <%= @potentials.total_pages %>
-        <% if @potentials.next_page %>
-            <%= link_to "Next >", params.merge(:page => @potentials.next_page) %>
-        <% end %>
-      </h3>
+          </thead>
+          <tbody>
+          <% @potentials.each do |potential| %>
+              <tr>
+                <td><%= potential.first_name? ? potential.first_name : 'N/A' %></td>
+                <td><%= potential.last_name? ? potential.last_name : 'N/A' %></td>
+                <td><%= potential.phone_number? ? potential.phone_number : 'N/A' %></td>
+                <td><%= potential.email? ? potential.email : 'N/A' %></td>
+                <td><%= potential.home_town? ? potential.home_town : 'N/A' %></td>
+                <td><%= potential.state? ? potential.state : 'N/A' %></td>
+              </tr>
+          <% end %>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-md-6 center-block">
+        <div align="center">
+          <h3>
+            <% if @potentials.previous_page %>
+              <%= link_to "< Previous", params.merge(:page => @potentials.previous_page) %>
+            <% end %>
+            Page <%= @potentials.current_page %> of <%= @potentials.total_pages %>
+            <% if @potentials.next_page %>
+              <%= link_to "Next >", params.merge(:page => @potentials.next_page) %>
+            <% end %>
+          </h3>
+        </div>
+      </div>
+      <div class="clear"></div>
     </div>
   </div>
 </div>
