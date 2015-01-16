@@ -95,7 +95,7 @@ background-color: $FooterBackground;
 //Home Page
 //Padding on the unmoveable card
 .top-card-padding{
-  padding-top: 9rem;
+  padding-top: 4rem;
   padding-bottom: 3rem;
 }
 
@@ -202,11 +202,6 @@ padding-bottom: 3rem;
 }
 //end body
 
-
-body{
-min-height: 100%;
-
-}
 //text alignment
 
 .navbar-right {
@@ -497,10 +492,6 @@ a.not-active:hover{
   border-color: $FooterBackground !important;
 }
 
-body {
-  padding-top: 30px;
-}
-
 .faq-cat-content {
   margin-top: 25px;
 }
@@ -773,6 +764,7 @@ body {
 }
 #header {
   padding:10px;
+  padding-bottom: 9rem;
 }
 #body {
   padding:10px;
