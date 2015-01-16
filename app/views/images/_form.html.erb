@@ -15,7 +15,9 @@
     <%= f.text_field :name, placeholder: 'Picture Name' %>
     <%= f.file_field :picture, placeholder: 'Image File' %>
     <%= f.text_field :remote_picture_url, placeholder: 'Or input url of photo' %>
+    <p>Link Image To Post Story</p>
     <%= f.collection_select :post_id, @posts.reverse, :id, :title, :include_blank => true, class: 'col-md-3' %>
+    <p>Photot Gallery</p>
     <%= f.collection_select :gallery_id, @galleries.reverse, :id, :name, :include_blank => true, class: 'col-md-3' %>
   </div>
   <div class="actions">
@@ -27,3 +29,4 @@
 <div style="float: right">
   <%= (image_tag @image.picture_url, style: 'width: auto; height: 30rem;') if @image.picture? %>
 </div>
+<div class="clear"></div>
