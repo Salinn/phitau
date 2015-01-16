@@ -26,7 +26,4 @@ class User < ActiveRecord::Base
     false
   end
 
-  validates :phone_number, length: {is: 11}, message: 'Phone Number Needs to Include the 1 at the start'
-  validates :first_name, length: {minimum: 3}, message: 'First Name Must be at least 3 Characters'
-  validates :last_name, length: {minimum: 3}, message: 'First Name Must be at least 3 Characters'
 end

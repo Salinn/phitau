@@ -24,11 +24,13 @@
     </div>
 
       <div class="field posts_checkboxes" style="float: left">
+        <%= hidden_field_tag :published, '' %>
         <%= f.label :published %><br>
         <%= f.check_box :published %>
       </div>
 
       <div class="field posts_checkboxes" style="float: left; padding-left: 10px;">
+        <%= hidden_field_tag :top_card, '' %>
         <%= f.label :top_card %><br>
         <%= f.check_box :top_card %>
       </div>

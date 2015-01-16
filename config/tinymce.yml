@@ -6,7 +6,7 @@ theme_advanced_statusbar_location: bottom
 toolbar:
   - styleselect | bold italic | undo redo | fontselect | fontsizeselect | image | link
 plugins:
+  - link
   - table
   - fullscreen
   - image
-  - link

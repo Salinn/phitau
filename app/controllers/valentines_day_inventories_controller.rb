@@ -1,6 +1,7 @@
 class ValentinesDayInventoriesController < ApplicationController
   before_action :set_valentines_day_inventory, only: [:show, :edit, :update, :destroy]
   respond_to :html, :xml, :json
+  load_and_authorize_resource
 
   def index
     @valentines_day_inventories = ValentinesDayInventory.all
