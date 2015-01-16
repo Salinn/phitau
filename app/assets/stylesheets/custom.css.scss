@@ -717,12 +717,19 @@ only screen and (max-width: 760px),
   /*
   Label the data
   */
-  td:nth-of-type(1):before { content: "First Name"; }
-  td:nth-of-type(2):before { content: "Last Name"; }
-  td:nth-of-type(3):before { content: "Phone Number"; }
-  td:nth-of-type(4):before { content: "Email"; }
-  td:nth-of-type(5):before { content: "City"; }
-  td:nth-of-type(6):before { content: "State"; }
+  .potentials-table td:nth-of-type(1):before { content: "First Name"; }
+  .potentials-table td:nth-of-type(2):before { content: "Last Name"; }
+  .potentials-table td:nth-of-type(3):before { content: "Phone Number"; }
+  .potentials-table td:nth-of-type(4):before { content: "Email"; }
+  .potentials-table td:nth-of-type(5):before { content: "City"; }
+  .potentials-table td:nth-of-type(6):before { content: "State"; }
+
+  .receipts-table td:nth-of-type(1):before { content: "Total spent"; }
+  .receipts-table td:nth-of-type(2):before { content: "Picture of receipt"; }
+  .receipts-table td:nth-of-type(3):before { content: "Brother who submitted"; }
+  .receipts-table td:nth-of-type(4):before { content: "Seen receipt"; }
+  .receipts-table td:nth-of-type(5):before { content: "Show"; }
+  .receipts-table td:nth-of-type(6):before { content: "Edit"; }
 }
 
 /* Smartphones (portrait and landscape) ----------- */

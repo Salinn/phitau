@@ -2,7 +2,7 @@
   <div class="col-md-6 col-md-offset-3 top-card-padding">
     <div class="card">
       <div id="page-wrap">
-        <table>
+        <table class="potentials-table">
           <thead>
           <tr>
             <th>First Name</th>
@@ -44,3 +44,12 @@
     </div>
   </div>
 </div>
+
+<script>
+    jQuery('.data-table').each(function() {
+        var thetable=jQuery(this);
+        jQuery(this).find('tbody td').each(function() {
+            jQuery(this).attr('data-heading',thetable.find('thead th:nth-child('+(jQuery(this).index()+1)+')').text());
+        });
+    });
+</script>

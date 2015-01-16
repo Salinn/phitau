@@ -18,7 +18,7 @@
   <div class="field">
     <%= f.label :picture_of_receipt %><br>
     <%= f.file_field :picture_of_receipt ,placeholder: 'Image File' %>
-    <%= f.text_field :remote_picture_of_receipt, placeholder: 'Or input url of photo' %>
+    <%= f.text_field :remote_picture_of_receipt_url, placeholder: 'Or input url of photo' %>
   </div>
   <div class="field">
     <%= f.label :brother_who_submitted %><br>
@@ -32,3 +32,4 @@
     <%= f.submit %>
   </div>
 <% end %>
+
