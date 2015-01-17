@@ -1,0 +1,31 @@
+<h1>Listing chairs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Chair name</th>
+      <th>User</th>
+      <th>Role</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @chairs.each do |chair| %>
+      <tr>
+        <td><%= chair.chair_name %></td>
+        <td><%= chair.user_id %></td>
+        <td><%= chair.role %></td>
+        <td><%= link_to 'Show', chair %></td>
+        <td><%= link_to 'Edit', edit_chair_path(chair) %></td>
+        <td><%= link_to 'Destroy', chair, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Chair', new_chair_path %>

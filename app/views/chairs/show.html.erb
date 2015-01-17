@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Chair name:</strong>
+  <%= @chair.chair_name %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @chair.user_id %>
+</p>
+
+<p>
+  <strong>Role:</strong>
+  <%= @chair.role %>
+</p>
+
+<%= link_to 'Edit', edit_chair_path(@chair) %> |
+<%= link_to 'Back', chairs_path %>
