@@ -63,27 +63,7 @@ class StaticPagesController < ApplicationController
     @eboard.push(sergeant) unless sergeant.nil?
     @eboard.push(chaplain) unless chaplain.nil?
 
-
-    recruitment=users.where(role: "recruitment").blank? ? nil : users.where(role: "recruitment")
-    alumni_relations=users.where(role: "alumni_relations").blank? ? nil : users.where(role: "alumni relations")
-    web_master=users.where(role: "admin").blank? ? nil : users.where(role: "admin")
-    brotherhood=users.where(role: "brotherhood").blank? ? nil : users.where(role: "brotherhood")
-    social=users.where(role: "social").blank? ? nil : users.where(role: "social")
-    community_service=users.where(role: "community_service").blank? ? nil : users.where(role: "community service")
-    philanthropy=users.where(role: "philanthropy").blank? ? nil : users.where(role: "philanthropy")
-    business_ops=users.where(role: "business_ops").blank? ? nil : users.where(role: "business_ops")
-    housing_manager=users.where(role: "housing_manager").blank? ? nil : users.where(role: "housing_manager")
-
-    @chairs.push(recruitment) unless recruitment.nil?
-    @chairs.push(alumni_relations) unless alumni_relations.nil?
-    @chairs.push(web_master) unless web_master.nil?
-    @chairs.push(brotherhood) unless brotherhood.nil?
-    @chairs.push(social) unless social.nil?
-    @chairs.push(community_service) unless community_service.nil?
-    @chairs.push(philanthropy) unless philanthropy.nil?
-    @chairs.push(business_ops) unless business_ops.nil?
-    @chairs.push(housing_manager) unless housing_manager.nil?
-
+    @chairs = Chair.all
   end
 
   def information_for_students

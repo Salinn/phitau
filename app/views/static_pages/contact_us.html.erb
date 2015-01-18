@@ -36,28 +36,28 @@
   <h2 style="text-align: center;">Chairs</h2>
   <hr>
   <ul class="flipping-cards">
-    <% @chairs.each do |position| %>
+    <% @chairs.each do |chair| %>
         <li>
-          <input type="checkbox" id="item<%= position.first.id %>">
-          <label for="item<%= position.first.id %>">
+          <input type="checkbox" id="item<%= chair.user.id %>">
+          <label for="item<%= chair.user.id %>">
           <span class="wrapper">
             <span class="image">
               <h3 class="postition-front-title">
-                <%= title(position.first.role) %>
+                <%= title(chair.chair_name) %>
               </h3>
               <%= image_tag "info.png", class: "postition-front-flip-icon" %>
-              <%= image_tag position.first.profile_picture_url, class:"user_img contact_img" if position.first.profile_picture? %>
+              <%= image_tag chair.user.profile_picture_url, class:"user_img contact_img" if chair.user.profile_picture? %>
             </span>
             <span class="back contact-back-background" >
               <h2>
-                <%= title(position.first.role) %>
+                <%= title(chair.chair_name) %>
               </h2>
               <h3>
-                <%= position.first.first_name if position.first.first_name? %> <%= " " + position.first.last_name if position.first.last_name? %>
+                <%= chair.user.first_name if chair.user.first_name? %> <%= " " + chair.user.last_name if chair.user.last_name? %>
               </h3>
               <h2>Email</h2>
               <h3>
-                <%= mail_to position.first.email %>
+                <%= mail_to chair.user.email %>
               </h3>
             </span>
           </span>

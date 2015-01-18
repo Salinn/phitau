@@ -9,7 +9,8 @@
   <%= favicon_link_tag "favicon.ico" %>>
 </head>
 
-<div id="container">
+<body>
+<div id="wrapper">
   <div id="header"><%= render 'layouts/header' %></div>
   <% flash.each do |name, msg| %>
       <% if name == :alert %>
@@ -18,11 +19,12 @@
           <%= content_tag :div, msg, class: "alert notice-info" %>
       <% end %>
   <% end %>
-  <div id="body">
+  <div id="content">
     <%= yield %>
   </div>
-  <div id="footer"></div>
+  <div id="footer"><%= render 'layouts/footer' %></div>
 </div>
+</body>
 </html>
 
 

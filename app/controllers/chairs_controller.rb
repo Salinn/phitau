@@ -1,5 +1,7 @@
 class ChairsController < ApplicationController
   before_action :set_chair, only: [:show, :edit, :update, :destroy]
+  respond_to :html, :xml, :json
+  load_and_authorize_resource
 
   def index
     @chairs = Chair.all
