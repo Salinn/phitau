@@ -63,7 +63,7 @@ class StaticPagesController < ApplicationController
     @eboard.push(sergeant) unless sergeant.nil?
     @eboard.push(chaplain) unless chaplain.nil?
 
-    @chairs = Chair.all
+    @chairs = Chair.all.where.not(user_id: [false,nil])
   end
 
   def information_for_students
