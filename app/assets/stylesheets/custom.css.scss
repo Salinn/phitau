@@ -730,6 +730,19 @@ only screen and (max-width: 760px),
   .receipts-table td:nth-of-type(4):before { content: "Seen receipt"; }
   .receipts-table td:nth-of-type(5):before { content: "Show"; }
   .receipts-table td:nth-of-type(6):before { content: "Edit"; }
+
+  .posts-table td:nth-of-type(1):before { content: "Title"; }
+  .posts-table td:nth-of-type(2):before { content: "Content"; }
+  .posts-table td:nth-of-type(3):before { content: "Top Card?"; }
+  .posts-table td:nth-of-type(4):before { content: "Author"; }
+  .posts-table td:nth-of-type(5):before { content: "Edit Post"; }
+  .posts-table td:nth-of-type(6):before { content: "Delete Post"; }
+
+  .user-all-edit-table td:nth-of-type(1):before { content: "First Name"; }
+  .user-all-edit-table td:nth-of-type(2):before { content: "Last Name"; }
+  .user-all-edit-table td:nth-of-type(3):before { content: "Email"; }
+  .user-all-edit-table td:nth-of-type(4):before { content: "Role"; }
+  .user-all-edit-table td:nth-of-type(5):before { content: "Confirmed Brother"; }
 }
 
 /* Smartphones (portrait and landscape) ----------- */
