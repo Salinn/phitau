@@ -18,10 +18,30 @@ $bottomHeight: 20rem;
 .phitau_named{
   padding-left: 10px;
 }
+h1.phitau_named {
+  font-size: $H1_header;
+}
+
+@media(max-width: 480px) {
+  h1.phitau_named {
+    font-size: 1rem;
+  }
+}
+
 //How Learning Leading Serving Looks
-.tag_line{
+.tag_line {
   padding-left: 10px;
   margin-top: 0px;
+}
+
+h3.tag_line {
+  font-size: $H3_header;
+}
+
+@media(max-width: 480px) {
+  h3.tag_line {
+    font-size: 0.7rem;
+  }
 }
 
 //Describes how the phi tau crest image looks
