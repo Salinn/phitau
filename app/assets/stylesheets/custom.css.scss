@@ -24,7 +24,7 @@ h1.phitau_named {
 
 @media(max-width: 480px) {
   h1.phitau_named {
-    font-size: 1rem;
+    font-size: $H1_header;
   }
 }
 
@@ -40,7 +40,7 @@ h3.tag_line {
 
 @media(max-width: 480px) {
   h3.tag_line {
-    font-size: 0.7rem;
+    font-size: $H3_header;
   }
 }
 
