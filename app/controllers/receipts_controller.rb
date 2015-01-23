@@ -22,8 +22,9 @@ class ReceiptsController < ApplicationController
 
   def create
     @receipt = Receipt.new(receipt_params)
+    @receipt.brother_who_submitted = current_user.id
     flash[:notice] = 'Receipt was successfully created.' if @receipt.save
-    respond_with(@receipt)
+    respond_with(@receipt, :location => root_path)
   end
 
   def update

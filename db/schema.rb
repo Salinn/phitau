@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150117233915) do
+ActiveRecord::Schema.define(version: 20150123025135) do
 
   create_table "alumni_news_letters", force: true do |t|
     t.date     "released_date"
@@ -99,10 +99,10 @@ ActiveRecord::Schema.define(version: 20150117233915) do
   create_table "receipts", force: true do |t|
     t.string   "total_spent"
     t.string   "picture_of_receipt"
-    t.integer  "brother_who_submitted"
     t.boolean  "seen_receipt"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
   end
 
   create_table "text_messages", force: true do |t|

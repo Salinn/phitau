@@ -1,35 +1,33 @@
 <%= form_for(@receipt) do |f| %>
-  <% if @receipt.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@receipt.errors.count, "error") %> prohibited this receipt from being saved:</h2>
+    <% if @receipt.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@receipt.errors.count, "error") %> prohibited this receipt from being saved:</h2>
 
-      <ul>
-      <% @receipt.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+          <ul>
+            <% @receipt.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :total_spent %><br>
+      <%= f.text_field :total_spent %>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :total_spent %><br>
-    <%= f.text_field :total_spent %>
-  </div>
-  <div class="field">
-    <%= f.label :picture_of_receipt %><br>
-    <%= f.file_field :picture_of_receipt ,placeholder: 'Image File' %>
-    <%= f.text_field :remote_picture_of_receipt_url, placeholder: 'Or input url of photo' %>
-  </div>
-  <div class="field">
-    <%= f.label :brother_who_submitted %><br>
-    <%= f.text_field :brother_who_submitted %>
-  </div>
-  <div class="field">
-    <%= f.label :seen_receipt %><br>
-    <%= f.check_box :seen_receipt %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <div class="field">
+      <%= f.label :picture_of_receipt %><br>
+      <%= f.file_field :picture_of_receipt ,placeholder: 'Image File' %>
+      <%= f.text_field :remote_picture_of_receipt_url, placeholder: 'Or input url of photo' %>
+    </div>
+    <% if current_user.role == '' %>
+    <div class="field">
+      <%= f.label :seen_receipt %><br>
+      <%= f.check_box :seen_receipt %>
+    </div>
+    <% end %>
+<div class="actions">
+  <%= f.submit %>
+</div>
 <% end %>
 
