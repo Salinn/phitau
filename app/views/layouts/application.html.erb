@@ -12,13 +12,15 @@
 <body>
 <div id="wrapper">
   <div id="header"><%= render 'layouts/header' %></div>
-  <% flash.each do |name, msg| %>
-      <% if name == :alert %>
-          <%= content_tag :div, msg, class: "alert alert-info" %>
-      <% else %>
-          <%= content_tag :div, msg, class: "alert notice-info" %>
-      <% end %>
-  <% end %>
+  <div class="container">
+    <% flash.each do |name, msg| %>
+        <% if name == :alert %>
+            <%= content_tag :div, msg, class: "alert alert-info" %>
+        <% else %>
+            <%= content_tag :div, msg, class: "alert notice-info" %>
+        <% end %>
+    <% end %>
+  </div>
   <div id="content">
     <%= yield %>
   </div>
