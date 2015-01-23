@@ -14,6 +14,7 @@ class Ability
       can :update, User, :id => user.id
       if user.confirmed_brother?
         can [:show, :read], AlumniNewsLetter
+        can [:create, :update], Receipt
       end
       if user.user_role? "writer"
         can [:show, :update, :new, :read, :create], AlumniNewsLetter
