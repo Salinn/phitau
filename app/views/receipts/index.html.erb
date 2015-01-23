@@ -7,7 +7,6 @@
           <thead>
           <tr>
             <th>Total spent</th>
-            <th>Picture of receipt</th>
             <th>Brother who submitted</th>
             <th>Seen receipt</th>
             <th></th>
@@ -19,9 +18,8 @@
           <% @receipts.each do |receipt| %>
               <tr>
                 <td><%= receipt.total_spent ? receipt.total_spent : 'N/A' %></td>
-                <td><%= receipt.picture_of_receipt ? receipt.picture_of_receipt : 'N/A' %></td>
-                <td><%= receipt.usersdfsdf ? receipt.brother_who_submitted : 'N/A' %></td>
-                <td><%= receipt.seen_receipt ? receipt.seen_receipt : 'N/A' %></td>
+                <td><%= receipt.user.last_name ? (receipt.user.first_name + ' ' + receipt.user.last_name): 'N/A' %></td>
+                <td><%= receipt.seen_receipt ? 'Yes' : 'No' %></td>
                 <td><%= link_to 'Show', receipt %></td>
                 <td><%= link_to 'Edit', edit_receipt_path(receipt) %></td>
               </tr>

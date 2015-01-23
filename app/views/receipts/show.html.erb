@@ -1,24 +1,30 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="col-md-8 col-md-offset-2 top-card-padding">
+    <div class="card">
+      <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Total spent:</strong>
-  <%= @receipt.total_spent %>
-</p>
+      <p>
+        <strong>Total spent:</strong>
+        <%= @receipt.total_spent %>
+      </p>
 
-<p>
-  <strong>Picture of receipt:</strong>
-  <%= @receipt.picture_of_receipt %>
-</p>
+      <p>
+        <strong>Picture of receipt:</strong>
+        <%= @receipt.picture_of_receipt_url %>
+      </p>
 
-<p>
-  <strong>Brother who sumbitted:</strong>
-  <%= @receipt.brother_who_submitted %>
-</p>
+      <p>
+        <strong>Brother who sumbitted:</strong>
+        <%= (@receipt.user.first_name + ' ' + @receipt.user.last_name)%>
+      </p>
 
-<p>
-  <strong>Seen receipt:</strong>
-  <%= @receipt.seen_receipt %>
-</p>
+      <p>
+        <strong>Seen receipt:</strong>
+        <%= @receipt.seen_receipt %>
+      </p>
 
-<%= link_to 'Edit', edit_receipt_path(@receipt) %> |
-<%= link_to 'Back', receipts_path %>
+      <%= link_to 'Edit', edit_receipt_path(@receipt) %> |
+      <%= link_to 'Back', receipts_path %>
+    </div>
+  </div>
+</div>

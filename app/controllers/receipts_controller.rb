@@ -4,7 +4,7 @@ class ReceiptsController < ApplicationController
   load_and_authorize_resource
 
   def index
-    @receipts = Receipt.all
+    @receipts = Receipt.all.reverse
     respond_with(@receipts)
   end
 
@@ -22,7 +22,7 @@ class ReceiptsController < ApplicationController
 
   def create
     @receipt = Receipt.new(receipt_params)
-    @receipt.brother_who_submitted = current_user.id
+    @receipt.user_id = current_user.id
     flash[:notice] = 'Receipt was successfully created.' if @receipt.save
     respond_with(@receipt, :location => root_path)
   end
