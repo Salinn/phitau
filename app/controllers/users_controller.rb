@@ -13,7 +13,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(user_params)
+    @user = User.new(user_params_new)
     generated_password = Devise.friendly_token.first(8)
     @user.role = 'potential new member'
     @user.password = generated_password
@@ -56,7 +56,7 @@ class UsersController < ApplicationController
   def update_all
     params['user'].keys.each do |id|
       @user = User.find(id.to_i)
-      @user.update_attributes(user_params)
+      @user.update_attributes(user_params(id))
     end
     redirect_to(root_path)
   end
@@ -80,7 +80,11 @@ class UsersController < ApplicationController
     @user.save
   end
 
-  def user_params
+  def user_params_new
     params.require(:user).permit(:first_name, :last_name, :email,:phone_number)
+  end
+
+  def user_params(id)
+    params.require(:user).fetch(id).permit(:role, :confirmed_brother)
   end
 end
