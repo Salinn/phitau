@@ -1,9 +1,0 @@
-*.gem
-rdoc
-.DS_Store
-log/*
-tmp/*
-lib/tasks/vendor/*
-public/vendor/*
-db/migrate/*create_lalala_assets*
-db/schema*

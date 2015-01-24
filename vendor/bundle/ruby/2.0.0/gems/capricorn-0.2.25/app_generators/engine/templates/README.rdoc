@@ -1,7 +1,0 @@
-= <%= engine_name.humanize %>
-
-
-== Example
-
-
-Copyright (c) 2009 [AUTHOR], released under the MIT license
