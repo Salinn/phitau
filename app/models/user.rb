@@ -27,4 +27,12 @@ class User < ActiveRecord::Base
     false
   end
 
+  def chairs_role? role
+    self.chairs.each do |chair|
+      if chair.role == role
+        return true
+      end
+    end
+    false
+  end
 end

@@ -12,8 +12,7 @@
     <% end %>
 
     <div class="field">
-      <%= f.label :to_number %><br>
-      <%= f.text_field :to_number, value: params[:to_number] %>
+      <%= f.text_field :to_number, value: params[:to_number], :placeholder => 'Enter Phone Number' %>
     </div>
     <div class="field">
       <%= f.label :user_group %><br>
@@ -21,7 +20,7 @@
     </div>
     <div class="field">
       <%= f.label :message %><br>
-      <%= f.text_field :message, value: params[:message] %>
+      <%= f.text_field :message, value: params[:message], :placeholder => 'Enter Message' %>
     </div>
     <div class="actions">
       <%= f.submit %>

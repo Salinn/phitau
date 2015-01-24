@@ -17,18 +17,18 @@ class Ability
         can [:create, :update], Receipt
         can [:create], User
       end
-      if user.user_role? "writer"
+      if user.user_role? 'recruitment' or user.chairs_role? 'recruitment'
+        can [:create, :read, :show], TextMessage
+      end
+      if user.user_role? 'writer' or user.chairs_role? 'writer'
         can [:show, :update, :new, :read, :create], AlumniNewsLetter
         can [:show, :update, :new, :read, :create], Post
         can [:show, :update, :new, :read, :create], Image
         can [:show, :update, :new, :read, :create], Gallery
       end
-      if user.user_role? "president"
+      if user.user_role? 'president'
         can [:show, :update, :new, :read, :create], FaqCategory
         can [:show, :update, :new, :read, :create], FaqQuestion
-      end
-      if user.user_role? "recruitment"
-        can [:show, :update, :new, :read, :create], TextMessage
       end
     end
   end

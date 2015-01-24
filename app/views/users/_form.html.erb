@@ -1,12 +1,12 @@
 
 <%= form_for(@user, url: users_admin_index_path(@user) ) do |f| %>
     <div class="registration_space">
-      <%= f.text_field :first_name, autofocus: true, :placeholder => "First Name", :class => "col-md-3" %>
-      <%= f.text_field :last_name,:placeholder => "Last Name",:class => "col-md-3" %>
+      <%= f.text_field :first_name, autofocus: true, :placeholder => 'First Name', :class => 'col-md-3' %>
+      <%= f.text_field :last_name,:placeholder => 'Last Name',:class => 'col-md-3' %>
     </div>
     <div class="field">
-      <%= f.email_field :email, :placeholder => "Email", :class => "col-md-3" %>
-      <%= f.text_field :phone_number, :placeholder => "Phone Number", :class => "col-md-3" %>
+      <%= f.email_field :email, :placeholder => 'Email', :class => 'col-md-3' %>
+      <%= f.text_field :phone_number, :placeholder => 'Phone Number', :class => 'col-md-3' %>
     </div>
     <div class="actions">
       <%= f.submit %>

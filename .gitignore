@@ -13,7 +13,10 @@
 
 # Ignore all logfiles and tempfiles.
 /log/*.log
-/tmp
+tmp
+
+# Ignore bundle files
+vendor/bundle
 
 # Ignore all .idea files
 **/.idea/workspace.xml **/.idea/tasks.xml

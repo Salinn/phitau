@@ -1,8 +1,9 @@
 class TextMessagesController < ApplicationController
   before_action :set_text_message, only: [:show, :edit, :update, :destroy]
+  load_and_authorize_resource
 
   def index
-    @text_messages = TextMessage.all
+    @text_messages = TextMessage.all.reverse
   end
 
   def show
@@ -37,10 +38,16 @@ class TextMessagesController < ApplicationController
 
   def send_text_message text_message
     if text_message.to_number != ""
+      message = text_message.message.gsub(/line_break/,"\n")
+      if user.phone_number.length == 10
+        phone_number = '1' + user.phone_number
+      else
+        phone_number = user.phone_number
+      end
       $twilio_client.account.messages.create(
         :from => "+#{$twilio_phone_number}",
-        :to => "+#{text_message.to_number}",
-        :body => "#{text_message.message}"
+        :to => "+#{phone_number}",
+        :body => "#{message}"
       )
     else
       User.all.each do |user|
@@ -48,10 +55,15 @@ class TextMessagesController < ApplicationController
           first_name = user.first_name
           line_break = line_break
           message = text_message.message.gsub(/first_name/,first_name)
-          message = text_message.message.gsub(/line_break/,"\n")
+          message = message.gsub(/line_break/,"\n")
+          if user.phone_number.length == 10
+            phone_number = '1' + user.phone_number
+          else
+            phone_number = user.phone_number
+          end
           $twilio_client.account.messages.create(
             :from => "+#{$twilio_phone_number}",
-            :to => "+#{user.phone_number}",
+            :to => "+#{phone_number}",
             :body => "#{message}"
           )
         end
