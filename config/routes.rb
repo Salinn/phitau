@@ -29,12 +29,14 @@ Phitau::Application.routes.draw do
 
   match 'users/all/edit' => 'users#edit_all', :as => :edit_all, :via => :get
   match 'users/all' => 'users#update_all', :as => :update_all, :via => :put
-  get 'potentials' => 'users#potential_new_members'
-  get 'potentials/new' => 'users#new_potential_member'
+  get 'users/new' => 'users#new'
 
   devise_for :users, :controllers => { :registrations => 'registration' }, :path_names => { :'sign_up.html.erb' => 'register'}
   resources :users, :only => [:show, :edit, :update ]
-  resources :users, :controller => 'users'
+  resources :users_admin, :controller => 'users'
+
+  get 'potentials' => 'users#potential_new_members'
+  get 'signup' => 'users#new'
 
   get 'twilio/send_text_message' => 'twilio#send_text_message'
   get 'twilio/new_message' => 'twilio#new_message'
