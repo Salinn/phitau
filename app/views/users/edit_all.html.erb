@@ -1,44 +1,51 @@
 <!--http://anthonylewis.com/2011/04/15/editing-multiple-records-in-rails/comment-page-1/#comment-1760-->
 <br><br>
-<div class="posts_checkboxes">
-<%= form_for :user, :url => update_all_path, :html => { :method => :put } do %>
-    <table class="user-all-edit-table">
-      <tr>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Email</th>
-        <th>Role</th>
-        <th>Confirmed Brother</th>
-      </tr>
-      <% @users.each do |user| %>
-          <%= fields_for "user[]", user do |user_fields| %>
+<div class="row">
+  <div class="col-md-10 col-md-offset-1 top-card-padding">
+    <div class="card">
+      <div class="posts_checkboxes">
+        <%= form_for :user, :url => update_all_path, :html => { :method => :put } do %>
+            <table class="user-all-edit-table">
               <tr>
-                <td><%= user_fields.text_field :first_name,:disabled => true %></td>
-                <td><%= user_fields.text_field :last_name,:disabled => true %></td>
-                <td><%= user_fields.email_field :email,:disabled => true %></td>
-                <td><%= user_fields.collection_select :role, User::ALLROLES, :to_s, :to_s, :class => "col-md-3" %></td>
-                <td style="padding-left: 2rem"><%= user_fields.check_box :confirmed_brother %></td>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Role</th>
+                <th>Confirmed Brother</th>
               </tr>
-          <% end %>
-      <% end %>
-    </table>
+              <% @users.each do |user| %>
+                  <%= fields_for "user[]", user do |user_fields| %>
+                      <tr>
+                        <td><%= user_fields.text_field :first_name,:disabled => true %></td>
+                        <td><%= user_fields.text_field :last_name,:disabled => true %></td>
+                        <td><%= user_fields.email_field :email,:disabled => true %></td>
+                        <td><%= user_fields.collection_select :role, User::ALLROLES, :to_s, :to_s, :class => "col-md-3" %></td>
+                        <td style="padding-left: 2rem"><%= user_fields.check_box :confirmed_brother %></td>
+                      </tr>
+                  <% end %>
+              <% end %>
+            </table>
 
-    <div class="actions">
-      <%= submit_tag %>
+            <div class="actions">
+              <%= submit_tag %>
+            </div>
+        <% end %>
+      </div>
+
+      <div class="col-md-6 center-block">
+        <div align="center">
+          <h3>
+            <% if @users.previous_page %>
+                <%= link_to "< Previous", params.merge(:page => @users.previous_page) %>
+            <% end %>
+            Page <%= @users.current_page %> of <%= @users.total_pages %>
+            <% if @users.next_page %>
+                <%= link_to "Next >", params.merge(:page => @users.next_page) %>
+            <% end %>
+          </h3>
+        </div>
+      </div>
+      <div class="clear"></div>
     </div>
-<% end %>
-</div>
-
-<div class="col-md-6 center-block">
-  <div align="center">
-    <h3>
-      <% if @users.previous_page %>
-          <%= link_to "< Previous", params.merge(:page => @users.previous_page) %>
-      <% end %>
-      Page <%= @users.current_page %> of <%= @users.total_pages %>
-      <% if @users.next_page %>
-          <%= link_to "Next >", params.merge(:page => @users.next_page) %>
-      <% end %>
-    </h3>
   </div>
 </div>
