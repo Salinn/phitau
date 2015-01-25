@@ -58,9 +58,8 @@ class TextMessagesController < ApplicationController
           message = text_message.message.gsub(/first_name/,first_name)
           message = message.gsub(/line_break/,"\n")
           contacts = message.match(/start_contacts(.*)end_contacts/)
-          message = message.gsub(contacts[0],"")
           contactss = contacts[1].split(',')
-          message+= contactss[current]
+          final_message = message.gsub(contacts[0],contactss[current])
           current = current + 1
           if user.phone_number.length == 10
             phone_number = '1' + user.phone_number
@@ -70,7 +69,7 @@ class TextMessagesController < ApplicationController
           $twilio_client.account.messages.create(
             :from => "+#{$twilio_phone_number}",
             :to => "+#{phone_number}",
-            :body => "#{message}"
+            :body => "#{final_message}"
           )
         end
       end
