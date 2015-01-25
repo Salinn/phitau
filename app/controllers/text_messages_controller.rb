@@ -37,6 +37,7 @@ class TextMessagesController < ApplicationController
   end
 
   def send_text_message text_message
+    current = 0
     if text_message.to_number != ""
       message = text_message.message.gsub(/line_break/,"\n")
       if user.phone_number.length == 10
@@ -56,6 +57,11 @@ class TextMessagesController < ApplicationController
           line_break = line_break
           message = text_message.message.gsub(/first_name/,first_name)
           message = message.gsub(/line_break/,"\n")
+          contacts = message.match(/start_contacts(.*)end_contacts/)
+          message = message.gsub(contacts[0],"")
+          contactss = contacts[1].split(',')
+          message+= contactss[current]
+          current = current + 1
           if user.phone_number.length == 10
             phone_number = '1' + user.phone_number
           else

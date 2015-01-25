@@ -19,6 +19,8 @@ Phitau::Application.routes.draw do
 
   resources :text_messages
 
+  get 'text' => 'text_messages#new'
+
   post 'text_messages/new_message' => 'text_messages#new_message'
 
   resources :alumni_news_letters
