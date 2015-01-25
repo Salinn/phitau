@@ -1,6 +1,6 @@
 <%= form_for(@receipt) do |f| %>
     <% if @receipt.errors.any? %>
-        <div id="error_explanation">
+        <div id='error_explanation'>
           <h2><%= pluralize(@receipt.errors.count, "error") %> prohibited this receipt from being saved:</h2>
 
           <ul>
@@ -11,17 +11,17 @@
         </div>
     <% end %>
 
-    <div class="field">
+    <div class='field'>
       <%= f.label :total_spent %><br>
       <%= f.text_field :total_spent %>
     </div>
-    <div class="field">
+    <div class='field'>
       <%= f.label :picture_of_receipt %><br>
       <%= f.file_field :picture_of_receipt ,placeholder: 'Image File' %>
       <%= f.text_field :remote_picture_of_receipt_url, placeholder: 'Or input url of photo' %>
     </div>
-    <% if current_user.role == ('admin') %>
-    <div class="field posts_checkboxes">
+    <% if ['admin', 'treasure'].include? current_user.role %>
+    <div class='field posts_checkboxes'>
       <%= f.label :seen_receipt %><br>
       <%= f.check_box :seen_receipt %>
     </div>
