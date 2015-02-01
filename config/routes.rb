@@ -11,6 +11,8 @@ Phitau::Application.routes.draw do
 
   resources :faq_questions
 
+  get 'valentines_day' => 'valentines_day_delieveries#new'
+
   resources :valentines_day_inventories
 
   resources :valentines_day_delieveries

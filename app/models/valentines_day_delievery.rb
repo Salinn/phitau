@@ -10,7 +10,7 @@ class ValentinesDayDelievery < ActiveRecord::Base
     (self.small_animial_quantity = 0) if small_animial_quantity.nil?
   end
 
-  PAYMENTMETHODS = %w["Cash","PayPal"]
+  PAYMENTMETHODS = ["Cash","PayPal"]
 
   validates :red_flower_quantity, :numericality => { :greater_than_or_equal_to => 0 }
   validates :white_flower_quantity, :numericality => { :greater_than_or_equal_to => 0 }
