@@ -25,7 +25,7 @@ class ValentinesDayDelievery < ActiveRecord::Base
   validates :recievers_phone_number, presence: true, :length => {:minimum => 11}, :numericality => true
   validates :delivery_location, presence: true
 
-  validate :check_inventory, :on => [:create, :update]
+  validate :check_inventory#, :on => [:create, :update]
 
   def check_inventory
     inventory = ValentinesDayInventory.where(current_year: Time.now.year.to_s).first

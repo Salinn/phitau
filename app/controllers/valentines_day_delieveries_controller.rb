@@ -26,7 +26,7 @@ class ValentinesDayDelieveriesController < ApplicationController
     @valentines_day_inventory = ValentinesDayInventory.where(current_year: Time.now.year.to_s).first
     @valentines_day_delievery = ValentinesDayDelievery.new(valentines_day_delievery_params)
     flash[:notice] = 'ValentinesDayDelievery was successfully created.' if @valentines_day_delievery.save
-    respond_with(@valentines_day_delievery)
+    respond_with(@valentines_day_delievery, :location => valentines_day_path)
   end
 
   def update
