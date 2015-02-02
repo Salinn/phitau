@@ -25,6 +25,7 @@ class ValentinesDayDelieveriesController < ApplicationController
   def create
     @valentines_day_inventory = ValentinesDayInventory.where(current_year: Time.now.year.to_s).first
     @valentines_day_delievery = ValentinesDayDelievery.new(valentines_day_delievery_params)
+    @valentines_day_delievery = calulate_cost
     flash[:notice] = 'ValentinesDayDelievery was successfully created.' if @valentines_day_delievery.save
     respond_with(@valentines_day_delievery, :location => valentines_day_path)
   end
@@ -41,6 +42,29 @@ class ValentinesDayDelieveriesController < ApplicationController
   end
 
   private
+    def calulate_cost
+      if @valentines_day_delievery.red_flower_quantity.nil? or @valentines_day_delievery.red_flower_quantity < 0
+        @valentines_day_delievery.red_flower_quantity = 0
+      end
+      if @valentines_day_delievery.pink_flower_quantity.nil? or @valentines_day_delievery.pink_flower_quantity < 0
+        @valentines_day_delievery.pink_flower_quantity = 0
+      end
+      if @valentines_day_delievery.small_animial_quantity.nil? or @valentines_day_delievery.small_animial_quantity < 0
+        @valentines_day_delievery.small_animial_quantity = 0
+      end
+      flowers = @valentines_day_delievery.red_flower_quantity
+      flowers += @valentines_day_delievery.pink_flower_quantity
+      stuffed_animals = @valentines_day_delievery.small_animial_quantity
+      if @valentines_day_delievery.payment == "Cash"
+        @valentines_day_delievery.total_price = (flowers * 2) + (stuffed_animals * 2)
+      else
+        total = (flowers * 2) + (stuffed_animals * 2)
+        @valentines_day_delievery.paypal_cost = 0.32 + (total * 0.029)
+        @valentines_day_delievery.total_price = total + @valentines_day_delievery.paypal_cost
+      end
+      return @valentines_day_delievery
+    end
+
     def set_valentines_day_delievery
       @valentines_day_inventory = ValentinesDayInventory.where(current_year: Time.now.year.to_s).first
       @valentines_day_delievery = ValentinesDayDelievery.find(params[:id])

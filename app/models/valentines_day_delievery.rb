@@ -20,9 +20,9 @@ class ValentinesDayDelievery < ActiveRecord::Base
   validates :small_animial_quantity, :numericality => { :greater_than_or_equal_to => 0 }
 
   validates :buyer_name, presence: true, :length => {:minimum => 4}
-  validates :buyer_phone_number, presence: true, :length => {:minimum => 11}, :numericality => true
+  validates :buyer_phone_number, presence: true, :length => {:minimum => 10, :maximum => 11}, :numericality => true
   validates :recievers_name, presence: true, :length => {:minimum => 4}
-  validates :recievers_phone_number, presence: true, :length => {:minimum => 11}, :numericality => true
+  validates :recievers_phone_number, presence: true, :length => {:minimum => 10, :maximum => 11}, :numericality => true
   validates :delivery_location, presence: true
 
   validate :check_inventory#, :on => [:create, :update]
