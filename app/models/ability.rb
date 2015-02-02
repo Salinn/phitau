@@ -12,6 +12,7 @@ class Ability
     if user.role != nil
       can :show, User, :id => user.id
       can :update, User, :id => user.id
+      can [:show, :update, :new, :read, :create], ValentinesDayDelievery
       if user.confirmed_brother?
         can [:show, :read], AlumniNewsLetter
         can [:create, :update], Receipt
