@@ -18,6 +18,9 @@ class Ability
         can [:create, :update], Receipt
         can [:create], User
       end
+      if user.chairs_role? 'philanthropy'
+        can [:show, :update, :new, :read, :create, :delete], ValentinesDayDelievery
+      end
       if user.user_role? 'recruitment' or user.chairs_role? 'recruitment'
         can [:create, :read, :show], TextMessage
       end
