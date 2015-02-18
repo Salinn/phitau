@@ -37,7 +37,7 @@ class PostsController < ApplicationController
 
     update_author
     top_card_check_and_fix
-
+    @post.asdfasdf
     respond_to do |format|
       if @post.save
         #UserMailer.signup_confirmation(current_user).deliver

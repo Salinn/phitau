@@ -7,7 +7,7 @@ class StaticPagesController < ApplicationController
   end
 
   def home
-    @posts = Post.where(top_card: [false, nil]).reverse.paginate(:page => params[:page], :per_page => 3)
+    @posts = Post.where(top_card: [false, nil]).order(:id).reverse.paginate(:page => params[:page], :per_page => 3)
     @top_card = Post.find_by(top_card: true)
   end
 
