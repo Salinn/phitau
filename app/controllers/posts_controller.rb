@@ -36,8 +36,7 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
 
     update_author
-    top_card_check_and_fix
-
+    top_card_check_and_fix if params[:post][:top_card] == '1'
     respond_to do |format|
       if @post.save
         #UserMailer.signup_confirmation(current_user).deliver

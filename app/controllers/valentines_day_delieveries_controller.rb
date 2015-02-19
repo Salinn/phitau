@@ -4,7 +4,7 @@ class ValentinesDayDelieveriesController < ApplicationController
   load_and_authorize_resource
 
   def index
-    @valentines_day_delieveries = ValentinesDayDelievery.all
+    @valentines_day_delieveries = ValentinesDayDelievery.all.reverse
     respond_with(@valentines_day_delieveries)
   end
 
@@ -33,7 +33,7 @@ class ValentinesDayDelieveriesController < ApplicationController
   def update
     @valentines_day_inventory = ValentinesDayInventory.where(current_year: Time.now.year.to_s).first
     flash[:notice] = 'ValentinesDayDelievery was successfully updated.' if @valentines_day_delievery.update(valentines_day_delievery_params)
-    respond_with(@valentines_day_delievery)
+    respond_with(@valentines_day_delievery, :location => valentines_day_path)
   end
 
   def destroy
