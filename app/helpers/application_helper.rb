@@ -9,5 +9,22 @@ module ApplicationHelper
 
     role
   end
-end
 
+  def get_link post
+    if post.images.empty?
+      nil
+    else
+      post.images.first.picture_url
+    end
+  end
+
+  def get_path post
+    if post.images.first.gallery
+      gallery_path(post.images.first.gallery.id)
+    elsif !post.images.empty?
+      image_path(post.images.first.id)
+    else
+      nil
+    end
+  end
+end
