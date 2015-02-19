@@ -1,0 +1,10 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3 top-card-padding">
+    <div class="card_registration">
+      <h1>Resources</h1>
+      <% if can? :create, AlumniNewsLetter %>
+          <%= link_to "Create Alumni News Letter", new_alumni_news_letters_path %>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -11,6 +11,10 @@ class StaticPagesController < ApplicationController
     @top_card = Post.find_by(top_card: true)
   end
 
+  def resources
+
+  end
+
   def about
 
   end
