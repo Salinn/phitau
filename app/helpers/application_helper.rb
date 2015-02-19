@@ -27,4 +27,8 @@ module ApplicationHelper
       nil
     end
   end
+
+  def not_sign_in
+    (current_user == nil or current_user.role == nil or current_user.role == "not_a_member")
+  end
 end

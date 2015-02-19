@@ -24,29 +24,19 @@
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav navbar-right">
         <!--This section gives links based of users rights or permissions -->
-        <% if current_user == nil or current_user.role == nil or current_user.role == "not_a_member"%>
+        <% if not_sign_in %>
             <li><%= link_to "Home", root_path %></li>
             <li><%= link_to "About", about_path %></li>
             <li><%= link_to "FAQ", faq_path %></li>
             <li><%= link_to "Contact", contact_us_path %></li>
         <% else %>
-            <li><%= link_to "Home", root_path %></li>
-            <% if current_user.role == "writer" %>
-                <li><%= link_to "Posts", posts_path, class: "nav-item" %></li>
-            <% elsif  current_user.role == "potential new member" %>
+            <% if current_user.role == "potential new member" %>
                 <li><%= link_to "About", about_path %></li>
                 <li><%= link_to "FAQ", faq_path %></li>
                 <li><%= link_to "Contact", contact_us_path %></li>
-            <% elsif  current_user.role == "admin" %>
-                <li><%= link_to "Posts", posts_path, class: "nav-item" %></li>
+            <% else %>
+                <li><%= link_to "Resources", '/resources' %></li>
                 <li><%= link_to "News-Letters", new_alumni_news_letter_path %></li>
-            <% elsif  current_user.role == "president" %>
-                <li><%= link_to "Posts", posts_path, class: "nav-item" %></li>
-                <li><%= link_to "News-Letters", new_alumni_news_letter_path %></li>
-            <% end %>
-            <% if current_user.confirmed_brother %>
-                <li><%= link_to "News-Letters", alumni_news_letters_path %></li>
-                <li><%= link_to "Submit Receipt", new_receipt_path %></li>
             <% end %>
             <li><%= link_to "Account", current_user  %></li>
         <% end %>

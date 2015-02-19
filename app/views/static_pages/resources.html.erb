@@ -2,9 +2,21 @@
   <div class="col-md-6 col-md-offset-3 top-card-padding">
     <div class="card_registration">
       <h1>Resources</h1>
-      <% if can? :create, AlumniNewsLetter %>
-          <%= link_to "Create Alumni News Letter", new_alumni_news_letters_path %>
+      <% if current_user.role == 'writer' %>
+          <h3><%= link_to 'Create Posts', posts_path %></h3>
+          <h3><%= link_to 'Create Alumni-News-Letters', new_alumni_news_letter_path %></h3>
+      <% end %>
+      <% if  current_user.role == 'admin' %>
+          <h3><%= link_to 'Create Posts', posts_path %></h3>
+          <h3><%= link_to 'Create Alumni-News-Letters', new_alumni_news_letter_path %></h3>
+      <% end %>
+      <% if  current_user.role == 'president' %>
+          <h3><%= link_to 'Create Posts', posts_path%></h3>
+      <% end %>
+      <% if current_user.confirmed_brother %>
+          <h3><%= link_to 'Submit Receipt', new_receipt_path %></h3>
       <% end %>
     </div>
   </div>
 </div>
+
