@@ -5,7 +5,7 @@
           <h1 class="card_header"><%= @top_card.title %></h1>
           <div class="img_div">
             <%= (link_to (image_tag get_link(@top_card)), get_img_path(@top_card), :class => "post_img") %>
-            <% if get_gallery_path(post) %>
+            <% if get_gallery_path(@top_card) %>
                 <h3 align="center"><%= link_to "Click Here for More #{@top_card.title} Pictures", get_gallery_path(@top_card)  %></h3>
             <% end %>
           </div>
