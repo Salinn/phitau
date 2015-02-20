@@ -69,19 +69,19 @@ a.wide.img:hover{
 //Start of the footer
 //Hides the background color when hovering over the bottom links
 a.nav-item:hover{
-background-color: transparent !important;
+  background-color: transparent !important;
 }
 
 //Hides background color when hovering over the footer phi tau crest
 // and the facebook and twitter links
 a.logo:hover{
-background-color: transparent !important;
+  background-color: transparent !important;
 }
 
 //Sets the footer size and color
 .footer {
-padding-top: 5px;
-background-color: $FooterBackground;
+  padding-top: 5px;
+  background-color: $FooterBackground;
 }
 
 //Color of the bottom title
@@ -121,29 +121,32 @@ background-color: $FooterBackground;
 
 //picture on the cards
 .post_img img{
-width: 40%;
-float: left;
-height: auto;
-
+  width: 100%;
+  float: left;
+  height: auto;
+}
+.img_div{
+  width: 40%;
+  float: left;
 }
 
 //text on the cards
 .post_text{
-float: right;
-width: 60%;
-padding-left: 20px;
+  float: right;
+  width: 60%;
+  padding-left: 20px;
 }
 
 //Title formatting
 .card_header{
-text-align:center;
-text-decoration: underline;
+  text-align:center;
+  text-decoration: underline;
 }
 
 //Without this the content won't stay in the card
 .clear{
-float: none;
-clear:both;
+  float: none;
+  clear:both;
 }
 
 //Centers the paginate text
@@ -154,15 +157,15 @@ clear:both;
 //End of Home Page
 //Start of cards for user account page
 .user_img{
-width: 50%;
-float: left;
-height: auto;
+  width: 50%;
+  float: left;
+  height: auto;
 }
 
 .user_info{
-float: right;
-width: 50%;
-padding-left: 20px;
+  float: right;
+  width: 50%;
+  padding-left: 20px;
 }
 //Push user edit info link to the right
 .push_link_right{
@@ -212,20 +215,20 @@ padding-left: 20px;
 //end of contact page
 //text changes
 .black_h2{
-color: $Black;
+  color: $Black;
 }
 //body
 .row {
-margin-left: 0px;
-margin-right: 0px;
-padding-bottom: 3rem;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-bottom: 3rem;
 }
 //end body
 
 //text alignment
 
 .navbar-right {
-display: inline-block;
+  display: inline-block;
 }
 @media only screen and (min-width: 1001px) {
   .nav>li>a {
@@ -241,20 +244,20 @@ display: inline-block;
 }
 
 .card {
-padding:1.5rem;
-box-shadow:0 10px 14px rgba(10,10,10,.6);
-background: $White;
-border-radius:3px;
-animation:fly-in-from-left .5s 1s ease both;
-transform-origin:top left;
-margin: 0 auto;
-padding-bottom: 3rem;
+  padding:1.5rem;
+  box-shadow:0 10px 14px rgba(10,10,10,.6);
+  background: $White;
+  border-radius:3px;
+  animation:fly-in-from-left .5s 1s ease both;
+  transform-origin:top left;
+  margin: 0 auto;
+  padding-bottom: 3rem;
 }
 
 hr {
-display: block; height: 1px;
-border: 0; border-top: 1px solid #000000;
-margin: 1em 0; padding: 0;
+  display: block; height: 1px;
+  border: 0; border-top: 1px solid #000000;
+  margin: 1em 0; padding: 0;
 }
 
 //Flipping Cards
@@ -263,33 +266,33 @@ margin: 1em 0; padding: 0;
 .flipping-cards label{  display:block; width:200px; height:250px; cursor:pointer;}
 
 .flipping-cards .wrapper{
-display:block; width:200px; height:250px;
--webkit-transform-style: preserve-3d;
--moz-transform-style: preserve-3d;
-transform-style: preserve-3d;
+  display:block; width:200px; height:250px;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
 
--webkit-transition: all 2.50s;
--moz-transition: all .50s;
-transition: all .50s;
+  -webkit-transition: all 2.50s;
+  -moz-transition: all .50s;
+  transition: all .50s;
 }
 .flipping-cards .wrapper span{
-display:block;
-width:200px;
-height:250px;
-position:absolute;
-top:0;
-left:0;
+  display:block;
+  width:200px;
+  height:250px;
+  position:absolute;
+  top:0;
+  left:0;
 }
 
 .flipping-cards label .image{
-//  border-radius:10px;
--webkit-backface-visibility:hidden; /* Chrome and Safari */
--moz-backface-visibility:hidden; /* Firefox */
--ms-backface-visibility:hidden; /* Internet Explorer */
+  //  border-radius:10px;
+  -webkit-backface-visibility:hidden; /* Chrome and Safari */
+  -moz-backface-visibility:hidden; /* Firefox */
+  -ms-backface-visibility:hidden; /* Internet Explorer */
 
-//background-image: repeating-linear-gradient(120deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px), repeating-linear-gradient(60deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px), linear-gradient(60deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1)), linear-gradient(120deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1));
-background-size: 70px 120px;
-background-image: url("http://americanmuslimconsumer.com/wp-content/uploads/2013/09/blank-user.jpg");
+  //background-image: repeating-linear-gradient(120deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px), repeating-linear-gradient(60deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px), linear-gradient(60deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1)), linear-gradient(120deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1));
+  background-size: 70px 120px;
+  background-image: url("http://americanmuslimconsumer.com/wp-content/uploads/2013/09/blank-user.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   -o-background-size: 100% 100%, auto;

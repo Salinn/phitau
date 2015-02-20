@@ -3,11 +3,12 @@
       <div class="col-md-8 col-md-offset-2 top-card-padding">
         <div class="card">
           <h1 class="card_header"><%= @top_card.title %></h1>
-          <div>
-            <%= (link_to (image_tag @top_card.images.first.picture_url ), image_path(@top_card.images.first.id), :class => "post_img") if (!@top_card.images.empty? and @top_card.images.first.picture?) %>
+          <div class="img_div">
+            <%= (link_to (image_tag get_link(@top_card)), get_img_path(@top_card), :class => "post_img") %>
+            <h3 align="center"><%= link_to "Click Here for More #{@top_card.title} Pictures", get_gallery_path(@top_card)  %></h3>
           </div>
           <div class="post_text">
-            <%= @top_card.content.html_safe %>
+            <%= raw @top_card.content %>
           </div>
           <div class="clear"> </div>
         </div>
@@ -18,8 +19,9 @@
     <% @posts.each do |post| %>
         <div class="card">
           <h1 class="card_header"><%= post.title %></h1>
-          <div>
-            <%= (link_to (image_tag get_link(post)), get_path(post), :class => "post_img") %>
+          <div class="img_div">
+            <%= (link_to (image_tag get_link(post)), get_img_path(post), :class => "post_img") %>
+            <h3 align="center"><%= link_to "Click Here for More #{post.title} Pictures", get_gallery_path(post)  %></h3>
           </div>
           <div class="post_text">
             <%= post.content.html_safe %>

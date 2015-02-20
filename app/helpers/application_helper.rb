@@ -18,16 +18,19 @@ module ApplicationHelper
     end
   end
 
-  def get_path post
-    if post.images.first.gallery
-      gallery_path(post.images.first.gallery.id)
-    elsif !post.images.empty?
-      image_path(post.images.first.id)
-    else
-      nil
+  def get_img_path post
+    unless post.images.empty?
+      return image_path(post.images.first.id)
     end
+    nil
   end
 
+  def get_gallery_path post
+    if post.images.first.gallery
+      return gallery_path(post.images.first.gallery.id)
+    end
+    nil
+  end
   def not_sign_in
     (current_user == nil or current_user.role == nil or current_user.role == "not_a_member")
   end

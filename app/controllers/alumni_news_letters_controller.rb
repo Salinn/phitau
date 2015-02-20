@@ -4,7 +4,7 @@ class AlumniNewsLettersController < ApplicationController
   load_and_authorize_resource
 
   def index
-    @alumni_news_letters = AlumniNewsLetter.all.reverse.paginate(:page => params[:page], :per_page => 1)
+    @alumni_news_letters = AlumniNewsLetter.all.order(:released_date).reverse.paginate(:page => params[:page], :per_page => 1)
     respond_with(@alumni_news_letters)
   end
 
