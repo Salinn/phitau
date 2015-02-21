@@ -614,10 +614,10 @@ a.not-active:hover{
 //  background-size:cover;
 //}
 .gallery_images img{
-  width: 25rem;
-  height: auto;
   padding-left: .5rem;
   padding-bottom: .5rem;
+  max-width: 250px;
+  max-height: 250px;
 }
 
 .image_images img{

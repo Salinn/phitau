@@ -16,4 +16,5 @@
 //= require bootstrap-sprockets
 //= require tinymce
 //= require jquery.flip.min
+//= require lightbox
 //= require_tree .

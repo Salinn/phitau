@@ -214,6 +214,8 @@ GEM
     jwt (1.2.1)
     kgio (2.9.3)
     libv8 (3.16.14.7)
+    lightbox2-rails (2.7.1)
+      railties (>= 3.1)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -374,6 +376,7 @@ DEPENDENCIES
   fog
   jbuilder (~> 1.2)
   jquery-rails
+  lightbox2-rails
   mini_magick
   pg
   rails (= 4.0.0)

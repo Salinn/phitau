@@ -26,6 +26,7 @@ gem "carrierwave"
 gem 'fog'
 gem 'mini_magick'
 gem 'fancybox-rails'
+gem 'lightbox2-rails'
 
 #Text editor for those who don't know how to use css to format text
 gem 'tinymce-rails'

@@ -1,27 +1,12 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
 <div>
 <h1 align="center">
   <%= @gallery.name %>
 </h1>
 </div>
-<div style="float: left;">
+  <div class="gallery_images">
 <% @gallery.images.each do |image| %>
-   <%= (link_to (image_tag image.picture_url), image_path(image.id), class: 'gallery_images') if(image.picture?) %>
+        <a  href='<%= image.picture_url %>' data-title='<%= image.name %>' rel="lightbox[<%= @gallery.name %>]"><img src="<%= image.picture_url %>" /></a>
 <% end %>
 </div>
-
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
+</div>

@@ -1,5 +1,5 @@
 <h1 align="center">Photo Galleries</h1>
-
+<div class="row">
 <% if can? :create, :galleries %>
   <%= (link_to 'New Gallery', new_gallery_path, "data-no-turbolink" => true)%>
 <% end %>
@@ -12,3 +12,4 @@
     <% end %>
 </div>
 <br>
+</div>
