@@ -1,4 +1,20 @@
-<p id="notice"><%= notice %></p>
-
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <div class="card">
+      <h1 class="card_header"><%= @post.title %></h1>
+      <div class="img_div">
+        <%= (link_to (image_tag get_link(@post)), get_img_path(@post), :class => "post_img") %>
+        <% if get_gallery_path(@post) %>
+            <h3 align="center"><%= link_to "Click Here for More #{@post.title} Pictures", get_gallery_path(@post)  %></h3>
+        <% end %>
+      </div>
+      <div class="post_text">
+        <%= @post.content.html_safe %>
+      </div>
+      <div class="clear"> </div>
+      <div align="center">
+        <h3><%= link_to "View More Stories", root_path %></h3>
+      </div>
+    </div>
+  </div>
+</div>

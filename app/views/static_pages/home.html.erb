@@ -2,7 +2,7 @@
   <% unless @posts.previous_page or @top_card.nil? %>
       <div class="col-md-8 col-md-offset-2 top-card-padding">
         <div class="card">
-          <h1 class="card_header"><%= @top_card.title %></h1>
+          <h1 class="card_header"><%= link_to @top_card.title, @top_card %></h1>
           <div class="img_div">
             <%= (link_to (image_tag get_link(@top_card)), get_img_path(@top_card), :class => "post_img") %>
             <% if get_gallery_path(@top_card) %>
@@ -20,7 +20,7 @@
   <div class="col-md-8 col-md-offset-2">
     <% @posts.each do |post| %>
         <div class="card">
-          <h1 class="card_header"><%= post.title %></h1>
+          <h1 class="card_header"><%= link_to post.title, post %></h1>
           <div class="img_div">
             <%= (link_to (image_tag get_link(post)), get_img_path(post), :class => "post_img") %>
             <% if get_gallery_path(post) %>
