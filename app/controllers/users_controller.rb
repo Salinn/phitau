@@ -38,12 +38,9 @@ class UsersController < ApplicationController
   end
 
   def update
-    if @user.role.nil?
-      @user.role = "requesting"
-    end
     @user = User.find params[:id]
     respond_to do |format|
-      if @user.update(post_params)
+      if @user.update(user_params)
         format.html { redirect_to root_path, notice: 'User was successfully updated.' }
         format.json { head :no_content }
       else
