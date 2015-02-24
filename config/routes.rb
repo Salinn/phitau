@@ -1,4 +1,6 @@
 Phitau::Application.routes.draw do
+  resources :community_services
+
   resources :chairs
 
   resources :receipts

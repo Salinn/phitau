@@ -18,6 +18,7 @@ class ChairsController < ApplicationController
   end
 
   def edit
+    @users = User.all.where(role: "current brother").map { |user| ["#{user.first_name} #{user.last_name}", user.id] }
   end
 
   def create

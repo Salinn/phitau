@@ -1,29 +1,34 @@
 <%= form_for(@chair) do |f| %>
-  <% if @chair.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@chair.errors.count, "error") %> prohibited this chair from being saved:</h2>
+    <% if @chair.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@chair.errors.count, "error") %> prohibited this chair from being saved:</h2>
 
-      <ul>
-      <% @chair.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+          <ul>
+            <% @chair.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :chair_name %><br>
+      <%= f.text_field :chair_name %>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :chair_name %><br>
-    <%= f.text_field :chair_name %>
-  </div>
-  <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.number_field :user_id %>
-  </div>
-  <div class="field">
-    <%= f.label :role %><br>
-    <%= f.text_field :role %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <div class="field">
+      <%= f.label :user_id %><br>
+      <%= form_tag(@users, :method => "get", id: "search-form") do %>
+          <%= text_field_tag :search, params[:search], placeholder: "Search Users" %>
+          <%= submit_tag "Search", :name => nil %>
+      <% end %>
+    </div>
+    <div class="field">
+      <%= f.label :role %><br>
+      <%= f.text_field :role %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
 <% end %>
+
+<%  %>
