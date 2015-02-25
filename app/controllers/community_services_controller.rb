@@ -8,6 +8,15 @@ class CommunityServicesController < ApplicationController
     respond_with(@community_services)
   end
 
+  def brothers_hours
+    @users = User.order(:first_name).where(role: 'current brother')
+  end
+
+  #TODO Add this feature in
+  def brothers_events
+    @users = current_user
+  end
+
   def show
     respond_with(@community_service)
   end

@@ -2,6 +2,9 @@ Phitau::Application.routes.draw do
 
   get 'users/:id/subscribe', to: 'users#subscribe', as: :subscribe
 
+  get 'brothers_hours' => 'community_services#brothers_hours'
+  get 'brothers_events' => 'community_services#brothers_events'
+
   resources :community_services
 
   resources :chairs
