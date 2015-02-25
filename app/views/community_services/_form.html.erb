@@ -10,27 +10,33 @@
           </ul>
         </div>
     <% end %>
-    <div class="field">
-      <%= f.label :event_name %><br />
-      <%= f.text_field :event_name %>
+    <div style="float: left; margin-left: 20%;">
+      <div class="field">
+        <%= f.label :event_name %><br />
+        <%= f.text_field :event_name %>
+      </div>
+      <div class="field">
+        <%= f.label :hours_volunteered %><br />
+        <%= f.number_field :hours_volunteered %>
+      </div>
+    </div>
+    <div style="float: right; margin-right: 20%">
+      <div class="field">
+        <%= f.label :date_of_event %><br>
+        <%= f.date_select :date_of_event %>
+      </div>
+      <div class="field">
+        <%= f.label :link_to_event %><br />
+        <%= f.text_field :link_to_event %>
+      </div>
     </div>
     <div class="field">
-      <%= f.label :hours_volunteered %><br />
-      <%= f.number_field :hours_volunteered %>
-    </div>
-    <div class="field">
-      <%= f.label :date_of_event %><br>
-      <%= f.date_select :date_of_event %>
-    </div>
-    <div class="field">
-      <%= f.label :link_to_event %><br />
-      <%= f.text_field :link_to_event %>
-    </div>
-    <div class="field">
-      <%= f.label :link_to_event %><br />
       <%= f.hidden_field :user_id, value: current_user.id %>
     </div>
-    <div class="actions">
-      <%= f.submit %>
+    <div class="clear"></div>
+    <div align="center">
+      <div class="actions">
+        <%= f.submit 'Submit Community Service Event'%>
+      </div>
     </div>
 <% end %>

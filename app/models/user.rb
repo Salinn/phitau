@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
   has_many :receipts
   has_many :attendances
   has_many :meetings, :through => :attendances
+  has_many :community_services
 
   searchkick
 

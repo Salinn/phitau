@@ -23,12 +23,12 @@ class CommunityServicesController < ApplicationController
   def create
     @community_service = CommunityService.new(community_service_params)
     flash[:notice] = 'CommunityService was successfully created.' if @community_service.save
-    respond_with(@community_service)
+    respond_with(@community_service, :location => '/resources')
   end
 
   def update
     flash[:notice] = 'CommunityService was successfully updated.' if @community_service.update(community_service_params)
-    respond_with(@community_service)
+    respond_with(@community_service, :location => community_services_path)
   end
 
   def destroy
@@ -42,6 +42,6 @@ class CommunityServicesController < ApplicationController
     end
 
     def community_service_params
-      params.require(:chair).permit(:event_name, :date_of_event, :link_to_event, :user_id, :hours_volunteered)
+      params.require(:community_service).permit(:event_name, :date_of_event, :link_to_event, :user_id, :hours_volunteered)
     end
 end

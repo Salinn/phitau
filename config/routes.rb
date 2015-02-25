@@ -1,4 +1,7 @@
 Phitau::Application.routes.draw do
+
+  get 'users/:id/subscribe', to: 'users#subscribe', as: :subscribe
+
   resources :community_services
 
   resources :chairs

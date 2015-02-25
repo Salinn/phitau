@@ -1,25 +1,39 @@
-<h1>Listing community_services</h1>
+<div class="row">
+  <div class="col-md-10 col-md-offset-1 top-card-padding">
+    <div class="card">
+      <div class="posts_checkboxes">
+        <h1 align="center">Community Services Hours</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+        <table class="user-all-edit-table">
+          <thead>
+          <tr>
+            <th>Brothers Name</th>
+            <th>Service Hours</th>
+            <th>Event Name</th>
+            <th>Event Date</th>
+            <th>Event Link</th>
+            <th>Edit</th>
+          </tr>
+          </thead>
 
-  <tbody>
-    <% @community_services.each do |community_service| %>
-      <tr>
-        <td><%= link_to 'Show', community_service %></td>
-        <td><%= link_to 'Edit', edit_community_service_path(community_service) %></td>
-        <td><%= link_to 'Destroy', community_service, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+          <tbody>
+          <% @community_services.each do |community_service| %>
+              <tr>
+                <td><%= "#{community_service.user.first_name} #{community_service.user.last_name}" %></td>
+                <td><%= community_service.hours_volunteered %></td>
+                <td><%= community_service.event_name %></td>
+                <td><%= community_service.date_of_event %></td>
+                <td><%= link_to community_service.link_to_event, community_service.link_to_event %></td>
+                <td><%= link_to 'Edit', edit_community_service_path(community_service) %></td>
+              </tr>
+          <% end %>
+          </tbody>
+        </table>
 
-<br>
+        <br>
 
-<%= link_to 'New Community service', new_community_service_path %>
+        <%= link_to 'New Community service', new_community_service_path %>
+      </div>
+    </div>
+  </div>
+</div>

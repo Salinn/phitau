@@ -62,6 +62,40 @@ class UsersController < ApplicationController
     @potentials = User.where(role: "potential new member").page(params[:page]).per_page(15)
   end
 
+  def subscribe
+    if missing_values
+    list_id = "c318382ea7"
+    gb = Gibbon::API.new
+    a = gb.lists.subscribe({:id => list_id, :email => {:email => current_user.email},
+                        :merge_vars => {
+                            :FNAME => current_user.first_name,
+                            :LNAME => current_user.last_name,
+                            :PCLASS => current_user.pledge_class },
+                        :double_optin => false})
+    redirect_to root_path, notice: a
+    end
+    missing_values_redirect
+  end
+
+  def missing_values
+    if current_user.first_name.nil? or current_user.last_name.nil? or current_user.pledge_class.nil?
+      return true
+    end
+    false
+  end
+
+  def missing_values_redirect
+    if current_user.first_name.nil?
+      redirect_to root_path, notice: 'Missing First Name'
+    end
+    if current_user.last_name.nil?
+      redirect_to root_path, notice: 'Missing Last Name'
+    end
+    if current_user.pledge_class.nil?
+      redirect_to root_path, notice: 'Missing Email'
+    end
+  end
+
   def destroy
     if @user.destroy
       flash[:notice] = "Successfully deleted User."

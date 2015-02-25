@@ -1,0 +1,1 @@
+Gibbon::API.api_key = ENV['mailchimp_api_key']

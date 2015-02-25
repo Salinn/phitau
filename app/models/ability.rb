@@ -10,6 +10,7 @@ class Ability
     can :show, Image
     can [:show, :read], Gallery
     if user.role != nil
+      can :subscribe, User
       can :show, User, :id => user.id
       can :update, User, :id => user.id
       can [:show, :update, :new, :read, :create], ValentinesDayDelievery
