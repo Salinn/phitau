@@ -3,7 +3,7 @@
     <div class="card">
       <div class="posts_checkboxes">
         <h1 align="center">Community Services Hours For Brother <%= "#{@user.first_name} #{@user.last_name}" %><% %></h1>
-
+        <%= link_to 'Back To All Brothers Total Hours', brothers_hours_path %>
         <table class="brothers-events-table">
           <thead>
           <tr>
@@ -29,8 +29,6 @@
         </table>
 
         <br>
-
-        <%= link_to 'New Community service', new_community_service_path %>
       </div>
     </div>
   </div>
