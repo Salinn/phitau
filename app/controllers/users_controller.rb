@@ -15,7 +15,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     generated_password = Devise.friendly_token.first(8)
-    @user.role = 'potential new member'
+    @user.user_status = 'potential new member'
     @user.password = generated_password
     # RegistrationMailer.welcome(@user, generated_password).deliver
     respond_to do |format|
@@ -59,7 +59,7 @@ class UsersController < ApplicationController
   end
 
   def potential_new_members
-    @potentials = User.where(role: "potential new member").page(params[:page]).per_page(15)
+    @potentials = User.where(user_status: "potential new member").page(params[:page]).per_page(15)
   end
 
   def subscribe
@@ -103,8 +103,8 @@ class UsersController < ApplicationController
     end
   end
 
-  def update_role role
-    @user.role = role
+  def update_user_status user_status
+    @user.user_status = user_status
     @user.save
   end
 
@@ -117,6 +117,6 @@ class UsersController < ApplicationController
   end
 
   def update_user_params(id)
-    params.require(:user).fetch(id).permit(:role, :confirmed_brother)
+    params.require(:user).fetch(id).permit(:user_status, :confirmed_brother)
   end
 end

@@ -16,7 +16,7 @@
     </div>
     <div class="field">
       <%= f.label :user_group %><br>
-      <%= f.collection_select :user_group, User::SIGNUPROLES, :to_s, :to_s, :class => "col-md-3" %>
+      <%= f.collection_select :user_group, User::USERSTATUSES, :to_s, :to_s, :class => "col-md-3" %>
     </div>
     <div class="field">
       <%= f.label :message %><br>

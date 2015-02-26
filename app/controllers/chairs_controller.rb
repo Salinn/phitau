@@ -18,7 +18,7 @@ class ChairsController < ApplicationController
   end
 
   def edit
-    @users = User.all.where(role: "current brother").map { |user| ["#{user.first_name} #{user.last_name}", user.id] }
+    @users = User.all.where(user_status: "current brother").map { |user| ["#{user.first_name} #{user.last_name}", user.id] }
   end
 
   def create
@@ -43,6 +43,6 @@ class ChairsController < ApplicationController
     end
 
     def chair_params
-      params.require(:chair).permit(:chair_name, :user_id, :role)
+      params.require(:chair).permit(:chair_name, :user_id, :user_status)
     end
 end

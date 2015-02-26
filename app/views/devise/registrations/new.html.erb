@@ -21,7 +21,7 @@
 
               <div class="registration_space">
                 <%= f.email_field :email,  :placeholder => "Email", :class => "col-md-3" %>
-                <%= f.collection_select :role, User::SIGNUPROLES, :to_s, :to_s, :class => "col-md-3" %>
+                <%= f.collection_select :user_status, User::USERSTATUSES, :to_s, :to_s, :class => "col-md-3" %>
                 <div class="clear"> </div>
               </div>
           <div class="clear"> </div>

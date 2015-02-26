@@ -9,7 +9,7 @@ class CommunityServicesController < ApplicationController
   end
 
   def brothers_hours
-    @users = User.order(:first_name).where(role: 'current brother')
+    @users = User.order(:first_name).where(user_status: 'current brother')
   end
 
   #TODO Add this feature in

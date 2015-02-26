@@ -52,7 +52,7 @@ class TextMessagesController < ApplicationController
       )
     else
       User.all.each do |user|
-        if user.role == text_message.user_group
+        if user.user_status == text_message.user_group
           first_name = user.first_name
           line_break = line_break
           message = text_message.message.gsub(/first_name/,first_name)
