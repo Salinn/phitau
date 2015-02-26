@@ -870,3 +870,12 @@ body {
     background: none !important;
   }
 }
+
+//Box off resources into neater sections
+.resources {
+//  width: 33%;
+  float: left;
+  h2 {
+    text-decoration: underline;
+  }
+}

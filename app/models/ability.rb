@@ -35,6 +35,8 @@ class Ability
       if user.have_permissions?('president')
         can [:show, :update, :new, :read, :create], FaqCategory
         can [:show, :update, :new, :read, :create], FaqQuestion
+        can [:show, :update, :new, :read, :create], Chair
+        can [:show, :update, :new, :read, :create], Eboard
       end
       if user.have_permissions?('community_service')
         can [:show, :update, :new, :read, :create], CommunityService
