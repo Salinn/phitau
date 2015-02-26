@@ -4,12 +4,12 @@
       <div class="posts_checkboxes">
         <h1 align="center">Community Services Hours For Each Brother</h1>
 
-        <table class="user-all-edit-table">
+        <table class="brothers-hours-table">
           <thead>
           <tr>
             <th>Brothers Name</th>
             <th>Total Hours</th>
-            <th>All Submitted Events</th>
+            <th>See All Of the Brothers Submitted Events</th>
           </tr>
           </thead>
 
@@ -18,7 +18,7 @@
               <tr>
                 <td><%= "#{user.first_name} #{user.last_name}" %></td>
                 <td><%= total_hours(user) %></td>
-                <td>Link to See all of your hours is Coming Soon!></td>
+                <td><%= link_to "#{user.first_name} #{user.last_name}'s Events", "brothers_events/#{user.id}" %></td>
               </tr>
           <% end %>
           </tbody>

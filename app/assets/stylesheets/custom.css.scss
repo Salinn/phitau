@@ -784,9 +784,19 @@ only screen and (max-width: 760px),
   .community-service-table td:nth-of-type(1):before { content: "Brothers Name"; }
   .community-service-table td:nth-of-type(2):before { content: "Service Hours"; }
   .community-service-table td:nth-of-type(3):before { content: "Event Name"; }
-  .community-service-table td:nth-of-type(4):before { content: "Event Link"; }
+  .community-service-table td:nth-of-type(4):before { content: "Event Date"; }
   .community-service-table td:nth-of-type(5):before { content: "Event Link"; }
   .community-service-table td:nth-of-type(6):before { content: "Edit"; }
+
+  .brothers-events-table td:nth-of-type(1):before { content: "Service Hours"; }
+  .brothers-events-table td:nth-of-type(2):before { content: "Event Name"; }
+  .brothers-events-table td:nth-of-type(3):before { content: "Event Date"; }
+  .brothers-events-table td:nth-of-type(4):before { content: "Event Link"; }
+  .brothers-events-table td:nth-of-type(5):before { content: "Edit"; }
+
+  .brothers-hours-table td:nth-of-type(1):before { content: "Brothers Name"; }
+  .brothers-hours-table td:nth-of-type(2):before { content: "Total Hours"; }
+  .brothers-hours-table td:nth-of-type(3):before { content: "See All Of the Brothers Submitted Events"; }
 }
 
 /* Smartphones (portrait and landscape) ----------- */

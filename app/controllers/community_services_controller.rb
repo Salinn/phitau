@@ -14,7 +14,7 @@ class CommunityServicesController < ApplicationController
 
   #TODO Add this feature in
   def brothers_events
-    @users = current_user
+    @user = User.find(params[:id])
   end
 
   def show
