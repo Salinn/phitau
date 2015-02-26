@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   has_many :chairs
+  has_many :eboards
   has_many :receipts
   has_many :attendances
   has_many :meetings, :through => :attendances
@@ -31,6 +32,15 @@ class User < ActiveRecord::Base
   def chairs_role? role
     self.chairs.each do |chair|
       if chair.role == role
+        return true
+      end
+    end
+    false
+  end
+
+  def eboards_role? role
+    self.eboards.each do |eboard|
+      if eboard.role == role
         return true
       end
     end

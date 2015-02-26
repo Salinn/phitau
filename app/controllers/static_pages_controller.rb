@@ -48,24 +48,7 @@ class StaticPagesController < ApplicationController
   end
 
   def contact_us
-    @eboard = []
-    @chairs = []
-
-    users = User.where.not(role: ["alumni","current brother","potential new member"])
-
-    president=users.where(role: "president").blank? ? nil : users.where(role: "president")
-    first_vp=users.where(role: "first_vp").blank? ? nil : users.where(role: "first_vp")
-    second_vp=users.where(role: "second_vp").blank? ? nil : users.where(role: "second_vp")
-    treasurer=users.where(role: "treasurer").blank? ? nil : users.where(role: "treasurer")
-    sergeant=users.where(role: "sergeant").blank? ? nil : users.where(role: "sergeant")
-    chaplain=users.where(role: "chaplain").blank? ? nil : users.where(role: "chaplain")
-
-    @eboard.push(president) unless president.nil?
-    @eboard.push(first_vp) unless first_vp.nil?
-    @eboard.push(second_vp) unless second_vp.nil?
-    @eboard.push(treasurer) unless treasurer.nil?
-    @eboard.push(sergeant) unless sergeant.nil?
-    @eboard.push(chaplain) unless chaplain.nil?
+    @eboard = Eboard.all.where.not(user_id: [false,nil])
 
     @chairs = Chair.all.where.not(user_id: [false,nil])
   end

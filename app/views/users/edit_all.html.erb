@@ -18,7 +18,7 @@
                         <td><%= user_fields.text_field :first_name,:disabled => true %></td>
                         <td><%= user_fields.text_field :last_name,:disabled => true %></td>
                         <td><%= user_fields.email_field :email,:disabled => true %></td>
-                        <td><%= user_fields.collection_select :user_status, User::ALLROLES, :to_s, :to_s, :class => "col-md-3" %></td>
+                        <td><%= user_fields.collection_select :user_status, User::USERSTATUSES, :to_s, :to_s, :class => "col-md-3" %></td>
                         <td style="padding-left: 2rem"><%= user_fields.check_box :confirmed_brother %></td>
                       </tr>
                   <% end %>

@@ -1,5 +1,7 @@
 Phitau::Application.routes.draw do
 
+  resources :eboards
+
   get 'users/:id/subscribe', to: 'users#subscribe', as: :subscribe
 
   get 'brothers_hours' => 'community_services#brothers_hours'

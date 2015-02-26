@@ -3,13 +3,13 @@ class Ability
 
   def initialize(user)
     user ||= User.new # guest user
-    if user.user_role? "admin"
+    if user.user_status == "admin" || user.chairs_role?('admin')
       can :manage, :all
     end
 
     can :show, Image
     can [:show, :read], Gallery
-    if user.role != nil
+    if user.user_status != nil
       can :subscribe, User
       can :show, User, :id => user.id
       can :update, User, :id => user.id
@@ -22,10 +22,10 @@ class Ability
       if user.chairs_role? 'philanthropy'
         can [:show, :update, :new, :read, :create, :delete], ValentinesDayDelievery
       end
-      if user.user_role? 'recruitment' or user.chairs_role? 'recruitment'
+      if user.user_role? 'recruitment' || user.chairs_role?('recruitment')
         can [:create, :read, :show], TextMessage
       end
-      if user.user_role? 'writer' or user.chairs_role? 'writer'
+      if user.user_role? 'writer' || user.chairs_role?('writer')
         can [:show, :update, :new, :read, :create], AlumniNewsLetter
         can [:show, :update, :new, :read, :create], Post
         can [:show, :update, :new, :read, :create], Image
