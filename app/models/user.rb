@@ -27,27 +27,14 @@ class User < ActiveRecord::Base
   end
 
   def user_role?(user_status)
-    if self.user_status == user_status
-      return true
-    end
-    false
+    self.user_status == user_status
   end
 
   def chairs_role?(role)
-    self.chairs.each do |chair|
-      if chair.role == role
-        return true
-      end
-    end
-    false
+    self.chairs.any? { |chair| chair.role == role}
   end
 
   def eboards_role?(role)
-    self.eboards.each do |eboard|
-      if eboard.role == role
-        return true
-      end
-    end
-    false
+    self.eboards.any? { |eboard| eboard.role == role}
   end
 end
