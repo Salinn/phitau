@@ -39,7 +39,7 @@ class Ability
         can [:show, :update, :new, :read, :create], Eboard
       end
       if user.have_permissions?('community_service')
-        can [:show, :update, :new, :read, :create], CommunityService
+        can :manage, CommunityService
       end
     end
   end
