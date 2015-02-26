@@ -35,8 +35,6 @@ Phitau::Application.routes.draw do
 
   resources :alumni_news_letters
 
-  resources :positions
-
   resources :posts
 
   match 'users/all/edit' => 'users#edit_all', :as => :edit_all, :via => :get
