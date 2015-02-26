@@ -20,7 +20,7 @@
       <%= f.file_field :picture_of_receipt ,placeholder: 'Image File' %>
       <%= f.text_field :remote_picture_of_receipt_url, placeholder: 'Or input url of photo' %>
     </div>
-    <% if ['admin', 'treasure'].include? current_user.role %>
+    <% if ['admin', 'treasure'].include? current_user.user_status %>
     <div class='field posts_checkboxes'>
       <%= f.label :seen_receipt %><br>
       <%= f.check_box :seen_receipt %>

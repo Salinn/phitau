@@ -32,6 +32,6 @@ module ApplicationHelper
     nil
   end
   def not_sign_in
-    (current_user == nil or current_user.role == nil or current_user.role == "not_a_member")
+    (current_user == nil or current_user.user_status == nil or current_user.user_status == "not_a_member")
   end
 end

@@ -1,0 +1,29 @@
+<%= form_for(@eboard) do |f| %>
+  <% if @eboard.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@eboard.errors.count, "error") %> prohibited this eboard from being saved:</h2>
+
+      <ul>
+      <% @eboard.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :position_name %><br>
+    <%= f.text_field :position_name %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :role %><br>
+    <%= f.text_field :role %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

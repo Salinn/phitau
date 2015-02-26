@@ -2,17 +2,17 @@
   <div class="col-md-6 col-md-offset-3 top-card-padding">
     <div class="card_registration">
       <h1>Resources</h1>
-      <% if current_user.role == 'writer' %>
+      <% if current_user.user_status == 'writer' %>
           <h3><%= link_to 'Create Posts', posts_path %></h3>
           <h3><%= link_to 'Create Alumni-News-Letters', new_alumni_news_letter_path %></h3>
       <% end %>
-      <% if  current_user.role == 'admin' %>
+      <% if  current_user.user_status == 'admin' %>
           <h3><%= link_to 'Create Posts', posts_path %></h3>
           <h3><%= link_to 'Edit All Users', 'users/all/edit' %></h3>
           <h3><%= link_to 'Community Service Logs', community_services_path %></h3>
           <h3><%= link_to 'Create Alumni-News-Letters', new_alumni_news_letter_path %></h3>
       <% end %>
-      <% if  current_user.role == 'president' %>
+      <% if  current_user.user_status == 'president' %>
           <h3><%= link_to 'Create Posts', posts_path%></h3>
       <% end %>
       <% if current_user.confirmed_brother %>
@@ -20,7 +20,7 @@
           <h3><%= link_to 'Submit Receipt', new_receipt_path %></h3>
           <h3><%= link_to 'Submit Community Service', new_community_service_path %></h3>
       <% end %>
-      <% if current_user.role == 'community service'%>
+      <% if current_user.user_status == 'community service'%>
           <h3><%= link_to 'Community Service Reports', community_services_path %></h3>
       <% end %>
     </div>

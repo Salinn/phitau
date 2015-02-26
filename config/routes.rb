@@ -1,5 +1,7 @@
 Phitau::Application.routes.draw do
 
+  resources :eboards
+
   get 'users/:id/subscribe', to: 'users#subscribe', as: :subscribe
 
   get 'brothers_hours' => 'community_services#brothers_hours'
@@ -34,8 +36,6 @@ Phitau::Application.routes.draw do
   post 'text_messages/new_message' => 'text_messages#new_message'
 
   resources :alumni_news_letters
-
-  resources :positions
 
   resources :posts
 

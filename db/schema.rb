@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150224173521) do
+ActiveRecord::Schema.define(version: 20150226014629) do
 
   create_table "alumni_news_letters", force: true do |t|
     t.date     "released_date"
@@ -44,6 +44,14 @@ ActiveRecord::Schema.define(version: 20150224173521) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "hours_volunteered"
+  end
+
+  create_table "eboards", force: true do |t|
+    t.string   "position_name"
+    t.integer  "user_id"
+    t.string   "role"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "faq_categories", force: true do |t|
@@ -144,7 +152,6 @@ ActiveRecord::Schema.define(version: 20150224173521) do
     t.datetime "locked_at"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "role"
     t.string   "first_name"
     t.string   "last_name"
     t.string   "profile_picture"
@@ -157,6 +164,7 @@ ActiveRecord::Schema.define(version: 20150224173521) do
     t.string   "major"
     t.string   "pledge_class"
     t.boolean  "confirmed_brother"
+    t.string   "user_status"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

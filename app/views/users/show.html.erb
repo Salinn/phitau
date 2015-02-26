@@ -10,7 +10,7 @@
       <div class="user_info">
         <p>Name: <%= @user.first_name if @user.first_name? %> <%= " " + @user.last_name if @user.last_name? %></p>
         <p>Email: <%= @user.email %></p>
-        <p>Website Status: <%= @user.role.slice(0,1).capitalize if @user.role? %><%= @user.role.slice(1..-1) if @user.role? %></p>
+        <p>Website Status: <%= @user.user_status.slice(0,1).capitalize if @user.user_status? %><%= @user.user_status.slice(1..-1) if @user.user_status? %></p>
         <p>Phone Number: <%= @user.phone_number if @user.phone_number?%></p>
         <p>Home Town: <%= @user.home_town if @user.home_town?%><%= ", " + @user.state if @user.state?%></p>
         <p>Pledge Class: <%= @user.pledge_class if @user.pledge_class?%></p>

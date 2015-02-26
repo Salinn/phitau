@@ -30,7 +30,7 @@
             <li><%= link_to "FAQ", faq_path %></li>
             <li><%= link_to "Contact", contact_us_path %></li>
         <% else %>
-            <% if current_user.role == "potential new member" %>
+            <% if current_user.user_status == "potential new member" %>
                 <li><%= link_to "About", about_path %></li>
                 <li><%= link_to "FAQ", faq_path %></li>
                 <li><%= link_to "Contact", contact_us_path %></li>
