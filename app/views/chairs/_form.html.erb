@@ -17,10 +17,7 @@
     </div>
     <div class="field">
       <%= f.label :user_id %><br>
-      <%= form_tag(@users, :method => "get", id: "search-form") do %>
-          <%= text_field_tag :search, params[:search], placeholder: "Search Users" %>
-          <%= submit_tag "Search", :name => nil %>
-      <% end %>
+      <%= f.number_field :user_id %>
     </div>
     <div class="field">
       <%= f.label :role %><br>
