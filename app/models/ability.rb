@@ -3,7 +3,7 @@ class Ability
 
   def initialize(user)
     user ||= User.new # guest user
-    if user.user_status == "admin" || user.chairs_role?('admin')
+    if user.have_permissions?('admin')
       can :manage, :all
     end
 
@@ -19,19 +19,19 @@ class Ability
         can [:create, :update], Receipt
         can [:create], User
       end
-      if user.chairs_role? 'philanthropy'
+      if user.have_permissions?('philanthropy')
         can [:show, :update, :new, :read, :create, :delete], ValentinesDayDelievery
       end
-      if user.user_role? 'recruitment' || user.chairs_role?('recruitment')
+      if user.have_permissions?('recruitment')
         can [:create, :read, :show], TextMessage
       end
-      if user.user_role? 'writer' || user.chairs_role?('writer')
+      if user.have_permissions?('writer')
         can [:show, :update, :new, :read, :create], AlumniNewsLetter
         can [:show, :update, :new, :read, :create], Post
         can [:show, :update, :new, :read, :create], Image
         can [:show, :update, :new, :read, :create], Gallery
       end
-      if user.user_role? 'president'
+      if user.have_permissions?('president')
         can [:show, :update, :new, :read, :create], FaqCategory
         can [:show, :update, :new, :read, :create], FaqQuestion
       end

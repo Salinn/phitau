@@ -22,14 +22,18 @@ class User < ActiveRecord::Base
 
   mount_uploader :profile_picture, ImageUploader
 
-  def user_role? user_status
+  def have_permissions?(permission)
+    user_role?(permission) || chairs_role?(permission) || eboards_role?(permission)
+  end
+
+  def user_role?(user_status)
     if self.user_status == user_status
       return true
     end
     false
   end
 
-  def chairs_role? role
+  def chairs_role?(role)
     self.chairs.each do |chair|
       if chair.role == role
         return true
@@ -38,7 +42,7 @@ class User < ActiveRecord::Base
     false
   end
 
-  def eboards_role? role
+  def eboards_role?(role)
     self.eboards.each do |eboard|
       if eboard.role == role
         return true

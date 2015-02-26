@@ -2,26 +2,28 @@
   <div class="col-md-6 col-md-offset-3 top-card-padding">
     <div class="card_registration">
       <h1>Resources</h1>
-      <% if current_user.user_status == 'writer' %>
+      <% if current_user.have_permissions?('writer') %>
           <h3><%= link_to 'Create Posts', posts_path %></h3>
           <h3><%= link_to 'Create Alumni-News-Letters', new_alumni_news_letter_path %></h3>
       <% end %>
-      <% if  current_user.user_status == 'admin' %>
+      <% if  current_user.have_permissions?('admin') %>
           <h3><%= link_to 'Create Posts', posts_path %></h3>
           <h3><%= link_to 'Edit All Users', 'users/all/edit' %></h3>
           <h3><%= link_to 'Community Service Logs', community_services_path %></h3>
+          <h3><%= link_to 'All Brothers Community Service Hours', brothers_hours_path %></h3>
           <h3><%= link_to 'Create Alumni-News-Letters', new_alumni_news_letter_path %></h3>
       <% end %>
-      <% if  current_user.user_status == 'president' %>
+      <% if  current_user.have_permissions?('community_service') %>
+          <h3><%= link_to 'Community Service Logs', community_services_path %></h3>
+          <h3><%= link_to 'All Brothers Community Service Hours', brothers_hours_path %></h3>
+      <% end %>
+      <% if  current_user.have_permissions?('president') %>
           <h3><%= link_to 'Create Posts', posts_path%></h3>
       <% end %>
-      <% if current_user.confirmed_brother %>
+      <% if current_user.confirmed_brother? %>
           <h3><%= link_to 'View Alumni-News-Letters', alumni_news_letters_path %></h3>
           <h3><%= link_to 'Submit Receipt', new_receipt_path %></h3>
           <h3><%= link_to 'Submit Community Service', new_community_service_path %></h3>
-      <% end %>
-      <% if current_user.user_status == 'community service'%>
-          <h3><%= link_to 'Community Service Reports', community_services_path %></h3>
       <% end %>
     </div>
   </div>
