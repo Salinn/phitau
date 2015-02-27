@@ -1,4 +1,4 @@
-ass @GoogleAnalytics
+class @GoogleAnalytics
 
   @load: ->
     # Google Analytics depends on a global _gaq array. window is the global scope.
