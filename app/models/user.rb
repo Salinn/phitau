@@ -22,6 +22,12 @@ class User < ActiveRecord::Base
 
   mount_uploader :profile_picture, ImageUploader
 
+  after_create :send_alert_email
+
+  def send_alert_email
+    UserMailer.new_user_alert_email(self).deliver
+  end
+
   def have_permissions?(permission)
     user_role?(permission) || chairs_role?(permission) || eboards_role?(permission)
   end
