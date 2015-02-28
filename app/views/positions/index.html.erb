@@ -1,0 +1,33 @@
+<h1>Listing positions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Position name</th>
+      <th>User</th>
+      <th>Role</th>
+      <th>On eboard</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @positions.each do |position| %>
+      <tr>
+        <td><%= position.position_name %></td>
+        <td><%= position.user_id %></td>
+        <td><%= position.role_id %></td>
+        <td><%= position.on_eboard %></td>
+        <td><%= link_to 'Show', position %></td>
+        <td><%= link_to 'Edit', edit_position_path(position) %></td>
+        <td><%= link_to 'Destroy', position, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Position', new_position_path %>
