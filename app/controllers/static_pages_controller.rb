@@ -48,9 +48,9 @@ class StaticPagesController < ApplicationController
   end
 
   def contact_us
-    @eboard = Position.where(on_eboard: true)
+    @eboard = Position.where.not(on_eboard: false, user_id: nil)
 
-    @chairs = Position.where(on_eboard: false)
+    @chairs = Position.where.not(on_eboard: true, user_id: nil)
   end
 
   def information_for_students
