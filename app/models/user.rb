@@ -54,18 +54,14 @@ class User < ActiveRecord::Base
   end
 
   def have_permissions?(permission)
-    user_role?(permission) || chairs_role?(permission) || eboards_role?(permission)
+    user_role?(permission) || positions_role?(permission)
   end
 
   def user_role?(user_status)
     self.user_status == user_status
   end
 
-  def chairs_role?(role)
-    self.chairs.any? { |chair| chair.role == role}
-  end
-
-  def eboards_role?(role)
-    self.eboards.any? { |eboard| eboard.role == role}
+  def positions_role?(role)
+    self.positions.any? { |position| position.role.name == role}
   end
 end
