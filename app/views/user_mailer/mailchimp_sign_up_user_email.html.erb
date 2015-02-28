@@ -4,9 +4,9 @@
 
 <p>Every month, during the school year, we send out an email with updates about what we are up to and some info about other Gamma Nu almuni!</p>
 
-<p>If you have filled out your profile <a href="http://gammanu.org/users/<%= @user.id %>">here</a></p>
+<p>If you have filled out your profile <a href="<%= @domain %>users/<%= @user.id %>">here</a></p>
 
-<p>Then you can email you can click here to <a href="gammanu.org/users/<%= @user.id %>/subscribe">sign up!</a></p>
+<p>Then you can email you can click here to <a href="<%= @domainusers %><%= @user.id %>/subscribe">sign up!</a></p>
 
 <p>In Phi,</p>
 
@@ -45,10 +45,6 @@
         <label for="mce-PCLASS">Pledge Class  <span class="asterisk">*</span>
         </label>
         <input type="text" value="" name="PCLASS" class="required" id="mce-PCLASS">
-      </div>
-      <div class="mc-field-group size1of2">
-        <label for="mce-MMERGE4">Grad Year </label>
-        <input type="number" name="MMERGE4" class="" value="" id="mce-MMERGE4">
       </div>
       <div class="mc-field-group input-group">
         <strong>Email Format </strong>

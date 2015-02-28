@@ -34,7 +34,7 @@ class User < ActiveRecord::Base
     gb = Gibbon::API.new
     a = gb.lists.members({:id => list_id})
     a["data"].each do |current_user|
-      if a["data"][current_user]["email"] == self.email
+      if current_user["email"] == self.email
          return
       end
     end

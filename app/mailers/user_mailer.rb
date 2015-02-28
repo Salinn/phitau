@@ -28,9 +28,12 @@ class UserMailer < ActionMailer::Base
     user_id_to_mail_to = Chair.where(role: 'alumni_relations')
     if user_id_to_mail_to.nil?
       user_id_to_mail_to = Eboard.where(role: 'president')
+    else
+      user_id_to_mail_to = Chair.where(role: 'admin')
     end
     @user_to_contact = user_id_to_mail_to.first.user
     @user = user
-    mail to: @user.email, subject: "Hey #{new_user.first_name} Would You Like To Be On Our Mailing List?"
+    @domain = ENV['GMAIL_DOMAIN']
+    mail to: @user.email, subject: "Hey #{user.first_name} Would You Like To Be On Our Mailing List?"
   end
 end
