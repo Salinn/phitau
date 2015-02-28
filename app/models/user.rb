@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
   has_many :chairs
   has_many :eboards
+  has_many :positions
+  has_many :roles
   has_many :receipts
   has_many :attendances
   has_many :meetings, :through => :attendances
