@@ -1,5 +1,9 @@
 Phitau::Application.routes.draw do
 
+  resources :roles
+
+  resources :positions
+
   resources :eboards
 
   get 'users/:id/subscribe', to: 'users#subscribe', as: :subscribe

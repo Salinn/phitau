@@ -4,19 +4,19 @@
   <ul class="flipping-cards">
     <% @eboard.each do |position| %>
       <li>
-        <input type="checkbox" id="item<%= position.position_name %><%= position.id %>">
+        <input type="checkbox" id="item<%= position.id %>">
         <label for="item<%= position.id %>">
           <span class="wrapper">
             <span class="image">
               <h3 class="postition-front-title">
-                <%= title(position.role) %>
+                <%= title(position.position_name) %>
               </h3>
               <%= image_tag "info.png", class: "postition-front-flip-icon" %>
               <%= image_tag position.user.profile_picture_url, class:"user_img contact_img" if position.user.profile_picture? %>
             </span>
             <span class="back contact-back-background" >
               <h2>
-                <%= title(position.role) %>
+                <%= title(position.position_name) %>
               </h2>
               <h3>
                 <%= position.user.first_name if position.user.first_name? %> <%= " " + position.user.last_name if position.user.last_name? %>
@@ -38,19 +38,19 @@
   <ul class="flipping-cards">
     <% @chairs.each do |chair| %>
         <li>
-          <input type="checkbox" id="item<%= chair.chair_name %><%= chair.user.id %>">
-          <label for="item<%= chair.user.id %>">
+          <input type="checkbox" id="item<%= chair.id %>">
+          <label for="item<%= chair.id %>">
           <span class="wrapper">
             <span class="image">
               <h3 class="postition-front-title">
-                <%= title(chair.chair_name) %>
+                <%= title(chair.position_name) %>
               </h3>
               <%= image_tag "info.png", class: "postition-front-flip-icon" %>
               <%= image_tag chair.user.profile_picture_url, class:"user_img contact_img" if chair.user.profile_picture? %>
             </span>
             <span class="back contact-back-background" >
               <h2>
-                <%= title(chair.chair_name) %>
+                <%= title(chair.position_name) %>
               </h2>
               <h3>
                 <%= chair.user.first_name if chair.user.first_name? %> <%= " " + chair.user.last_name if chair.user.last_name? %>
