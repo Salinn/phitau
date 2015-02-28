@@ -4,7 +4,7 @@
   <ul class="flipping-cards">
     <% @eboard.each do |position| %>
       <li>
-        <input type="checkbox" id="item<%= position.id %>">
+        <input type="checkbox" id="item<%= position.position_name %><%= position.id %>">
         <label for="item<%= position.id %>">
           <span class="wrapper">
             <span class="image">
@@ -38,7 +38,7 @@
   <ul class="flipping-cards">
     <% @chairs.each do |chair| %>
         <li>
-          <input type="checkbox" id="item<%= chair.user.id %>">
+          <input type="checkbox" id="item<%= position.chair_name %><%= chair.user.id %>">
           <label for="item<%= chair.user.id %>">
           <span class="wrapper">
             <span class="image">
