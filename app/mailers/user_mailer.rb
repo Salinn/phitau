@@ -6,12 +6,13 @@ class UserMailer < ActionMailer::Base
   #
   #   en.user_mailer.signup_confirmation.subject
   #
-  def signup_confirmation user
+  def signup_confirmation(user)
     @greeting = "Hi"
     @user = user
 
     mail to: user.email, subject: "Sign Up Confirmation"
   end
+
   def new_user_alert_email(new_user)
     @new_user = new_user
 
@@ -21,5 +22,18 @@ class UserMailer < ActionMailer::Base
     end
     @user = user_id_to_mail_to.first.user
     mail to: @user.email, subject: "New Person Signed Up On The Website #{new_user.first_name} #{new_user.last_name}"
+  end
+
+  def mailchimp_sign_up_user_email(user)
+    user_id_to_mail_to = Chair.where(role: 'alumni_relations')
+    if user_id_to_mail_to.nil?
+      user_id_to_mail_to = Eboard.where(role: 'president')
+    else
+      user_id_to_mail_to = Chair.where(role: 'admin')
+    end
+    @user_to_contact = user_id_to_mail_to.first.user
+    @user = user
+    @domain = ENV['GMAIL_DOMAIN']
+    mail to: @user.email, subject: "Hey #{user.first_name} Would You Like To Be On Our Mailing List?"
   end
 end

@@ -39,7 +39,7 @@ Phitau::Application.configure do
       domain: "localhost:3000",
       authentication: "plain",
       enable_starttls_auto: true,
-      user_name: ENV["EMAIL_ACCOUNT"],
-      password: ENV["EMAIL_PASSWORD"],
+      user_name: ENV["GMAIL_USERNAME"],
+      password: ENV["GMAIL_PASSWORD"]
   }
 end
