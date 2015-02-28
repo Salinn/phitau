@@ -23,22 +23,32 @@ class User < ActiveRecord::Base
   mount_uploader :profile_picture, ImageUploader
 
   after_create :send_alert_email
-  after_create :check_mailchimp_list
+  after_create :check_to_send_mailchimp_email
 
   def send_alert_email
     UserMailer.new_user_alert_email(self).deliver
   end
 
-  def check_mailchimp_list
+  def check_to_send_mailchimp_email
+    if check_mailchimp_list_for_user?
+      mailchimp_send_email_invite
+    end
+  end
+
+  def check_mailchimp_list_for_user?
     list_id = "c318382ea7"
     gb = Gibbon::API.new
-    a = gb.lists.members({:id => list_id})
-    a["data"].each do |current_user|
-      if current_user["email"] == self.email
-         return
-      end
-    end
+    a = gb.lists.member_info({:id => list_id, :emails => [{:email => self.email}]})
+    a["success_count"] == 0
+  end
+
+  def mailchimp_send_email_invite
     UserMailer.mailchimp_sign_up_user_email(self).deliver
+  end
+
+  def send_mailchimp_email
+    mailchimp_send_email_invite
+    redirect_to root_path, notice: "Thanks for registering for the Gamma Nu's Alumni News Letter!"
   end
 
   def have_permissions?(permission)

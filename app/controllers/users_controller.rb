@@ -41,7 +41,7 @@ class UsersController < ApplicationController
     @user = User.find params[:id]
     respond_to do |format|
       if @user.update(user_update_params)
-        format.html { redirect_to root_path, notice: 'User was successfully updated.' }
+        format.html { redirect_to edit_user_path, notice: 'User was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
@@ -64,21 +64,22 @@ class UsersController < ApplicationController
 
   def subscribe
     if missing_values
-    list_id = "c318382ea7"
-    gb = Gibbon::API.new
-    a = gb.lists.subscribe({:id => list_id, :email => {:email => current_user.email},
-                        :merge_vars => {
-                            :FNAME => current_user.first_name,
-                            :LNAME => current_user.last_name,
-                            :PCLASS => current_user.pledge_class },
-                        :double_optin => false})
-    redirect_to root_path, notice: a
+      redirect_to edit_user_path, alert: "You are missing either your First/Last name or your Pledge Class"
+    else
+      list_id = "c318382ea7"
+      gb = Gibbon::API.new
+      a = gb.lists.subscribe({:id => list_id, :email => {:email => current_user.email},
+                              :merge_vars => {
+                                  :FNAME => current_user.first_name,
+                                  :LNAME => current_user.last_name,
+                                  :PCLASS => current_user.pledge_class },
+                              :double_optin => false})
+      redirect_to edit_user_path, notice: "Thanks for registering for the Gamma Nu's Alumni News Letter!"
     end
-    missing_values_redirect
   end
 
   def missing_values
-    if current_user.first_name.nil? or current_user.last_name.nil? or current_user.pledge_class.nil?
+    if current_user.first_name.blank? || current_user.last_name.blank? || current_user.pledge_class.blank?
       return true
     end
     false
