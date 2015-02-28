@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150228194822) do
+ActiveRecord::Schema.define(version: 20150228222711) do
 
   create_table "alumni_news_letters", force: true do |t|
     t.date     "released_date"
@@ -19,13 +19,6 @@ ActiveRecord::Schema.define(version: 20150228194822) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "news_letter_html",      limit: 255
-  end
-
-  create_table "attendances", force: true do |t|
-    t.integer  "user_id"
-    t.integer  "meeting_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
   end
 
   create_table "chairs", force: true do |t|
@@ -44,14 +37,6 @@ ActiveRecord::Schema.define(version: 20150228194822) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "hours_volunteered"
-  end
-
-  create_table "eboards", force: true do |t|
-    t.string   "position_name"
-    t.integer  "user_id"
-    t.string   "role"
-    t.datetime "created_at"
-    t.datetime "updated_at"
   end
 
   create_table "faq_categories", force: true do |t|
@@ -86,13 +71,6 @@ ActiveRecord::Schema.define(version: 20150228194822) do
     t.integer  "gallery_id"
     t.integer  "post_id"
     t.string   "picture"
-  end
-
-  create_table "meetings", force: true do |t|
-    t.datetime "date"
-    t.string   "meeting_minutes"
-    t.datetime "created_at"
-    t.datetime "updated_at"
   end
 
   create_table "positions", force: true do |t|
@@ -136,11 +114,6 @@ ActiveRecord::Schema.define(version: 20150228194822) do
     t.string   "message"
     t.datetime "created_at"
     t.datetime "updated_at"
-  end
-
-  create_table "user_positions", force: true do |t|
-    t.integer "user_id"
-    t.integer "position_id"
   end
 
   create_table "users", force: true do |t|
