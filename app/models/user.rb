@@ -23,9 +23,22 @@ class User < ActiveRecord::Base
   mount_uploader :profile_picture, ImageUploader
 
   after_create :send_alert_email
+  after_create :check_mailchimp_list
 
   def send_alert_email
     UserMailer.new_user_alert_email(self).deliver
+  end
+
+  def check_mailchimp_list
+    list_id = "c318382ea7"
+    gb = Gibbon::API.new
+    a = gb.lists.members({:id => list_id})
+    a["data"].each do |current_user|
+      if a["data"][current_user]["email"] == self.email
+         return
+      end
+    end
+    UserMailer.mailchimp_sign_up_user_email(self).deliver
   end
 
   def have_permissions?(permission)
