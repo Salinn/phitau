@@ -15,7 +15,7 @@ class CommunityServicesController < ApplicationController
 
   #TODO Add this feature in
   def brothers_events
-    @user = User.find(params[:id])
+    @user = User.find(params[:user_id])
     if @user.nil?
       @user = current_user
       render notice: 'Issue loading, Currently working on this feature'
