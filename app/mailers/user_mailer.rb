@@ -21,7 +21,9 @@ class UserMailer < ActionMailer::Base
       user_id_to_mail_to = Position.where(position_name: 'President')
     end
     @user = user_id_to_mail_to.first.user
-    mail to: @user.email, subject: "New Person Signed Up On The Website #{new_user.first_name} #{new_user.last_name}"
+    unless @user.nil?
+      mail to: @user.email, subject: "New Person Signed Up On The Website #{new_user.first_name} #{new_user.last_name}"
+    end
   end
 
   def mailchimp_sign_up_user_email(user)

@@ -35,6 +35,7 @@ class UsersController < ApplicationController
 
   def edit_all
     @users = User.all.order(:first_name).page(params[:page]).per_page(15)
+    @positions = Position.all
   end
 
   def update

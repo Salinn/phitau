@@ -22,6 +22,10 @@
       <%= f.label :message %><br>
       <%= f.text_field :message, value: params[:message], :placeholder => 'Enter Message' %>
     </div>
+    <div class="field">
+      <%= f.label :contact_info %><br>
+      <%= f.text_field :contact_info, value: params[:contact_info], :placeholder => 'Enter Contact Info' %>
+    </div>
     <div class="actions">
       <%= f.submit %>
     </div>
