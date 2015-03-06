@@ -122,18 +122,16 @@ a.logo:hover{
 //picture on the cards
 .post_img img{
   width: 100%;
-  float: left;
   height: auto;
 }
 .img_div{
   width: 40%;
   float: left;
+  margin: 10px;
 }
 
 //text on the cards
 .post_text{
-  float: right;
-  width: 60%;
   padding-left: 20px;
 }
 
