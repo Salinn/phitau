@@ -12,7 +12,7 @@ class StaticPagesController < ApplicationController
   end
 
   def resources
-    authorize! :user, :controls
+    authorize! :user, :controls, :message => 'You need to login to access User Resources'
   end
 
   def about
