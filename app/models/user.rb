@@ -27,6 +27,10 @@ class User < ActiveRecord::Base
   after_create :send_alert_email
   after_create :check_to_send_mailchimp_email
 
+  def name
+    "#{self.first_name} #{self.last_name}"
+  end
+
   def send_alert_email
     UserMailer.new_user_alert_email(self).deliver
   end
