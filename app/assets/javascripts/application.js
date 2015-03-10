@@ -17,4 +17,5 @@
 //= require tinymce
 //= require jquery.flip.min
 //= require lightbox
+//= require chosen-jquery
 //= require_tree .

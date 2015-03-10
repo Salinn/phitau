@@ -49,7 +49,8 @@ gem 'bootstrap-will_paginate', '0.0.9'
 
 #Searching
 gem 'elasticsearch'
-gem "searchkick"
+gem 'searchkick'
+gem 'chosen-rails'
 
 #error reporting
 gem 'raygun4ruby'

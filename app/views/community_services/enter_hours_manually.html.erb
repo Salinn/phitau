@@ -1,0 +1,52 @@
+<div class="row">
+  <div class="col-md-8 col-md-offset-2 top-card-padding">
+    <div class="card">
+      <h1 align="center">Manually Enter Community Service Report For Brother</h1>
+      <br/>
+      <%= form_for(@community_service) do |f| %>
+          <% if @community_service.errors.any? %>
+              <div id="error_explanation">
+                <h2><%= pluralize(@community_service.errors.count, "error") %> prohibited this community_service from being saved:</h2>
+
+                <ul>
+                  <% @community_service.errors.full_messages.each do |msg| %>
+                      <li><%= msg %></li>
+                  <% end %>
+                </ul>
+              </div>
+          <% end %>
+          <div style="float: left; margin-left: 20%;">
+            <div class="field">
+              <%= f.label :event_name %><br />
+              <%= f.text_field :event_name %>
+            </div>
+            <div class="field">
+              <%= f.label :hours_volunteered %><br />
+              <%= f.number_field :hours_volunteered %>
+            </div>
+          </div>
+          <div style="float: right; margin-right: 20%">
+            <div class="field">
+              <%= f.label :date_of_event %><br>
+              <%= f.date_select :date_of_event %>
+            </div>
+            <div class="field">
+              <%= f.label :link_to_event %><br />
+              <%= f.text_field :link_to_event %>
+            </div>
+          </div>
+          <div class="clear"></div>
+          <div align="center" class="field">
+            <%= f.label :user_id %><br />
+            <%= f.collection_select :user_id, User.order(:first_name).where(user_status: ['current brother' || 'coop']), :id, :name %>
+          </div>
+          <div class="clear"></div>
+          <div align="center">
+            <div class="actions">
+              <%= f.submit 'Submit Community Service Event'%>
+            </div>
+          </div>
+      <% end %>
+    </div>
+  </div>
+</div>
