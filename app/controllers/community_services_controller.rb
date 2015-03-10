@@ -34,6 +34,11 @@ class CommunityServicesController < ApplicationController
   def edit
   end
 
+  def enter_hours_manually
+    @community_service = CommunityService.new
+    render template: 'community_services/enter_hours_manually'
+  end
+
   def create
     @community_service = CommunityService.new(community_service_params)
     flash[:notice] = 'CommunityService was successfully created.' if @community_service.save
