@@ -19,6 +19,7 @@ class Ability
         can [:create, :update], Receipt
         can [:create], User
         can [:create, :update, :new], CommunityService
+        can :user, :controls
       end
       if user.have_permissions?('philanthropy')
         can [:show, :update, :new, :read, :create, :delete], ValentinesDayDelievery
