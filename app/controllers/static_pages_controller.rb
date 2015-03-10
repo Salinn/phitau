@@ -12,7 +12,7 @@ class StaticPagesController < ApplicationController
   end
 
   def resources
-
+    authorize! :user, :controls
   end
 
   def about
