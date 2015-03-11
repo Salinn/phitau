@@ -17,11 +17,11 @@
   </div>
   <div class="field">
     <%= f.label :user_id %><br>
-    <%= f.collection_select :user_id, User.order(:first_name), :id, :name %>
+    <%= f.collection_select :user_id, @users, :id, :name %>
   </div>
   <div class="field">
     <%= f.label :role_id %><br>
-    <%= f.collection_select :role_id, Role.order(:name), :id, :name  %>
+    <%= f.collection_select :role_id, @roles, :id, :name  %>
   </div>
   <div class="field posts_checkboxes">
     <%= f.label :on_eboard %><br>
