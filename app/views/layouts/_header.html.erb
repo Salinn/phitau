@@ -1,3 +1,4 @@
+
 <!--Requiered to help scalling-->
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <div class="navbar navbar-inverse navbar-fixed-top">
@@ -30,7 +31,7 @@
             <li><%= link_to "FAQ", faq_path %></li>
             <li><%= link_to "Contact", contact_us_path %></li>
         <% else %>
-            <% if current_user.user_status == "potential new member" %>
+            <% if !current_user.confirmed_brother? %>
                 <li><%= link_to "About", about_path %></li>
                 <li><%= link_to "FAQ", faq_path %></li>
                 <li><%= link_to "Contact", contact_us_path %></li>
