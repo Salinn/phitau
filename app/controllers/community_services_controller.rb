@@ -36,6 +36,7 @@ class CommunityServicesController < ApplicationController
 
   def enter_hours_manually
     @community_service = CommunityService.new
+    @users = User.order(:first_name).where(user_status: ['current brother','coop'])
     render template: 'community_services/enter_hours_manually'
   end
 

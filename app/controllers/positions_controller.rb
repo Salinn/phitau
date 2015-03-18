@@ -14,10 +14,14 @@ class PositionsController < ApplicationController
 
   def new
     @position = Position.new
+    @users = User.order(:first_name).where(user_status: ['current brother','coop'])
+    @roles = Role.all.order(:name)
     respond_with(@position)
   end
 
   def edit
+    @users = User.order(:first_name).where(user_status: ['current brother','coop'])
+    @roles = Role.all.order(:name)
   end
 
   def create

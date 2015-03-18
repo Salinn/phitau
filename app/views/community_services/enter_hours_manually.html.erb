@@ -38,7 +38,7 @@
           <div class="clear"></div>
           <div align="center" class="field">
             <%= f.label :user_id %><br />
-            <%= f.collection_select :user_id, User.order(:first_name).where(user_status: ['current brother' || 'coop']), :id, :name %>
+            <%= f.collection_select :user_id, @users, :id, :name %>
           </div>
           <div class="clear"></div>
           <div align="center">
