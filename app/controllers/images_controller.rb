@@ -27,6 +27,7 @@ class ImagesController < ApplicationController
   def create
     @image = Image.new(image_params)
     flash[:notice] = 'Image was successfully created.' if @image.save
+    UserMailer.new_image_email(current_user, @image).deliver!
     respond_with(@image)
   end
 

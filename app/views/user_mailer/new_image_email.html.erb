@@ -1,10 +1,10 @@
 <p>Hey <%= @user.first_name %>,</p>
 
-<p>There is a new user who just signed up!</p>
-<p>The new user's name is <%= "#{@new_user.first_name} #{@new_user.last_name}"%> he signed up as a  <%= "#{@new_user.user_status}" %></p>
+<p>There user who submitted a new photo!</p>
+<p>The new user's name is <%= "#{@user_who_submitted_the_image.first_name} #{@user_who_submitted_the_image.last_name}"%> %></p>
 
-<p>To update information about this user you can click <a href='gammanu.org/users/all/edit'>here</a></p>
-<p>If you want to send them a welcoming email their email is  <%= "#{@new_user.email }" %></p>
+<p>To view the image please click here <a href='gammanu.org/images/<%= @image.id %>/edit'>here</a></p>
+<p>If you want to send them an email in response to their email, here is their email  <%= "#{@user_who_submitted_the_image.email }" %></p>
 
 <p>Have a nice day!</p>
 
