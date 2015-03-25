@@ -7,7 +7,7 @@ class Ability
       can :manage, :all
     end
 
-    can [:show, :read], Image
+    can [:show, :read, :create, :new], Image
     can [:show, :read], Gallery
     can [:show, :read], Post
     if user.user_status != nil
