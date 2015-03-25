@@ -1,8 +1,17 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3 top-card-padding">
+    <div class="card">
 <p id="notice"><%= notice %></p>
 <h1 align="center">
   <%= @image.name%>
 </h1>
 
 <div align="center">
-  <%= image_tag @image.picture_url, style: "width: auto; height: 30rem;"%>
+  <%= image_tag @image.picture_url, style: "max-width: 600px; max-height: 600px;"%>
 </div>
+      <h3><%= link_to "Upload another image", new_image_path %></h3>
+      <h3><%= link_to "View galleries", galleries_path %></h3>
+      <h3><%= link_to "Home page", root_path %></h3>
+        </div>
+      </div>
+    </div>

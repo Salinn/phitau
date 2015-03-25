@@ -1,7 +1,7 @@
 <p>Hey <%= @user.first_name %>,</p>
 
 <p>There user who submitted a new photo!</p>
-<p>The new user's name is <%= "#{@user_who_submitted_the_image.first_name} #{@user_who_submitted_the_image.last_name}"%> %></p>
+<p>The new user's name is <%= "#{@user_who_submitted_the_image.first_name} #{@user_who_submitted_the_image.last_name}"%> </p>
 
 <p>To view the image please click here <a href='gammanu.org/images/<%= @image.id %>/edit'>here</a></p>
 <p>If you want to send them an email in response to their email, here is their email  <%= "#{@user_who_submitted_the_image.email }" %></p>

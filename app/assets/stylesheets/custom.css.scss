@@ -127,12 +127,14 @@ a.logo:hover{
 .img_div{
   width: 40%;
   float: left;
-  margin: 10px;
+  padding-right: 1%;
 }
 
 //text on the cards
 .post_text{
-  padding-left: 20px;
+  padding-left: 0px;
+  width: 59%;
+  float: right;
 }
 
 //Title formatting

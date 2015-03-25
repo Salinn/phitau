@@ -7,13 +7,14 @@ class Ability
       can :manage, :all
     end
 
-    can [:show, :read, :create, :new], Image
+    can [:show, :read], Image
     can [:show, :read], Gallery
     can [:show, :read], Post
     if user.user_status != nil
       can :subscribe, User
       can :show, User, :id => user.id
       can :update, User, :id => user.id
+      can [:show, :read, :create, :new], Image
       can [:show, :update, :new, :read, :create], ValentinesDayDelievery
       if user.confirmed_brother?
         can [:show, :read], AlumniNewsLetter
