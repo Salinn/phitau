@@ -1,0 +1,35 @@
+<h1>Listing alumni_eternals</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Picture</th>
+      <th>Description</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @alumni_eternals.each do |alumni_eternal| %>
+      <tr>
+        <td><%= alumni_eternal.user_id %></td>
+        <td><%= alumni_eternal.first_name %></td>
+        <td><%= alumni_eternal.last_name %></td>
+        <td><%= alumni_eternal.picture %></td>
+        <td><%= alumni_eternal.description %></td>
+        <td><%= link_to 'Show', alumni_eternal %></td>
+        <td><%= link_to 'Edit', edit_alumni_eternal_path(alumni_eternal) %></td>
+        <td><%= link_to 'Destroy', alumni_eternal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Alumni eternal', new_alumni_eternal_path %>

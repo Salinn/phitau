@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @alumni_eternal.user_id %>
+</p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @alumni_eternal.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @alumni_eternal.last_name %>
+</p>
+
+<p>
+  <strong>Picture:</strong>
+  <%= @alumni_eternal.picture %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @alumni_eternal.description %>
+</p>
+
+<%= link_to 'Edit', edit_alumni_eternal_path(@alumni_eternal) %> |
+<%= link_to 'Back', alumni_eternals_path %>
