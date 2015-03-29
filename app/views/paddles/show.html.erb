@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Pledge class:</strong>
+  <%= @paddle.pledge_class %>
+</p>
+
+<p>
+  <strong>Picture:</strong>
+  <%= @paddle.picture %>
+</p>
+
+<%= link_to 'Edit', edit_paddle_path(@paddle) %> |
+<%= link_to 'Back', paddles_path %>

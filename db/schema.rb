@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150228225536) do
+ActiveRecord::Schema.define(version: 20150329035222) do
 
   create_table "alumni_news_letters", force: true do |t|
     t.date     "released_date"
@@ -71,6 +71,13 @@ ActiveRecord::Schema.define(version: 20150228225536) do
     t.integer  "gallery_id"
     t.integer  "post_id"
     t.string   "picture"
+  end
+
+  create_table "paddles", force: true do |t|
+    t.string   "pledge_class"
+    t.string   "picture"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "positions", force: true do |t|

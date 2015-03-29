@@ -1,0 +1,25 @@
+<%= form_for(@paddle) do |f| %>
+  <% if @paddle.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@paddle.errors.count, "error") %> prohibited this paddle from being saved:</h2>
+
+      <ul>
+      <% @paddle.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :pledge_class %><br>
+    <%= f.text_field :pledge_class %>
+  </div>
+  <div class="field">
+    <%= f.label :picture %><br>
+    <%= f.text_field :picture %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
