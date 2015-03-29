@@ -1,0 +1,29 @@
+<h1>Listing alumni_eternal_stories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Story</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @alumni_eternal_stories.each do |alumni_eternal_story| %>
+      <tr>
+        <td><%= alumni_eternal_story.user_id %></td>
+        <td><%= alumni_eternal_story.story %></td>
+        <td><%= link_to 'Show', alumni_eternal_story %></td>
+        <td><%= link_to 'Edit', edit_alumni_eternal_story_path(alumni_eternal_story) %></td>
+        <td><%= link_to 'Destroy', alumni_eternal_story, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Alumni eternal story', new_alumni_eternal_story_path %>

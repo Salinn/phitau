@@ -1,0 +1,2 @@
+module AlumniEternalStoriesHelper
+end

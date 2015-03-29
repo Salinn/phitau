@@ -11,7 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150329045656) do
+ActiveRecord::Schema.define(version: 20150329071359) do
+
+  create_table "alumni_eternal_stories", force: true do |t|
+    t.integer  "user_id"
+    t.text     "story"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "alumni_eternal_id"
+  end
+
+  create_table "alumni_eternals", force: true do |t|
+    t.integer  "user_id"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "picture"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "alumni_news_letters", force: true do |t|
     t.date     "released_date"

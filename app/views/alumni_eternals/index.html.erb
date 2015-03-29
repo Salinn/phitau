@@ -1,35 +1,17 @@
-<h1>Listing alumni_eternals</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>User</th>
-      <th>First name</th>
-      <th>Last name</th>
-      <th>Picture</th>
-      <th>Description</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @alumni_eternals.each do |alumni_eternal| %>
-      <tr>
-        <td><%= alumni_eternal.user_id %></td>
-        <td><%= alumni_eternal.first_name %></td>
-        <td><%= alumni_eternal.last_name %></td>
-        <td><%= alumni_eternal.picture %></td>
-        <td><%= alumni_eternal.description %></td>
-        <td><%= link_to 'Show', alumni_eternal %></td>
-        <td><%= link_to 'Edit', edit_alumni_eternal_path(alumni_eternal) %></td>
-        <td><%= link_to 'Destroy', alumni_eternal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Alumni eternal', new_alumni_eternal_path %>
+<div class="row">
+  <div align="center">
+    <h1>Search for an alumni eternal</h1>
+    <input type="text" name="FirstName" value="Mickey">
+  </div>
+  <hr>
+  <% @alumni_eternals.each do |alumni_eternal| %>
+      <div style="float: left; display: inline-block; padding: 10px;">
+        <%= image_tag "http://upload.wikimedia.org/wikipedia/commons/1/13/Daniel_Ingram_Profile.png", style: "display: block;"%>
+        <h3 align="center">
+          <%= link_to "#{alumni_eternal.first_name} #{alumni_eternal.last_name}", alumni_eternal %>
+        </h3>
+      </div>
+  <% end %>
+  <div class="clear"></div>
+  <br>
+</div>

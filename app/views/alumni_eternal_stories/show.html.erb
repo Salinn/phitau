@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @alumni_eternal_story.user_id %>
+</p>
+
+<p>
+  <strong>Story:</strong>
+  <%= @alumni_eternal_story.story %>
+</p>
+
+<%= link_to 'Edit', edit_alumni_eternal_story_path(@alumni_eternal_story) %> |
+<%= link_to 'Back', alumni_eternal_stories_path %>

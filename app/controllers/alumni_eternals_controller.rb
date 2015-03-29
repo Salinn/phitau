@@ -1,7 +1,7 @@
 class AlumniEternalsController < ApplicationController
   before_action :set_alumni_eternal, only: [:show, :edit, :update, :destroy]
-
   respond_to :html
+  load_and_authorize_resource
 
   def index
     @alumni_eternals = AlumniEternal.all
@@ -42,6 +42,6 @@ class AlumniEternalsController < ApplicationController
     end
 
     def alumni_eternal_params
-      params.require(:alumni_eternal).permit(:user_id, :first_name, :last_name, :picture, :description)
+      params.require(:alumni_eternal).permit(:user_id, :first_name, :last_name, :picture, :remote_picture_url, :description)
     end
 end

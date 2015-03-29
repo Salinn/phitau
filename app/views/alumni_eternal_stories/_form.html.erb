@@ -1,0 +1,26 @@
+<%= form_for(@alumni_eternal_story) do |f| %>
+  <% if @alumni_eternal_story.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@alumni_eternal_story.errors.count, "error") %> prohibited this alumni_eternal_story from being saved:</h2>
+
+      <ul>
+      <% @alumni_eternal_story.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.hidden_field :user_id, value: current_user.id %>
+  </div>
+    <div class="field">
+      <%= f.hidden_field :alumni_eternal_id, value: @alumni_eternal.id %>
+    </div>
+  <div class="field">
+    <%= f.text_area :story %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
