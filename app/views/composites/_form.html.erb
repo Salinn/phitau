@@ -1,0 +1,25 @@
+<%= form_for(@composite) do |f| %>
+  <% if @composite.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@composite.errors.count, "error") %> prohibited this composite from being saved:</h2>
+
+      <ul>
+      <% @composite.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :year %><br>
+    <%= f.text_field :year %>
+  </div>
+  <div class="field">
+    <%= f.file_field :picture, placeholder: 'Image File' %>
+    <%= f.text_field :remote_picture_url, placeholder: 'Or input url of photo' %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

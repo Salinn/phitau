@@ -1,5 +1,7 @@
 Phitau::Application.routes.draw do
 
+  resources :composites
+
   resources :paddles
 
   resources :roles

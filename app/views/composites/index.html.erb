@@ -1,0 +1,7 @@
+<div class="row">
+  <div class="gallery_images">
+    <% @composites.each do |composite| %>
+        <a  href='<%= composite.picture_url %>' data-title='<%= composite.year %>' rel="lightbox[paddles]"><img src="<%= composite.picture_url %>" /></a>
+    <% end %>
+  </div>
+</div>

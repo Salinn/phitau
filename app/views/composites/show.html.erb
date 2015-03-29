@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @composite.year %>
+</p>
+
+<p>
+  <strong>Picture:</strong>
+  <%= @composite.picture %>
+</p>
+
+<%= link_to 'Edit', edit_composite_path(@composite) %> |
+<%= link_to 'Back', composites_path %>
