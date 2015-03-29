@@ -16,8 +16,8 @@
     <%= f.text_field :pledge_class %>
   </div>
   <div class="field">
-    <%= f.label :picture %><br>
-    <%= f.text_field :picture %>
+    <%= f.file_field :picture, placeholder: 'Image File' %>
+    <%= f.text_field :remote_picture_url, placeholder: 'Or input url of photo' %>
   </div>
   <div class="actions">
     <%= f.submit %>

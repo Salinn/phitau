@@ -1,29 +1,7 @@
-<h1>Listing paddles</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Pledge class</th>
-      <th>Picture</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<div class="row">
+  <div class="gallery_images">
     <% @paddles.each do |paddle| %>
-      <tr>
-        <td><%= paddle.pledge_class %></td>
-        <td><%= paddle.picture %></td>
-        <td><%= link_to 'Show', paddle %></td>
-        <td><%= link_to 'Edit', edit_paddle_path(paddle) %></td>
-        <td><%= link_to 'Destroy', paddle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+        <a  href='<%= paddle.picture_url %>' data-title='<%= paddle.pledge_class %>' rel="lightbox[paddles]"><img src="<%= paddle.picture_url %>" /></a>
     <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Paddle', new_paddle_path %>
+  </div>
+</div>

@@ -42,6 +42,6 @@ class PaddlesController < ApplicationController
     end
 
     def paddle_params
-      params.require(:paddle).permit(:pledge_class, :picture)
+      params.require(:paddle).permit(:pledge_class, :picture, :remote_picture_url)
     end
 end
