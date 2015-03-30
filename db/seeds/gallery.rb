@@ -1,0 +1,6 @@
+Gallery.create!(id: 1, name: 'Gallery 1', private: false, post_id: 1)
+Gallery.create!(id: 2, name: 'Gallery 2', private: false, post_id: 2)
+Gallery.create!(id: 3, name: 'Gallery 3', private: false, post_id: 4)
+Gallery.create!(id: 4, name: 'Gallery 4', private: false, post_id: 5)
+Gallery.create!(id: 5, name: 'Gallery 5', private: false, post_id: 6)
+Gallery.create!(id: 6, name: 'Gallery 6', private: false, post_id: 7)

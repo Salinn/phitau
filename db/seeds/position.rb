@@ -1,0 +1,6 @@
+Position.create!(id: 1, position_name: 'President', user_id: 1, role_id: 1, on_eboard: true)
+Position.create!(id: 2, position_name: 'First President', user_id: 2, role_id: 2, on_eboard: true)
+Position.create!(id: 3, position_name: 'Second President', user_id: 3, role_id: 3, on_eboard: true)
+Position.create!(id: 4, position_name: 'Web Master', user_id: 4, role_id: 7, on_eboard: false)
+Position.create!(id: 5, position_name: 'Community Service', user_id: 5, role_id: 9, on_eboard: false)
+Position.create!(id: 6, position_name: 'Philanthropy', user_id: 6, role_id: 10, on_eboard: false)

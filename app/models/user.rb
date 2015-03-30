@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
 
   searchkick
 
-  USERSTATUSES = ["potential new member", "alumni", "current brother", "coop"]
+  USERSTATUSES = ["potential new member", "associate member", "alumni", "current brother", "coop"]
   ALLROLES = ["alumni", "current brother", "potential new member", "dummy",
               "president","first_vp","second_vp","treasurer","sergeant","chaplain",
               "recruitment", "alumni_relations", "web_master","brotherhood","social","community_service",
@@ -24,8 +24,10 @@ class User < ActiveRecord::Base
 
   mount_uploader :profile_picture, ImageUploader
 
-  after_create :send_alert_email
-  after_create :check_to_send_mailchimp_email
+  if ENV['GMAIL_DOMAIN'] == 'http://gammanu.org/'
+    after_create :send_alert_email
+    after_create :check_to_send_mailchimp_email
+  end
 
   def name
     "#{self.first_name} #{self.last_name}"

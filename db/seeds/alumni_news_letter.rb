@@ -1,0 +1,4 @@
+AlumniNewsLetter.create!(id: 1, released_date: Time.now, news_letter_html: 'http://us6.campaign-archive2.com/?u=ce08ce712bbaafa93211ec048&id=1a96a5afd4&e=[UNIQID] ' )
+AlumniNewsLetter.create!(id: 2, released_date: 1.months.from_now, news_letter_html: 'http://us6.campaign-archive2.com/?u=ce08ce712bbaafa93211ec048&id=a28cf8479a&e=[UNIQID]' )
+AlumniNewsLetter.create!(id: 3, released_date: 2.months.from_now, news_letter_html: 'http://us6.campaign-archive2.com/?u=ce08ce712bbaafa93211ec048&id=d09514bd8a&e=[UNIQID]' )
+AlumniNewsLetter.create!(id: 4, released_date: 3.months.from_now, news_letter_html: 'http://us6.campaign-archive2.com/?u=ce08ce712bbaafa93211ec048&id=0121d7e380&e=[UNIQID]' )
