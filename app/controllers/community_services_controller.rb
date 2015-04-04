@@ -11,6 +11,8 @@ class CommunityServicesController < ApplicationController
 
   def brothers_hours
     @users = User.order(:first_name).where(user_status: 'current brother')
+    @coop = User.order(:first_name).where(user_status: 'coop')
+    @am = User.order(:first_name).where(user_status: 'associate member')
   end
 
   #TODO Add this feature in

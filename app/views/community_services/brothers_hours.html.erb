@@ -3,6 +3,7 @@
     <div class="card">
       <div class="posts_checkboxes">
         <h1 align="center">Community Services Hours For Each Brother</h1>
+        <h3>Current Brothers</h3>
         <table class="brothers-hours-table">
           <thead>
           <tr>
@@ -14,6 +15,51 @@
 
           <tbody>
           <% @users.each do |user| %>
+              <tr>
+                <td><%= "#{user.first_name} #{user.last_name}" %></td>
+                <td><%= total_hours(user) %></td>
+                <td><%= link_to "#{user.first_name} #{user.last_name}'s Events", "brothers_events/#{user.id}" %></td>
+              </tr>
+          <% end %>
+          </tbody>
+        </table>
+
+        <hr>
+        <h3>Brothers On Coop</h3>
+
+        <table class="brothers-hours-table">
+          <thead>
+          <tr>
+            <th>Brothers Name</th>
+            <th>Total Hours</th>
+            <th>See All Of the Brothers Submitted Events</th>
+          </tr>
+          </thead>
+
+          <tbody>
+          <% @coop.each do |user| %>
+              <tr>
+                <td><%= "#{user.first_name} #{user.last_name}" %></td>
+                <td><%= total_hours(user) %></td>
+                <td><%= link_to "#{user.first_name} #{user.last_name}'s Events", "brothers_events/#{user.id}" %></td>
+              </tr>
+          <% end %>
+          </tbody>
+        </table>
+
+        <hr>
+        <h3>Associate Members</h3>
+        <table class="brothers-hours-table">
+          <thead>
+          <tr>
+            <th>Brothers Name</th>
+            <th>Total Hours</th>
+            <th>See All Of the Brothers Submitted Events</th>
+          </tr>
+          </thead>
+
+          <tbody>
+          <% @am.each do |user| %>
               <tr>
                 <td><%= "#{user.first_name} #{user.last_name}" %></td>
                 <td><%= total_hours(user) %></td>
