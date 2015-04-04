@@ -1,17 +1,1 @@
-<p>Hey <%= @user.first_name %>,</p>
-
-<p>I wanted to invite you to sign up for our Alumni News Letter!</p>
-
-<p>Every month, during the school year, we send out an email with updates about what we are up to and some info about other Gamma Nu almuni!</p>
-
-<p>If you have filled out your profile <a href="<%= @domain %>/users/<%= @user.id %>/edit">here</a></p>
-
-<p>Then you can email you can click here to <a href="<%= @domain %>/users/<%= @user.id %>/subscribe">sign up!</a></p>
-
-<p>Otherwise you can sign up <a href="http://eepurl.com/bfz215">here!</a></p>
-
-<p>If you have trouble with the signing up please contact me at <%= "#{@user_to_contact.email}" %></p>
-
-<p>In Phi,</p>
-
-<p><%= "#{@user_to_contact.first_name} #{@user_to_contact.last_name}" %></p>
+<%= render "user_mailer/mailchimp_sign_up" %>

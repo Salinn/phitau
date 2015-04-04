@@ -1,0 +1,19 @@
+<tr>
+  <td align="left" valign="top" style="padding-left: 0px; padding-bottom: 10px; padding-top: 0px; padding-right: 0px; color: #ffffff;">
+    Hey <%= @user.first_name %>,
+  </td>
+</tr>  <tr>
+  <td align="left" valign="top" style="padding-left: 0px; padding-bottom: 10px; padding-top: 0px; padding-right: 0px; color: #ffffff;">There user who submitted a new photo!
+    The new user's name is <%= "#{@user_who_submitted_the_image.first_name} #{@user_who_submitted_the_image.last_name}"%>
+  </td>
+</tr>  <tr>
+  <td align="left" valign="top" style="padding-left: 0px; padding-bottom: 10px; padding-top: 0px; padding-right: 0px; color: #ffffff;">
+    To view the image please click here <a href='gammanu.org/images/<%= @image.id %>/edit'>here</a>
+    If you want to send them an email in response to their email, here is their email  <%= "#{@user_who_submitted_the_image.email }" %>
+  </td>
+</tr>
+<tr>
+  <td align="left" valign="top" style="padding-left: 0px; padding-bottom: 10px; padding-top: 0px; padding-right: 0px; color: #ffffff;">
+    Have a nice day!
+  </td>
+</tr>
