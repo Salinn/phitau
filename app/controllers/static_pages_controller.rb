@@ -48,9 +48,20 @@ class StaticPagesController < ApplicationController
   end
 
   def contact_us
-    @eboard = Position.where.not(on_eboard: false, user_id: nil)
+    eboard = Position.where.not(on_eboard: false, user_id: nil)
+    @eboard = []
+    eboard.each { |position|@eboard.push(position) if position.role.name == 'president' }
+    eboard.each { |position|@eboard.push(position) if position.role.name == 'first_vp' }
+    eboard.each { |position|@eboard.push(position) if position.role.name == 'second_vp' }
+    eboard.each { |position|@eboard.push(position) if position.role.name == 'treasurer' }
+    eboard.each { |position|@eboard.push(position) if position.role.name == 'chaplain' }
+    eboard.each { |position|@eboard.push(position) if position.role.name == 'sergeant' }
 
     @chairs = Position.where.not(on_eboard: true, user_id: nil)
+
+    @brothers = User.where(user_status: ['current brother','coop'])
+
+    @associate_members = User.where(user_status: 'associate member')
   end
 
   def information_for_students
