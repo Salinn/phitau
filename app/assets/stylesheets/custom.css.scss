@@ -533,6 +533,7 @@ a.not-active:hover{
   padding: 15px 10px 15px 10px;
   background-color: $FooterBackground;
   color: $White;
+  width: 100% ;
 }
 
 .nav-tabs li a:focus,
@@ -540,10 +541,14 @@ a.not-active:hover{
   outline: none;
 }
 
+.nav-tabs li {
+  padding-right: 4px;
+  padding-bottom: 4px;
+}
+
 .nav-tabs {
   padding-bottom: 30px;
-  width: 300px;
-  margin: 0 auto;
+  width: 100%;
   border-bottom: none;
 }
 
