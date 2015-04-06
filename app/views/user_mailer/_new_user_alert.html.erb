@@ -1,27 +1,27 @@
-<tr style="background-color: #5e0000;">
-  <td align="left" valign="top" style="padding-left: 0px; padding-bottom: 10px; padding-top: 0px; padding-right: 0px; color: #ffffff;">
-    Hey Paul,
+<tr>
+  <td align="left" valign="top" style="padding-left: 10px; padding-bottom: 10px; padding-top: 0px; padding-right: 0px; color: #000000;">
+    Hey <%= @user.first_name %>,
   </td>
 </tr>
 <tr>
-  <td align="left" valign="top" style="padding-left: 0px; padding-bottom: 10px; padding-top: 0px; padding-right: 0px; color: #ffffff;">
+  <td align="left" valign="top" style="padding-left: 10px; padding-bottom: 10px; padding-top: 0px; padding-right: 0px; color: #000000;">
     There is a new user who just signed up!
   </td>
 </tr>
 <tr>
-  <td align="left" valign="top" style="padding-left: 0px; padding-bottom: 10px; padding-top: 0px; padding-right: 0px; color: #ffffff;">
-    The new user's name is <%= "#{new_user.first_name} #{new_user.last_name}" %> he signed up as a potential new member
-    To update information about this user you can <a href='gammanu.org/users/all/edit'>here.</a><
+  <td align="left" valign="top" style="padding-left: 10px; padding-bottom: 10px; padding-top: 0px; padding-right: 0px; color: #000000;">
+    The new user's name is <%= "#{@new_user.first_name} #{@new_user.last_name}" %> he signed up as a potential new member
+    To update information about this user you can <a href='gammanu.org/users/all/edit'>here.</a>
     If you want to send them a welcoming email their email is <%= "#{@new_user.email }" %>
   </td>
 </tr>
 <tr>
-  <td align="left" valign="top" style="padding-left: 0px; padding-bottom: 10px; padding-top: 0px; padding-right: 0px;color: #ffffff;">
+  <td align="left" valign="top" style="padding-left: 10px; padding-bottom: 10px; padding-top: 0px; padding-right: 0px;color: #000000;">
     Have a nice day!
   </td>
 </tr>
 <tr>
-  <td align="left" valign="top" style="padding-left: 0px; padding-bottom: 0px; padding-top: 0px; padding-right: 0px;color: #ffffff;">
+  <td align="left" valign="top" style="padding-left: 10px; padding-bottom: 0px; padding-top: 0px; padding-right: 0px;color: #000000;">
     Your friendly email notification service
   </td>
 </tr>

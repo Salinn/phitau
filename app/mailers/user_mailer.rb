@@ -22,7 +22,7 @@ class UserMailer < ActionMailer::Base
     end
     @user = user_id_to_mail_to.user
     unless @user.nil?
-      body_template = 'user_mailer/new_user_alert_email'
+      body_template = 'user_mailer/new_user_alert'
       email_title = "New Person Signed Up On The Website #{new_user.first_name} #{new_user.last_name}"
       to_address = @user.email
       email_template(body_template, email_title, to_address)
@@ -39,8 +39,8 @@ class UserMailer < ActionMailer::Base
     end
     @user_to_contact = user_id_to_mail_to.first.user
     @user = user
-    body_template = 'user_mailer/mailchimp_sign_up_user'
-    email_title = "New Image Submitted by #{@user_who_submitted_the_image.first_name} #{@user_who_submitted_the_image.last_name}"
+    body_template = 'user_mailer/mailchimp_sign_up'
+    email_title = "Hey #{user.first_name} Would You Like To Be On Our Mailing List?"
     to_address = @user.email
     email_template(body_template, email_title, to_address)
   end
