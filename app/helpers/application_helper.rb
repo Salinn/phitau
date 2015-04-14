@@ -12,7 +12,7 @@ module ApplicationHelper
 
   def get_link post
     if post.images.empty?
-      nil
+      image_tag 'no-image.png'
     else
       post.images.first.picture_url
     end
