@@ -39,14 +39,6 @@ ActiveRecord::Schema.define(version: 20150329071359) do
     t.text     "news_letter_html",      limit: 255
   end
 
-  create_table "chairs", force: true do |t|
-    t.string   "chair_name"
-    t.integer  "user_id"
-    t.string   "role"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "community_services", force: true do |t|
     t.string   "event_name"
     t.date     "date_of_event"

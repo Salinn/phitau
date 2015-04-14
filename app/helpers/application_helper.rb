@@ -12,7 +12,7 @@ module ApplicationHelper
 
   def get_link post
     if post.images.empty?
-      image_tag 'no-image.png'
+      'no-image.png'
     else
       post.images.first.picture_url
     end
@@ -26,7 +26,7 @@ module ApplicationHelper
   end
 
   def get_gallery_path post
-    if post.images.first.gallery
+    if post.images.any? && post.images.first.gallery
       return gallery_path(post.images.first.gallery.id)
     end
     nil
