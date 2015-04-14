@@ -4,7 +4,7 @@ class CompositesController < ApplicationController
   respond_to :html
 
   def index
-    @composites = Composite.all
+    @composites = Composite.all.order(:year)
     respond_with(@composites)
   end
 
