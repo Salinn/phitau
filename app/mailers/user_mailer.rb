@@ -64,6 +64,15 @@ class UserMailer < ActionMailer::Base
     end
   end
 
+  def welcome_email(user)
+    @user = user
+
+    body_template = 'user_mailer/welcome'
+    email_title = "New Image Submitted by #{@user_who_submitted_the_image.first_name} #{@user_who_submitted_the_image.last_name}"
+    to_address = @user.email
+    email_template(body_template, email_title, to_address)
+  end
+
   def email_template(body_template, email_title, to_address)
     @body_template = body_template
     subject = email_title

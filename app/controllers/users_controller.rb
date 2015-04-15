@@ -17,7 +17,7 @@ class UsersController < ApplicationController
     generated_password = Devise.friendly_token.first(8)
     @user.user_status = 'potential new member'
     @user.password = generated_password
-    # RegistrationMailer.welcome(@user, generated_password).deliver
+    UserMailer.welcome_email(@user, generated_password).deliver_later(wait: 1.minute)
     respond_to do |format|
       if @user.save
         format.html { redirect_to new_users_admin_path, notice: 'User was successfully created.' }
