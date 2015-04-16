@@ -6,7 +6,7 @@
 <tr>
   <td align="left" valign="top" style="padding-left: 10px; padding-bottom: 10px; padding-top: 0px; padding-right: 0px; color: #000000;">
     We wanted to let you know that you have been signed up on the Phi Kappa Tau website!
-    To login you will use this email as your login name and to create your own password you can <%= link_to 'click here', new_user_password_path %>
+    To login you will use this email as your login name and to create your own password you can <a href="<%= @domain %><%= new_user_password_path %>">sign up!</a>
   </td>
 </tr>
 <tr>
@@ -14,5 +14,3 @@
     Have a nice day!
   </td>
 </tr>
-
-<%= @generated_password %>
