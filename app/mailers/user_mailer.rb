@@ -1,5 +1,5 @@
 class UserMailer < ActionMailer::Base
-  default from: "pmdpkt@gmail.com"
+  default from: "pmdspam@gmail.com"
 
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:
@@ -64,11 +64,12 @@ class UserMailer < ActionMailer::Base
     end
   end
 
-  def welcome_email(user)
+  def welcome_email(user, generated_password)
     @user = user
+    @generated_password
 
     body_template = 'user_mailer/welcome'
-    email_title = "New Image Submitted by #{@user_who_submitted_the_image.first_name} #{@user_who_submitted_the_image.last_name}"
+    email_title = "Welcome to the RIT Phi Kappa Tau Website!"
     to_address = @user.email
     email_template(body_template, email_title, to_address)
   end
