@@ -59,6 +59,10 @@ class User < ActiveRecord::Base
     redirect_to root_path, notice: "Thanks for registering for the Gamma Nu's Alumni News Letter!"
   end
 
+  def multiple_have_permissions?(positions) #Takes an array of positions
+    positions.any? { |position| have_permissions?(position)}
+  end
+
   def have_permissions?(permission)
     user_role?(permission) || positions_role?(permission)
   end
