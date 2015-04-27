@@ -1,68 +1,88 @@
 <div class="row">
   <div class="col-md-8 col-md-offset-2 top-card-padding">
-    <div class="card_registration">
+    <div class="card_registration" style="float: left;">
       <h1>Resources</h1>
       <hr>
       <% if current_user.multiple_have_permissions?(['admin','community_service','president','second_vp']) %>
           <div class="resources col-sm-4">
-            <div style="border-color: #00A000; border-size: 1px; border-style: solid;">
+            <div style="color: #736f7e">
               <h2>Community Service</h2>
               <h3><%= link_to 'Community Service Logs', community_services_path %></h3>
               <h3><%= link_to 'Brothers Community Service', brothers_hours_path %></h3>
               <h3><%= link_to 'Manually Enter Community Service', community_service_manually_path, 'data-no-turbolink' => true %></h3>
               <!--  'data-no-turbolink' => true makes sure things aren't cached -->
             </div>
+            <hr>
           </div>
       <% end %>
       <% if current_user.multiple_have_permissions?(['admin','president','writer','second_vp']) %>
-          <div class="resources col-sm-4"><div style="border-color: #00A000; border-size: 1px; border-style: solid;">
-            <h2>Posts</h2>
-            <h3><%= link_to 'Create Post', new_post_path %></h3>
-            <h3><%= link_to 'Edit Posts', posts_path %></h3>
-          </div></div>
+          <div class="resources col-sm-4">
+            <div style="color: #736f7e">
+              <h2>Posts</h2>
+              <h3><%= link_to 'Create Post', new_post_path %></h3>
+              <h3><%= link_to 'Edit Posts', posts_path %></h3>
+            </div>
+            <hr>
+          </div>
       <% end %>
       <% if current_user.multiple_have_permissions?(['admin','president','writer','second_vp']) %>
-          <div class="resources col-sm-4"><div style="border-color: #00A000; border-size: 1px; border-style: solid;">
-            <h2>Recruitment</h2>
-            <h3><%= link_to 'Potentials', potentials_path %></h3>
-            <h3><%= link_to 'New Potentials', new_users_admin_path %></h3>
-            <h3><%= link_to 'New Text Message', new_text_message_path %></h3>
-            <h3><%= link_to 'View Old Texts', text_messages_path %></h3>
-          </div></div>
+          <div class="resources col-sm-4">
+            <div style="color: #736f7e">
+              <h2>Recruitment</h2>
+              <h3><%= link_to 'Potentials', potentials_path %></h3>
+              <h3><%= link_to 'New Potentials', new_users_admin_path %></h3>
+              <h3><%= link_to 'New Text Message', new_text_message_path %></h3>
+              <h3><%= link_to 'View Old Texts', text_messages_path %></h3>
+            </div>
+            <hr>
+          </div>
       <% end %>
       <% if current_user.multiple_have_permissions?(['admin','president','writer','second_vp']) %>
-          <div class="resources col-sm-4"><div style="border-color: #00A000; border-size: 1px; border-style: solid;">
-            <h2>Alumni</h2>
-            <h3><%= link_to 'Create Alumni-News-Letters', new_alumni_news_letter_path %></h3>
-            <h3><%= link_to 'View Alumni-News-Letters', alumni_news_letters_path %></h3>
-            <h3><%= link_to 'New Composite', new_composite_path %></h3>
-            <h3><%= link_to 'Edit Old Composites', composites_path %></h3>
-            <h3><%= link_to 'New Paddle', new_paddle_path %></h3>
-            <h3><%= link_to 'Edit Old Paddle', paddles_path %></h3>
-          </div></div>
+          <div class="resources col-sm-4">
+            <div style="color: #736f7e">
+              <h2>Alumni</h2>
+              <h3><%= link_to 'Create Alumni-News-Letters', new_alumni_news_letter_path %></h3>
+              <h3><%= link_to 'View Alumni-News-Letters', alumni_news_letters_path %></h3>
+              <h3><%= link_to 'New Composite', new_composite_path %></h3>
+              <h3><%= link_to 'Edit Old Composites', composites_path %></h3>
+              <h3><%= link_to 'New Paddle', new_paddle_path %></h3>
+              <h3><%= link_to 'Edit Old Paddle', paddles_path %></h3>
+            </div>
+            <hr>
+          </div>
       <% end %>
       <% if current_user.multiple_have_permissions?(['admin','president']) %>
-          <div class="resources col-sm-4"><div style="border-color: #00A000; border-size: 1px; border-style: solid;">
-            <h2>Update FAQ</h2>
-            <h3><%= link_to 'Edit All Users', edit_all_path %></h3>
-          </div></div>
+          <div class="resources col-sm-4">
+            <div style="color: #736f7e">
+              <h2>Update FAQ</h2>
+              <h3><%= link_to 'Edit All Users', edit_all_path %></h3>
+            </div>
+            <hr>
+          </div>
       <% end %>
       <% if current_user.multiple_have_permissions?(['admin','president','writer','second_vp']) %>
-          <div class="resources col-sm-4"><div style="border-color: #00A000; border-size: 1px; border-style: solid;">
-            <h2>Users</h2>
-            <h3><%= link_to 'FAQ Categories', faq_categories_path %></h3>
-            <h3><%= link_to 'FAQ Questions', faq_questions_path %></h3>
-          </div></div>
+          <div class="resources col-sm-4">
+            <div style="color: #736f7e">
+              <h2>Users</h2>
+              <h3><%= link_to 'FAQ Categories', faq_categories_path %></h3>
+              <h3><%= link_to 'FAQ Questions', faq_questions_path %></h3>
+            </div>
+            <hr>
+          </div>
       <% end %>
       <% if current_user.confirmed_brother? %>
-          <div class="resources col-sm-4"><div style="border-color: #00A000; border-size: 1px; border-style: solid;">
-            <h2>Brothers</h2>
-            <h3><%= link_to 'View Alumni-News-Letters', alumni_news_letters_path %></h3>
-            <h3><%= link_to 'Submit Receipt', new_receipt_path %></h3>
-            <h3><%= link_to 'Submit Community Service Hours', new_community_service_path %></h3>
-          </div></div>
+          <div class="resources col-sm-4">
+            <div style="color: #736f7e">
+              <h2>Brothers</h2>
+              <h3><%= link_to 'View Alumni-News-Letters', alumni_news_letters_path %></h3>
+              <h3><%= link_to 'Submit Receipt', new_receipt_path %></h3>
+              <h3><%= link_to 'Submit Community Service Hours', new_community_service_path %></h3>
+            </div>
+            <hr>
+          </div>
       <% end %>
-      <div class="clear"></div>
+      <div class="clear">
+      </div>
     </div>
   </div>
 </div>
