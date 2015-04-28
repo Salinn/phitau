@@ -54,7 +54,7 @@
       <% if current_user.multiple_have_permissions?(['admin','president']) %>
           <div class="resources col-sm-4">
             <div style="color: #736f7e">
-              <h2>Update FAQ</h2>
+              <h2>Users</h2>
               <h3><%= link_to 'Edit All Users', edit_all_path %></h3>
             </div>
             <hr>
@@ -63,7 +63,7 @@
       <% if current_user.multiple_have_permissions?(['admin','president','writer','second_vp']) %>
           <div class="resources col-sm-4">
             <div style="color: #736f7e">
-              <h2>Users</h2>
+              <h2>Update FAQ</h2>
               <h3><%= link_to 'FAQ Categories', faq_categories_path %></h3>
               <h3><%= link_to 'FAQ Questions', faq_questions_path %></h3>
             </div>

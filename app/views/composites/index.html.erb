@@ -1,18 +1,16 @@
 <div class="row">
   <div class="gallery_images">
     <% @composites.each do |composite| %>
-        <div style="padding: 20px; width: 400px;">
+        <div style="padding: 20px; width: 400px; display: inline-block;">
           <div class="card" style="width: 300px; margin: 0px;">
             <div align="center">
               <a href='<%= composite.picture_url %>' data-title='<%= composite.year %>' rel="lightbox[paddles]">
-                <%= image_tag composite.picture_url, class: 'img-responsive' %>
+                <%= image_tag composite.picture_url, class: 'composite-images' %>
               </a>
-              <h3><%= "#{composite.year} - #{composite.year.to_i + 1}" %> </h3>
+              <h3><%= link_to ("#{composite.year} - #{composite.year.to_i + 1}"), composite %> </h3>
             </div>
-            <div class="clear"></div>
           </div>
         </div>
-        <div class="clear"></div>
     <% end %>
   </div>
 </div>

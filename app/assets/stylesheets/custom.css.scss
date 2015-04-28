@@ -637,6 +637,10 @@ a.not-active:hover{
   padding-left: .5rem;
   padding-bottom: .5rem;
 }
+.composite-images {
+  max-width: 300px;
+  max-height: 200px;
+}
 .gallery_imges a.img:hover{
   background-color: transparent !important;
 }
