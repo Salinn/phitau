@@ -10,8 +10,10 @@
       <div class="user_info">
         <p>Name: <%= @user.first_name if @user.first_name? %> <%= " " + @user.last_name if @user.last_name? %></p>
         <p>Email: <%= @user.email %></p>
-        <p>Website Status: <%= @user.user_status.slice(0,1).capitalize if @user.user_status? %><%= @user.user_status.slice(1..-1) if @user.user_status? %></p>
-        <p>Phone Number: <%= @user.phone_number if @user.phone_number?%></p>
+        <p>Brotherhood Status: <%= @user.user_status.slice(0,1).capitalize if @user.user_status? %><%= @user.user_status.slice(1..-1) if @user.user_status? %></p>
+        <% if current_user && current_user.id == @user.id %>
+            <p>Phone Number: <%= @user.phone_number if @user.phone_number?%></p>
+        <% end %>
         <p>Home Town: <%= @user.home_town if @user.home_town?%><%= ", " + @user.state if @user.state?%></p>
         <p>Pledge Class: <%= @user.pledge_class if @user.pledge_class?%></p>
         <p>Major: <%= @user.major if @user.major?%></p>
@@ -19,9 +21,11 @@
       </div>
       <!--makes sure everything stays on the page-->
       <div class="clear"> </div>
-      <div>
-        <%= link_to "Edit Info", edit_user_path(@user), :class => "push_link_right" %>
-      </div>
+      <% if current_user && current_user.id == @user.id %>
+          <div>
+            <%= link_to "Edit Info", edit_user_path(@user), :class => "push_link_right" %>
+          </div>
+      <% end %>
       <br>
     </div>
   </div>

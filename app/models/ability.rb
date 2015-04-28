@@ -10,6 +10,7 @@ class Ability
     can [:show, :read], Image
     can [:show, :read], Gallery
     can [:show, :read], Post
+    can [:show, :read], User
     if user.user_status != nil
       can :subscribe, User
       can :show, User, :id => user.id
