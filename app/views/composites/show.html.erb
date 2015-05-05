@@ -1,14 +1,11 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Year:</strong>
-  <%= @composite.year %>
-</p>
-
-<p>
-  <strong>Picture:</strong>
-  <%= @composite.picture %>
-</p>
-
-<%= link_to 'Edit', edit_composite_path(@composite) %> |
-<%= link_to 'Back', composites_path %>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3 top-card-padding">
+    <div class="card">
+      <div align="center">
+          <%= image_tag @composite.picture_url, class: 'composite-image' %>
+        <div class="clear"></div>
+        <h3><%= "#{@composite.year} - #{@composite.year.to_i + 1}" %> </h3>
+      </div>
+    </div>
+  </div>
+</div>

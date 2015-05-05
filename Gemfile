@@ -61,6 +61,9 @@ gem 'gibbon'
 #server side
 gem 'puma'
 
+#stops us from deleting rows
+gem "paranoia", "~> 2.0"
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false

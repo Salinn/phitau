@@ -34,7 +34,7 @@ class User < ActiveRecord::Base
   end
 
   def send_alert_email
-    UserMailer.new_user_alert_email(self).deliver_later(wait: 1.minute)
+    UserMailer.new_user_alert_email(self).deliver!
   end
 
   def check_to_send_mailchimp_email
@@ -51,12 +51,16 @@ class User < ActiveRecord::Base
   end
 
   def mailchimp_send_email_invite
-    UserMailer.mailchimp_sign_up_user_email(self).deliver_later(wait: 1.minute)
+    UserMailer.mailchimp_sign_up_user_email(self).deliver!
   end
 
   def send_mailchimp_email
     mailchimp_send_email_invite
     redirect_to root_path, notice: "Thanks for registering for the Gamma Nu's Alumni News Letter!"
+  end
+
+  def multiple_have_permissions?(positions) #Takes an array of positions
+    positions.any? { |position| have_permissions?(position)}
   end
 
   def have_permissions?(permission)

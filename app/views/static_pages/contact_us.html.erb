@@ -88,9 +88,19 @@
               <%= image_tag brother.profile_picture_url, class:"user_img contact_img" if brother.profile_picture? %>
             </span>
             <span class="back contact-back-background" >
+              <% if brother.first_name? &&  brother.last_name? %>
+               <% name = "#{brother.first_name}  #{brother.last_name}" %>
+              <% elsif brother.first_name? %>
+               <% name = brother.first_name %>
+              <% elsif brother.last_name? %>
+               <% name =  brother.last_name %>
+              <% end %>
               <h3>
-                <%= brother.first_name if brother.first_name? %> <%= " " + brother.last_name if brother.last_name? %>
+                Account Info
               </h3>
+              <h4>
+                <%= link_to name, brother, style: 'color: #ffffff;' %>
+              </h4>
               <h3>
                 Email
               </h3>

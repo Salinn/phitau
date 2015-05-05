@@ -637,6 +637,14 @@ a.not-active:hover{
   padding-left: .5rem;
   padding-bottom: .5rem;
 }
+.composite-images {
+  max-width: 300px;
+  max-height: 200px;
+}
+.composite-image{
+  width: 100%;
+  padding-right: 1%;
+}
 .gallery_imges a.img:hover{
   background-color: transparent !important;
 }
@@ -886,6 +894,7 @@ body {
 .resources {
 //  width: 33%;
   float: left;
+  min-height: 200px;
   h2 {
     text-decoration: underline;
   }

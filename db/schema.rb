@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150329071359) do
+ActiveRecord::Schema.define(version: 20150422183557) do
 
   create_table "alumni_eternal_stories", force: true do |t|
     t.integer  "user_id"
@@ -19,7 +19,10 @@ ActiveRecord::Schema.define(version: 20150329071359) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "alumni_eternal_id"
+    t.datetime "deleted_at"
   end
+
+  add_index "alumni_eternal_stories", ["deleted_at"], name: "index_alumni_eternal_stories_on_deleted_at"
 
   create_table "alumni_eternals", force: true do |t|
     t.integer  "user_id"
@@ -29,7 +32,10 @@ ActiveRecord::Schema.define(version: 20150329071359) do
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.datetime "deleted_at"
   end
+
+  add_index "alumni_eternals", ["deleted_at"], name: "index_alumni_eternals_on_deleted_at"
 
   create_table "alumni_news_letters", force: true do |t|
     t.date     "released_date"
@@ -37,7 +43,10 @@ ActiveRecord::Schema.define(version: 20150329071359) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "news_letter_html",      limit: 255
+    t.datetime "deleted_at"
   end
+
+  add_index "alumni_news_letters", ["deleted_at"], name: "index_alumni_news_letters_on_deleted_at"
 
   create_table "community_services", force: true do |t|
     t.string   "event_name"
@@ -47,14 +56,20 @@ ActiveRecord::Schema.define(version: 20150329071359) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "hours_volunteered"
+    t.datetime "deleted_at"
   end
+
+  add_index "community_services", ["deleted_at"], name: "index_community_services_on_deleted_at"
 
   create_table "composites", force: true do |t|
     t.string   "year"
     t.string   "picture"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.datetime "deleted_at"
   end
+
+  add_index "composites", ["deleted_at"], name: "index_composites_on_deleted_at"
 
   create_table "faq_categories", force: true do |t|
     t.string   "title"
@@ -77,7 +92,10 @@ ActiveRecord::Schema.define(version: 20150329071359) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "post_id"
+    t.datetime "deleted_at"
   end
+
+  add_index "galleries", ["deleted_at"], name: "index_galleries_on_deleted_at"
 
   create_table "images", force: true do |t|
     t.string   "name"
@@ -88,14 +106,20 @@ ActiveRecord::Schema.define(version: 20150329071359) do
     t.integer  "gallery_id"
     t.integer  "post_id"
     t.string   "picture"
+    t.datetime "deleted_at"
   end
+
+  add_index "images", ["deleted_at"], name: "index_images_on_deleted_at"
 
   create_table "paddles", force: true do |t|
     t.string   "pledge_class"
     t.string   "picture"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.datetime "deleted_at"
   end
+
+  add_index "paddles", ["deleted_at"], name: "index_paddles_on_deleted_at"
 
   create_table "positions", force: true do |t|
     t.string   "position_name"
@@ -104,7 +128,10 @@ ActiveRecord::Schema.define(version: 20150329071359) do
     t.boolean  "on_eboard"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.datetime "deleted_at"
   end
+
+  add_index "positions", ["deleted_at"], name: "index_positions_on_deleted_at"
 
   create_table "posts", force: true do |t|
     t.string   "title"
@@ -115,7 +142,10 @@ ActiveRecord::Schema.define(version: 20150329071359) do
     t.datetime "updated_at"
     t.string   "image"
     t.boolean  "top_card"
+    t.datetime "deleted_at"
   end
+
+  add_index "posts", ["deleted_at"], name: "index_posts_on_deleted_at"
 
   create_table "receipts", force: true do |t|
     t.string   "total_spent"
@@ -124,13 +154,19 @@ ActiveRecord::Schema.define(version: 20150329071359) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
+    t.datetime "deleted_at"
   end
+
+  add_index "receipts", ["deleted_at"], name: "index_receipts_on_deleted_at"
 
   create_table "roles", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.datetime "deleted_at"
   end
+
+  add_index "roles", ["deleted_at"], name: "index_roles_on_deleted_at"
 
   create_table "text_messages", force: true do |t|
     t.string   "to_number"
@@ -139,7 +175,10 @@ ActiveRecord::Schema.define(version: 20150329071359) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "contact_info"
+    t.datetime "deleted_at"
   end
+
+  add_index "text_messages", ["deleted_at"], name: "index_text_messages_on_deleted_at"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -170,8 +209,10 @@ ActiveRecord::Schema.define(version: 20150329071359) do
     t.string   "pledge_class"
     t.boolean  "confirmed_brother"
     t.string   "user_status"
+    t.datetime "deleted_at"
   end
 
+  add_index "users", ["deleted_at"], name: "index_users_on_deleted_at"
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
