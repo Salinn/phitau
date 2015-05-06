@@ -24,17 +24,26 @@ RSpec.describe PaddlesController, type: :controller do
   # Paddle. As you add validations to Paddle, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+    {
+        pledge_class: '1967',
+        picture: 'https://s3.amazonaws.com/phitau/test/paddle1.jpg'
+    }
   }
 
   let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
+    {
+        pledge_class: nil,
+        picture: nil
+    }
   }
 
   # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in
   # PaddlesController. Be sure to keep this updated too.
-  let(:valid_session) { {} }
+  let(:valid_session) {
+    @user = FactoryGirl.create(:user)
+    sign_in :user, @user
+  }
 
   describe "GET #index" do
     it "assigns all paddles as @paddles" do
@@ -103,14 +112,17 @@ RSpec.describe PaddlesController, type: :controller do
   describe "PUT #update" do
     context "with valid params" do
       let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
+        {
+            pledge_class: '1984',
+            picture: 'https://s3.amazonaws.com/phitau/test/paddle2.jpg'
+        }
       }
 
       it "updates the requested paddle" do
         paddle = Paddle.create! valid_attributes
         put :update, {:id => paddle.to_param, :paddle => new_attributes}, valid_session
         paddle.reload
-        skip("Add assertions for updated state")
+        expect(assigns(:paddle).attributes[:pledge_class]).to match(new_attributes[:pledge_class])
       end
 
       it "assigns the requested paddle as @paddle" do
