@@ -23,11 +23,13 @@ RSpec.describe FaqQuestionsController, :type => :controller do
   # This should return the minimal set of attributes required to create a valid
   # FaqQuestion. As you add validations to FaqQuestion, be sure to
   # adjust the attributes here as well.
+  let(:faq_category) { create(:faq_category) }
+
   let(:valid_attributes) {
     {
         title: 'Does everyone in your chapter talk, dress and act the same?',
         content: 'We pride ourselves on',
-        faq_category_id: 1
+        faq_category_id: faq_category.id
     }
   }
 
@@ -49,7 +51,7 @@ RSpec.describe FaqQuestionsController, :type => :controller do
 
   describe "GET index" do
     it "assigns all faq_questions as @faq_questions" do
-      faq_question = FaqQuestion.create! valid_attributes
+      faq_question = FaqQuestion.create!(valid_attributes)
       get :index, {}, valid_session
       expect(assigns(:faq_questions)).to eq([faq_question])
     end

@@ -24,11 +24,17 @@ RSpec.describe AlumniEternalStoriesController, type: :controller do
   # AlumniEternalStory. As you add validations to AlumniEternalStory, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+    {
+      user_id:  @user = FactoryGirl.create(:user),
+      story: '',
+      alumni_eternal_id: ''
+    }
   }
 
   let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
+    {
+        #TODO Add Validation for This!
+    }
   }
 
   # This should return the minimal set of values that should be in the session

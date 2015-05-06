@@ -6,7 +6,7 @@ FactoryGirl.define do
     first_name 'Paul'
     last_name 'Darragh'
     phone_number '15088388579'
-    role 'admin'
+    user_status 'admin'
     password 'password123'
   end
 end

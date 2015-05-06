@@ -16,16 +16,12 @@ class Ability
       can :show, User, :id => user.id
       can :update, User, :id => user.id
       can [:show, :read, :create, :new], Image
-      can [:show, :update, :new, :read, :create], ValentinesDayDelievery
       if user.confirmed_brother?
         can [:show, :read], AlumniNewsLetter
         can [:create, :update], Receipt
         can [:create], User
         can [:create, :update, :new], CommunityService
         can :user, :controls
-      end
-      if user.have_permissions?('philanthropy')
-        can [:show, :update, :new, :read, :create, :delete], ValentinesDayDelievery
       end
       if user.have_permissions?('recruitment')
         can [:create, :read, :show], TextMessage
