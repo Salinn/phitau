@@ -48,6 +48,14 @@ ActiveRecord::Schema.define(version: 20150422183557) do
 
   add_index "alumni_news_letters", ["deleted_at"], name: "index_alumni_news_letters_on_deleted_at"
 
+  create_table "chairs", force: true do |t|
+    t.string   "chair_name"
+    t.integer  "user_id"
+    t.string   "role"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "community_services", force: true do |t|
     t.string   "event_name"
     t.date     "date_of_event"
