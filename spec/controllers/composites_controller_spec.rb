@@ -24,17 +24,26 @@ RSpec.describe CompositesController, type: :controller do
   # Composite. As you add validations to Composite, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+    {
+        year: 2015,
+        picture: 'www.some_picture.com'
+    }
   }
 
   let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
+    {
+        year: nil,
+        picture: nil
+    }
   }
 
   # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in
   # CompositesController. Be sure to keep this updated too.
-  let(:valid_session) { {} }
+  let(:valid_session) {
+    @user = FactoryGirl.create(:user)
+    sign_in :user, @user
+  }
 
   describe "GET #index" do
     it "assigns all composites as @composites" do
@@ -103,7 +112,10 @@ RSpec.describe CompositesController, type: :controller do
   describe "PUT #update" do
     context "with valid params" do
       let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
+        {
+            year: 2014,
+            picture: 'www.some_picture.com'
+        }
       }
 
       it "updates the requested composite" do

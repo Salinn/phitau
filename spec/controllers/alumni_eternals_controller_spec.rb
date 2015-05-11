@@ -24,17 +24,32 @@ RSpec.describe AlumniEternalsController, type: :controller do
   # AlumniEternal. As you add validations to AlumniEternal, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+    {
+        user_id: 1,
+        first_name: 'Paul',
+        last_name: 'Darragh',
+        picture: '',
+        description: 'He was a good guy'
+    }
   }
 
   let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
+    {
+        user_id: nil,
+        first_name: nil,
+        last_name: nil,
+        picture: nil,
+        description: nil
+    }
   }
 
   # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in
   # AlumniEternalsController. Be sure to keep this updated too.
-  let(:valid_session) { {} }
+  let(:valid_session) {
+    @user = FactoryGirl.create(:user)
+    sign_in :user, @user
+  }
 
   describe "GET #index" do
     it "assigns all alumni_eternals as @alumni_eternals" do
@@ -103,7 +118,13 @@ RSpec.describe AlumniEternalsController, type: :controller do
   describe "PUT #update" do
     context "with valid params" do
       let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
+        {
+            user_id: 1,
+            first_name: 'Paul',
+            last_name: 'Darragh',
+            picture: '',
+            description: 'He was a really good guy'
+        }
       }
 
       it "updates the requested alumni_eternal" do

@@ -24,17 +24,32 @@ RSpec.describe CommunityServicesController, type: :controller do
   # CommunityService. As you add validations to CommunityService, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+    {
+        event_name: 'Dog Walking',
+        date_of_event: Data.now,
+        link_to_event: 'www.link_to_event.com',
+        user_id: 1,
+        hours_volunteered: 4
+    }
   }
 
   let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
+    {
+        event_name: nil,
+        date_of_event: nil,
+        link_to_event: nil,
+        user_id: nil,
+        hours_volunteered: nil
+    }
   }
 
   # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in
   # CommunityServicesController. Be sure to keep this updated too.
-  let(:valid_session) { {} }
+  let(:valid_session) {
+    @user = FactoryGirl.create(:user)
+    sign_in :user, @user
+  }
 
   describe "GET #index" do
     it "assigns all community_services as @community_services" do
@@ -103,7 +118,13 @@ RSpec.describe CommunityServicesController, type: :controller do
   describe "PUT #update" do
     context "with valid params" do
       let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
+        {
+            event_name: 'Dog Petting',
+            date_of_event: Data.now,
+            link_to_event: 'www.link_to_event.com',
+            user_id: 1,
+            hours_volunteered: 4
+        }
       }
 
       it "updates the requested community_service" do

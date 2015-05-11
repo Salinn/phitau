@@ -25,22 +25,27 @@ RSpec.describe AlumniEternalStoriesController, type: :controller do
   # adjust the attributes here as well.
   let(:valid_attributes) {
     {
-      user_id:  @user = FactoryGirl.create(:user),
-      story: '',
-      alumni_eternal_id: ''
+      user_id: 1,
+      story: 'Something touching about an alumni',
+      alumni_eternal_id: 1
     }
   }
 
   let(:invalid_attributes) {
     {
-        #TODO Add Validation for This!
+        user_id: nil,
+        story: nil,
+        alumni_eternal_id: nil
     }
   }
 
   # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in
   # AlumniEternalStoriesController. Be sure to keep this updated too.
-  let(:valid_session) { {} }
+  let(:valid_session) {
+    @user = FactoryGirl.create(:user)
+    sign_in :user, @user
+  }
 
   describe "GET #index" do
     it "assigns all alumni_eternal_stories as @alumni_eternal_stories" do
@@ -109,7 +114,11 @@ RSpec.describe AlumniEternalStoriesController, type: :controller do
   describe "PUT #update" do
     context "with valid params" do
       let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
+        {
+            user_id:  1,
+            story: 'Updated Something touching about an alumni',
+            alumni_eternal_id: 1
+        }
       }
 
       it "updates the requested alumni_eternal_story" do

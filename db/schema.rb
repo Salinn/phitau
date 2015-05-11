@@ -48,14 +48,6 @@ ActiveRecord::Schema.define(version: 20150422183557) do
 
   add_index "alumni_news_letters", ["deleted_at"], name: "index_alumni_news_letters_on_deleted_at"
 
-  create_table "chairs", force: true do |t|
-    t.string   "chair_name"
-    t.integer  "user_id"
-    t.string   "role"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "community_services", force: true do |t|
     t.string   "event_name"
     t.date     "date_of_event"
@@ -223,27 +215,6 @@ ActiveRecord::Schema.define(version: 20150422183557) do
   add_index "users", ["deleted_at"], name: "index_users_on_deleted_at"
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
-
-  create_table "valentines_day_delieveries", force: true do |t|
-    t.integer  "red_flower_quantity"
-    t.integer  "white_flower_quantity"
-    t.integer  "pink_flower_quantity"
-    t.integer  "large_stuffed_animial_quantity"
-    t.integer  "medium_stuffed_animial_quantity"
-    t.integer  "small_animial_quantity"
-    t.string   "buyer_name"
-    t.string   "buyer_phone_number"
-    t.string   "recievers_name"
-    t.string   "recievers_phone_number"
-    t.string   "delivery_location"
-    t.time     "delivery_time"
-    t.string   "delivery_instructions"
-    t.string   "payment"
-    t.string   "paypal_cost"
-    t.string   "total_price"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
   create_table "valentines_day_inventories", force: true do |t|
     t.integer  "total_red_flowers"
