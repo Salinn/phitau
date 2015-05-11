@@ -24,17 +24,30 @@ RSpec.describe ReceiptsController, :type => :controller do
   # Receipt. As you add validations to Receipt, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+    {
+        total_spent: '20.13',
+        picture_of_receipt: 'www.picture.com',
+        seen_receipt: true,
+        user_id: 1
+    }
   }
 
   let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
+    {
+        total_spent: nil,
+        picture_of_receipt: nil,
+        seen_receipt: nil,
+        user_id: nil
+    }
   }
 
   # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in
   # ReceiptsController. Be sure to keep this updated too.
-  let(:valid_session) { {} }
+  let(:valid_session) {
+    @user = FactoryGirl.create(:user)
+    sign_in :user, @user
+  }
 
   describe "GET index" do
     it "assigns all receipts as @receipts" do
@@ -103,7 +116,12 @@ RSpec.describe ReceiptsController, :type => :controller do
   describe "PUT update" do
     describe "with valid params" do
       let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
+        {
+            total_spent: '213.13',
+            picture_of_receipt: 'www.one_picture.com',
+            seen_receipt: true,
+            user_id: 1
+        }
       }
 
       it "updates the requested receipt" do

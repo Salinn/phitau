@@ -32,10 +32,6 @@ Phitau::Application.routes.draw do
 
   get 'valentines_day' => 'valentines_day_delieveries#new'
 
-  resources :valentines_day_inventories
-
-  resources :meetings
-
   resources :text_messages
 
   get 'text' => 'text_messages#new'
