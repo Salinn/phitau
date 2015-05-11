@@ -20,7 +20,7 @@
   <div class="col-md-8 col-md-offset-2">
     <% @posts.each do |post| %>
         <div class="card">
-          <h5 style="float: right;">Posted on <%= post.created_at.strftime('%A, %b %d') %></h5>
+          <h5 style="float: right;">Posted on <%= post.created_at.strftime('%m/%d/%Y') %></h5>
           <br>
           <h1 class="card_header"><%= link_to post.title, post %></h1>
           <div class="img_div">
