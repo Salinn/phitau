@@ -16,7 +16,6 @@ RSpec.describe "alumni_eternal_stories/index", type: :view do
 
   it "renders a list of alumni_eternal_stories" do
     render
-    assert_select "tr>td", :text => 1.to_s, :count => 2
     assert_select "tr>td", :text => "MyText".to_s, :count => 2
   end
 end

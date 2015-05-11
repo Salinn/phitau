@@ -114,7 +114,7 @@ RSpec.describe TextMessagesController, :type => :controller do
       let(:new_attributes) {
         {
             to_number: '15088388579',
-            message: 'Come check out this rush event'
+            message: 'Come check out this rush event again'
         }
       }
 
