@@ -1,12 +1,20 @@
 class User < ActiveRecord::Base
-  has_many :chairs
-  has_many :eboards
   has_many :positions
   has_many :roles
   has_many :receipts
   has_many :attendances
   has_many :meetings, :through => :attendances
   has_many :community_services
+
+  validates :first_name, length: { minimum: 2 }
+  validates :last_name, length: { minimum: 2 }
+=begin
+  validate check_user_status
+
+  def check_user_status
+    USERSTATUSES.include?(self.user_status)
+  end
+=end
 
   searchkick
 

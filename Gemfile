@@ -85,6 +85,8 @@ group :development, :test do
   gem 'capybara'
   gem 'shoulda-matchers'
   gem 'cucumber-rails', require: false
+
+  gem 'faker'
 end
 
 #Gems used in production
