@@ -25,7 +25,7 @@ RSpec.describe CompositesController, type: :controller do
   # adjust the attributes here as well.
   let(:valid_attributes) {
     {
-        year: 2015,
+        year: '2015',
         picture: 'www.some_picture.com'
     }
   }
@@ -113,7 +113,7 @@ RSpec.describe CompositesController, type: :controller do
     context "with valid params" do
       let(:new_attributes) {
         {
-            year: 2014,
+            year: '2014',
             picture: 'www.some_picture.com'
         }
       }
@@ -122,7 +122,7 @@ RSpec.describe CompositesController, type: :controller do
         composite = Composite.create! valid_attributes
         put :update, {:id => composite.to_param, :composite => new_attributes}, valid_session
         composite.reload
-        skip("Add assertions for updated state")
+        expect(composite.attributes).to include( { 'year' => '2014' } )
       end
 
       it "assigns the requested composite as @composite" do

@@ -29,7 +29,7 @@ RSpec.describe FaqQuestionsController, :type => :controller do
     {
         title: 'Does everyone in your chapter talk, dress and act the same?',
         content: 'We pride ourselves on',
-        faq_category_id: faq_category.id
+        faq_category_id: 1
     }
   }
 
@@ -117,7 +117,7 @@ RSpec.describe FaqQuestionsController, :type => :controller do
     describe "with valid params" do
       let(:new_attributes) {
         {
-            title: 'Does everyone in your chapter talk, dress and act the same?',
+            title: 'Does does everyone in your chapter talk, dress and act the same?',
             content: 'We pride ourselves on',
             faq_category_id: 2,
         }
@@ -127,7 +127,7 @@ RSpec.describe FaqQuestionsController, :type => :controller do
         faq_question = FaqQuestion.create! valid_attributes
         put :update, {:id => faq_question.to_param, :faq_question => new_attributes}, valid_session
         faq_question.reload
-        skip("Add assertions for updated state")
+        expect(faq_question.attributes).to include( { 'title' => 'Does does everyone in your chapter talk, dress and act the same?' } )
       end
 
       it "assigns the requested faq_question as @faq_question" do

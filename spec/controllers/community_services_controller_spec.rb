@@ -131,7 +131,7 @@ RSpec.describe CommunityServicesController, type: :controller do
         community_service = CommunityService.create! valid_attributes
         put :update, {:id => community_service.to_param, :community_service => new_attributes}, valid_session
         community_service.reload
-        skip("Add assertions for updated state")
+        expect(community_service.attributes).to include( { 'event_name' => 'Dog Petting' } )
       end
 
       it "assigns the requested community_service as @community_service" do

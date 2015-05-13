@@ -128,7 +128,7 @@ RSpec.describe ReceiptsController, :type => :controller do
         receipt = Receipt.create! valid_attributes
         put :update, {:id => receipt.to_param, :receipt => new_attributes}, valid_session
         receipt.reload
-        skip("Add assertions for updated state")
+        expect(receipt.attributes).to include( { "total_spent" => '213.13' } )
       end
 
       it "assigns the requested receipt as @receipt" do

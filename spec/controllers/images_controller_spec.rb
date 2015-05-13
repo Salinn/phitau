@@ -125,7 +125,7 @@ RSpec.describe ImagesController, :type => :controller do
         image = Image.create! valid_attributes
         put :update, {:id => image.to_param, :image => new_attributes}, valid_session
         image.reload
-        skip("Add assertions for updated state")
+        expect(image.attributes).to include( { 'gallery_id' => '2' } )
       end
 
       it "assigns the requested image as @image" do

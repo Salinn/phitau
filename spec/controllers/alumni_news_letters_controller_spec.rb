@@ -122,7 +122,7 @@ RSpec.describe AlumniNewsLettersController, :type => :controller do
         alumni_news_letter = AlumniNewsLetter.create! valid_attributes
         put :update, {:id => alumni_news_letter.to_param, :alumni_news_letter => new_attributes}, valid_session
         alumni_news_letter.reload
-        skip("Add assertions for updated state")
+        expect(alumni_news_letter.attributes).to include( { 'news_letter_html' => 'some other link' } )
       end
 
       it "assigns the requested alumni_news_letter as @alumni_news_letter" do

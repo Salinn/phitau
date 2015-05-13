@@ -116,7 +116,7 @@ RSpec.describe RolesController, type: :controller do
         role = Role.create! valid_attributes
         put :update, {:id => role.to_param, :role => new_attributes}, valid_session
         role.reload
-        skip("Add assertions for updated state")
+        expect(role.attributes).to include( { "name" => 'Web Master' } )
       end
 
       it "assigns the requested role as @role" do

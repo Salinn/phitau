@@ -122,7 +122,7 @@ RSpec.describe PaddlesController, type: :controller do
         paddle = Paddle.create! valid_attributes
         put :update, {:id => paddle.to_param, :paddle => new_attributes}, valid_session
         paddle.reload
-        expect(assigns(:paddle).attributes[:pledge_class]).to match(new_attributes[:pledge_class])
+        expect(paddle.attributes).to include( { 'pledge_class' => '1984' } )
       end
 
       it "assigns the requested paddle as @paddle" do

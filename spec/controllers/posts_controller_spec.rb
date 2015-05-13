@@ -125,7 +125,7 @@ RSpec.describe PostsController, :type => :controller do
         post = Post.create! valid_attributes
         put :update, {:id => post.to_param, :post => new_attributes}, valid_session
         post.reload
-        expect(assigns(:post).attributes[:title]).to match(new_attributes[:title])
+        expect(post.attributes).to include( { "title" => 'Fall Clean Up Updated' } )
       end
 
       it "assigns the requested post as @post" do

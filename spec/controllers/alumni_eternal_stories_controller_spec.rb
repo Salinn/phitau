@@ -125,7 +125,7 @@ RSpec.describe AlumniEternalStoriesController, type: :controller do
         alumni_eternal_story = AlumniEternalStory.create! valid_attributes
         put :update, {:id => alumni_eternal_story.to_param, :alumni_eternal_story => new_attributes}, valid_session
         alumni_eternal_story.reload
-        skip("Add assertions for updated state")
+        expect(alumni_eternal_story.attributes).to include( { 'story' => 'Updated Something touching about an alumni' } )
       end
 
       it "assigns the requested alumni_eternal_story as @alumni_eternal_story" do

@@ -122,7 +122,7 @@ RSpec.describe GalleriesController, :type => :controller do
         gallery = Gallery.create! valid_attributes
         put :update, {:id => gallery.to_param, :gallery => new_attributes}, valid_session
         gallery.reload
-        skip("Add assertions for updated state")
+        expect(gallery.attributes).to include( { 'post_id' => '1' } )
       end
 
       it "assigns the requested gallery as @gallery" do

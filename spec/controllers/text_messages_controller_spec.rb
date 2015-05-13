@@ -122,7 +122,7 @@ RSpec.describe TextMessagesController, :type => :controller do
         text_message = TextMessage.create! valid_attributes
         put :update, {:id => text_message.to_param, :text_message => new_attributes}, valid_session
         text_message.reload
-        skip("Add assertions for updated state")
+        expect(text_message.attributes).to include( { "to_number" => 'Come check out this rush event again' } )
       end
 
       it "assigns the requested text_message as @text_message" do

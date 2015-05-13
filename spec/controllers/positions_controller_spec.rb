@@ -128,7 +128,7 @@ RSpec.describe PositionsController, type: :controller do
         position = Position.create! valid_attributes
         put :update, {:id => position.to_param, :position => new_attributes}, valid_session
         position.reload
-        skip("Add assertions for updated state")
+        expect(position.attributes).to include( { 'position_name' => '1st Vice-President' } )
       end
 
       it "assigns the requested position as @position" do

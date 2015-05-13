@@ -119,7 +119,7 @@ RSpec.describe FaqCategoriesController, :type => :controller do
         faq_category = FaqCategory.create! valid_attributes
         put :update, {:id => faq_category.to_param, :faq_category => new_attributes}, valid_session
         faq_category.reload
-        skip("Add assertions for updated state")
+        expect(faq_category.attributes).to include( { 'title' => 'Rushing' } )
       end
 
       it "assigns the requested faq_category as @faq_category" do
