@@ -13,11 +13,18 @@ RSpec.describe User, :type => :model do
   it "is invalid without a last name" do
     expect(FactoryGirl.build(:user, last_name: nil)).to_not be_valid
   end
-  it "has a valid user status"
-  # its(:email) {should == 'pmdspam@gmail.com'}
-  # its(:first_name) {should == 'Paul'}
-  # its(:last_name) {should == 'Darragh'}
-  # its(:phone_number) {should == '15088388579'}
-  # its(:role) {should == 'admin'}
-
+  it "is invalid without an email" do
+    expect(FactoryGirl.build(:user, email: nil)).to_not be_valid
+  end
+  it "is invalid without a phone number" do
+    expect(FactoryGirl.build(:user, phone_number: nil)).to be_valid
+  end
+  
+  it "should return a contacts full name as a string" do
+    user = FactoryGirl.build(:user, first_name: 'Matt', last_name: 'Smith')
+    user.name.should == "Matt Smith"
+  end
+  
+  #Possibly look into working on tests for mailchimp
+  #Possibly look into working on tests for roles, might switch to rollify
 end
