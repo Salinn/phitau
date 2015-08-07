@@ -30,6 +30,7 @@ gem 'lightbox2-rails'
 
 #Text editor for those who don't know how to use css to format text
 gem 'tinymce-rails'
+gem 'ckeditor'
 
 #Stops webcralwers from signing up
 gem "recaptcha", :require => "recaptcha/rails"
