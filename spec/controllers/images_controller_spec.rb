@@ -23,11 +23,23 @@ RSpec.describe ImagesController, :type => :controller do
   # This should return the minimal set of attributes required to create a valid
   # Image. As you add validations to Image, be sure to
   # adjust the attributes here as well.
+  let(:gallery) { 
+    Gallery.new(name:"abcdefg") 
+  }
+  
+  let(:valid_attributes) {
+    {
+        name: 'Fall Cleanup 2014',
+        gallery_id: :gallery,
+        remote_picture_url: 'http://gammanu.org/images/13'
+    }
+  }
+  
   let(:valid_attributes) {
     {
         name: 'Fall Cleanup 2014',
         gallery_id: '1',
-        picture: 'http://gammanu.org/images/13'
+        remote_picture_url: 'http://gammanu.org/images/13'
     }
   }
 
