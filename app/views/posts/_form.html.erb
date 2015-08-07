@@ -36,6 +36,18 @@
       </div>
 
       <div class="clear"></div>
+      
+      <div class="field">
+        <%= f.fields_for :image, @post.image do |image_fields| %>
+          <%= image_fields.text_field :name, placeholder: 'Picture Name' %><br>
+          <%= image_fields.file_field :picture, placeholder: 'Image File' %><br>
+          <%= image_fields.text_field :remote_picture_url, placeholder: 'Or input url of photo' %><br>
+          <p>Photot Gallery</p>
+          <%= image_fields.collection_select :gallery_id, @galleries, :id, :name, :include_blank => true, class: 'col-md-3' %>
+      <% end %>
+    </div>
+  
+     <div class="clear"></div>
       <div class="actions" align="center">
         <%= f.submit %>
       </div>

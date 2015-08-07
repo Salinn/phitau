@@ -1,6 +1,8 @@
 class Post < ActiveRecord::Base
-  has_many :images
+  has_one :image
   has_many :galleries
+  
+  accepts_nested_attributes_for :image
 
   validates :title, presence: true, length: { minimum: 5  }
   validates :content, presence: true, length: { minimum: 10  }
