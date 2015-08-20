@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Rush interview:</strong>
+  <%= @interview_time.rush_interview %>
+</p>
+
+<p>
+  <strong>Interview time:</strong>
+  <%= @interview_time.interview_time %>
+</p>
+
+<p>
+  <strong>Interview date:</strong>
+  <%= @interview_time.interview_date %>
+</p>
+
+<%= link_to 'Edit', edit_interview_time_path(@interview_time) %> |
+<%= link_to 'Back', interview_times_path %>

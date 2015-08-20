@@ -1,0 +1,53 @@
+<h1>Listing interview_questionnaires</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Rush interview</th>
+      <th>Date of birth</th>
+      <th>Hometown</th>
+      <th>Current address</th>
+      <th>Room number</th>
+      <th>Grade point average</th>
+      <th>Major</th>
+      <th>Year in school</th>
+      <th>Nickname</th>
+      <th>Outside activities</th>
+      <th>Hobbies</th>
+      <th>Brothers you know</th>
+      <th>Rush events attended</th>
+      <th>Reason for rushing</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @interview_questionnaires.each do |interview_questionnaire| %>
+      <tr>
+        <td><%= interview_questionnaire.rush_interview %></td>
+        <td><%= interview_questionnaire.date_of_birth %></td>
+        <td><%= interview_questionnaire.hometown %></td>
+        <td><%= interview_questionnaire.current_address %></td>
+        <td><%= interview_questionnaire.room_number %></td>
+        <td><%= interview_questionnaire.grade_point_average %></td>
+        <td><%= interview_questionnaire.major %></td>
+        <td><%= interview_questionnaire.year_in_school %></td>
+        <td><%= interview_questionnaire.nickname %></td>
+        <td><%= interview_questionnaire.outside_activities %></td>
+        <td><%= interview_questionnaire.hobbies %></td>
+        <td><%= interview_questionnaire.brothers_you_know %></td>
+        <td><%= interview_questionnaire.rush_events_attended %></td>
+        <td><%= interview_questionnaire.reason_for_rushing %></td>
+        <td><%= link_to 'Show', interview_questionnaire %></td>
+        <td><%= link_to 'Edit', edit_interview_questionnaire_path(interview_questionnaire) %></td>
+        <td><%= link_to 'Destroy', interview_questionnaire, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Interview questionnaire', new_interview_questionnaire_path %>

@@ -1,0 +1,2 @@
+module InterviewTimesHelper
+end

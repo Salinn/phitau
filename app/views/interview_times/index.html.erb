@@ -1,0 +1,31 @@
+<h1>Listing interview_times</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Rush interview</th>
+      <th>Interview time</th>
+      <th>Interview date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @interview_times.each do |interview_time| %>
+      <tr>
+        <td><%= interview_time.rush_interview %></td>
+        <td><%= interview_time.interview_time %></td>
+        <td><%= interview_time.interview_date %></td>
+        <td><%= link_to 'Show', interview_time %></td>
+        <td><%= link_to 'Edit', edit_interview_time_path(interview_time) %></td>
+        <td><%= link_to 'Destroy', interview_time, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Interview time', new_interview_time_path %>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150819161228) do
+ActiveRecord::Schema.define(version: 20150820213813) do
 
   create_table "alumni_eternal_stories", force: true do |t|
     t.integer  "user_id"
@@ -47,6 +47,15 @@ ActiveRecord::Schema.define(version: 20150819161228) do
   end
 
   add_index "alumni_news_letters", ["deleted_at"], name: "index_alumni_news_letters_on_deleted_at"
+
+  create_table "bids", force: true do |t|
+    t.integer  "rush_interview_id"
+    t.string   "bid_given"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "bids", ["rush_interview_id"], name: "index_bids_on_rush_interview_id"
 
   create_table "community_services", force: true do |t|
     t.string   "event_name"
@@ -126,6 +135,37 @@ ActiveRecord::Schema.define(version: 20150819161228) do
 
   add_index "images", ["deleted_at"], name: "index_images_on_deleted_at"
 
+  create_table "interview_questionnaires", force: true do |t|
+    t.integer  "rush_interview_id"
+    t.date     "date_of_birth"
+    t.string   "hometown"
+    t.string   "current_address"
+    t.string   "room_number"
+    t.string   "grade_point_average"
+    t.string   "major"
+    t.integer  "year_in_school"
+    t.string   "nickname"
+    t.text     "outside_activities"
+    t.text     "hobbies"
+    t.text     "brothers_you_know"
+    t.string   "rush_events_attended"
+    t.text     "reason_for_rushing"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "interview_questionnaires", ["rush_interview_id"], name: "index_interview_questionnaires_on_rush_interview_id"
+
+  create_table "interview_times", force: true do |t|
+    t.integer  "rush_interview_id"
+    t.time     "interview_time"
+    t.date     "interview_date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "interview_times", ["rush_interview_id"], name: "index_interview_times_on_rush_interview_id"
+
   create_table "paddles", force: true do |t|
     t.string   "pledge_class"
     t.string   "picture"
@@ -182,6 +222,14 @@ ActiveRecord::Schema.define(version: 20150819161228) do
   end
 
   add_index "roles", ["deleted_at"], name: "index_roles_on_deleted_at"
+
+  create_table "rush_interviews", force: true do |t|
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "rush_interviews", ["user_id"], name: "index_rush_interviews_on_user_id"
 
   create_table "text_messages", force: true do |t|
     t.string   "to_number"

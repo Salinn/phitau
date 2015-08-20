@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Rush interview:</strong>
+  <%= @bid.rush_interview %>
+</p>
+
+<p>
+  <strong>Bid given:</strong>
+  <%= @bid.bid_given %>
+</p>
+
+<%= link_to 'Edit', edit_bid_path(@bid) %> |
+<%= link_to 'Back', bids_path %>

@@ -1,0 +1,29 @@
+<%= form_for(@interview_time) do |f| %>
+  <% if @interview_time.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@interview_time.errors.count, "error") %> prohibited this interview_time from being saved:</h2>
+
+      <ul>
+      <% @interview_time.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :rush_interview %><br>
+    <%= f.text_field :rush_interview %>
+  </div>
+  <div class="field">
+    <%= f.label :interview_time %><br>
+    <%= f.time_select :interview_time %>
+  </div>
+  <div class="field">
+    <%= f.label :interview_date %><br>
+    <%= f.date_select :interview_date %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

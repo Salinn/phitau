@@ -1,5 +1,13 @@
 Phitau::Application.routes.draw do
 
+  resources :interview_questionnaires
+
+  resources :bids
+
+  resources :interview_times
+
+  resources :rush_interviews
+
   resources :events
 
   resources :alumni_eternal_stories
