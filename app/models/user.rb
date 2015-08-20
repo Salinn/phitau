@@ -16,8 +16,6 @@ class User < ActiveRecord::Base
   end
 =end
 
-  searchkick
-
   USERSTATUSES = ["potential new member", "associate member", "alumni", "current brother", "coop"]
   ALLROLES = ["alumni", "current brother", "potential new member", "dummy",
               "president","first_vp","second_vp","treasurer","sergeant","chaplain",

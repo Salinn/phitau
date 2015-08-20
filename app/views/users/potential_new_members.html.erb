@@ -1,16 +1,33 @@
 <div class="row">
-  <div class="col-md-6 col-md-offset-3 top-card-padding">
+  <div class="col-md-8 col-md-offset-2 top-card-padding">
     <div class="card">
       <div id="page-wrap">
+        <div align="center">
+          <%= search_form_for @search, url: potentials_path do |f| %>
+              <div class="field">
+                <%= f.text_field :first_name_cont, placeholder: 'Search by First Name'  %>
+                <%= f.text_field :last_name_cont, placeholder: 'Search by Last Name'  %>
+                <%= f.search_field :phone_number_cont, placeholder: 'Search by Phone Number' %>
+                <%= f.search_field :email_cont, placeholder: 'Search by Email' %>
+              </div>
+              <div class="actions" style='display: inline;'>
+                <%= f.submit "Search Potentials" %>
+              </div>
+              <div style='display: inline;'>
+                <%= link_to 'Clear Search', potentials_path %>
+              </div>
+          <% end %>
+        </div>
+
+        <br>
+
         <table class="potentials-table">
           <thead>
           <tr>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Phone Number</th>
-            <th>Email</th>
-            <th>City</th>
-            <th>State</th>
+            <th><%= sort_link @search, :first_name,'First Name' %></th>
+            <th><%= sort_link @search, :last_name,'Last Name' %></th>
+            <th><%= sort_link @search, :phone_number, 'Phone Number' %></th>
+            <th><%= sort_link @search, :email, 'Email' %></th>
           </tr>
           </thead>
           <tbody>
@@ -20,25 +37,10 @@
                 <td><%= potential.last_name? ? potential.last_name : 'N/A' %></td>
                 <td><%= potential.phone_number? ? potential.phone_number : 'N/A' %></td>
                 <td><%= potential.email? ? potential.email : 'N/A' %></td>
-                <td><%= potential.home_town? ? potential.home_town : 'N/A' %></td>
-                <td><%= potential.state? ? potential.state : 'N/A' %></td>
               </tr>
           <% end %>
           </tbody>
         </table>
-      </div>
-      <div class="col-md-6 center-block">
-        <div align="center">
-          <h3>
-            <% if @potentials.previous_page %>
-              <%= link_to "< Previous", params.merge(:page => @potentials.previous_page) %>
-            <% end %>
-            Page <%= @potentials.current_page %> of <%= @potentials.total_pages %>
-            <% if @potentials.next_page %>
-              <%= link_to "Next >", params.merge(:page => @potentials.next_page) %>
-            <% end %>
-          </h3>
-        </div>
       </div>
       <div class="clear"></div>
     </div>

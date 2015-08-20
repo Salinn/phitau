@@ -49,9 +49,8 @@ gem 'will_paginate', '3.0.4'
 gem 'bootstrap-will_paginate', '0.0.9'
 
 #Searching
-gem 'elasticsearch'
-gem 'searchkick'
 gem 'chosen-rails'
+gem 'ransack'
 
 #JQuery for datepicker and timepicker
 gem 'jquery-ui-rails'

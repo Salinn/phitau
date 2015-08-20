@@ -60,7 +60,8 @@ class UsersController < ApplicationController
   end
 
   def potential_new_members
-    @potentials = User.where(user_status: "potential new member").page(params[:page]).per_page(15)
+    @search = User.where(user_status: "potential new member").ransack(params[:q])
+    @potentials = @search.result
   end
 
   def subscribe
