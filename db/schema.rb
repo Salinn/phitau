@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150422183557) do
+ActiveRecord::Schema.define(version: 20150819161228) do
 
   create_table "alumni_eternal_stories", force: true do |t|
     t.integer  "user_id"
@@ -70,6 +70,21 @@ ActiveRecord::Schema.define(version: 20150422183557) do
   end
 
   add_index "composites", ["deleted_at"], name: "index_composites_on_deleted_at"
+
+  create_table "events", force: true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.time     "start_time"
+    t.time     "end_time"
+    t.date     "event_date"
+    t.boolean  "required_event"
+    t.boolean  "private_event"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "events", ["user_id"], name: "index_events_on_user_id"
 
   create_table "faq_categories", force: true do |t|
     t.string   "title"

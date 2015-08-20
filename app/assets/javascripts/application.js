@@ -14,8 +14,10 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require ckeditor/init
+//= require jquery_ujs
+//= require jquery-ui
+//= require jquery.timepicker.js
 //= require bootstrap-sprockets
-//= require tinymce
 //= require jquery.flip.min
 //= require lightbox
 //= require chosen-jquery

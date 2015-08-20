@@ -1,0 +1,59 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3 top-card-padding">
+    <div class="card">
+      <div align="center">
+        <%= form_for(@event) do |f| %>
+            <% if @event.errors.any? %>
+                <div id="error_explanation">
+                  <h2><%= pluralize(@event.errors.count, "error") %> prohibited this event from being saved:</h2>
+
+                  <ul>
+                    <% @event.errors.full_messages.each do |msg| %>
+                        <li><%= msg %></li>
+                    <% end %>
+                  </ul>
+                </div>
+            <% end %>
+            <div class="col-md-5 col-md-offset-1">
+              <div class="field">
+                <%= f.label :name %><br>
+                <%= f.text_field :name, tabindex: 1 %>
+              </div>
+              <div class="field">
+                <%= f.label :start_time %><br>
+                <%= f.text_field :start_time, tabindex: 3 %>
+              </div>
+              <div class="field posts_checkboxes">
+                <%= f.label :required_event %>
+                <%= f.check_box :required_event, tabindex: 5 %>
+              </div>
+            </div>
+            <div class="col-md-5 col-md-offset-1">
+              <div class="field">
+                <%= f.label :event_date %><br>
+                <%= f.text_field :event_date, tabindex: 2 %>
+              </div>
+              <div class="field">
+                <%= f.label :end_time %><br>
+                <%= f.text_field :end_time, tabindex: 4 %>
+              </div>
+              <div class="field posts_checkboxes">
+                <%= f.label :private_event %>
+                <%= f.check_box :private_event, tabindex: 6 %>
+              </div>
+            </div>
+            <div class="field">
+              <%= f.hidden_field :user_id, value: current_user.id %>
+            </div>
+            <div class="field">
+              <%= f.label :description %><br>
+              <%= f.cktext_area :description, tabindex: 7 %>
+            </div>
+            <div class="actions">
+              <%= f.submit %>
+            </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

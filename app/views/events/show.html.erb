@@ -1,0 +1,53 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3 top-card-padding">
+    <div class="card">
+      <div>
+        <div class='col-md-10 col-md-offset-1'>
+          <h1>
+            <%= @event.name %>
+          </h1>
+          <h3 style="text-align: center">
+            <%= @event.event_date.strftime('%A, %B %d') %>
+          </h3>
+          <hr>
+        </div>
+
+        <% if current_user.confirmed_brother? %>
+            <div class="col-md-5 col-md-offset-1">
+              <p>
+                <strong>Required event:</strong>
+                <%= @event.required_event %>
+              </p>
+            </div>
+            <div class="col-md-5 col-md-offset-1">
+              <p>
+                <strong>Private event:</strong>
+                <%= @event.private_event %>
+              </p>
+            </div>
+        <% end %>
+
+        <div class="col-md-5 col-md-offset-1">
+          <h5>
+            From <%= @event.start_time.strftime('%l:%M %p') %> to <%= @event.end_time.strftime('%l:%M %p') %>
+          </h5>
+        </div>
+        <div class="col-md-5 col-md-offset-1">
+          <%= raw @event.description %>
+          <p>
+            <%= @event.user.first_name %> <%= @event.user.last_name %> created thins event
+          </p>
+        </div>
+
+        <div class="col-md-12">
+          <% if current_user.multiple_have_permissions?(['president','first_vp','second_vp','treasurer','sergeant','chaplain','admin']) %>
+              <%= link_to 'Edit', edit_event_path(@event) %> |
+          <% end %>
+          <%= link_to 'Back', events_path %>
+        </div>
+
+        <div class="clear"></div>
+      </div>
+    </div>
+  </div>
+</div>

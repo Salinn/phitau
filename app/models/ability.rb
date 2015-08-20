@@ -3,10 +3,11 @@ class Ability
 
   def initialize(user)
     user ||= User.new # guest user
-    if user.have_permissions?('admin')
+    if user.have_permissions?('admin') || user.have_permissions?('president')
       can :manage, :all
     end
 
+    can [:show, :index], Event, private_event: false
     can [:show, :read], Image
     can [:show, :read], Gallery
     can [:show, :read], Post
@@ -22,9 +23,11 @@ class Ability
         can [:create], User
         can [:create, :update, :new], CommunityService
         can :user, :controls
+        can [:show, :index], Event
       end
       if user.have_permissions?('recruitment')
         can [:create, :read, :show], TextMessage
+        can [:show, :index, :create, :update], Event
       end
       if user.have_permissions?('writer')
         can [:show, :update, :new, :read, :create], AlumniNewsLetter
@@ -32,13 +35,9 @@ class Ability
         can [:show, :update, :new, :read, :create], Image
         can [:show, :update, :new, :read, :create], Gallery
       end
-      if user.have_permissions?('president')
-        can [:show, :update, :new, :read, :create], FaqCategory
-        can [:show, :update, :new, :read, :create], FaqQuestion
-        can [:show, :update, :new, :read, :create], Position
-      end
       if user.have_permissions?('community_service')
         can :manage, CommunityService
+        can [:show, :index, :create, :update], Event
       end
     end
   end

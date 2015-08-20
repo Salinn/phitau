@@ -1,0 +1,27 @@
+<div class="row">
+  <h1>Phi Kappa Tau's Events</h1>
+
+  <div id='events' class='col-md-10 col-md-offset-1'>
+    <h2 id='month'>
+      <%= link_to '<', date: @date.prev_month %>
+      <%= @date.strftime("%B %Y") %>
+      <%= link_to '>', date: @date.next_month %>
+    </h2>
+    <%= calendar @date do |date| %>
+        <%= date.day %>
+        <% if @events_by_date[date] %>
+            <ul>
+              <% @events_by_date[date].each do |event| %>
+                  <li><%= link_to event.name, event %></li>
+              <% end %>
+            </ul>
+        <% end %>
+    <% end %>
+  </div>
+  <div class='clear'></div>
+  <div class="col-md-10 col-md-offset-1">
+    <% if current_user.confirmed_brother? %>
+        <h3><%= link_to 'Create your own event', new_event_path, data: { no_turbolink: true } %></h3>
+    <% end %>
+  </div>
+</div>

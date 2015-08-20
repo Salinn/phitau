@@ -53,6 +53,10 @@ gem 'elasticsearch'
 gem 'searchkick'
 gem 'chosen-rails'
 
+#JQuery for datepicker and timepicker
+gem 'jquery-ui-rails'
+gem 'jquery-timepicker-rails'
+
 #error reporting
 gem 'raygun4ruby'
 

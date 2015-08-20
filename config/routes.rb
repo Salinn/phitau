@@ -1,5 +1,7 @@
 Phitau::Application.routes.draw do
 
+  resources :events
+
   resources :alumni_eternal_stories
 
   resources :alumni_eternals

@@ -20,7 +20,7 @@ class UsersController < ApplicationController
     UserMailer.welcome_email(@user, generated_password).deliver!
     respond_to do |format|
       if @user.save
-        format.html { redirect_to new_users_admin_path, notice: 'User was successfully created.' }
+        format.html { redirect_to new_users_admin_path, notice: 'You have successfully registered.' }
         format.json { render action: 'show', status: :created, location: @user }
       else
         format.html { render action: 'new' }
