@@ -66,14 +66,16 @@
               <hr>
             </div>
         <% end %>
-        <% if current_user.multiple_have_permissions?(['admin','president','writer','second_vp']) %>
+        <% if current_user.confirmed_brother? %>
             <div class="resources col-md-6">
               <div style="color: #736f7e">
                 <h2>Recruitment</h2>
                 <h3><%= link_to 'Potentials', potentials_path %></h3>
                 <h3><%= link_to 'New Potentials', new_users_admin_path %></h3>
-                <h3><%= link_to 'New Text Message', new_text_message_path %></h3>
-                <h3><%= link_to 'View Old Texts', text_messages_path %></h3>
+                <% if current_user.multiple_have_permissions?(['admin','president','writer','second_vp','recruitment']) %>
+                    <h3><%= link_to 'New Text Message', new_text_message_path %></h3>
+                    <h3><%= link_to 'View Old Texts', text_messages_path %></h3>
+                <% end %>
               </div>
               <hr>
             </div>

@@ -42,6 +42,16 @@ class RushInterviewsController < ApplicationController
     end
 
     def rush_interview_params
-      params.require(:rush_interview).permit(:user_id)
+      params.require(:rush_interview).permit(:user_id,
+                                             bid_attributes: [:bid_given],
+                                             interview_time_attributes: [:interview_time, :interview_date],
+                                             interview_questionnaire_attributes: [:rush_interview_id, :date_of_birth,
+                                                                                  :hometown, :current_address,
+                                                                                  :room_number, :grade_point_average,
+                                                                                  :major, :year_in_school, :nickname,
+                                                                                  :outside_activities, :hobbies,
+                                                                                  :brothers_you_know,
+                                                                                  :rush_events_attended,
+                                                                                  :reason_for_rushing])
     end
 end

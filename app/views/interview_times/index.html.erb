@@ -1,4 +1,4 @@
-<h1>Listing interview_times</h1>
+<h1>Interview Times</h1>
 
 <table>
   <thead>
@@ -15,7 +15,11 @@
   <tbody>
     <% @interview_times.each do |interview_time| %>
       <tr>
-        <td><%= interview_time.rush_interview %></td>
+        <% if interview_time.rush_interview.user %>
+            <td><%= interview_time.rush_interview.user.first_name %> <%= interview_time.rush_interview.user.last_name %></td>
+        <% else %>
+            <td><%= link_to "Sign Up", interview_time_path(interview_time.id), method: :post %></td>
+        <% end %>
         <td><%= interview_time.interview_time %></td>
         <td><%= interview_time.interview_date %></td>
         <td><%= link_to 'Show', interview_time %></td>
@@ -28,4 +32,4 @@
 
 <br>
 
-<%= link_to 'New Interview time', new_interview_time_path %>
+<%= link_to 'New Interview time', new_interview_time_path, data: { no_turbolink: true } %>

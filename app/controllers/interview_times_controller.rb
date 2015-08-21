@@ -1,6 +1,5 @@
 class InterviewTimesController < ApplicationController
   before_action :set_interview_time, only: [:show, :edit, :update, :destroy]
-
   respond_to :html
 
   def index
@@ -14,6 +13,7 @@ class InterviewTimesController < ApplicationController
 
   def new
     @interview_time = InterviewTime.new
+    @interview_time.create_rush_interview
     respond_with(@interview_time)
   end
 
@@ -23,7 +23,7 @@ class InterviewTimesController < ApplicationController
   def create
     @interview_time = InterviewTime.new(interview_time_params)
     flash[:notice] = 'InterviewTime was successfully created.' if @interview_time.save
-    respond_with(@interview_time)
+    respond_with(@interview_time, location: interview_times_path)
   end
 
   def update
@@ -35,6 +35,12 @@ class InterviewTimesController < ApplicationController
     @interview_time.destroy
     respond_with(@interview_time)
   end
+
+  def update_rush_interview(interview_time)
+    interview_time.update_rush_interview(current_user)
+  end
+
+  helper_method :update_rush_interview
 
   private
     def set_interview_time
