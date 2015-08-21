@@ -1,35 +1,47 @@
 <h1>Interview Times</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Rush interview</th>
-      <th>Interview time</th>
-      <th>Interview date</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @interview_times.each do |interview_time| %>
-      <tr>
-        <% if interview_time.rush_interview.user %>
-            <td><%= interview_time.rush_interview.user.first_name %> <%= interview_time.rush_interview.user.last_name %></td>
-        <% else %>
-            <td><%= link_to "Sign Up", interview_time_path(interview_time.id), method: :post %></td>
-        <% end %>
-        <td><%= interview_time.interview_time %></td>
-        <td><%= interview_time.interview_date %></td>
-        <td><%= link_to 'Show', interview_time %></td>
-        <td><%= link_to 'Edit', edit_interview_time_path(interview_time) %></td>
-        <td><%= link_to 'Destroy', interview_time, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class="col-md-1"></div>
+<% @interview_times_by_date.each do |date, interviews| %>
+    <div class="col-md-3" style="display: inline-block">
+      <div class="card">
+        <h3><%= date.strftime('%A, %B %d') %></h3>
+        <table>
+          <tr>
+            <th>Interview time</th>
+            <th>Who is signed up</th>
+          </tr>
+          <% interviews.each do |interview| %>
+              <tr>
+                <td><%= interview.interview_time.strftime('%l:%M %p') %></td>
+                <% if interview.rush_interview.user %>
+                    <td>
+                      <%= interview.rush_interview.user.first_name %> <%= interview.rush_interview.user.last_name %> : 
+                      <% if interview.rush_interview.user.id == current_user.id %>
+                          <%= form_for(interview, :html => { style: 'display: inline-block' }) do |f| %>
+                              <%= f.submit 'Drop Time Slot' %>
+                          <% end %>
+                      <% end %>
+                    </td>
+                <% else %>
+                    <td><%= form_for(interview) do |f| %>
+                          <%= f.submit 'Select Time Slot' %>
+                      <% end %>
+                    </td>
+                <% end %>
+              </tr>
+          <% end %>
+        </table>
+      </div>
+      <div class="clear"></div>
+    </div>
+<% end %>
 
 <br>
-
-<%= link_to 'New Interview time', new_interview_time_path, data: { no_turbolink: true } %>
+<div class="clear"></div>
+<br>
+<% if current_user.multiple_have_permissions?(['president','first_vp','second_vp','treasurer','sergeant','chaplain','admin']) %>
+    <div class="col-md-1"></div>
+    <div class="col-md-3" style="display: inline-block">
+      <%= link_to 'New Interview time', new_interview_time_path, data: { no_turbolink: true } %>
+    </div>
+<% end %>

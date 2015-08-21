@@ -3,8 +3,9 @@ class InterviewTimesController < ApplicationController
   respond_to :html
 
   def index
-    @interview_times = InterviewTime.all
-    respond_with(@interview_times)
+    interview_times = InterviewTime.all
+    @interview_times_by_date = interview_times.group_by(&:interview_date)
+    respond_with(@interview_times_by_date)
   end
 
   def show
@@ -27,8 +28,8 @@ class InterviewTimesController < ApplicationController
   end
 
   def update
-    flash[:notice] = 'InterviewTime was successfully updated.' if @interview_time.update(interview_time_params)
-    respond_with(@interview_time)
+    flash[:notice] = 'Thanks for picking a interview time.' if (@interview_time.update(interview_time_params) && @interview_time.update_rush_interview(current_user))
+    respond_with(@interview_time, location: interview_times_path)
   end
 
   def destroy
@@ -36,18 +37,14 @@ class InterviewTimesController < ApplicationController
     respond_with(@interview_time)
   end
 
-  def update_rush_interview(interview_time)
-    interview_time.update_rush_interview(current_user)
-  end
-
-  helper_method :update_rush_interview
-
   private
     def set_interview_time
       @interview_time = InterviewTime.find(params[:id])
     end
 
     def interview_time_params
-      params.require(:interview_time).permit(:rush_interview_id, :interview_time, :interview_date)
+      if params[:interview_time].present?
+        params.require(:interview_time).permit(:rush_interview_id, :interview_time, :interview_date)
+      end
     end
 end
