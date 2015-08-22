@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150820213813) do
+ActiveRecord::Schema.define(version: 20150822212725) do
 
   create_table "alumni_eternal_stories", force: true do |t|
     t.integer  "user_id"
@@ -234,7 +234,7 @@ ActiveRecord::Schema.define(version: 20150820213813) do
   create_table "text_messages", force: true do |t|
     t.string   "to_number"
     t.string   "user_group"
-    t.string   "message"
+    t.text     "message",      limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "contact_info"
