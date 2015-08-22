@@ -10,7 +10,7 @@ users = [
     big_brother:'AJ Broderick', 
     major:'Software Engineering', 
     confirmed_brother: true, 
-    user_status: 'coop', 
+    user_status: 'potential new member',
     :password => 'topsecret', 
     :password_confirmation => 'topsecret'
   },
@@ -85,7 +85,7 @@ users = [
     big_brother:'Mark Eddy', 
     major:'Accounting', 
     confirmed_brother: true, 
-    user_status: 'potential new member', 
+    user_status: 'coop',
     :password => 'topsecret', 
     :password_confirmation => 'topsecret'
   }

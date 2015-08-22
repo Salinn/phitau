@@ -17,15 +17,9 @@ class TextMessagesController < ApplicationController
   end
 
   def create
-    if params[:Body].nil?
-      @text_message = TextMessage.new(text_message_params)
-      flash[:notice] = 'TextMessage was successfully created.' if @text_message.save
-      send_text_message @text_message
-    else
-      @text_message = TextMessage.new(:message => params[:Body], :to_number => params[:From])
-      flash[:notice] = 'TextMessage was successfully created.' if @text_message.save
-    #   send a text or email to the recruitment chair
-    end
+    @text_message = TextMessage.new(text_message_params)
+    flash[:notice] = 'TextMessage was successfully created.' if @text_message.save
+    send_text_message @text_message
   end
 
   def update
@@ -38,39 +32,29 @@ class TextMessagesController < ApplicationController
 
   def send_text_message text_message
     current = 0
-    if text_message.to_number != ""
-      message = text_message.message.gsub(/line_break/,"\n")
-      if user.phone_number.length == 10
-        phone_number = '1' + user.phone_number
-      else
-        phone_number = user.phone_number
-      end
-      $twilio_client.account.messages.create(
-        :from => "+#{$twilio_phone_number}",
-        :to => "+#{phone_number}",
-        :body => "#{message}"
-      )
-    else
-      User.all.each do |user|
-        if user.user_status == text_message.user_group
-          first_name = user.first_name
-          line_break = line_break
-          message = text_message.message.gsub(/first_name/,first_name)
-          message = message.gsub(/line_break/,"\n")
-          contacts = message.match(/start_contacts(.*)end_contacts/)
-          contactss = contacts[1].split(',')
-          final_message = message.gsub(contacts[0],contactss[current])
-          current = current + 1
-          if user.phone_number.length == 10
-            phone_number = '1' + user.phone_number
-          else
-            phone_number = user.phone_number
-          end
+    User.all.each do |user|
+      if user.user_status == text_message.user_group
+        first_name = user.first_name
+        line_break = line_break
+        message = text_message.message.gsub(/first_name/,first_name)
+        message = message.gsub(/line_break/,"\n")
+        contacts = text_message.contact_info
+        contactss = contacts.split(',')
+        final_message = message + contactss[current]
+        current = current + 1
+        if user.phone_number.length == 10
+          phone_number = '1' + user.phone_number
+        else
+          phone_number = user.phone_number
+        end
+        begin
           $twilio_client.account.messages.create(
-            :from => "+#{$twilio_phone_number}",
-            :to => "+#{phone_number}",
-            :body => "#{final_message}"
+              :from => "+#{$twilio_phone_number}",
+              :to => "+#{phone_number}",
+              :body => "#{final_message}"
           )
+        rescue
+          puts 'Invalid Number'
         end
       end
     end
@@ -79,11 +63,11 @@ class TextMessagesController < ApplicationController
   end
 
   private
-    def set_text_message
-      @text_message = TextMessage.find(params[:id])
-    end
+  def set_text_message
+    @text_message = TextMessage.find(params[:id])
+  end
 
-    def text_message_params
-      params.require(:text_message).permit(:to_number, :user_group, :message, :Body, :From)
-    end
+  def text_message_params
+    params.require(:text_message).permit(:to_number, :user_group, :message, :contact_info, :Body, :From)
+  end
 end

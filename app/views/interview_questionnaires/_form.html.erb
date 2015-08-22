@@ -10,64 +10,68 @@
       </ul>
     </div>
   <% end %>
+    <div class="col-md-5 col-md-offset-1">
+      <div class="field">
+        <%= f.label :date_of_birth %><br>
+        <%= f.text_field :date_of_birth, tabindex: 1  %>
+      </div>
+      <div class="field">
+        <%= f.label :room_number %><br>
+        <%= f.text_field :room_number, tabindex: 3, placeholder: 'Dorm or Apartment number' %>
+      </div>
+      <div class="field">
+        <%= f.label :grade_point_average %><br>
+        <%= f.text_field :grade_point_average, tabindex: 5, placeholder: 'out of 4.0' %>
+      </div>
+      <div class="field">
+        <%= f.label :year_in_school %><br>
+        <%= f.number_field :year_in_school, tabindex: 7, placeholder: '1st, 2nd, etc' %>
+      </div>
+      <div class="field">
+        <%= f.label 'Extra curricular activtites' %><br>
+        <%= f.text_area :outside_activities, tabindex: 9, placeholder: 'What groups at school are you involved in?' %>
+      </div>
+      <div class="field">
+        <%= f.label :rush_events_attended %><br>
+        <%= f.text_area :rush_events_attended, tabindex: 11, placeholder: 'Seperate these by commas' %>
+      </div>
+      <div class="field">
+        <%= f.label :reason_for_rushing %><br>
+        <%= f.text_area :reason_for_rushing, tabindex: 13, placeholder: 'Why are you interested in Phi Tau?' %>
+      </div>
+    </div>
 
-  <div class="field">
-    <%= f.label :rush_interview %><br>
-    <%= f.text_field :rush_interview %>
-  </div>
-  <div class="field">
-    <%= f.label :date_of_birth %><br>
-    <%= f.date_select :date_of_birth %>
-  </div>
-  <div class="field">
-    <%= f.label :hometown %><br>
-    <%= f.text_field :hometown %>
-  </div>
-  <div class="field">
-    <%= f.label :current_address %><br>
-    <%= f.text_field :current_address %>
-  </div>
-  <div class="field">
-    <%= f.label :room_number %><br>
-    <%= f.text_field :room_number %>
-  </div>
-  <div class="field">
-    <%= f.label :grade_point_average %><br>
-    <%= f.text_field :grade_point_average %>
-  </div>
-  <div class="field">
-    <%= f.label :major %><br>
-    <%= f.text_field :major %>
-  </div>
-  <div class="field">
-    <%= f.label :year_in_school %><br>
-    <%= f.number_field :year_in_school %>
-  </div>
-  <div class="field">
-    <%= f.label :nickname %><br>
-    <%= f.text_field :nickname %>
-  </div>
-  <div class="field">
-    <%= f.label :outside_activities %><br>
-    <%= f.text_area :outside_activities %>
-  </div>
-  <div class="field">
-    <%= f.label :hobbies %><br>
-    <%= f.text_area :hobbies %>
-  </div>
-  <div class="field">
-    <%= f.label :brothers_you_know %><br>
-    <%= f.text_area :brothers_you_know %>
-  </div>
-  <div class="field">
-    <%= f.label :rush_events_attended %><br>
-    <%= f.text_field :rush_events_attended %>
-  </div>
-  <div class="field">
-    <%= f.label :reason_for_rushing %><br>
-    <%= f.text_area :reason_for_rushing %>
-  </div>
+
+    <div class="col-md-5 col-md-offset-1">
+      <div class="field">
+        <%= f.label :hometown %><br>
+        <%= f.text_field :hometown, tabindex: 2, placeholder: 'Hometown and State' %>
+      </div>
+      <div class="field">
+        <%= f.label :current_address %><br>
+        <%= f.text_field :current_address, tabindex: 4, placeholder: 'Where in the Rochester area do you live?' %>
+      </div>
+      <div class="field">
+        <%= f.label :major %><br>
+        <%= f.text_field :major, tabindex: 6, placeholder: 'No need for minors' %>
+      </div>
+      <div class="field">
+        <%= f.label :nickname %><br>
+        <%= f.text_field :nickname, tabindex: 8, placeholder: '' %>
+      </div>
+      <div class="field">
+        <%= f.label :hobbies %><br>
+        <%= f.text_area :hobbies, tabindex: 10, placeholder: 'What do you enjoy doing with your free time?' %>
+      </div>
+      <div class="field">
+        <%= f.label :brothers_you_know %><br>
+        <%= f.text_area :brothers_you_know, tabindex: 12, placeholder: 'Seperate these by commas' %>
+      </div>
+    </div>
+
+
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Submit Interview Questionaire' %>
   </div>
 <% end %>
+<div class="clear"></div>
