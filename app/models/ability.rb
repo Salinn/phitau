@@ -20,7 +20,7 @@ class Ability
       if user.confirmed_brother?
         can [:show, :read], AlumniNewsLetter
         can [:create, :update], Receipt
-        can [:create], User
+        can [:create, :potential_new_members], User
         can [:create, :update, :new], CommunityService
         can :user, :controls
         can [:show, :index], Event
