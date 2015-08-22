@@ -38,9 +38,13 @@ class TextMessagesController < ApplicationController
         line_break = line_break
         message = text_message.message.gsub(/first_name/,first_name)
         message = message.gsub(/line_break/,"\n")
-        contacts = text_message.contact_info
-        contactss = contacts.split(',')
-        final_message = message + contactss[current]
+        if text_message.contact_info != ""
+          contacts = text_message.contact_info
+          contactss = contacts.split(',')
+          final_message = message + contactss[current]
+        else
+          final_message = message
+        end
         current = current + 1
         if user.phone_number.length == 10
           phone_number = '1' + user.phone_number
