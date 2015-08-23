@@ -4,6 +4,8 @@ class Post < ActiveRecord::Base
   
   accepts_nested_attributes_for :image
 
+  acts_as_paranoid
+
   validates :title, presence: true, length: { minimum: 5  }
   validates :content, presence: true, length: { minimum: 10  }
 

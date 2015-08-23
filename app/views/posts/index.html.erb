@@ -1,30 +1,32 @@
-<div class="top-card-padding">
-  <h1 align="center">All of our blog posts (Newest at the top)</h1>
-  <h3 align="center"><%= link_to 'Create a New Post', new_post_path, "data-no-turbolink" => true  %></h3>
-  <h5 align="center">Top card being selected allows you to change which card shows up on the home screen separated from all of the other cards </h5>
-  <table class="posts-table">
-    <thead>
-    <tr>
-      <th>Title</th>
-      <th>Content</th>
-      <th>Top Card?</th>
-      <th>Author</th>
-      <th>Edit Post</th>
-      <th>Delete Post</th>
-    </tr>
-    </thead>
+<div class='col-md-8 col-md-offset-2'>
+  <div class="top-card-padding">
+  <div class="card">
+    <h1 align="center">All of our blog posts (Newest at the top)</h1>
+    <h3 align="center"><%= link_to 'Create a New Post', new_post_path, "data-no-turbolink" => true  %></h3>
+    <h5 align="center">Top card being selected allows you to change which card shows up on the home screen separated from all of the other cards </h5>
+    <table class="posts-table">
+      <thead>
+      <tr>
+        <th>Title</th>
+        <th>Top Card?</th>
+        <th>Author</th>
+        <th>Edit Post</th>
+        <th>Delete Post</th>
+      </tr>
+      </thead>
 
-    <tbody>
-    <% @posts.reverse.each do |post| %>
-        <tr>
-          <td><%= post.title %></td>
-          <td><%= post.content %></td>
-          <td><%= post.top_card %></td>
-          <td><%= post.author %></td>
-          <td><%= link_to 'Edit', edit_post_path(post), 'data-no-turbolink' => true  %></td>
-          <td><%= link_to 'Delete Post', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
-    <% end %>
-    </tbody>
-  </table>
+      <tbody>
+      <% @posts.reverse.each do |post| %>
+          <tr>
+            <td><%= post.title %></td>
+            <td><%= post.top_card %></td>
+            <td><%= post.author %></td>
+            <td><%= link_to 'Edit', edit_post_path(post), 'data-no-turbolink' => true  %></td>
+            <td><%= link_to 'Delete Post', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+  </div>
 </div>
