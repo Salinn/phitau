@@ -3,6 +3,9 @@
     <div class="card">
       <div id="page-wrap">
         <div align="center">
+
+          <h2>Total Potentials: <%= @potentials.length %></h2>
+
           <%= search_form_for @search, url: potentials_path do |f| %>
               <div class="field">
                 <%= f.text_field :first_name_cont, placeholder: 'Search by First Name'  %>
