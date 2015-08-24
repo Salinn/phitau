@@ -14,6 +14,16 @@
               <hr>
             </div>
         <% end %>
+        <% if current_user.confirmed_brother? %>
+            <div class="resources col-md-6">
+              <div style="color: #736f7e">
+                <h2>Calendar</h2>
+                <h3><%= link_to 'Create New Event', new_event_path, data: { no_turbolink: true } %></h3>
+                <h3><%= link_to 'View Calendar', events_path %></h3>
+              </div>
+              <hr>
+            </div>
+        <% end %>
         <% if current_user.multiple_have_permissions?(['admin','president']) %>
             <div class="resources col-md-6">
               <div style="color: #736f7e">
