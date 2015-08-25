@@ -20,7 +20,7 @@
   </div>
   <div class='clear'></div>
   <div class="col-md-10 col-md-offset-1">
-    <% if current_user.confirmed_brother? %>
+    <% if current_user && current_user.confirmed_brother? %>
         <h3><%= link_to 'Create your own event', new_event_path, data: { no_turbolink: true } %></h3>
     <% end %>
   </div>

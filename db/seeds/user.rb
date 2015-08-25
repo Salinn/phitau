@@ -24,7 +24,7 @@ users = [
     state: 'PA', 
     big_brother:'Paul Darragh', 
     major:'Biomedical Engineering', 
-    confirmed_brother: false, 
+    confirmed_brother: true,
     user_status: 'current brother', 
     :password => 'topsecret', 
     :password_confirmation => 'topsecret'
@@ -60,7 +60,7 @@ users = [
     :password_confirmation => 'topsecret'
   },
   {
-    email: 'matt@rollings.com', 
+    email: 'paul@darragh.com',
     first_name: 'Matt', 
     last_name: 'Rollings', 
     profile_picture:'http://www.collegedebauchery.com/wp-content/uploads/2013/08/awesome-fraternity-composite-photos-06.jpg', 
@@ -75,7 +75,7 @@ users = [
     :password_confirmation => 'topsecret'
   },
   {
-    email: 'george@denison.com', 
+    email: 'p@d.com',
     first_name: 'George', 
     last_name: 'Denison', 
     profile_picture:'http://www.collegedebauchery.com/wp-content/uploads/2013/08/awesome-fraternity-composite-photos-33.jpg', 
@@ -84,7 +84,7 @@ users = [
     state: 'NY', 
     big_brother:'Mark Eddy', 
     major:'Accounting', 
-    confirmed_brother: true, 
+    confirmed_brother: false,
     user_status: 'coop',
     :password => 'topsecret', 
     :password_confirmation => 'topsecret'

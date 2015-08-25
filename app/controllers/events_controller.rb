@@ -7,7 +7,7 @@ class EventsController < ApplicationController
   def index
     @date = params[:date] ? Date.parse(params[:date]) : Date.today
 
-    if current_user.multiple_have_permissions?(['brother'])
+    if current_user && current_user.confirmed_brother?
       @events = Event.where(event_date: @date.beginning_of_month..@date.end_of_month)
     else
       @events = Event.where(event_date: @date.beginning_of_month..@date.end_of_month, private_event: false)
