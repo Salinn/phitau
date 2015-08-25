@@ -56,7 +56,7 @@ class TextMessagesController < ApplicationController
 
         (current_contact_index == (contacts.length-1)) ? current_contact_index = 0 : current_contact_index += 1
       rescue
-        puts 'Invalid Number'
+        puts "Invalid Number - #{user.first_name} #{user.phone_number}"
       end
     end
 
