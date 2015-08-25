@@ -31,35 +31,31 @@ class TextMessagesController < ApplicationController
   end
 
   def send_text_message text_message
-    current = 0
-    User.all.each do |user|
-      if user.user_status == text_message.user_group
-        first_name = user.first_name
-        line_break = line_break
-        message = text_message.message.gsub(/first_name/,first_name)
-        message = message.gsub(/line_break/,"\n")
-        if text_message.contact_info != ""
-          contacts = text_message.contact_info
-          contactss = contacts.split(',')
-          final_message = message + contactss[current]
-        else
-          final_message = message
-        end
-        current = current + 1
-        if user.phone_number.length == 10
-          phone_number = '1' + user.phone_number
-        else
-          phone_number = user.phone_number
-        end
-        begin
-          $twilio_client.account.messages.create(
-              :from => "+#{$twilio_phone_number}",
-              :to => "+#{phone_number}",
-              :body => "#{final_message}"
-          )
-        rescue
-          puts 'Invalid Number'
-        end
+    current_contact_index = 0
+    users = User.where(user_status: text_message.user_group)
+    contacts = text_message.contact_info.split(',')
+
+    users.each do |user|
+      if user.nil? || user.phone_number.nil? || user.first_name.nil?
+        next
+      end
+
+      first_name = user.first_name
+      message = text_message.message.gsub(/first_name/,first_name)
+      message = message.gsub(/line_break/,"\n")
+      message = message.gsub(/contact_person/,contacts[current_contact_index])
+
+      (user.phone_number.length == 10) ? phone_number = '1' + user.phone_number : phone_number = user.phone_number
+
+      begin
+        $twilio_client.account.messages.create(
+            :from => "+#{$twilio_phone_number}",
+            :to => "+#{phone_number}",
+            :body => "#{message}"
+        )
+        current_contact_index += 1
+      rescue
+        puts 'Invalid Number'
       end
     end
 
