@@ -53,7 +53,8 @@ class TextMessagesController < ApplicationController
             :to => "+#{phone_number}",
             :body => "#{message}"
         )
-        current_contact_index += 1
+
+        (current_contact_index == (contacts.length-1)) ? current_contact_index = 0 : current_contact_index += 1
       rescue
         puts 'Invalid Number'
       end
