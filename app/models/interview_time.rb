@@ -10,5 +10,6 @@ class InterviewTime < ActiveRecord::Base
   def update_rush_interview(user)
     assigned_user = (self.rush_interview.user_id == user.id) ? nil : user.id
     self.rush_interview.update_attribute(:user_id, assigned_user)
+    (assigned_user == nil) ? 'Interview time was successfully cleared' : 'Interview was successfully scheduled.'
   end
 end

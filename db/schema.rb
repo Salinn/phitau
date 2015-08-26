@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150822212725) do
+ActiveRecord::Schema.define(version: 20150825191819) do
 
   create_table "alumni_eternal_stories", force: true do |t|
     t.integer  "user_id"
@@ -136,7 +136,6 @@ ActiveRecord::Schema.define(version: 20150822212725) do
   add_index "images", ["deleted_at"], name: "index_images_on_deleted_at"
 
   create_table "interview_questionnaires", force: true do |t|
-    t.integer  "rush_interview_id"
     t.date     "date_of_birth"
     t.string   "hometown"
     t.string   "current_address"
@@ -152,9 +151,8 @@ ActiveRecord::Schema.define(version: 20150822212725) do
     t.text     "reason_for_rushing"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
   end
-
-  add_index "interview_questionnaires", ["rush_interview_id"], name: "index_interview_questionnaires_on_rush_interview_id"
 
   create_table "interview_times", force: true do |t|
     t.integer  "rush_interview_id"

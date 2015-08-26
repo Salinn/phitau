@@ -23,10 +23,17 @@
                       <% end %>
                     </td>
                 <% else %>
-                    <td><%= form_for(interview) do |f| %>
-                          <%= f.submit 'Select Time Slot' %>
-                      <% end %>
-                    </td>
+                    <% if current_user.rush_interviews.any? && current_user.rush_interviews.last.interview_time %>
+                        <td>
+                          Deselect Current Time to Switch
+                        </td>
+                    <% else %>
+                        <td>
+                          <%= form_for(interview) do |f| %>
+                              <%= f.submit 'Select Time Slot' %>
+                          <% end %>
+                        </td>
+                    <% end %>
                 <% end %>
               </tr>
           <% end %>

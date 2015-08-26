@@ -3,7 +3,7 @@
 <table>
   <thead>
     <tr>
-      <th>Rush interview</th>
+      <th>User</th>
       <th>Date of birth</th>
       <th>Hometown</th>
       <th>Current address</th>
@@ -26,7 +26,7 @@
   <tbody>
     <% @interview_questionnaires.each do |interview_questionnaire| %>
       <tr>
-        <td><%= interview_questionnaire.rush_interview %></td>
+        <td><%= interview_questionnaire.user %></td>
         <td><%= interview_questionnaire.date_of_birth %></td>
         <td><%= interview_questionnaire.hometown %></td>
         <td><%= interview_questionnaire.current_address %></td>

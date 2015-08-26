@@ -3,7 +3,7 @@ class InterviewTimesController < ApplicationController
   respond_to :html
 
   def index
-    interview_times = InterviewTime.all
+    interview_times = InterviewTime.all.order(:interview_time).reverse
     @interview_times_by_date = interview_times.group_by(&:interview_date)
     respond_with(@interview_times_by_date)
   end
@@ -28,7 +28,8 @@ class InterviewTimesController < ApplicationController
   end
 
   def update
-    flash[:notice] = 'Thanks for picking a interview time.' if (@interview_time.update(interview_time_params) && @interview_time.update_rush_interview(current_user))
+    flash_response = @interview_time.update_rush_interview(current_user)
+    flash[:notice] = flash_response if @interview_time.update(interview_time_params)
     respond_with(@interview_time, location: interview_times_path)
   end
 
