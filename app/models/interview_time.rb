@@ -10,6 +10,18 @@ class InterviewTime < ActiveRecord::Base
   def update_rush_interview(user)
     assigned_user = (self.rush_interview.user_id == user.id) ? nil : user.id
     self.rush_interview.update_attribute(:user_id, assigned_user)
+
+    send_interview_email(user) unless assigned_user.nil?
+
     (assigned_user == nil) ? 'Interview time was successfully cleared' : 'Interview was successfully scheduled.'
+  end
+
+  def send_interview_email(user)
+    create_questionaire(user) unless(user.interview_questionnaires.any? && user.interview_questionnaires.last.created_within_same_month?)
+    UserMailer.interview_time_email(user).deliver!
+  end
+
+  def create_questionaire(user)
+    InterviewQuestionnaire.create!(user_id: user.id)
   end
 end

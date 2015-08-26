@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
   has_many :meetings, :through => :attendances
   has_many :community_services
   has_many :rush_interviews
+  has_many :interview_questionnaires
 
   validates :first_name, length: { minimum: 2 }
   validates :last_name, length: { minimum: 2 }

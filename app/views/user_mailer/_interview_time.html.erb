@@ -1,0 +1,26 @@
+<tr>
+  <td align="left" valign="top" style="padding-left: 10px; padding-bottom: 10px; padding-top: 0px; padding-right: 0px; color: #000000;">
+    Hi <%= @user.first_name %>,
+  </td>
+</tr>
+<tr>
+  <td align="left" valign="top" style="padding-left: 10px; padding-bottom: 10px; padding-top: 0px; padding-right: 0px; color: #000000;">
+    We wanted to thank you for signing up for an interview.
+  </td>
+</tr>
+<tr>
+  <td align="left" valign="top" style="padding-left: 10px; padding-bottom: 10px; padding-top: 0px; padding-right: 0px; color: #000000;">
+    Your Interview is at 604 Charter's Way at <%= @interview_time.interview_time.strftime('%l:%M %p') %> on
+    <%= @interview_time.interview_date.strftime('%A, %B %d') %>
+  </td>
+</tr>
+<tr>
+  <td align="left" valign="top" style="padding-left: 10px; padding-bottom: 10px; padding-top: 0px; padding-right: 0px;color: #000000;">
+    The last step would be for you to follow <%= link_to 'this link', edit_interview_questionnaire_url(@user.interview_questionnaires.last) %> and give us some additional information about yourself
+  </td>
+</tr>
+<tr>
+  <td align="left" valign="top" style="padding-left: 10px; padding-bottom: 10px; padding-top: 0px; padding-right: 0px;color: #000000;">
+    See you soon!
+  </td>
+</tr>

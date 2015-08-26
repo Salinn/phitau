@@ -66,11 +66,22 @@ class UserMailer < ActionMailer::Base
 
   def welcome_email(user, generated_password)
     @user = user
-    @generated_password
+    @generated_password = generated_password
 
     body_template = 'user_mailer/welcome'
     email_title = "Welcome to the RIT Phi Kappa Tau Website!"
     to_address = @user.email
+    email_template(body_template, email_title, to_address)
+  end
+
+  def interview_time_email(user)
+    @user = user
+    @interview_time = user.rush_interviews.last.interview_time
+
+    body_template = 'user_mailer/interview_time'
+    email_title = "Thanks for signing up for an interview at #{@interview_time.interview_time.strftime('%l:%M %p')} on #{@interview_time.interview_date.strftime('%A, %B %d')}"
+    to_address = @user.email
+
     email_template(body_template, email_title, to_address)
   end
 
