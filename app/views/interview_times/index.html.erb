@@ -13,7 +13,7 @@
           <% interviews.each do |interview| %>
               <tr>
                 <td><%= interview.interview_time.strftime('%l:%M %p') %></td>
-                <% if interview.rush_interview.user %>
+                <% if interview.rush_interview && interview.rush_interview.user %>
                     <td>
                       <%= interview.rush_interview.user.first_name %> <%= interview.rush_interview.user.last_name %> :
                       <% if interview.rush_interview.user.id == current_user.id %>

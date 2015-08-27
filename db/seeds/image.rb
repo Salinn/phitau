@@ -1,4 +1,5 @@
 images = [
+=begin
     {
         name: '',
         gallery_id: 1,
@@ -89,6 +90,7 @@ images = [
         post_id: nil,
         remote_picture_url: 'http://images1.fanpop.com/images/photos/1300000/Hobbes-calvin-and-hobbes-1395518-2000-1503.jpg'
     }
+=end
 ]
 
 Image.create!(images)

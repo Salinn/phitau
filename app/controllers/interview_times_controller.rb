@@ -3,7 +3,7 @@ class InterviewTimesController < ApplicationController
   respond_to :html
 
   def index
-    interview_times = InterviewTime.all.order(:interview_time).reverse
+    interview_times = InterviewTime.all.order(:interview_time)
     @interview_times_by_date = interview_times.group_by(&:interview_date)
     respond_with(@interview_times_by_date)
   end

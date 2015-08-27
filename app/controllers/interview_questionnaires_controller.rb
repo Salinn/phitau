@@ -27,8 +27,8 @@ class InterviewQuestionnairesController < ApplicationController
   end
 
   def update
-    flash[:notice] = 'InterviewQuestionnaire was successfully updated.' if @interview_questionnaire.update(interview_questionnaire_params)
-    respond_with(@interview_questionnaire)
+    flash[:notice] = 'Thanks for telling us a little more about yourself!' if @interview_questionnaire.update(interview_questionnaire_params)
+    respond_with(@interview_questionnaire, location: root_path)
   end
 
   def destroy

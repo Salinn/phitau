@@ -28,7 +28,7 @@ class BidsController < ApplicationController
 
   def update
     flash[:notice] = 'Bid was successfully updated.' if @bid.update(bid_params)
-    respond_with(@bid)
+    respond_with(@bid, location: rush_interviews_path)
   end
 
   def destroy
