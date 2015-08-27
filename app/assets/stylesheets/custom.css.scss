@@ -822,6 +822,9 @@ only screen and (max-width: 760px),
   .events-table td:nth-of-type(5):before { content: "Thursday"; }
   .events-table td:nth-of-type(6):before { content: "Friday"; }
   .events-table td:nth-of-type(7):before { content: "Saturday"; }
+
+  .interview-time-table td:nth-of-type(1):before { content: "Interview time"; }
+  .interview-time-table td:nth-of-type(2):before { content: "Who is signed up"; }
 }
 
 /* Smartphones (portrait and landscape) ----------- */
