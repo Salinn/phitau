@@ -45,7 +45,9 @@ class TextMessagesController < ApplicationController
       message = message.gsub(/line_break/,"\n")
       message = message.gsub(/contact_person/,contacts[current_contact_index])
 
-      (user.phone_number.length == 10) ? phone_number = '1' + user.phone_number : phone_number = user.phone_number
+      phone_number = phone_number.gsub(/[^\d]/, '')
+
+      phone_number = '1' + phone_number if (phone_number.length == 10)
 
       begin
         $twilio_client.account.messages.create(

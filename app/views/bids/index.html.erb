@@ -1,29 +1,74 @@
-<h1>Listing bids</h1>
+<div class="row">
+  <div class="col-md-4">
+    <div class="card">
+      <h1>Yes</h1>
+      <table class="yes-bids-table">
+        <thead>
+        <tr>
+          <th>Name</th>
+          <th>Phone Number</th>
+          <th>Where they live</th>
+        </tr>
+        </thead>
 
-<table>
-  <thead>
-    <tr>
-      <th>Rush interview</th>
-      <th>Bid given</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+        <tbody>
+        <% @yes_bids.each do |bid| %>
+            <tr>
+              <td><%= bid.rush_interview.user.name %></td>
+              <td><%= bid.rush_interview.user.phone_number %></td>
+              <td><%= bid.rush_interview.user.interview_questionnaires.last.room_number %> <%= bid.rush_interview.user.interview_questionnaires.last.current_address %></td>
+            </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
 
-  <tbody>
-    <% @bids.each do |bid| %>
-      <tr>
-        <td><%= bid.rush_interview %></td>
-        <td><%= bid.bid_given %></td>
-        <td><%= link_to 'Show', bid %></td>
-        <td><%= link_to 'Edit', edit_bid_path(bid) %></td>
-        <td><%= link_to 'Destroy', bid, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+  <div class="col-md-4">
+    <div class="card">
+      <h1>No</h1>
+      <table class="bids-table">
+        <thead>
+        <tr>
+          <th>Name</th>
+          <th>Phone Number</th>
+        </tr>
+        </thead>
 
-<br>
+        <tbody>
+        <% @no_bids.each do |bid| %>
+            <tr>
+              <td><%= bid.rush_interview.user.name %></td>
+              <td><%= bid.rush_interview.user.phone_number %></td>
+            </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
 
-<%= link_to 'New Bid', new_bid_path %>
+  <div class="col-md-4">
+    <div class="card">
+      <h1>Deferred</h1>
+      <table class="bids-table">
+        <thead>
+        <tr>
+          <th>Name</th>
+          <th>Phone Number</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <% @deferred_bids.each do |bid| %>
+            <tr>
+              <td><%= bid.rush_interview.user.name %></td>
+              <td><%= bid.rush_interview.user.phone_number %></td>
+            </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+

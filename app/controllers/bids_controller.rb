@@ -4,7 +4,10 @@ class BidsController < ApplicationController
   respond_to :html
 
   def index
-    @bids = Bid.all
+    bids = Bid.all
+    @yes_bids = bids.select { |bid| bid.bid_given == 'Yes' }
+    @no_bids = bids.select { |bid| bid.bid_given == 'No' }
+    @deferred_bids = bids.select { |bid| bid.bid_given == 'Deferred' }
     respond_with(@bids)
   end
 

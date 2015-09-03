@@ -825,6 +825,13 @@ only screen and (max-width: 760px),
 
   .interview-time-table td:nth-of-type(1):before { content: "Interview time"; }
   .interview-time-table td:nth-of-type(2):before { content: "Who is signed up"; }
+
+  .bids-table td:nth-of-type(1):before { content: "Name"; }
+  .bids-table td:nth-of-type(2):before { content: "Phone Number"; }
+
+  .yes-bids-table td:nth-of-type(1):before { content: "Name"; }
+  .yes-bids-table td:nth-of-type(2):before { content: "Phone Number"; }
+  .yes-bids-table td:nth-of-type(3):before { content: "Where they live"; }
 }
 
 /* Smartphones (portrait and landscape) ----------- */
