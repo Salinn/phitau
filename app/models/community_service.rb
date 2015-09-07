@@ -3,7 +3,6 @@ class CommunityService < ActiveRecord::Base
 
   validates :event_name, presence: true
   validates :date_of_event, presence: true
-  validates :link_to_event, presence: true
   validates :user_id, presence: true
   validates :hours_volunteered, presence: true
 end
