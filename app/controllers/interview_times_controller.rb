@@ -14,7 +14,6 @@ class InterviewTimesController < ApplicationController
 
   def new
     @interview_time = InterviewTime.new
-    @interview_time.create_rush_interview
     respond_with(@interview_time)
   end
 

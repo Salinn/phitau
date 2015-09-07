@@ -8,7 +8,7 @@ class InterviewTime < ActiveRecord::Base
   end
 
   def update_rush_interview(user)
-    return 'InterviewTime was successfully created.' if user.user_status != 'potential new member'
+    create_rush_interview unless self.rush_interview_id
     assigned_user = (self.rush_interview.user_id == user.id) ? nil : user.id
     self.rush_interview.update_attribute(:user_id, assigned_user)
 
