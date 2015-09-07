@@ -47,12 +47,5 @@
 
     <br>
     <div class="clear"></div>
-    <br>
-    <% if current_user.multiple_have_permissions?(['president','first_vp','second_vp','treasurer','sergeant','chaplain','admin']) %>
-        <div class="col-md-1"></div>
-        <div class="col-md-3" style="display: inline-block">
-          <%= link_to 'New Interview time', new_interview_time_path, data: { no_turbolink: true } %>
-        </div>
-    <% end %>
   </div>
 </div>
