@@ -1,6 +1,7 @@
 class TextMessagesController < ApplicationController
   before_action :set_text_message, only: [:show, :edit, :update, :destroy]
   load_and_authorize_resource
+  respond_to :html
 
   def index
     @text_messages = TextMessage.all.reverse
@@ -20,14 +21,16 @@ class TextMessagesController < ApplicationController
     @text_message = TextMessage.new(text_message_params)
     flash[:notice] = 'TextMessage was successfully created.' if @text_message.save
     send_text_message @text_message
+    respond_with(@text_message, location: text_messages_path)
   end
 
   def update
     flash[:notice] = 'TextMessage was successfully updated.' if @text_message.update(text_message_params)
+    respond_with(@text_message, location: text_messages_path)
   end
 
   def destroy
-    @text_message.destroy
+    respond_with(@text_message.destroy, location: text_messages_path)
   end
 
   def send_text_message text_message

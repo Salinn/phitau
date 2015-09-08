@@ -26,14 +26,14 @@ RSpec.describe TextMessagesController, :type => :controller do
   let(:valid_attributes) {
     {
         to_number: '15088388579',
-        message: 'Come check out this event'
+        message: 'Come check out this event',
+        user_group: 'coop',
+        contact_info: 'Tim (555) 444 - 3322, Bob (123) 321 - 1234'
     }
   }
 
   let(:invalid_attributes) {
     {
-        to_number: nil,
-        message: nil
     }
   }
 
@@ -92,7 +92,7 @@ RSpec.describe TextMessagesController, :type => :controller do
 
       it "redirects to the created text_message" do
         post :create, {:text_message => valid_attributes}, valid_session
-        expect(response).to redirect_to(TextMessage.last)
+        expect(response).to redirect_to(text_messages_path)
       end
     end
 
@@ -113,7 +113,6 @@ RSpec.describe TextMessagesController, :type => :controller do
     describe "with valid params" do
       let(:new_attributes) {
         {
-            to_number: '15088388579',
             message: 'Come check out this rush event again'
         }
       }

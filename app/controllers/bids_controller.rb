@@ -1,6 +1,6 @@
 class BidsController < ApplicationController
   before_action :set_bid, only: [:show, :edit, :update, :destroy]
-
+  load_and_authorize_resource
   respond_to :html
 
   def index

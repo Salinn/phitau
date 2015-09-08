@@ -14,20 +14,30 @@ class Ability
     can [:show, :read], User
     if user.user_status != nil
       can :subscribe, User
-      can :show, User, :id => user.id
       can :update, User, :id => user.id
-      can [:show, :read, :create, :new], Image
+      can [:index], InterviewTime
       if user.confirmed_brother?
+        can [:show, :read, :create, :new], Image
         can [:show, :read], AlumniNewsLetter
         can [:create, :update], Receipt
         can [:create, :potential_new_members], User
         can [:create, :update, :new], CommunityService
         can :user, :controls
         can [:show, :index], Event
+        can [:show, :index], InterviewQuestionnaire
+        can [:show, :index], RushInterview
+        can [:show, :index], Bid
+      end
+      unless user.confirmed_brother?
+        can [:index, :update], InterviewTime
+        can [:show, :update], InterviewQuestionnaire, :user_id => user.id
       end
       if user.have_permissions?('recruitment')
         can [:create, :read, :show], TextMessage
         can [:show, :index, :create, :update], Event
+        can :manage, InterviewTime
+        can [:update], RushInterview
+        can [:update], Bid
       end
       if user.have_permissions?('writer')
         can [:show, :update, :new, :read, :create], AlumniNewsLetter
