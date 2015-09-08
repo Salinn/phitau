@@ -46,7 +46,7 @@ class User < ActiveRecord::Base
   end
 
   def check_to_send_mailchimp_email
-    if check_mailchimp_list_for_user?
+    if check_mailchimp_list_for_user? && self.user_status != 'potential new member'
       mailchimp_send_email_invite
     end
   end
