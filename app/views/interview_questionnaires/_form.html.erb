@@ -13,31 +13,31 @@
     <div class="col-md-5 col-md-offset-1">
       <div class="field">
         <%= f.label :date_of_birth %><br>
-        <%= f.text_field :date_of_birth, tabindex: 1  %>
+        <%= f.text_field :date_of_birth, size: "40x1", tabindex: 1  %>
       </div>
       <div class="field">
         <%= f.label :room_number %><br>
-        <%= f.text_field :room_number, tabindex: 3, placeholder: 'Dorm or Apartment number' %>
+        <%= f.text_field :room_number, size: "40x1", tabindex: 3, placeholder: '123' %>
       </div>
       <div class="field">
         <%= f.label :grade_point_average %><br>
-        <%= f.text_field :grade_point_average, tabindex: 5, placeholder: 'out of 4.0' %>
+        <%= f.text_field :grade_point_average, size: "40x1", tabindex: 5, placeholder: 'out of 4.0' %>
       </div>
       <div class="field">
         <%= f.label :year_in_school %><br>
-        <%= f.number_field :year_in_school, tabindex: 7, placeholder: '1st, 2nd, etc' %>
+        <%= f.number_field :year_in_school, size: "40", tabindex: 7, placeholder: '1st, 2nd, etc' %>
       </div>
       <div class="field">
         <%= f.label 'Extra curricular activtites' %><br>
-        <%= f.text_area :outside_activities, tabindex: 9, placeholder: 'What groups at school are you involved in?' %>
+        <%= f.text_area :outside_activities, size: "40x3", tabindex: 9, placeholder: 'What groups at school are you involved in?' %>
       </div>
       <div class="field">
         <%= f.label :rush_events_attended %><br>
-        <%= f.text_area :rush_events_attended, tabindex: 11, placeholder: 'Seperate these by commas' %>
+        <%= f.text_area :rush_events_attended, size: "40x3", tabindex: 11, placeholder: 'Seperate these by commas' %>
       </div>
       <div class="field">
         <%= f.label :reason_for_rushing %><br>
-        <%= f.text_area :reason_for_rushing, tabindex: 13, placeholder: 'Why are you interested in Phi Tau?' %>
+        <%= f.text_area :reason_for_rushing, size: "40x3", tabindex: 13, placeholder: 'Why are you interested in Phi Tau?' %>
       </div>
     </div>
 
@@ -45,27 +45,27 @@
     <div class="col-md-5 col-md-offset-1">
       <div class="field">
         <%= f.label :hometown %><br>
-        <%= f.text_field :hometown, tabindex: 2, placeholder: 'Hometown and State' %>
+        <%= f.text_field :hometown, size: "40x1", tabindex: 2, placeholder: 'Hometown and State' %>
       </div>
       <div class="field">
-        <%= f.label :current_address %><br>
-        <%= f.text_field :current_address, tabindex: 4, placeholder: 'Where in the Rochester area do you live?' %>
+        <%= f.label :current_address, 'Building Name or Apartment Complex' %><br>
+        <%= f.text_field :current_address, size: "40x1", tabindex: 4, placeholder: 'Kate Gleason, Park Paint, etc' %>
       </div>
       <div class="field">
         <%= f.label :major %><br>
-        <%= f.text_field :major, tabindex: 6, placeholder: 'No need for minors' %>
+        <%= f.text_field :major, size: "40x1", tabindex: 6, placeholder: 'No need for minors' %>
       </div>
       <div class="field">
         <%= f.label :nickname %><br>
-        <%= f.text_field :nickname, tabindex: 8, placeholder: '' %>
+        <%= f.text_field :nickname, size: "40x1", tabindex: 8, placeholder: '' %>
       </div>
       <div class="field">
         <%= f.label :hobbies %><br>
-        <%= f.text_area :hobbies, tabindex: 10, placeholder: 'What do you enjoy doing with your free time?' %>
+        <%= f.text_area :hobbies, size: "40x3", tabindex: 10, placeholder: 'What do you enjoy doing with your free time?' %>
       </div>
       <div class="field">
         <%= f.label :brothers_you_know %><br>
-        <%= f.text_area :brothers_you_know, tabindex: 12, placeholder: 'Seperate these by commas' %>
+        <%= f.text_area :brothers_you_know, size: "40x3", tabindex: 12, placeholder: 'Seperate these by commas' %>
       </div>
     </div>
 
