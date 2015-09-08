@@ -3,7 +3,7 @@
 FactoryGirl.define do
   factory :post do
     title 'My first post'
-    content 'Hello, behavior-driven development world!'
+    content 'Hello, testing world!'
   end
 end
 

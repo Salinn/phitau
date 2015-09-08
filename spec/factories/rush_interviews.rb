@@ -1,6 +1,5 @@
 FactoryGirl.define do
   factory :rush_interview do
-    user nil
+    user_id 1
   end
-
 end
