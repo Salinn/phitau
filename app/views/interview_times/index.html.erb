@@ -3,7 +3,7 @@
     <h1>Interview Times</h1>
 
     <div class="col-md-12"></div>
-    <% @interview_times_by_date.each do |date, interviews| %>
+    <% @interview_times_by_date.sort.each do |date, interviews| %>
         <div class="col-md-4 col-lg-4" style="margin: 0">
           <div class="card">
             <h3><%= date.strftime('%A, %B %d') %></h3>
