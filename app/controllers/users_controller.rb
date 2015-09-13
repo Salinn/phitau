@@ -35,8 +35,8 @@ class UsersController < ApplicationController
   end
 
   def edit_all
-    @users = User.all.order(:first_name).page(params[:page]).per_page(15)
-    @positions = Position.all
+    @search = User.ransack(params[:q])
+    @users = @search.result.order(:first_name).page(params[:page]).per_page(30)
   end
 
   def update
@@ -57,7 +57,7 @@ class UsersController < ApplicationController
       @user = User.find(id.to_i)
       @user.update_attributes(update_user_params(id))
     end
-    redirect_to(root_path)
+    redirect_to(edit_all_path)
   end
 
   def potential_new_members
