@@ -1,6 +1,7 @@
 class InterviewQuestionnaire < ActiveRecord::Base
   belongs_to :rush_interview
   has_one :bid
+  belongs_to :user
 
   after_create :create_bid
 

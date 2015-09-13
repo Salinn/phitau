@@ -17,37 +17,29 @@
       <th>Brothers you know</th>
       <th>Rush events attended</th>
       <th>Reason for rushing</th>
-      <th></th>
-      <th></th>
-      <th></th>
     </tr>
   </thead>
 
   <tbody>
     <% @interview_questionnaires.each do |interview_questionnaire| %>
       <tr>
-        <td><%= interview_questionnaire.user %></td>
-        <td><%= interview_questionnaire.date_of_birth %></td>
-        <td><%= interview_questionnaire.hometown %></td>
-        <td><%= interview_questionnaire.current_address %></td>
-        <td><%= interview_questionnaire.room_number %></td>
-        <td><%= interview_questionnaire.grade_point_average %></td>
-        <td><%= interview_questionnaire.major %></td>
-        <td><%= interview_questionnaire.year_in_school %></td>
-        <td><%= interview_questionnaire.nickname %></td>
-        <td><%= interview_questionnaire.outside_activities %></td>
-        <td><%= interview_questionnaire.hobbies %></td>
-        <td><%= interview_questionnaire.brothers_you_know %></td>
-        <td><%= interview_questionnaire.rush_events_attended %></td>
-        <td><%= interview_questionnaire.reason_for_rushing %></td>
-        <td><%= link_to 'Show', interview_questionnaire %></td>
-        <td><%= link_to 'Edit', edit_interview_questionnaire_path(interview_questionnaire) %></td>
-        <td><%= link_to 'Destroy', interview_questionnaire, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= interview_questionnaire.user.name unless interview_questionnaire.user.nil? || interview_questionnaire.user.name.nil? %></td>
+        <td><%= interview_questionnaire.date_of_birth unless interview_questionnaire.date_of_birth.nil? %></td>
+        <td><%= interview_questionnaire.hometown unless interview_questionnaire.hometown.nil? %></td>
+        <td><%= interview_questionnaire.current_address unless interview_questionnaire.current_address.nil? %></td>
+        <td><%= interview_questionnaire.room_number unless interview_questionnaire.room_number.nil? %></td>
+        <td><%= interview_questionnaire.grade_point_average unless interview_questionnaire.grade_point_average.nil? %></td>
+        <td><%= interview_questionnaire.major unless interview_questionnaire.major.nil? %></td>
+        <td><%= interview_questionnaire.year_in_school unless interview_questionnaire.year_in_school.nil? %></td>
+        <td><%= interview_questionnaire.nickname unless interview_questionnaire.nickname.nil? %></td>
+        <td><%= interview_questionnaire.outside_activities unless interview_questionnaire.outside_activities.nil? %></td>
+        <td><%= interview_questionnaire.hobbies unless interview_questionnaire.hobbies.nil? %></td>
+        <td><%= interview_questionnaire.brothers_you_know unless interview_questionnaire.brothers_you_know.nil? %></td>
+        <td><%= interview_questionnaire.rush_events_attended unless interview_questionnaire.rush_events_attended.nil? %></td>
+        <td><%= interview_questionnaire.reason_for_rushing unless interview_questionnaire.reason_for_rushing.nil? %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Interview questionnaire', new_interview_questionnaire_path %>
