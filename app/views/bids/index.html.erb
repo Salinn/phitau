@@ -15,7 +15,7 @@
         <% @yes_bids.each do |bid| %>
             <tr>
               <td><%= bid.rush_interview.user.name %></td>
-              <td><%= bid.rush_interview.user.phone_number %></td>
+              <td><%= link_to "#{bid.rush_interview.user.phone_number}", "tel:#{bid.rush_interview.user.phone_number}" %></td>
               <td><%= bid.rush_interview.user.interview_questionnaires.last.room_number %> <%= bid.rush_interview.user.interview_questionnaires.last.current_address %></td>
             </tr>
         <% end %>
@@ -39,7 +39,7 @@
         <% @no_bids.each do |bid| %>
             <tr>
               <td><%= bid.rush_interview.user.name %></td>
-              <td><%= bid.rush_interview.user.phone_number %></td>
+              <td><%= link_to "#{bid.rush_interview.user.phone_number}", "tel:#{bid.rush_interview.user.phone_number}" %></td>
             </tr>
         <% end %>
         </tbody>
@@ -62,7 +62,7 @@
         <% @deferred_bids.each do |bid| %>
             <tr>
               <td><%= bid.rush_interview.user.name %></td>
-              <td><%= bid.rush_interview.user.phone_number %></td>
+              <td><%= link_to "#{bid.rush_interview.user.phone_number}", "tel:#{bid.rush_interview.user.phone_number}" %></td>
             </tr>
         <% end %>
         </tbody>
