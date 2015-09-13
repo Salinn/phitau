@@ -8,7 +8,7 @@
               <div style='text-align: center;'>
                 <h2>
                   <%= (interview.user && interview.user.name) ? interview.user.name : 'No Name Available' %>
-                  <%= (interview.user.interview_questionnaires.last.nickname != "") ? "(#{interview.user.interview_questionnaires.last.nickname})" : '' %>
+                  <%= "(#{interview.user.interview_questionnaires.last.nickname})" unless interview.user.interview_questionnaires.last.nickname.nil? %>
                 </h2>
               </div>
               <div class="col-md-4">

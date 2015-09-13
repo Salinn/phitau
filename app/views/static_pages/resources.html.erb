@@ -84,6 +84,7 @@
                 <h3><%= link_to 'New Potentials', new_users_admin_path %></h3>
                 <h3><%= link_to 'Bids', bids_path %></h3>
                 <h3><%= link_to 'Rush Slides', rush_interviews_path %></h3>
+                <h3><%= link_to 'Interviews', interview_times_path %></h3>
                 <% if current_user.multiple_have_permissions?(['admin','president','writer','second_vp','recruitment']) %>
                     <h3><%= link_to 'New Text Message', new_text_message_path %></h3>
                     <h3><%= link_to 'View Old Texts', text_messages_path %></h3>

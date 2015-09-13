@@ -1,9 +1,149 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>User:</strong>
-  <%= @rush_interview.user %>
-</p>
-
-<%= link_to 'Edit', edit_rush_interview_path(@rush_interview) %> |
-<%= link_to 'Back', rush_interviews_path %>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-10 col-lg-offset-1">
+      <div class="card">
+        <div>
+          <div style='text-align: center;'>
+            <h2>
+              <%= (@rush_interview.user && @rush_interview.user.name) ? @rush_interview.user.name : 'No Name Available' %>
+              <%= "(#{@rush_interview.user.interview_questionnaires.last.nickname})" unless @rush_interview.user.interview_questionnaires.last.nickname.nil? %>
+            </h2>
+          </div>
+          <div class="col-md-4">
+            <div class="img_div">
+              <%= image_tag (@rush_interview.user && @rush_interview.user.profile_picture?) ? @rush_interview.user.profile_picture_url : 'no-image.png', :class => "contact_img" %>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <% if @rush_interview.user && @rush_interview.user.interview_questionnaires %>
+                <div>
+                  <p style="margin: 0;">GPA:</p>
+                </div>
+                <div>
+                  <% if @rush_interview.user.interview_questionnaires.last.grade_point_average %>
+                      <h3 style="margin: 0; padding-left: 15px;"><%= @rush_interview.user.interview_questionnaires.last.grade_point_average %></h3>
+                  <% end %>
+                </div>
+                <div>
+                  <p style="margin: 0;">Major:</p>
+                </div>
+                <div>
+                  <% if @rush_interview.user.interview_questionnaires.last.major %>
+                      <h3 style="margin: 0; padding-left: 15px;"><%= @rush_interview.user.interview_questionnaires.last.major %></h3>
+                  <% end %>
+                </div>
+                <div>
+                  <p style="margin: 0;">Events Attended Total:</p>
+                </div>
+                <div>
+                  <% if @rush_interview.user.interview_questionnaires.last.rush_events_attended %>
+                      <h3 style="margin: 0; padding-left: 15px;"><%= @rush_interview.user.interview_questionnaires.last.rush_events_attended.split(',').length %></h3>
+                  <% end %>
+                </div>
+                <div>
+                  <p style="margin: 0;">Brothers Known Total:</p>
+                </div>
+                <div>
+                  <% if @rush_interview.user.interview_questionnaires.last.brothers_you_know %>
+                      <h3 style="margin: 0; padding-left: 15px;"><%= @rush_interview.user.interview_questionnaires.last.brothers_you_know.split(',').length %></h3>
+                  <% end %>
+                </div>
+                <div>
+                  <p style="margin: 0;">Reason for rushing:</p>
+                </div>
+                <div>
+                  <% if @rush_interview.user.interview_questionnaires.last.reason_for_rushing %>
+                      <h3 style="margin: 0; padding-left: 15px;"><%= @rush_interview.user.interview_questionnaires.last.reason_for_rushing %></h3>
+                  <% end %>
+                </div>
+            <% end %>
+          </div>
+          <div class="col-md-4">
+            <% if @rush_interview.user && @rush_interview.user.interview_questionnaires %>
+                <div>
+                  <p style="margin: 0";>Home Town:</p>
+                </div>
+                <div>
+                  <% if @rush_interview.user.interview_questionnaires.last.hometown %>
+                      <h3 style="margin: 0; padding-left: 15px;"><%= @rush_interview.user.interview_questionnaires.last.hometown %></h3>
+                  <% end %>
+                </div>
+                <div>
+                  <p style="margin: 0;">Where they live:</p>
+                </div>
+                <div>
+                  <% if @rush_interview.user.interview_questionnaires.last.room_number && interview.user.interview_questionnaires.last.current_address %>
+                      <h3 style="margin: 0; padding-left: 15px;"><%= @rush_interview.user.interview_questionnaires.last.room_number %> <%= interview.user.interview_questionnaires.last.current_address %></h3>
+                  <% end %>
+                </div>
+                <div>
+                  <p style="margin: 0;">Involvement</p>
+                </div>
+                <div>
+                  <% if @rush_interview.user.interview_questionnaires.last.outside_activities %>
+                      <h3 style="margin: 0; padding-left: 15px;"><%= @rush_interview.user.interview_questionnaires.last.outside_activities %></h3>
+                  <% end %>
+                </div>
+                <div>
+                  <p style="margin: 0;">Hobbies:</p>
+                </div>
+                <div>
+                  <% if @rush_interview.user.interview_questionnaires.last.hobbies %>
+                      <h3 style="margin: 0; padding-left: 15px;"><%= @rush_interview.user.interview_questionnaires.last.hobbies %></h3>
+                  <% end %>
+                </div>
+                <div>
+                  <p style="margin: 0;">Events Attended:</p>
+                </div>
+                <div>
+                  <% if @rush_interview.user.interview_questionnaires.last.rush_events_attended %>
+                      <h3 style="margin: 0; padding-left: 15px;"><%= @rush_interview.user.interview_questionnaires.last.rush_events_attended %></h3>
+                  <% end %>
+                </div>
+                <div>
+                  <p style="margin: 0;">Brothers Known:</p>
+                </div>
+                <div>
+                  <% if @rush_interview.user.interview_questionnaires.last.brothers_you_know %>
+                      <h3 style="margin: 0; padding-left: 15px;"><%= @rush_interview.user.interview_questionnaires.last.brothers_you_know %></h3>
+                  <% end %>
+                </div>
+            <% end %>
+          </div>
+        </div>
+        <div class="clear"></div>
+        <div class="col-md-6">
+          <% if current_user.multiple_have_permissions?(['admin','president','recruitment']) %>
+              <%= form_for(@rush_interview.user) do |f| %>
+                  <div class="field">
+                    <%= f.file_field :profile_picture %>
+                  </div>
+                  <div class="field">
+                    <%= f.label :remote_profile_picture_url, "or image URL" %><br />
+                    <%= f.text_field :remote_profile_picture_url %>
+                  </div>
+                  <%= f.submit "Update Picture" %>
+              <% end %>
+          <% end %>
+        </div>
+        <div class="col-md-6">
+          <% if current_user.multiple_have_permissions?(['admin','president','recruitment']) %>
+              <%= form_for(@rush_interview.bid) do |f| %>
+                  <div class="field">
+                    <%= f.label :bid_given %><br>
+                    <%= f.collection_select :bid_given, RushInterview::BIDOPTIONS, :to_s, :to_s, :class => "col-md-3" %>
+                  </div>
+                  <div class="actions">
+                    <%= f.submit 'Update' %>
+                  </div>
+              <% end %>
+          <% end %>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>

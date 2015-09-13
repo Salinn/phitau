@@ -17,7 +17,7 @@
                     <td><%= interview.interview_time.strftime('%l:%M %p') %></td>
                     <% if interview.rush_interview && interview.rush_interview.user %>
                         <td>
-                          <%= interview.rush_interview.user.first_name %> <%= interview.rush_interview.user.last_name %> :
+                          <%= link_to "#{interview.rush_interview.user.first_name} #{interview.rush_interview.user.last_name}", rush_interview_path(interview.rush_interview) %>
                           <% if interview.rush_interview.user.id == current_user.id %>
                               <%= form_for(interview, :html => { style: 'display: inline-block' }) do |f| %>
                                   <%= f.submit 'Drop Time Slot' %>
