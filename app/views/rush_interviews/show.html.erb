@@ -74,8 +74,8 @@
                   <p style="margin: 0;">Where they live:</p>
                 </div>
                 <div>
-                  <% if @rush_interview.user.interview_questionnaires.last.room_number && interview.user.interview_questionnaires.last.current_address %>
-                      <h3 style="margin: 0; padding-left: 15px;"><%= @rush_interview.user.interview_questionnaires.last.room_number %> <%= interview.user.interview_questionnaires.last.current_address %></h3>
+                  <% if @rush_interview.user.interview_questionnaires.last.room_number && @rush_interview.user.interview_questionnaires.last.current_address %>
+                      <h3 style="margin: 0; padding-left: 15px;"><%= @rush_interview.user.interview_questionnaires.last.room_number %> <%= @rush_interview.user.interview_questionnaires.last.current_address %></h3>
                   <% end %>
                 </div>
                 <div>
