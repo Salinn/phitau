@@ -33,9 +33,9 @@
                 <% @users.each do |user| %>
                     <%= fields_for "user[]", user do |user_fields| %>
                         <tr>
-                          <td><%= user_fields.text_field :first_name,:disabled => true %></td>
-                          <td><%= user_fields.text_field :last_name,:disabled => true %></td>
-                          <td><%= user_fields.email_field :email,:disabled => true %></td>
+                          <td><%= user_fields.text_field :first_name %></td>
+                          <td><%= user_fields.text_field :last_name %></td>
+                          <td><%= user_fields.email_field :email %></td>
                           <td><%= user_fields.collection_select :user_status, User::USERSTATUSES, :to_s, :to_s, :class => "col-md-3" %></td>
                           <td><%= user_fields.check_box :confirmed_brother %></td>
                         </tr>
