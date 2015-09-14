@@ -121,6 +121,6 @@ class UsersController < ApplicationController
   end
 
   def update_user_params(id)
-    params.require(:user).fetch(id).permit(:user_status, :confirmed_brother)
+    params.require(:user).fetch(id).permit(:first_name, :last_name, :email, :user_status, :confirmed_brother)
   end
 end
