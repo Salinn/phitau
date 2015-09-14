@@ -7,17 +7,17 @@
         <div>
           <div style='text-align: center;'>
             <h2>
-              <%= (@rush_interview.user && @rush_interview.user.name) ? @rush_interview.user.name : 'No Name Available' %>
-              <%= "(#{@rush_interview.user.interview_questionnaires.last.nickname})" unless @rush_interview.user.interview_questionnaires.last.nickname.nil? %>
+              <%= link_to "#{interview_name}", user_path(@rush_interview.user) %>
+              <%= nickname %>
             </h2>
           </div>
           <div class="col-md-4">
             <div class="img_div">
-              <%= image_tag (@rush_interview.user && @rush_interview.user.profile_picture?) ? @rush_interview.user.profile_picture_url : 'no-image.png', :class => "contact_img" %>
+              <%= image_tag potentials_picture, :class => "contact_img" %>
             </div>
           </div>
           <div class="col-md-4">
-            <% if @rush_interview.user && @rush_interview.user.interview_questionnaires %>
+            <% if filled_out_questionnare? %>
                 <div>
                   <p style="margin: 0;">GPA:</p>
                 </div>
@@ -61,7 +61,7 @@
             <% end %>
           </div>
           <div class="col-md-4">
-            <% if @rush_interview.user && @rush_interview.user.interview_questionnaires %>
+            <% if filled_out_questionnare? %>
                 <div>
                   <p style="margin: 0";>Home Town:</p>
                 </div>

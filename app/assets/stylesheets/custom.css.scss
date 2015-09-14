@@ -826,6 +826,21 @@ only screen and (max-width: 760px),
   .interview-time-table td:nth-of-type(1):before { content: "Interview time"; }
   .interview-time-table td:nth-of-type(2):before { content: "Who is signed up"; }
 
+  .interview-questionare-table td:nth-of-type(1):before { content: "Potential"; }
+  .interview-questionare-table td:nth-of-type(2):before { content: "Date of birth"; }
+  .interview-questionare-table td:nth-of-type(3):before { content: "Hometown"; }
+  .interview-questionare-table td:nth-of-type(4):before { content: "Current address"; }
+  .interview-questionare-table td:nth-of-type(5):before { content: "Room number"; }
+  .interview-questionare-table td:nth-of-type(6):before { content: "Grade point average"; }
+  .interview-questionare-table td:nth-of-type(7):before { content: "Major"; }
+  .interview-questionare-table td:nth-of-type(8):before { content: "Year in school"; }
+  .interview-questionare-table td:nth-of-type(9):before { content: "Nickname"; }
+  .interview-questionare-table td:nth-of-type(10):before { content: "Outside activities"; }
+  .interview-questionare-table td:nth-of-type(11):before { content: "Hobbies"; }
+  .interview-questionare-table td:nth-of-type(12):before { content: "Brothers you know"; }
+  .interview-questionare-table td:nth-of-type(13):before { content: "Rush events attended"; }
+  .interview-questionare-table td:nth-of-type(14):before { content: "Reason for rushing"; }
+
   .bids-table td:nth-of-type(1):before { content: "Name"; }
   .bids-table td:nth-of-type(2):before { content: "Phone Number"; }
 
