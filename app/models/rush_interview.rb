@@ -9,5 +9,7 @@ class RushInterview < ActiveRecord::Base
   accepts_nested_attributes_for :interview_questionnaire
   accepts_nested_attributes_for :bid
 
+  acts_as_paranoid
+
   BIDOPTIONS = ['', 'Yes', 'No', 'Deferred']
 end

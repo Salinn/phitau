@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150825191819) do
+ActiveRecord::Schema.define(version: 20150914195558) do
 
   create_table "alumni_eternal_stories", force: true do |t|
     t.integer  "user_id"
@@ -152,7 +152,10 @@ ActiveRecord::Schema.define(version: 20150825191819) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
+    t.datetime "deleted_at"
   end
+
+  add_index "interview_questionnaires", ["deleted_at"], name: "index_interview_questionnaires_on_deleted_at"
 
   create_table "interview_times", force: true do |t|
     t.integer  "rush_interview_id"
@@ -160,8 +163,10 @@ ActiveRecord::Schema.define(version: 20150825191819) do
     t.date     "interview_date"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.datetime "deleted_at"
   end
 
+  add_index "interview_times", ["deleted_at"], name: "index_interview_times_on_deleted_at"
   add_index "interview_times", ["rush_interview_id"], name: "index_interview_times_on_rush_interview_id"
 
   create_table "paddles", force: true do |t|
@@ -225,8 +230,10 @@ ActiveRecord::Schema.define(version: 20150825191819) do
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.datetime "deleted_at"
   end
 
+  add_index "rush_interviews", ["deleted_at"], name: "index_rush_interviews_on_deleted_at"
   add_index "rush_interviews", ["user_id"], name: "index_rush_interviews_on_user_id"
 
   create_table "text_messages", force: true do |t|

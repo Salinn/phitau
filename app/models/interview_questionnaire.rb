@@ -3,6 +3,8 @@ class InterviewQuestionnaire < ActiveRecord::Base
   has_one :bid
   belongs_to :user
 
+  acts_as_paranoid
+
   after_create :create_bid
 
   def created_within_same_month?

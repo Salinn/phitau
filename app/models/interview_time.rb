@@ -1,6 +1,8 @@
 class InterviewTime < ActiveRecord::Base
   belongs_to :rush_interview
 
+  acts_as_paranoid
+
   def create_rush_interview
     rush_interview = RushInterview.create!
     self.rush_interview_id = rush_interview.id
