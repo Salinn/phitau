@@ -6,12 +6,6 @@ class UserMailer < ActionMailer::Base
   #
   #   en.user_mailer.signup_confirmation.subject
   #
-  def signup_confirmation(user)
-    @greeting = "Hi"
-    @user = user
-
-    mail to: user.email, subject: "Sign Up Confirmation"
-  end
 
   def new_user_alert_email(new_user)
     @new_user = new_user
@@ -66,8 +60,7 @@ class UserMailer < ActionMailer::Base
 
   def welcome_email(user, generated_password)
     @user = user
-    @generated_password = generated_password
-
+    @user.send_reset_password_instructions
     body_template = 'user_mailer/welcome'
     email_title = "Welcome to the RIT Phi Kappa Tau Website!"
     to_address = @user.email

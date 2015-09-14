@@ -36,7 +36,7 @@
         <% if current_user.multiple_have_permissions?(['admin','president','writer','second_vp']) %>
             <div class="resources col-md-6">
               <div style="color: #736f7e">
-                <h2>Update FAQ</h2>
+                <h2>Static Pages</h2>
                 <h3><%= link_to 'FAQ Categories', faq_categories_path %></h3>
                 <h3><%= link_to 'FAQ Questions', faq_questions_path %></h3>
               </div>
@@ -97,7 +97,7 @@
         <% if current_user.multiple_have_permissions?(['admin','president','writer','second_vp']) %>
             <div class="resources col-md-6">
               <div style="color: #736f7e">
-                <h2>Update Alumni Info</h2>
+                <h2>Alumni Info</h2>
                 <h3><%= link_to 'Create Alumni-News-Letters', new_alumni_news_letter_path %></h3>
                 <h3><%= link_to 'View Alumni-News-Letters', alumni_news_letters_path %></h3>
                 <h3><%= link_to 'New Composite', new_composite_path %></h3>

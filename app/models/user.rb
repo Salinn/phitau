@@ -22,7 +22,7 @@ class User < ActiveRecord::Base
   ALLROLES = ["alumni", "current brother", "potential new member", "dummy",
               "president","first_vp","second_vp","treasurer","sergeant","chaplain",
               "recruitment", "alumni_relations", "web_master","brotherhood","social","community_service",
-              "philanthropy","business_ops", "housing_manager",
+              "philanthropy","business_ops", "housing_manager", "secretary",
               "admin", "writer"]
 
   # Include default devise modules. Others available are:

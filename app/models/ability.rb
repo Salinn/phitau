@@ -49,6 +49,10 @@ class Ability
         can :manage, CommunityService
         can [:show, :index, :create, :update], Event
       end
+      if user.have_permissions?('secretary')
+        can :manage, CommunityService
+        can [:show, :index, :create, :update], Event
+      end
     end
   end
 end
