@@ -32,10 +32,13 @@
             <li><%= link_to "Contact", contact_us_path %></li>
         <% else %>
             <% if !current_user.confirmed_brother? %>
-                <li><%= link_to "About", about_path %></li>
-                <li><%= link_to "FAQ", faq_path %></li>
+                <!--<li><%= link_to "About", about_path %></li>-->
+                <!--<li><%= link_to "FAQ", faq_path %></li>-->
                 <li><%= link_to "Contact", contact_us_path %></li>
                 <li><%= link_to "Interviews", interview_times_path %></li>
+                <% if current_user.interview_questionnaires.any? %>
+                    <li><%= link_to "Questionnaire", edit_interview_questionnaire_path(current_user.interview_questionnaires.last.id) %></li>
+                <% end %>
             <% else %>
                 <li><%= link_to "Resources", '/resources' %></li>
                 <li><%= link_to "News-Letters", alumni_news_letters_path %></li>
