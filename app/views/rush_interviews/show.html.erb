@@ -7,13 +7,13 @@
         <div>
           <div style='text-align: center;'>
             <h2>
-              <%= link_to "#{interview_name}", user_path(@rush_interview.user) %>
-              <%= nickname %>
+              <%= link_to "#{interview_name(@rush_interview)}", user_path(@rush_interview.user) %>
+              <%= nickname(@rush_interview.user.interview_questionnaires.last) %>
             </h2>
           </div>
           <div class="col-md-4 col-xs-12">
-            <div class="img_div">
-              <%= image_tag potentials_picture, :class => "contact_img" %>
+            <div>
+              <%= image_tag potentials_picture(@rush_interview), :class => "potential_img" %>
             </div>
           </div>
           <div class="col-md-4 col-xs-12">

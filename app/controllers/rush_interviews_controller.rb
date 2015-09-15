@@ -4,7 +4,7 @@ class RushInterviewsController < ApplicationController
   respond_to :html
 
   def index
-    @rush_interviews = RushInterview.all
+    @rush_interviews = RushInterview.all.most_recent_interviews
     respond_with(@rush_interviews)
   end
 

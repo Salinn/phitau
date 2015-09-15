@@ -12,4 +12,10 @@ class RushInterview < ActiveRecord::Base
   acts_as_paranoid
 
   BIDOPTIONS = ['', 'Yes', 'No', 'Deferred']
+
+  scope :most_recent_interviews, ->  {
+    where("rush_interviews.created_at > ?", (Time.now.month + 2.months))
+  }
+
+  #default_scope joins(:user).order("users.first_name ASC")
 end
