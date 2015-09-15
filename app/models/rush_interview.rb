@@ -11,7 +11,13 @@ class RushInterview < ActiveRecord::Base
 
   acts_as_paranoid
 
+  after_create :create_bid
+
   BIDOPTIONS = ['', 'Yes', 'No', 'Deferred']
+
+  def create_bid
+    Bid.create!(rush_interview_id: self.id)
+  end
 
   # scope :most_recent_interviews, ->  {
   #   where("rush_interviews.created_at < ?", (Time.now.month - 2.months))
