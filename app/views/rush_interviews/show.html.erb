@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <div class="container-fluid">
   <div class="row">
     <div class="col-lg-10 col-lg-offset-1">
@@ -111,8 +109,16 @@
                   <% end %>
                 </div>
             <% end %>
+            <div class="clear"></div>
           </div>
         </div>
+        <div class="clear"></div>
+        <% if current_user.multiple_have_permissions?(['admin','president','recruitment']) %>
+            <%= render 'add_photo', interview: @rush_interview %>
+        <% end %>
+        <% if current_user.multiple_have_permissions?(['admin','president','recruitment']) %>
+            <%= render 'change_bid_status', interview: @rush_interview %>
+        <% end %>
         <div class="clear"></div>
       </div>
     </div>

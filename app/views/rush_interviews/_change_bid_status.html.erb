@@ -1,0 +1,13 @@
+<div class="col-md-6">
+  <% if current_user.multiple_have_permissions?(['admin','president','recruitment']) %>
+      <%= form_for(interview.bid, remote: true) do |f| %>
+          <div class="field">
+            <%= f.label :bid_given %><br>
+            <%= f.collection_select :bid_given, RushInterview::BIDOPTIONS, :to_s, :to_s, :class => "col-md-3" %>
+          </div>
+          <div class="actions">
+            <%= f.submit 'Update' %>
+          </div>
+      <% end %>
+  <% end %>
+</div>

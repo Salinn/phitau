@@ -1,0 +1,12 @@
+<div class="col-md-6">
+  <%= form_for(interview.user) do |f| %>
+      <div class="field">
+        <%= f.file_field :profile_picture %>
+      </div>
+      <div class="field">
+        <%= f.label :remote_profile_picture_url, "or image URL" %><br />
+        <%= f.text_field :remote_profile_picture_url %>
+      </div>
+      <%= f.submit "Update Picture" %>
+  <% end %>
+</div>

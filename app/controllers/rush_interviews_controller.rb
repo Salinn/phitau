@@ -1,7 +1,7 @@
 class RushInterviewsController < ApplicationController
   before_action :set_rush_interview, only: [:show, :edit, :update, :destroy]
   load_and_authorize_resource
-  respond_to :html
+  respond_to :html, :js
 
   def index
     @rush_interviews = RushInterview.all

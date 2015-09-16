@@ -114,33 +114,12 @@
               </div>
             </div>
             <div class="clear"></div>
-            <div class="col-md-6">
-              <% if current_user.multiple_have_permissions?(['admin','president','recruitment']) %>
-                  <%= form_for(interview.user) do |f| %>
-                      <div class="field">
-                        <%= f.file_field :profile_picture %>
-                      </div>
-                      <div class="field">
-                        <%= f.label :remote_profile_picture_url, "or image URL" %><br />
-                        <%= f.text_field :remote_profile_picture_url %>
-                      </div>
-                      <%= f.submit "Update Picture" %>
-                  <% end %>
-              <% end %>
-            </div>
-            <div class="col-md-6">
-              <% if current_user.multiple_have_permissions?(['admin','president','recruitment']) %>
-                  <%= form_for(interview.bid) do |f| %>
-                      <div class="field">
-                        <%= f.label :bid_given %><br>
-                        <%= f.collection_select :bid_given, RushInterview::BIDOPTIONS, :to_s, :to_s, :class => "col-md-3" %>
-                      </div>
-                      <div class="actions">
-                        <%= f.submit 'Update' %>
-                      </div>
-                  <% end %>
-              <% end %>
-            </div>
+            <% if current_user.multiple_have_permissions?(['admin','president','recruitment']) %>
+                <%= render 'add_photo', interview: interview %>
+            <% end %>
+            <% if current_user.multiple_have_permissions?(['admin','president','recruitment']) %>
+                <%= render 'change_bid_status', interview: interview %>
+            <% end %>
             <div class="clear"></div>
             <hr>
         <% end %>
