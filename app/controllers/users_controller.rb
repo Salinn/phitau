@@ -101,10 +101,18 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    if @user.destroy
-      flash[:notice] = "Successfully deleted User."
-      redirect_to root_path
+    @user = User.find(params[:id])
+
+    @user.rush_interviews.each do |interview|
+      if interview.interview_time
+        interview.interview_time.rush_interview_id = nil
+        interview.interview_time.save
+      end
+
+      interview.destroy
     end
+    @user.destroy
+    redirect_to potentials_path, notice: "User deleted."
   end
 
   def update_user_status user_status
