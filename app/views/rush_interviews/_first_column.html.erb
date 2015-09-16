@@ -1,0 +1,48 @@
+<div>
+  <p style="margin: 0;">GPA:</p>
+</div>
+<div>
+  <% if interview_questionnaire.grade_point_average %>
+      <h3 style="margin: 0; padding-left: 15px;"><%= interview_questionnaire.grade_point_average %></h3>
+  <% end %>
+</div>
+<div>
+  <p style="margin: 0;">Major:</p>
+</div>
+<div>
+  <% if interview_questionnaire.major %>
+      <h3 style="margin: 0; padding-left: 15px;"><%= interview_questionnaire.major %></h3>
+  <% end %>
+</div>
+<div>
+  <p style="margin: 0;">Year:</p>
+</div>
+<div>
+  <% if interview_questionnaire.year_in_school %>
+      <h3 style="margin: 0; padding-left: 15px;"><%= interview_questionnaire.year_in_school %></h3>
+  <% end %>
+</div>
+<div>
+  <p style="margin: 0;">Events Attended Total:</p>
+</div>
+<div>
+  <% if interview_questionnaire.rush_events_attended %>
+      <h3 style="margin: 0; padding-left: 15px;"><%= interview_questionnaire.rush_events_attended.split(',').length %></h3>
+  <% end %>
+</div>
+<div>
+  <p style="margin: 0;">Brothers Known Total:</p>
+</div>
+<div>
+  <% if interview_questionnaire.brothers_you_know %>
+      <h3 style="margin: 0; padding-left: 15px;"><%= interview_questionnaire.brothers_you_know.split(',').length %></h3>
+  <% end %>
+</div>
+<div>
+  <p style="margin: 0;">Reason for rushing:</p>
+</div>
+<div>
+  <% if interview_questionnaire.reason_for_rushing %>
+      <h3 style="margin: 0; padding-left: 15px;"><%= interview_questionnaire.reason_for_rushing %></h3>
+  <% end %>
+</div>

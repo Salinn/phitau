@@ -18,98 +18,12 @@
               </div>
               <div class="col-md-4 col-xs-12">
                 <% if interview.user && interview.user.interview_questionnaires %>
-                    <div>
-                      <p style="margin: 0;">GPA:</p>
-                    </div>
-                    <div>
-                      <% if interview.user.interview_questionnaires.last.grade_point_average %>
-                          <h3 style="margin: 0; padding-left: 15px;"><%= interview.user.interview_questionnaires.last.grade_point_average %></h3>
-                      <% end %>
-                    </div>
-                    <div>
-                      <p style="margin: 0;">Major:</p>
-                    </div>
-                    <div>
-                      <% if interview.user.interview_questionnaires.last.major %>
-                          <h3 style="margin: 0; padding-left: 15px;"><%= interview.user.interview_questionnaires.last.major %></h3>
-                      <% end %>
-                    </div>
-                    <div>
-                      <p style="margin: 0;">Events Attended Total:</p>
-                    </div>
-                    <div>
-                      <% if interview.user.interview_questionnaires.last.rush_events_attended %>
-                          <h3 style="margin: 0; padding-left: 15px;"><%= interview.user.interview_questionnaires.last.rush_events_attended.split(',').length %></h3>
-                      <% end %>
-                    </div>
-                    <div>
-                      <p style="margin: 0;">Brothers Known Total:</p>
-                    </div>
-                    <div>
-                      <% if interview.user.interview_questionnaires.last.brothers_you_know %>
-                          <h3 style="margin: 0; padding-left: 15px;"><%= interview.user.interview_questionnaires.last.brothers_you_know.split(',').length %></h3>
-                      <% end %>
-                    </div>
-                    <div>
-                      <p style="margin: 0;">Reason for rushing:</p>
-                    </div>
-                    <div>
-                      <% if interview.user.interview_questionnaires.last.reason_for_rushing %>
-                          <h3 style="margin: 0; padding-left: 15px;"><%= interview.user.interview_questionnaires.last.reason_for_rushing %></h3>
-                      <% end %>
-                    </div>
+                    <%= render 'first_column', interview_questionnaire: interview.user.interview_questionnaires.last %>
                 <% end %>
               </div>
               <div class="col-md-4 col-xs-12">
                 <% if interview.user && interview.user.interview_questionnaires %>
-                    <div>
-                      <p style="margin: 0";>Home Town:</p>
-                    </div>
-                    <div>
-                      <% if interview.user.interview_questionnaires.last.hometown %>
-                          <h3 style="margin: 0; padding-left: 15px;"><%= interview.user.interview_questionnaires.last.hometown %></h3>
-                      <% end %>
-                    </div>
-                    <div>
-                      <p style="margin: 0;">Where they live:</p>
-                    </div>
-                    <div>
-                      <% if interview.user.interview_questionnaires.last.room_number && interview.user.interview_questionnaires.last.current_address %>
-                          <h3 style="margin: 0; padding-left: 15px;"><%= interview.user.interview_questionnaires.last.room_number %> <%= interview.user.interview_questionnaires.last.current_address %></h3>
-                      <% end %>
-                    </div>
-                    <div>
-                      <p style="margin: 0;">Involvement</p>
-                    </div>
-                    <div>
-                      <% if interview.user.interview_questionnaires.last.outside_activities %>
-                          <h3 style="margin: 0; padding-left: 15px;"><%= interview.user.interview_questionnaires.last.outside_activities %></h3>
-                      <% end %>
-                    </div>
-                    <div>
-                      <p style="margin: 0;">Hobbies:</p>
-                    </div>
-                    <div>
-                      <% if interview.user.interview_questionnaires.last.hobbies %>
-                          <h3 style="margin: 0; padding-left: 15px;"><%= interview.user.interview_questionnaires.last.hobbies %></h3>
-                      <% end %>
-                    </div>
-                    <div>
-                      <p style="margin: 0;">Events Attended:</p>
-                    </div>
-                    <div>
-                      <% if interview.user.interview_questionnaires.last.rush_events_attended %>
-                          <h3 style="margin: 0; padding-left: 15px;"><%= interview.user.interview_questionnaires.last.rush_events_attended %></h3>
-                      <% end %>
-                    </div>
-                    <div>
-                      <p style="margin: 0;">Brothers Known:</p>
-                    </div>
-                    <div>
-                      <% if interview.user.interview_questionnaires.last.brothers_you_know %>
-                          <h3 style="margin: 0; padding-left: 15px;"><%= interview.user.interview_questionnaires.last.brothers_you_know %></h3>
-                      <% end %>
-                    </div>
+                    <%= render 'second_column', interview_questionnaire: interview.user.interview_questionnaires.last %>
                 <% end %>
               </div>
             </div>

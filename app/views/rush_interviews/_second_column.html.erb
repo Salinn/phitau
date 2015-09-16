@@ -1,0 +1,48 @@
+<div>
+  <p style="margin: 0";>Home Town:</p>
+</div>
+<div>
+  <% if interview_questionnaire.hometown %>
+      <h3 style="margin: 0; padding-left: 15px;"><%= interview_questionnaire.hometown %></h3>
+  <% end %>
+</div>
+<div>
+  <p style="margin: 0;">Where they live:</p>
+</div>
+<div>
+  <% if interview_questionnaire.room_number && interview_questionnaire.current_address %>
+      <h3 style="margin: 0; padding-left: 15px;"><%= interview_questionnaire.room_number %> <%= interview_questionnaire.current_address %></h3>
+  <% end %>
+</div>
+<div>
+  <p style="margin: 0;">Involvement</p>
+</div>
+<div>
+  <% if interview_questionnaire.outside_activities %>
+      <h3 style="margin: 0; padding-left: 15px;"><%= interview_questionnaire.outside_activities %></h3>
+  <% end %>
+</div>
+<div>
+  <p style="margin: 0;">Hobbies:</p>
+</div>
+<div>
+  <% if interview_questionnaire.hobbies %>
+      <h3 style="margin: 0; padding-left: 15px;"><%= interview_questionnaire.hobbies %></h3>
+  <% end %>
+</div>
+<div>
+  <p style="margin: 0;">Events Attended:</p>
+</div>
+<div>
+  <% if interview_questionnaire.rush_events_attended %>
+      <h3 style="margin: 0; padding-left: 15px;"><%= interview_questionnaire.rush_events_attended %></h3>
+  <% end %>
+</div>
+<div>
+  <p style="margin: 0;">Brothers Known:</p>
+</div>
+<div>
+  <% if interview_questionnaire.brothers_you_know %>
+      <h3 style="margin: 0; padding-left: 15px;"><%= interview_questionnaire.brothers_you_know %></h3>
+  <% end %>
+</div>
