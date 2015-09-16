@@ -10,6 +10,8 @@ class User < ActiveRecord::Base
 
   validates :first_name, length: { minimum: 2 }
   validates :last_name, length: { minimum: 2 }
+
+  acts_as_paranoid
 =begin
   validate check_user_status
 

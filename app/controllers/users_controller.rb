@@ -111,6 +111,10 @@ class UsersController < ApplicationController
 
       interview.destroy
     end
+
+    @user.interview_questionnaires.each do |questionnaire|
+      questionnaire.destroy
+    end
     @user.destroy
     redirect_to potentials_path, notice: "User deleted."
   end
