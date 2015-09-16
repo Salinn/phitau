@@ -60,7 +60,7 @@ gem 'jquery-timepicker-rails'
 gem 'raygun4ruby'
 
 #mailchimp
-gem 'gibbon'
+gem 'gibbon', '1.1.5'
 
 #server side
 gem 'puma'

@@ -1,1 +1,1 @@
-gibbon = Gibbon::Request.new(api_key:  ENV['mailchimp_api_key'])
+Gibbon::API.api_key = ENV['mailchimp_api_key']
