@@ -31,7 +31,9 @@
             <th><%= sort_link @search, :last_name,'Last Name' %></th>
             <th><%= sort_link @search, :phone_number, 'Phone Number' %></th>
             <th><%= sort_link @search, :email, 'Email' %></th>
+            <% if current_user.multiple_have_permissions?(['admin','president','recruitment'])%>
             <th></th>
+                <% end %>
           </tr>
           </thead>
           <tbody>
@@ -41,11 +43,13 @@
                 <td><%= potential.last_name? ? potential.last_name : 'N/A' %></td>
                 <td><%= potential.phone_number? ? potential.phone_number : 'N/A' %></td>
                 <td><%= potential.email? ? potential.email : 'N/A' %></td>
-                <td>
-                  <%= link_to users_admin_path(potential), method: :delete, data: { confirm: "Are You sure?" } do %>
+                <% if current_user.multiple_have_permissions?(['admin','president','recruitment'])%>
+                    <td>
+                  <%= link_to users_admin_path(potential), method: :delete, data: { confirm: "Are you sure that you want to remove this potential?" } do %>
                     <i class="glyphicon glyphicon-remove"></i>
                   <% end %>
                 </td>
+                <% end %>
               </tr>
           <% end %>
           </tbody>

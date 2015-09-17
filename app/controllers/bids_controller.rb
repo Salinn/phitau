@@ -6,9 +6,10 @@ class BidsController < ApplicationController
   def index
     bids = Bid.all
     @yes_bids = bids.select { |bid| bid.bid_given == 'Yes' }
+    @yes_bids.sort! { |a,b| a.rush_interview.user.interview_questionnaires.last.current_address <=> b.rush_interview.user.interview_questionnaires.last.current_address }
+
     @no_bids = bids.select { |bid| bid.bid_given == 'No' }
     @deferred_bids = bids.select { |bid| bid.bid_given == 'Deferred' }
-    respond_with(@bids)
   end
 
   def show

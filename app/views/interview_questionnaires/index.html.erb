@@ -2,26 +2,29 @@
 
 <table class="interview-questionare-table">
   <thead>
-    <tr>
-      <th>Potential</th>
-      <th>Date of birth</th>
-      <th>Hometown</th>
-      <th>Current address</th>
-      <th>Room number</th>
-      <th>Grade point average</th>
-      <th>Major</th>
-      <th>Year in school</th>
-      <th>Nickname</th>
-      <th>Outside activities</th>
-      <th>Hobbies</th>
-      <th>Brothers you know</th>
-      <th>Rush events attended</th>
-      <th>Reason for rushing</th>
-    </tr>
+  <tr>
+    <th>Potential</th>
+    <th>Date of birth</th>
+    <th>Hometown</th>
+    <th>Current address</th>
+    <th>Room number</th>
+    <th>Grade point average</th>
+    <th>Major</th>
+    <th>Year in school</th>
+    <th>Nickname</th>
+    <th>Outside activities</th>
+    <th>Hobbies</th>
+    <th>Brothers you know</th>
+    <th>Rush events attended</th>
+    <th>Reason for rushing</th>
+    <% if current_user.multiple_have_permissions?(['admin','president','recruitment'])%>
+        <th></th>
+    <% end %>
+  </tr>
   </thead>
 
   <tbody>
-    <% @interview_questionnaires.each do |interview_questionnaire| %>
+  <% @interview_questionnaires.each do |interview_questionnaire| %>
       <tr>
         <td><%= interview_questionnaire.user.name unless interview_questionnaire.user.nil? || interview_questionnaire.user.name.nil? %></td>
         <td><%= interview_questionnaire.date_of_birth unless interview_questionnaire.date_of_birth.nil? %></td>
@@ -37,8 +40,15 @@
         <td><%= interview_questionnaire.brothers_you_know unless interview_questionnaire.brothers_you_know.nil? %></td>
         <td><%= interview_questionnaire.rush_events_attended unless interview_questionnaire.rush_events_attended.nil? %></td>
         <td><%= interview_questionnaire.reason_for_rushing unless interview_questionnaire.reason_for_rushing.nil? %></td>
+        <% if current_user.multiple_have_permissions?(['admin','president','recruitment'])%>
+            <td>
+              <%= link_to interview_questionnaire, method: :delete, data: { confirm: "Are you sure that you want to remove this questionnaire?" } do %>
+                  <i class="glyphicon glyphicon-remove"></i>
+                  </td>
+              <% end %>
+        <% end %>
       </tr>
-    <% end %>
+  <% end %>
   </tbody>
 </table>
 

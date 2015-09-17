@@ -34,7 +34,7 @@ class InterviewQuestionnairesController < ApplicationController
 
   def destroy
     @interview_questionnaire.destroy
-    respond_with(@interview_questionnaire)
+    respond_with(@interview_questionnaire, location: interview_questionnaires_path)
   end
 
   private
