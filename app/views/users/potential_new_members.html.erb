@@ -13,10 +13,10 @@
                 <%= f.search_field :phone_number_cont, placeholder: 'Search by Phone Number' %>
                 <%= f.search_field :email_cont, placeholder: 'Search by Email' %>
               </div>
-              <div class="actions" style='display: inline;'>
+              <div class="actions potentials-inline">
                 <%= f.submit "Search Potentials" %>
               </div>
-              <div style='display: inline;'>
+              <div class="potentials-inline">
                 <%= link_to 'Clear Search', potentials_path %>
               </div>
           <% end %>
@@ -39,10 +39,10 @@
           <tbody>
           <% @potentials.each do |potential| %>
               <tr>
-                <td><%= potential.first_name? ? potential.first_name : 'N/A' %></td>
-                <td><%= potential.last_name? ? potential.last_name : 'N/A' %></td>
-                <td><%= potential.phone_number? ? potential.phone_number : 'N/A' %></td>
-                <td><%= potential.email? ? potential.email : 'N/A' %></td>
+                <td><%= first_name(potential) %></td>
+                <td><%= last_name(potential) %></td>
+                <td><%= phone_number(potential) %></td>
+                <td><%= email(potential) %></td>
                 <% if current_user.multiple_have_permissions?(['admin','president','recruitment'])%>
                     <td>
                   <%= link_to users_admin_path(potential), method: :delete, data: { confirm: "Are you sure that you want to remove this potential?" } do %>
@@ -59,12 +59,3 @@
     </div>
   </div>
 </div>
-
-<script>
-    jQuery('.data-table').each(function() {
-        var thetable=jQuery(this);
-        jQuery(this).find('tbody td').each(function() {
-            jQuery(this).attr('data-heading',thetable.find('thead th:nth-child('+(jQuery(this).index()+1)+')').text());
-        });
-    });
-</script>

@@ -1,0 +1,18 @@
+//Used to keep clear and submit button on the same line
+.potentials-inline {
+  display: inline;
+}
+
+.all_users-inline {
+  display: inline;
+}
+
+.user-edit-back-link {
+  margin-top: 4rem;
+  font-size: 1.7rem
+}
+
+//Used to change the title color
+#page-wrap > table > thead > tr > th > a {
+  color: white;
+}

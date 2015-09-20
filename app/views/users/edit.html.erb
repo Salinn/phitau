@@ -1,13 +1,12 @@
-<!--You can only update one or the other currently-->
-
 <div class="row">
   <div class="col-md-6 col-md-offset-3 top-card-padding">
     <div class="card">
       <h1 class="card_header">Your Info</h1>
-      <!--Users picture-->
+
+      <!--The form for updating a users picture-->
       <div class="user_img">
-        <%= image_tag @user.profile_picture, :class => "user_img" if @user.profile_picture? %>
-        <%= form_for current_user, url: {action: "update"} do |f| %>
+        <%= image_tag profile_picture(@user), :class => "user_img" %>
+        <%= form_for @user, url: {action: "update"} do |f| %>
             <div class="field">
               <%= f.file_field :profile_picture %>
             </div>
@@ -19,15 +18,11 @@
         <% end %>
         <div class="field">
         </div>
-        <% if @user.check_mailchimp_list_for_user? %>
-            <div style="margin-top: 4rem; font-size: 1.7rem">
-              <%= link_to "Sign Up For Alumni News Letter", subscribe_path %>
-            </div>
-        <% end %>
       </div>
-      <!--makes sure everything stays on the page-->
+
+      <!-- The form that will let them update their information-->
       <div class="user_info">
-        <%= form_for current_user, url: {action: "update"} do |f| %>
+        <%= form_for @user, url: {action: "update"} do |f| %>
             <%= f.text_field :first_name, :placeholder => "First Name" %>
             <%= f.text_field :last_name, :placeholder => "Last Name" %>
             <%= f.text_field :phone_number, :placeholder => "Phone Number" %>
@@ -36,12 +31,25 @@
             <%= f.text_field :big_brother, :placeholder => "Big Brother" %>
             <%= f.text_field :major, :placeholder => "Major" %>
             <%= f.text_field :pledge_class, :placeholder => "Pledge Class" %>
+
+            <% if current_user.multiple_have_permissions?(['associate member']) %>
+                <%= f.text_field :home_address, :placeholder => "Where do you live?" %>
+                <%= f.text_field :parents_contact_info, :placeholder => "Parent's Name/Phone Number" %>
+            <% end %>
+
+            <% if approved_brother? %>
+                <%= f.text_field :ritual_number_local, :placeholder => "Local Ritual Number" %>
+                <%= f.text_field :ritual_number_national, :placeholder => "National Ritual Number" %>
+            <% end %>
+
             <div class="clear"> </div>
             <%= f.submit "Update Information" %>
         <% end %>
       </div>
       <div class="clear"></div>
-      <div style="margin-top: 4rem; font-size: 1.7rem">
+
+      <!-- Link that leads back to the show page-->
+      <div class="user-edit-back-link">
         <%= link_to "Back to Account Page", user_path %>
       </div>
     </div>

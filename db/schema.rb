@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150914195558) do
+ActiveRecord::Schema.define(version: 20150920230822) do
 
   create_table "alumni_eternal_stories", force: true do |t|
     t.integer  "user_id"
@@ -278,6 +278,10 @@ ActiveRecord::Schema.define(version: 20150914195558) do
     t.boolean  "confirmed_brother"
     t.string   "user_status"
     t.datetime "deleted_at"
+    t.string   "ritual_number_local"
+    t.string   "ritual_number_national"
+    t.string   "home_address"
+    t.string   "parents_contact_info"
   end
 
   add_index "users", ["deleted_at"], name: "index_users_on_deleted_at"

@@ -129,7 +129,9 @@ class UsersController < ApplicationController
   end
 
   def user_update_params
-    params.require(:user).permit(:first_name, :last_name, :phone_number, :profile_picture, :remote_profile_picture, :home_town, :state, :big_brother, :major, :pledge_class)
+    params.require(:user).permit(:first_name, :last_name, :phone_number, :profile_picture, :remote_profile_picture,
+                                 :home_town, :state, :big_brother, :major, :pledge_class, :ritual_number_local,
+                                 :ritual_number_national, :home_address, :parents_contact_info)
   end
 
   def update_user_params(id)

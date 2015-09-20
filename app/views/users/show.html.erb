@@ -4,24 +4,42 @@
       <h1 class="card_header">Your Info</h1>
       <div>
         <!--Users picture-->
-        <%= image_tag @user.profile_picture_url, :class => "user_img" if @user.profile_picture? %>
+        <%= image_tag profile_picture(@user), :class => "user_img" %>
       </div>
+
       <!--User info-->
       <div class="user_info">
-        <p>Name: <%= @user.first_name if @user.first_name? %> <%= " " + @user.last_name if @user.last_name? %></p>
-        <p>Email: <%= @user.email %></p>
-        <p>Brotherhood Status: <%= @user.user_status.slice(0,1).capitalize if @user.user_status? %><%= @user.user_status.slice(1..-1) if @user.user_status? %></p>
-        <% if current_user && current_user.id == @user.id %>
-            <p>Phone Number: <%= @user.phone_number if @user.phone_number?%></p>
+        <p>Name: <%= first_name(@user) %> <%= last_name(@user)%></p>
+        <p>Email: <%= email(@user) %></p>
+        <p>Brotherhood Status: <%= user_status(@user) %></p>
+        <p>Home Town: <%= home_town_and_state(@user) %></p>
+        <p>Pledge Class: <%= pledge_class(@user) %></p>
+        <p>Major: <%= major(@user) %></p>
+        <p>Big Brother: <%= big_brother(@user) %></p>
+        <!-- Keeps brothers personal numbers private to only brothers-->
+        <% if current_user?(@user) || approved_brother? %>
+            <p>Phone Number: <%= phone_number(@user) %></p>
+            <p>Local Ritual Number: <%= ritual_number_local(@user) %></p>
+            <p>National Ritual Number: <%= ritual_number_national(@user) %></p>
         <% end %>
-        <p>Home Town: <%= @user.home_town if @user.home_town?%><%= ", " + @user.state if @user.state?%></p>
-        <p>Pledge Class: <%= @user.pledge_class if @user.pledge_class?%></p>
-        <p>Major: <%= @user.major if @user.major?%></p>
-        <p>Big Brother: <%= @user.big_brother if @user.big_brother?%></p>
+        <% if current_user?(@user) || current_user.multiple_have_permissions?(['admin','president','first_vp','second_vp']) %>
+            <p>Home Address: <%= home_address(@user) %></p>
+            <p>Parents Contact Info: <%= parents_contact_info(@user) %></p>
+        <% end %>
       </div>
-      <!--makes sure everything stays on the page-->
+
+      <!--makes sure everything stays on the card-->
       <div class="clear"> </div>
-      <% if current_user && current_user.id == @user.id %>
+
+      <!-- Adds shows a link for members to sign up for alumni newsletters-->
+      <% if on_mailing_list?(@user) %>
+          <div style="margin-top: 4rem; font-size: 1.7rem">
+            <%= link_to "Sign Up For Alumni News Letter", subscribe_path %>
+          </div>
+      <% end %>
+
+      <!-- Lets people change their profile, only if it them though-->
+      <% if current_user?(@user) %>
           <div>
             <%= link_to "Edit Info", edit_user_path(@user), :class => "push_link_right" %>
           </div>
