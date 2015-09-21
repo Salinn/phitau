@@ -1,149 +1,36 @@
 <div class="row">
-  <h2 style="text-align: center;">Executive Board</h2>
+  <h2 id='#ExecutiveBoard' style="text-align: center;">Executive Board</h2>
   <hr>
   <ul class="flipping-cards">
     <% @eboard.each do |position| %>
-        <li>
-          <input type="checkbox" id="eboard<%= position.id %>">
-          <label for="eboard<%= position.id %>">
-          <span class="wrapper">
-            <span class="image">
-              <h3 class="postition-front-title">
-                <!-- The title call is for national because we tech don't have a 2nd vp, makes sure we are in compliance with them-->
-                <%= title(position.role.name) %>
-              </h3>
-              <%= image_tag "info.png", class: "postition-front-flip-icon" %>
-              <%= image_tag position.user.profile_picture_url, class:"user_img contact_img" if position.user.profile_picture? %>
-            </span>
-            <span class="back contact-back-background" >
-              <h3>
-                <%= title(position.role.name) %>
-              </h3>
-              <h4>
-                <%= position.user.first_name if position.user.first_name? %> <%= " " + position.user.last_name if position.user.last_name? %>
-              </h4>
-              <h3>
-                Email
-              </h3>
-              <h4>
-                <%= mail_to position.user.email, nil, style: 'color: #ffffff;' %>
-              </h4>
-            </span>
-          </span>
-          </label>
-        </li>
+        <%= render 'contact_position', position: position, position_type: 'eboard'%>
     <% end %>
   </ul>
   <div style="float: none; clear:both;"> </div>
 
-  <h2 style="text-align: center;">Chairs</h2>
+  <h2 id='#Chairs' style="text-align: center;">Chairs</h2>
   <hr>
   <ul class="flipping-cards">
     <% @chairs.each do |chair| %>
-        <li>
-          <input type="checkbox" id="chair<%= chair.id %>">
-          <label for="chair<%= chair.id %>">
-          <span class="wrapper">
-            <span class="image">
-              <h3 class="postition-front-title">
-                <%= title(chair.position_name) %>
-              </h3>
-              <%= image_tag "info.png", class: "postition-front-flip-icon" %>
-              <%= image_tag chair.user.profile_picture_url, class:"user_img contact_img" if chair.user.profile_picture? %>
-            </span>
-            <span class="back contact-back-background" >
-              <h3>
-                <%= title(chair.position_name) %>
-              </h3>
-              <h4>
-                <%= chair.user.first_name if chair.user.first_name? %> <%= " " + chair.user.last_name if chair.user.last_name? %>
-              </h4>
-              <h3>
-                Email
-              </h3>
-              <h4>
-                <%= mail_to chair.user.email, nil, style: 'color: #ffffff;' %>
-              </h4>
-            </span>
-          </span>
-          </label>
-        </li>
+    <%= render 'contact_position', position: chair, position_type: 'chair'%>
     <% end %>
   </ul>
   <div class="clear"> </div>
 
-  <h2 style="text-align: center;">Current Brothers</h2>
+  <h2 id="'#CurrentBrothers" style="text-align: center;">Current Brothers</h2>
   <hr>
   <ul class="flipping-cards">
     <% @brothers.each do |brother| %>
-        <li>
-          <input type="checkbox" id="user<%= brother.id %>">
-          <label for="user<%= brother.id %>">
-          <span class="wrapper">
-            <span class="image">
-              <h3 class="postition-front-title">
-                <%= brother.first_name if brother.first_name? %> <%= " " + brother.last_name if brother.last_name? %>
-              </h3>
-              <%= image_tag "info.png", class: "postition-front-flip-icon" %>
-              <%= image_tag brother.profile_picture_url, class:"user_img contact_img" if brother.profile_picture? %>
-            </span>
-            <span class="back contact-back-background" >
-              <% if brother.first_name? &&  brother.last_name? %>
-               <% name = "#{brother.first_name}  #{brother.last_name}" %>
-              <% elsif brother.first_name? %>
-               <% name = brother.first_name %>
-              <% elsif brother.last_name? %>
-               <% name =  brother.last_name %>
-              <% end %>
-              <h3>
-                Account Info
-              </h3>
-              <h4>
-                <%= link_to name, brother, style: 'color: #ffffff;' %>
-              </h4>
-              <h3>
-                Email
-              </h3>
-              <h4>
-                <%= mail_to brother.email, nil, style: 'color: #ffffff;' %>
-              </h4>
-            </span>
-          </span>
-          </label>
-        </li>
+        <%= render 'contact_member', user: brother %>
     <% end %>
   </ul>
   <div class="clear"> </div>
 
-  <h2 style="text-align: center;">Current Associate Members</h2>
+  <h2 id='#AssociateMembers' style="text-align: center;">Current Associate Members</h2>
   <hr>
   <ul class="flipping-cards">
-    <% @associate_members.each do |am| %>
-        <li>
-          <input type="checkbox" id="user<%= am.id %>">
-          <label for="user<%= am.id %>">
-          <span class="wrapper">
-            <span class="image">
-              <h3 class="postition-front-title">
-                <%= am.first_name if am.first_name? %> <%= " " + am.last_name if am.last_name? %>
-              </h3>
-              <%= image_tag "info.png", class: "postition-front-flip-icon" %>
-              <%= image_tag am.profile_picture_url, class:"user_img contact_img" if am.profile_picture? %>
-            </span>
-            <span class="back contact-back-background" >
-              <h3>
-                <%= am.first_name if am.first_name? %> <%= " " + am.last_name if am.last_name? %>
-              </h3>
-              <h3>
-                Email
-              </h3>
-              <h4>
-                <%= mail_to am.email, nil, style: 'color: #ffffff;' %>
-              </h4>
-            </span>
-          </span>
-          </label>
-        </li>
+    <% @associate_members.each do |associate_member| %>
+        <%= render 'contact_member', user: associate_member %>
     <% end %>
   </ul>
   <div class="clear"> </div>

@@ -19,6 +19,10 @@ module UsersHelper
     user.last_name? ? user.last_name : 'N/A'
   end
 
+  def user_name(user)
+    first_name(user) + ' ' + last_name(user)
+  end
+
   def email(user)
     user.email? ? user.email : 'N/A'
   end
@@ -88,6 +92,10 @@ module UsersHelper
   end
 
   def profile_picture(user)
-    user.profile_picture? ? user.profile_picture_url : 'no-image.png'
+    user.profile_picture? ? user.profile_picture_url : 'blank-user.jpg'
+  end
+
+  def not_sign_in
+    (current_user == nil or current_user.user_status == nil or current_user.user_status == "not_a_member")
   end
 end
