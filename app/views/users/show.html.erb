@@ -32,7 +32,7 @@
       <div class="clear"> </div>
 
       <!-- Adds shows a link for members to sign up for alumni newsletters-->
-      <% if on_mailing_list?(@user) %>
+      <% if on_mailing_list?(@user) && current_user?(@user) %>
           <div style="margin-top: 4rem; font-size: 1.7rem">
             <%= link_to "Sign Up For Alumni News Letter", subscribe_path %>
           </div>
