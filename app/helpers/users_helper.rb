@@ -56,11 +56,11 @@ module UsersHelper
   end
 
   def home_town(user)
-    user.home_town if user.home_town?
+    user.home_town? ? user.home_town : 'No Hometown listed'
   end
 
   def home_state(user)
-    user.state if user.state?
+    user.state? ? user.state : 'No State listed'
   end
 
   def home_town_and_state(user)

@@ -43,7 +43,6 @@ class PostsController < ApplicationController
     top_card_check_and_fix if params[:post][:top_card] == '1'
     respond_to do |format|
       if @post.save
-        #UserMailer.signup_confirmation(current_user).deliver
         format.html { redirect_to posts_path, notice: 'Post was successfully created.' }
         format.json { render action: 'show', status: :created, location: @post }
       else

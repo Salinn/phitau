@@ -21,7 +21,8 @@ class InterviewTime < ActiveRecord::Base
 
   def send_interview_email(user)
     create_questionaire(user) unless(user.interview_questionnaires.any? && user.interview_questionnaires.last.created_within_same_month?)
-    UserMailer.interview_time_email(user).deliver!
+    UserMailer.delay(queue: 'email', run_at: 5.minutes.from_now).interview_time_email(user)
+    UserMailer.delay(queue: 'email', run_at: 2.days.from_now).interview_time_reminder_email(user)
   end
 
   def create_questionaire(user)

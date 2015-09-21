@@ -78,6 +78,17 @@ class UserMailer < ActionMailer::Base
     email_template(body_template, email_title, to_address)
   end
 
+  def interview_time_reminder_email(user)
+    @user = user
+    @interview_time = user.rush_interviews.last.interview_time
+
+    body_template = 'user_mailer/interview_time'
+    email_title = "This is a reminder about the interview at #{@interview_time.interview_time.strftime('%l:%M %p')} on #{@interview_time.interview_date.strftime('%A, %B %d')}"
+    to_address = @user.email
+
+    email_template(body_template, email_title, to_address)
+  end
+
   def email_template(body_template, email_title, to_address)
     @body_template = body_template
     subject = email_title
