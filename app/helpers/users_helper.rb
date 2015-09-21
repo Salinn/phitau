@@ -79,6 +79,10 @@ module UsersHelper
     current_user && current_user.confirmed_brother?
   end
 
+  def have_permissions?(allowed_positions)
+    current_user && current_user.multiple_have_permissions?(allowed_positions)
+  end
+
   def on_mailing_list?(user)
     user.check_mailchimp_list_for_user?
   end

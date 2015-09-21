@@ -62,6 +62,9 @@ gem 'raygun4ruby'
 #mailchimp
 gem 'gibbon', '1.1.5'
 
+#Delayed jobs that increase the speed at what things could be done / done in the background
+gem 'delayed_job_active_record'
+
 #server side
 gem 'puma'
 

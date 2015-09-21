@@ -44,7 +44,7 @@ class User < ActiveRecord::Base
   end
 
   def send_alert_email
-    UserMailer.new_user_alert_email(self).deliver!
+    UserMailer.delay(run_at: 5.minutes.from_now).new_user_alert_email(self).deliver!
   end
 
   def check_to_send_mailchimp_email

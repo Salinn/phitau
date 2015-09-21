@@ -18,7 +18,7 @@ class UsersController < ApplicationController
     @user.user_status = 'potential new member'
     @user.password = generated_password
 
-    UserMailer.welcome_email(@user, generated_password).deliver!
+    UserMailer.delay(run_at: 5.minutes.from_now).welcome_email(@user, generated_password).deliver!
     respond_to do |format|
       if @user.save
         format.html { redirect_to new_users_admin_path, notice: 'You have successfully registered.' }

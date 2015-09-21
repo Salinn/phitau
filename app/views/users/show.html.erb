@@ -22,7 +22,7 @@
             <p>Local Ritual Number: <%= ritual_number_local(@user) %></p>
             <p>National Ritual Number: <%= ritual_number_national(@user) %></p>
         <% end %>
-        <% if current_user?(@user) || current_user.multiple_have_permissions?(['admin','president','first_vp','second_vp']) %>
+        <% if current_user?(@user) || have_permissions?(['admin','president','first_vp','second_vp']) %>
             <p>Home Address: <%= home_address(@user) %></p>
             <p>Parents Contact Info: <%= parents_contact_info(@user) %></p>
         <% end %>
