@@ -10,6 +10,7 @@
                 <%= f.text_field :last_name_cont, placeholder: 'Search by Last Name'  %>
                 <%= f.search_field :phone_number_cont, placeholder: 'Search by Phone Number' %>
                 <%= f.search_field :email_cont, placeholder: 'Search by Email' %>
+                <%= f.search_field :user_status_cont, placeholder: 'Search by Email' %>
               </div>
               <div class="actions potentials-inline">
                 <%= f.submit "Search Brothers" %>
@@ -29,6 +30,7 @@
             <th><%= sort_link @search, :last_name,'Last Name' %></th>
             <th><%= sort_link @search, :phone_number, 'Phone Number' %></th>
             <th><%= sort_link @search, :email, 'Email' %></th>
+            <th><%= sort_link @search, :user_status, 'Current Status' %></th>
             <% if current_user.multiple_have_permissions?(['admin','president','recruitment'])%>
                 <th></th>
             <% end %>
@@ -41,6 +43,7 @@
                 <td><%= last_name(user) %></td>
                 <td><%= phone_number(user) %></td>
                 <td><%= email(user) %></td>
+                <td><%= user_status(user) %></td>
                 <% if current_user.multiple_have_permissions?(['admin','president','recruitment'])%>
                     <td>
                       <%= link_to users_admin_path(user), method: :delete, data: { confirm: "Are you sure that you want to remove this potential?" } do %>
