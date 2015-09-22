@@ -20,7 +20,7 @@ class Ability
         can [:show, :read, :create, :new], Image
         can [:show, :read], AlumniNewsLetter
         can [:create, :update], Receipt
-        can [:create, :potential_new_members], User
+        can [:create, :potential_new_members, :search_users], User
         can [:create, :update, :new], CommunityService
         can :user, :controls
         can [:show, :index], Event
