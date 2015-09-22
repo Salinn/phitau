@@ -1,0 +1,58 @@
+<div class="row">
+  <div class="col-md-8 col-md-offset-2 top-card-padding">
+    <div class="card">
+      <div id="page-wrap">
+        <div align="center">
+          <%= search_form_for @search, url: search_users_path do |f| %>
+              <div class="field">
+                <%= f.text_field :first_name_cont, placeholder: 'Search by First Name'  %>
+                <%= f.text_field :last_name_cont, placeholder: 'Search by Last Name'  %>
+                <%= f.search_field :phone_number_cont, placeholder: 'Search by Phone Number' %>
+                <%= f.search_field :email_cont, placeholder: 'Search by Email' %>
+              </div>
+              <div class="actions potentials-inline">
+                <%= f.submit "Search Brothers" %>
+              </div>
+              <div class="potentials-inline">
+                <%= link_to 'Clear Search', search_users_path %>
+              </div>
+          <% end %>
+        </div>
+
+        <br>
+
+        <table class="potentials-table">
+          <thead>
+          <tr>
+            <th><%= sort_link @search, :first_name,'First Name' %></th>
+            <th><%= sort_link @search, :last_name,'Last Name' %></th>
+            <th><%= sort_link @search, :phone_number, 'Phone Number' %></th>
+            <th><%= sort_link @search, :email, 'Email' %></th>
+            <% if current_user.multiple_have_permissions?(['admin','president','recruitment'])%>
+                <th></th>
+            <% end %>
+          </tr>
+          </thead>
+          <tbody>
+          <% @users.each do |user| %>
+              <tr>
+                <td><%= first_name(user) %></td>
+                <td><%= last_name(user) %></td>
+                <td><%= phone_number(user) %></td>
+                <td><%= email(user) %></td>
+                <% if current_user.multiple_have_permissions?(['admin','president','recruitment'])%>
+                    <td>
+                      <%= link_to users_admin_path(user), method: :delete, data: { confirm: "Are you sure that you want to remove this potential?" } do %>
+                          <i class="glyphicon glyphicon-remove"></i>
+                      <% end %>
+                    </td>
+                <% end %>
+              </tr>
+          <% end %>
+          </tbody>
+        </table>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+</div>

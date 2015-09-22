@@ -55,6 +55,7 @@ Phitau::Application.routes.draw do
   match 'users/all/edit' => 'users#edit_all', :as => :edit_all, :via => :get
   match 'users/all' => 'users#update_all', :as => :update_all, :via => :put
   get 'users/new' => 'users#new'
+  get 'search_users' => 'users#search_users'
 
   devise_for :users, :controllers => { :registrations => 'registration' }, :path_names => { :'sign_up.html.erb' => 'register'}
   resources :users, :only => [:show, :edit, :update ]

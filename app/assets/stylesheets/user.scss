@@ -16,3 +16,45 @@
 #page-wrap > table > thead > tr > th > a {
   color: white;
 }
+
+//Used for the contact page
+.card__front,
+.card__back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+}
+
+.contact_card {
+  padding:1.5rem;
+  box-shadow:0 10px 14px rgba(10,10,10,.6);
+  background: white;
+  border-radius:3px;
+  transform-origin:top left;
+  margin: 0 auto;
+  padding-bottom: 3rem;
+  width: 200px;
+  height: 250px;
+  display: inline;
+}
+
+.card__front {
+  background-color: white;
+}
+
+.card__back {
+  background-color: white;
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+}
+
+.contact_card.effect__click.flipped .card__front {
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+}
+
+.contact_card.effect__click.flipped .card__back {
+  -webkit-transform: rotateY(0);
+  transform: rotateY(0);
+}

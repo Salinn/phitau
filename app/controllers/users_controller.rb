@@ -119,6 +119,11 @@ class UsersController < ApplicationController
     redirect_to potentials_path, notice: "User deleted."
   end
 
+  def search_users
+    @search = User.where.not(user_status: 'potential new member', confirmed_brother: false).ransack(params[:q])
+    @users = @search.result
+  end
+
   def update_user_status user_status
     @user.user_status = user_status
     @user.save
