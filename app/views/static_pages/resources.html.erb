@@ -24,11 +24,14 @@
               <hr>
             </div>
         <% end %>
-        <% if current_user.multiple_have_permissions?(['admin','president']) %>
+        <% if current_user.confirmed_brother? %>
             <div class="resources col-md-6">
               <div style="color: #736f7e">
                 <h2>Users</h2>
-                <h3><%= link_to 'Edit All Users', edit_all_path %></h3>
+                <h3><%= link_to 'Search Brothers', search_users_path %></h3>
+                <% if current_user.multiple_have_permissions?(['admin','president']) %>
+                    <h3><%= link_to 'Edit All Users', edit_all_path %></h3>
+                <% end %>
               </div>
               <hr>
             </div>
