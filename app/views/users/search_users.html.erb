@@ -39,9 +39,9 @@
           <tbody>
           <% @users.each do |user| %>
               <tr>
-                <td><%= first_name(user) %></td>
-                <td><%= last_name(user) %></td>
-                <td><%= phone_number(user) %></td>
+                <td><%= link_to first_name(user), user %></td>
+                <td><%= link_to last_name(user), user %></td>
+                <td><%= link_to phone_number(user), "tel:#{phone_number(user)}" %></td>
                 <td><%= email(user) %></td>
                 <td><%= user_status(user) %></td>
                 <% if current_user.multiple_have_permissions?(['admin','president','recruitment'])%>
