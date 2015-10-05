@@ -4,7 +4,7 @@ class StandardsBoardsController < ApplicationController
   respond_to :html
 
   def index
-    @standards_boards = StandardsBoard.all
+    @standards_boards = StandardsBoard.all.reverse
     respond_with(@standards_boards)
   end
 
@@ -14,6 +14,7 @@ class StandardsBoardsController < ApplicationController
 
   def new
     @standards_board = StandardsBoard.new
+    @users = User.where(user_status: ['current brother','coop','associate member'])
     respond_with(@standards_board)
   end
 
@@ -22,13 +23,13 @@ class StandardsBoardsController < ApplicationController
 
   def create
     @standards_board = StandardsBoard.new(standards_board_params)
-    flash[:notice] = 'StandardsBoard was successfully created.' if @standards_board.save
-    respond_with(@standards_board)
+    flash[:notice] = 'Thanks for submitting a person to standards board' if @standards_board.save
+    respond_with(@standards_board, location: standards_boards_path)
   end
 
   def update
-    flash[:notice] = 'StandardsBoard was successfully updated.' if @standards_board.update(standards_board_params)
-    respond_with(@standards_board)
+    flash[:notice] = 'Thanks for updating a standards board submission' if @standards_board.update(standards_board_params)
+    respond_with(@standards_board, location: standards_boards_path)
   end
 
   def destroy

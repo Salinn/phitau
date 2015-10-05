@@ -59,9 +59,9 @@ class StaticPagesController < ApplicationController
 
     @chairs = Position.where.not(on_eboard: true, user_id: nil)
 
-    @brothers = User.where(user_status: ['current brother','coop'])
+    @brothers = User.find_by_user_status(user_status: ['current brother','coop'])
 
-    @associate_members = User.where(user_status: 'associate member')
+    @associate_members = User.find_by_user_status(user_status: 'associate member')
   end
 
   def information_for_students

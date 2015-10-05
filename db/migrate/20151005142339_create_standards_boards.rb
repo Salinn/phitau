@@ -4,6 +4,7 @@ class CreateStandardsBoards < ActiveRecord::Migration
       t.belongs_to :user, index: true
       t.text :reason
       t.belongs_to :position, index: true
+      t.boolean :completed
 
       t.timestamps
     end

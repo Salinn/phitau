@@ -34,7 +34,7 @@ class Ability
       end
       if user.have_permissions?('recruitment')
         can [:create, :read, :show], TextMessage
-        can [:show, :index, :create, :update], Event
+        can [:create, :update], Event
         can :manage, InterviewTime
         can [:update], RushInterview
         can [:update], Bid
@@ -47,7 +47,10 @@ class Ability
       end
       if user.have_permissions?('community_service')
         can :manage, CommunityService
-        can [:show, :index, :create, :update], Event
+        can [:create, :update], Event
+      end
+      if user.have_permissions?('philanthropy')
+        can [:create, :update], Event
       end
       if user.have_permissions?('secretary')
         can :manage, CommunityService

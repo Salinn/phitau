@@ -2,5 +2,5 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 jQuery ->
-  $('#position_user_id').chosen()
-  $('#position_role_id').chosen()
+  $('#standards_board_user_id').chosen()
+  $('#standards_board_position_id').chosen()
