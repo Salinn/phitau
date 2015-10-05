@@ -1,5 +1,7 @@
 Phitau::Application.routes.draw do
 
+  resources :standards_boards
+
   resources :interview_questionnaires
 
   resources :bids

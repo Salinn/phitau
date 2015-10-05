@@ -1,0 +1,31 @@
+<h1>Listing standards_boards</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Reason</th>
+      <th>Position</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @standards_boards.each do |standards_board| %>
+      <tr>
+        <td><%= standards_board.user %></td>
+        <td><%= standards_board.reason %></td>
+        <td><%= standards_board.position %></td>
+        <td><%= link_to 'Show', standards_board %></td>
+        <td><%= link_to 'Edit', edit_standards_board_path(standards_board) %></td>
+        <td><%= link_to 'Destroy', standards_board, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Standards board', new_standards_board_path %>

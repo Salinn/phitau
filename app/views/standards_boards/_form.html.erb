@@ -1,0 +1,29 @@
+<%= form_for(@standards_board) do |f| %>
+  <% if @standards_board.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@standards_board.errors.count, "error") %> prohibited this standards_board from being saved:</h2>
+
+      <ul>
+      <% @standards_board.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user %><br>
+    <%= f.text_field :user %>
+  </div>
+  <div class="field">
+    <%= f.label :reason %><br>
+    <%= f.text_area :reason %>
+  </div>
+  <div class="field">
+    <%= f.label :position %><br>
+    <%= f.text_field :position %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

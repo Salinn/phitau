@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @standards_board.user %>
+</p>
+
+<p>
+  <strong>Reason:</strong>
+  <%= @standards_board.reason %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @standards_board.position %>
+</p>
+
+<%= link_to 'Edit', edit_standards_board_path(@standards_board) %> |
+<%= link_to 'Back', standards_boards_path %>
