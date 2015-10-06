@@ -25,3 +25,4 @@ vendor/bundle
 .idea
 #Ignore the seceret.yml file
 config/secrets.yml
+app/assets/stylesheets/scaffolds.scss
