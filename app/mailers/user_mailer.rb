@@ -89,6 +89,19 @@ class UserMailer < ActionMailer::Base
     email_template(body_template, email_title, to_address)
   end
 
+  def standards_board_email(standards_board)
+    body_template = 'user_mailer/standards_board'
+    email_title = "#{standards_board.user.name} has been sent to Standards Board by #{standards_board.position.position_name}"
+
+    @user = Position.find_by(position_name: 'President').user
+    to_address = @user.email
+    email_template(body_template, email_title, to_address)
+
+    @user = Position.find_by(position_name: 'First President').user
+    to_address = @user.email
+    email_template(body_template, email_title, to_address)
+  end
+
   def email_template(body_template, email_title, to_address)
     @body_template = body_template
     subject = email_title
