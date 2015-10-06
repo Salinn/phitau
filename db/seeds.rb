@@ -13,6 +13,7 @@ load 'db/seeds/alumni_news_letter.rb'
 #Order matters
 load 'db/seeds/gallery.rb' #Depends on post
 load 'db/seeds/position.rb' #Depends on role and user
+load 'db/seeds/standards_board.rb' #Depends on user and position
 load 'db/seeds/image.rb' #Depends on post and gallery
 load 'db/seeds/faq_question.rb' #Depends on faq category
 load 'db/seeds/community_service.rb' #Depends on user

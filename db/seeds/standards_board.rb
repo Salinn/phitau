@@ -1,57 +1,57 @@
 standards_boards = [
     {
-        user: 1,
+        user_id: 1,
         reason: '',
-        position: 1,
+        position_id: 1,
         completed: true
     },
     {
-        user: 1,
+        user_id: 1,
         reason: '',
-        position: 2,
+        position_id: 2,
         completed: true
     },
     {
-        user: 2,
+        user_id: 2,
         reason: '',
-        position: 1,
+        position_id: 1,
+        completed: false
+    },
+    {
+        user_id: 3,
+        reason: '',
+        position_id: 2,
         completed: true
     },
     {
-        user: 3,
+        user_id: 4,
         reason: '',
-        position: 2,
+        position_id: 5,
+        completed: false
+    },
+    {
+        user_id: 3,
+        reason: '',
+        position_id: 4,
         completed: true
     },
     {
-        user: 4,
+        user_id: 2,
         reason: '',
-        position: 5,
+        position_id: 3,
         completed: true
     },
     {
-        user: 3,
+        user_id: 1,
         reason: '',
-        position: 4,
+        position_id: 6,
         completed: true
     },
     {
-        user: 2,
+        user_id: 2,
         reason: '',
-        position: 3,
-        completed: true
-    },
-    {
-        user: 1,
-        reason: '',
-        position: 6,
-        completed: true
-    },
-    {
-        user: 2,
-        reason: '',
-        position: 4,
-        completed: true
+        position_id: 4,
+        completed: false
     }
 ]
 

@@ -1,19 +1,23 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="col-xl-10 col-md-10 col-xs-10 col-xl-offset-1 col-md-offset-1 col-xs-offset-1">
+    <div class="card">
+      <p>
+        <strong>Brother Submitted To Standards Board:</strong>
+        <%= @standards_board.user.name %>
+      </p>
 
-<p>
-  <strong>User:</strong>
-  <%= @standards_board.user %>
-</p>
+      <p>
+        <strong>Reason:</strong>
+        <%= raw @standards_board.reason %>
+      </p>
 
-<p>
-  <strong>Reason:</strong>
-  <%= @standards_board.reason %>
-</p>
+      <p>
+        <strong>Position who submitted them:</strong>
+        <%= @standards_board.position.position_name %>
+      </p>
 
-<p>
-  <strong>Position:</strong>
-  <%= @standards_board.position %>
-</p>
-
-<%= link_to 'Edit', edit_standards_board_path(@standards_board) %> |
-<%= link_to 'Back', standards_boards_path %>
+      <%= link_to 'Edit', edit_standards_board_path(@standards_board) %> |
+      <%= link_to 'Back', standards_boards_path %>
+    </div>
+  </div>
+</div>

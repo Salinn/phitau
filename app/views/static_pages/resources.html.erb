@@ -38,7 +38,7 @@
               <hr>
             </div>
         <% end %>
-        <% if current_user.confirmed_brother? %>
+        <% if current_user.confirmed_brother? && current_user.positions.any? %>
             <div class="resources col-md-6">
               <div style="color: #736f7e">
                 <h2>Standards-Board</h2>

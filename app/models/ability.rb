@@ -33,11 +33,16 @@ class Ability
         can [:show, :update], InterviewQuestionnaire, :user_id => user.id
       end
       if user.have_permissions?('recruitment')
+        can [:create, :index], StandardsBoard
+        can [:update, :edit], StandardsBoard, :position_id => user.holds_positions?(position_id)
         can [:create, :read, :show], TextMessage
         can [:create, :update], Event
         can :manage, InterviewTime
         can [:update], RushInterview
         can [:update], Bid
+      end
+      if user.have_permissions?('first_vp')
+        can :manage, StandardsBoard
       end
       if user.have_permissions?('writer')
         can [:show, :update, :new, :read, :create], AlumniNewsLetter
@@ -46,13 +51,19 @@ class Ability
         can [:show, :update, :new, :read, :create], Gallery
       end
       if user.have_permissions?('community_service')
+        can [:create, :index], StandardsBoard
+        can [:update, :edit], StandardsBoard, :position_id => user.holds_positions?(position_id)
         can :manage, CommunityService
         can [:create, :update], Event
       end
       if user.have_permissions?('philanthropy')
+        can [:create, :index], StandardsBoard
+        can [:update, :edit], StandardsBoard, :position_id => user.holds_positions?(position_id)
         can [:create, :update], Event
       end
       if user.have_permissions?('secretary')
+        can [:create, :index], StandardsBoard
+        can [:update, :edit], StandardsBoard, :position_id => user.holds_positions?(position_id)
         can :manage, CommunityService
         can [:show, :index, :create, :update], Event
       end

@@ -84,4 +84,8 @@ class User < ActiveRecord::Base
   def positions_role?(role)
     self.positions.any? { |position| position.role.name == role}
   end
+
+  def holds_positions?(id)
+    self.positions.any? { |position| position.id == id}
+  end
 end

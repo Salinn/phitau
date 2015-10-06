@@ -256,6 +256,7 @@ ActiveRecord::Schema.define(version: 20151005142339) do
     t.integer  "user_id"
     t.text     "reason"
     t.integer  "position_id"
+    t.boolean  "completed"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,6 +1,8 @@
 Phitau::Application.routes.draw do
 
-  resources :standards_boards
+  resources :standards_boards do
+    put :updated_completed
+  end
 
   resources :interview_questionnaires
 
