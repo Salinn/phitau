@@ -23,12 +23,12 @@ class RushInterviewsController < ApplicationController
   def create
     @rush_interview = RushInterview.new(rush_interview_params)
     flash[:notice] = 'RushInterview was successfully created.' if @rush_interview.save
-    respond_with(@rush_interview)
+    respond_with(@rush_interview, location: rush_interviews_path)
   end
 
   def update
     flash[:notice] = 'RushInterview was successfully updated.' if @rush_interview.update(rush_interview_params)
-    respond_with(@rush_interview)
+    respond_with(@rush_interview, location: rush_interviews_path)
   end
 
   def destroy
@@ -42,7 +42,7 @@ class RushInterviewsController < ApplicationController
     end
 
     def rush_interview_params
-      params.require(:rush_interview).permit(:user_id,
+      params.require(:rush_interview).permit(:user_id, :photo, :remote_photo_url,
                                              bid_attributes: [:bid_given],
                                              interview_time_attributes: [:interview_time, :interview_date],
                                              interview_questionnaire_attributes: [:rush_interview_id, :date_of_birth,

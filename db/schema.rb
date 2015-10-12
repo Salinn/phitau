@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151005142339) do
+ActiveRecord::Schema.define(version: 20151012230854) do
 
   create_table "alumni_eternal_stories", force: true do |t|
     t.integer  "user_id"
@@ -247,6 +247,7 @@ ActiveRecord::Schema.define(version: 20151005142339) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.datetime "deleted_at"
+    t.string   "photo"
   end
 
   add_index "rush_interviews", ["deleted_at"], name: "index_rush_interviews_on_deleted_at"

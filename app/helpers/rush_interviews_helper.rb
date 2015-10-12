@@ -10,8 +10,8 @@ module RushInterviewsHelper
   end
 
   def potentials_picture(rush_interview)
-    if rush_interview.user && rush_interview.user.profile_picture?
-      rush_interview.user.profile_picture_url
+    if rush_interview && rush_interview.photo?
+      rush_interview.photo
     else
       'no-image.png'
     end

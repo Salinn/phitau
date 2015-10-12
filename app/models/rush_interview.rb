@@ -9,6 +9,8 @@ class RushInterview < ActiveRecord::Base
   accepts_nested_attributes_for :interview_questionnaire
   accepts_nested_attributes_for :bid
 
+  mount_uploader :photo, ImageUploader
+
   acts_as_paranoid
 
   after_create :create_bid
