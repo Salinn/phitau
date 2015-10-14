@@ -2,6 +2,7 @@ class InterviewQuestionnaire < ActiveRecord::Base
   belongs_to :rush_interview
   has_one :bid
   belongs_to :user
+  belongs_to :current_residence
 
   acts_as_paranoid
 

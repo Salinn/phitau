@@ -10,8 +10,8 @@
   <p style="margin: 0;">Where they live:</p>
 </div>
 <div>
-  <% if interview_questionnaire.room_number && interview_questionnaire.current_address %>
-      <h3 style="margin: 0; padding-left: 15px;"><%= interview_questionnaire.room_number %> <%= interview_questionnaire.current_address %></h3>
+  <% if interview_questionnaire.room_number && interview_questionnaire.current_residence %>
+      <h3 style="margin: 0; padding-left: 15px;"><%= interview_questionnaire.room_number %> <%= interview_questionnaire.current_residence.building_name %></h3>
   <% end %>
 </div>
 <div>

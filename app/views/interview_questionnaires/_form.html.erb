@@ -48,8 +48,8 @@
         <%= f.text_field :hometown, size: "40x1", tabindex: 2, placeholder: 'Hometown and State' %>
       </div>
       <div class="field">
-        <%= f.label :current_address, 'Building Name or Apartment Complex' %><br>
-        <%= f.text_field :current_address, size: "40x1", tabindex: 4, placeholder: 'Kate Gleason, Park Paint, etc' %>
+        <%= f.label :current_residence, 'Building Name or Apartment Complex' %><br>
+        <%= f.collection_select :current_residence_id, @residences, :id, :building_name , size: "40x1", tabindex: 4, placeholder: 'Kate Gleason, Park Paint, etc' %>
       </div>
       <div class="field">
         <%= f.label :major %><br>

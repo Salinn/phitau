@@ -9,6 +9,7 @@ load 'db/seeds/event.rb'
 load 'db/seeds/faq_category.rb'
 load 'db/seeds/composite.rb'
 load 'db/seeds/alumni_news_letter.rb'
+load 'db/seeds/current_residences.rb'
 
 #Order matters
 load 'db/seeds/gallery.rb' #Depends on post

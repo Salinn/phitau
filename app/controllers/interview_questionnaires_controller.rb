@@ -19,6 +19,7 @@ class InterviewQuestionnairesController < ApplicationController
   end
 
   def edit
+    @residences = CurrentResidence.all.order(:building_name)
   end
 
   def create
@@ -43,6 +44,6 @@ class InterviewQuestionnairesController < ApplicationController
     end
 
     def interview_questionnaire_params
-      params.require(:interview_questionnaire).permit(:rush_interview_id, :date_of_birth, :hometown, :current_address, :room_number, :grade_point_average, :major, :year_in_school, :nickname, :outside_activities, :hobbies, :brothers_you_know, :rush_events_attended, :reason_for_rushing)
+      params.require(:interview_questionnaire).permit(:rush_interview_id, :date_of_birth, :hometown, :current_residence_id, :room_number, :grade_point_average, :major, :year_in_school, :nickname, :outside_activities, :hobbies, :brothers_you_know, :rush_events_attended, :reason_for_rushing)
     end
 end

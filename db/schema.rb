@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151012230854) do
+ActiveRecord::Schema.define(version: 20151014142501) do
 
   create_table "alumni_eternal_stories", force: true do |t|
     t.integer  "user_id"
@@ -79,6 +79,14 @@ ActiveRecord::Schema.define(version: 20151012230854) do
   end
 
   add_index "composites", ["deleted_at"], name: "index_composites_on_deleted_at"
+
+  create_table "current_residences", force: true do |t|
+    t.string   "building_name"
+    t.integer  "map_location"
+    t.boolean  "dorm_side"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "delayed_jobs", force: true do |t|
     t.integer  "priority",   default: 0, null: false
@@ -154,7 +162,6 @@ ActiveRecord::Schema.define(version: 20151012230854) do
   create_table "interview_questionnaires", force: true do |t|
     t.date     "date_of_birth"
     t.string   "hometown"
-    t.string   "current_address"
     t.string   "room_number"
     t.string   "grade_point_average"
     t.string   "major"
@@ -169,6 +176,7 @@ ActiveRecord::Schema.define(version: 20151012230854) do
     t.datetime "updated_at"
     t.integer  "user_id"
     t.datetime "deleted_at"
+    t.integer  "current_residence_id"
   end
 
   add_index "interview_questionnaires", ["deleted_at"], name: "index_interview_questionnaires_on_deleted_at"
