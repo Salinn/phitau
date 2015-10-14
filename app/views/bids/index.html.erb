@@ -12,12 +12,15 @@
         </thead>
 
         <tbody>
-        <% @yes_bids.each do |bid| %>
-            <tr>
-              <td><%= bid.rush_interview.user.name %></td>
-              <td><%= link_to "#{bid.rush_interview.user.phone_number}", "tel:#{bid.rush_interview.user.phone_number}" %></td>
-              <td><%= bid.rush_interview.user.interview_questionnaires.last.room_number %> <%= bid.rush_interview.user.interview_questionnaires.last.current_address %></td>
-            </tr>
+        <% @yes_bids.each do |index, residence| %>
+            <% residence.sort! { |x| x.room_number } %>
+            <% residence.each do |bid| %>
+                <tr>
+                  <td><%= bid.rush_interview.user.name %></td>
+                  <td><%= link_to "#{bid.rush_interview.user.phone_number}", "tel:#{bid.rush_interview.user.phone_number}" %></td>
+                  <td><%= bid.rush_interview.user.interview_questionnaires.last.room_number %> <%= bid.rush_interview.user.interview_questionnaires.last.current_residence.building_name %></td>
+                </tr>
+            <% end %>
         <% end %>
         </tbody>
       </table>
