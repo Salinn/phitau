@@ -1,8 +1,8 @@
 class CreateAttendances < ActiveRecord::Migration
   def change
     create_table :attendances do |t|
-      t.integer :user_id
-      t.integer :meeting_id
+      t.belongs_to :event, index: true
+      t.boolean :deleted_at
 
       t.timestamps
     end

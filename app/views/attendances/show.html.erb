@@ -1,0 +1,12 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Event:</strong>
+  <%= @attendance.event.name %>
+</p>
+
+<% @attendance.users.each do |user| %>
+    <p><%= user.name %></p>
+<% end %>
+<%= link_to 'Edit', edit_attendance_path(@attendance) %> |
+<%= link_to 'Back', attendances_path %>

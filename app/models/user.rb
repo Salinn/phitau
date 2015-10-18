@@ -3,10 +3,12 @@ class User < ActiveRecord::Base
   has_many :roles
   has_many :receipts
   has_many :attendances
-  has_many :meetings, :through => :attendances
   has_many :community_services
   has_many :rush_interviews
   has_many :interview_questionnaires
+
+  has_and_belongs_to_many :attendances
+
 
   validates :first_name, length: { minimum: 2 }
   validates :last_name, length: { minimum: 2 }

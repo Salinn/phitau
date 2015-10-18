@@ -1,5 +1,7 @@
 Phitau::Application.routes.draw do
 
+  resources :attendances
+
   resources :current_residences
 
   resources :standards_boards do

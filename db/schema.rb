@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151014142501) do
+ActiveRecord::Schema.define(version: 20151014182640) do
 
   create_table "alumni_eternal_stories", force: true do |t|
     t.integer  "user_id"
@@ -47,6 +47,22 @@ ActiveRecord::Schema.define(version: 20151014142501) do
   end
 
   add_index "alumni_news_letters", ["deleted_at"], name: "index_alumni_news_letters_on_deleted_at"
+
+  create_table "attendances", force: true do |t|
+    t.integer  "event_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "attendances", ["event_id"], name: "index_attendances_on_event_id"
+
+  create_table "attendances_users", id: false, force: true do |t|
+    t.integer "attendance_id", null: false
+    t.integer "user_id",       null: false
+  end
+
+  add_index "attendances_users", ["attendance_id", "user_id"], name: "index_attendances_users_on_attendance_id_and_user_id"
+  add_index "attendances_users", ["user_id", "attendance_id"], name: "index_attendances_users_on_user_id_and_attendance_id"
 
   create_table "bids", force: true do |t|
     t.integer  "rush_interview_id"
