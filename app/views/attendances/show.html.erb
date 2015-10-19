@@ -1,12 +1,19 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="col-xl-8 col-md-8 col-xs-8 col-xl-offset-4 col-md-offset-2 col-xs-offset-2">
+    <div class="card">
 
-<p>
-  <strong>Event:</strong>
-  <%= @attendance.event.name %>
-</p>
+      <h1>
+        Event:  <%= @attendance.event.name %>
+      </h1>
 
-<% @attendance.users.each do |user| %>
-    <p><%= user.name %></p>
-<% end %>
-<%= link_to 'Edit', edit_attendance_path(@attendance) %> |
-<%= link_to 'Back', attendances_path %>
+      <p style="display: inline">Brothers who attended: </p>
+
+      <% @attendance.users.each do |user| %>
+          <p style="display: inline"><%= user.name %>,</p>
+      <% end %>
+      <br><br>
+      <%= link_to 'Edit', edit_attendance_path(@attendance) %> |
+      <%= link_to 'Back', attendances_path %>
+    </div>
+  </div>
+</div>

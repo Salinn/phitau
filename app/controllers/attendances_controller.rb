@@ -4,7 +4,7 @@ class AttendancesController < ApplicationController
   respond_to :html
 
   def index
-    @attendances = Attendance.all
+    @attendances = Attendance.all.reverse
     respond_with(@attendances)
   end
 
@@ -45,7 +45,7 @@ class AttendancesController < ApplicationController
   private
     def create_attendance_users
       @users = User.where(id: params[:user_ids])
-      @attendance.users.delete_all
+      @attendance.users.delete
       @attendance.users << @users
     end
     def set_attendance

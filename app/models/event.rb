@@ -7,4 +7,10 @@ class Event < ActiveRecord::Base
   validates :name, length: { minimum: 3 }
   validates :description, length: { minimum: 10 }
   validates :user_id, presence: true
+
+  after_create :create_attendance
+
+  def create_attendance
+    Attendance.create!(event_id: id)
+  end
 end

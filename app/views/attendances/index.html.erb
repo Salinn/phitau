@@ -10,6 +10,7 @@
           <th>Event Date</th>
           <th>Event Required?</th>
           <th>See Who went</th>
+          <th>Update</th>
         </tr>
         </thead>
 
@@ -20,6 +21,7 @@
               <td><%= attendance.event.event_date.strftime('%A, %b %d') %></td>
               <td><%= required?(attendance.event) %></td>
               <td><%= link_to 'Show', attendance %></td>
+              <td><%= link_to 'Update', edit_attendance_path(attendance) %></td>
             </tr>
         <% end %>
         </tbody>

@@ -15,7 +15,12 @@
       <%= f.label :event %><br>
       <%= f.collection_select :event_id, @events, :id, :name %>
     </div>
-    <%= select_tag :user_ids, options_from_collection_for_select(@users, :id, :name, @attendance.users.map{ |u| u.id }), :multiple => true %>
+    <% @users.each do |user| %>
+        <div class="posts_checkboxes">
+          <%= check_box_tag :user_ids, user.id, @attendance.users.include?(user) %>
+          <%= user_name(user) %><br>
+        </div>
+    <% end %>
     <div class="actions">
       <%= f.submit %>
     </div>
