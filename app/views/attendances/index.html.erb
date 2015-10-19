@@ -20,7 +20,7 @@
             <tr>
               <td><%= attendance.event.name %></td>
               <td><%= attendance.event.event_date.strftime('%A, %b %d') %></td>
-              <td><%= required?(attendance.event) %></td>
+              <td><%= event_required?(attendance.event) %></td>
               <td><%= link_to 'Show', attendance %></td>
               <td><%= link_to 'Update', edit_attendance_path(attendance) %></td>
             </tr>

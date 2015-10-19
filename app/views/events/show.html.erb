@@ -16,13 +16,13 @@
             <div class="col-md-5 col-md-offset-1">
               <p>
                 <strong>Required event:</strong>
-                <%= @event.required_event %>
+                <%= event_required?(@event) %>
               </p>
             </div>
             <div class="col-md-5 col-md-offset-1">
               <p>
                 <strong>Private event:</strong>
-                <%= @event.private_event %>
+                <%= event_private?(@event) %>
               </p>
             </div>
         <% end %>
