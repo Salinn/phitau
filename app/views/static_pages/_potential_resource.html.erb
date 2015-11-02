@@ -1,0 +1,19 @@
+<div class="resources col-md-6">
+  <div style="color: #736f7e">
+    <h2>Questionnaires</h2>
+      <h3>
+        <%= link_to "Questionnaire", edit_interview_questionnaire_path(current_user.interview_questionnaires.last.id) %>
+      </h3>
+  </div>
+  <hr>
+</div>
+<div class="resources col-md-6">
+  <div style="color: #736f7e">
+    <h2>Interview Times</h2>
+    <h3>
+      <%= link_to "Interview Times", interview_times_path %>
+    </h3>
+  </div>
+  <hr>
+</div>
+

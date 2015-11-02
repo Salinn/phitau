@@ -1,0 +1,124 @@
+<% if current_user.multiple_have_permissions?(['admin','president','writer','second_vp']) %>
+    <div class="resources col-md-6">
+      <div style="color: #736f7e">
+        <h2>Posts</h2>
+        <h3><%= link_to 'Create Post', new_post_path %></h3>
+        <h3><%= link_to 'Edit Posts', posts_path %></h3>
+      </div>
+      <hr>
+    </div>
+<% end %>
+<% if current_user.confirmed_brother? %>
+    <div class="resources col-md-6">
+      <div style="color: #736f7e">
+        <h2>Calendar</h2>
+        <h3><%= link_to 'View Calendar', events_path %></h3>
+        <% if current_user.multiple_have_permissions?(['admin','president','philanthropy','community_service','recruitment', 'secretary']) %>
+            <h3><%= link_to 'Create New Event', new_event_path, data: { no_turbolink: true } %></h3>
+        <% end %>
+        <% if current_user.multiple_have_permissions?(['admin','president','philanthropy','community_service','recruitment', 'secretary']) %>
+            <h3><%= link_to 'Attendance', attendances_path %></h3>
+        <% end %>
+      </div>
+      <hr>
+    </div>
+<% end %>
+<% if current_user.confirmed_brother? %>
+    <div class="resources col-md-6">
+      <div style="color: #736f7e">
+        <h2>Users</h2>
+        <h3><%= link_to 'Search Brothers', search_users_path %></h3>
+        <% if current_user.multiple_have_permissions?(['admin','president']) %>
+            <h3><%= link_to 'Edit All Users', edit_all_path %></h3>
+        <% end %>
+      </div>
+      <hr>
+    </div>
+<% end %>
+<% if current_user.confirmed_brother? && current_user.positions.any? %>
+    <div class="resources col-md-6">
+      <div style="color: #736f7e">
+        <h2>Standards-Board</h2>
+        <h3><%= link_to 'Recent Submits', standards_boards_path %></h3>
+        <h3><%= link_to 'Submit Brother to Standards Board', new_standards_board_path, data: { no_turbolink: true } %></h3>
+      </div>
+      <hr>
+    </div>
+<% end %>
+<% if current_user.multiple_have_permissions?(['admin','president','writer','second_vp']) %>
+    <div class="resources col-md-6">
+      <div style="color: #736f7e">
+        <h2>Website-Pages</h2>
+        <h3><%= link_to 'FAQ Categories', faq_categories_path %></h3>
+        <h3><%= link_to 'FAQ Questions', faq_questions_path %></h3>
+      </div>
+      <hr>
+    </div>
+<% end %>
+<% if current_user.confirmed_brother? && current_user.user_status == 'current brother' %>
+    <div class="resources col-md-6">
+      <div style="color: #736f7e">
+        <h2>Brothers</h2>
+        <h3><%= link_to 'Submit Receipt', new_receipt_path %></h3>
+        <h3><%= link_to 'Submit Community Service Hours', new_community_service_path %></h3>
+      </div>
+      <hr>
+    </div>
+<% end %>
+<% if current_user.confirmed_brother? %>
+    <div class="resources col-md-6">
+      <div style="color: #736f7e">
+        <h2>Alumni</h2>
+        <h3><%= link_to 'View Alumni-News-Letters', alumni_news_letters_path %></h3>
+        <h3><%= link_to 'View Composites', composites_path %></h3>
+      </div>
+      <hr>
+    </div>
+<% end %>
+<% if current_user.multiple_have_permissions?(['associate member', 'current brother', 'coop']) %>
+    <div class="resources col-md-6">
+      <div style="color: #736f7e">
+        <h2>Community Service</h2>
+        <h3><%= link_to 'Brothers Community Service', brothers_hours_path %></h3>
+        <h3><%= link_to 'Submit Community Service Hours', new_community_service_path %></h3>
+        <% if current_user.multiple_have_permissions?(['admin','president','writer','second_vp','community_service']) %>
+            <h3><%= link_to 'Manually Enter Community Service', community_service_manually_path, 'data-no-turbolink' => true %></h3>
+            <h3><%= link_to 'Latest Community Service Hours', community_services_path %></h3>
+        <% end %>
+        <!--  'data-no-turbolink' => true makes sure things aren't cached -->
+      </div>
+      <hr>
+    </div>
+<% end %>
+<% if current_user.confirmed_brother? %>
+    <div class="resources col-md-6">
+      <div style="color: #736f7e">
+        <h2>Recruitment</h2>
+        <h3><%= link_to 'Potentials', potentials_path %></h3>
+        <h3><%= link_to 'New Potentials', new_users_admin_path %></h3>
+        <h3><%= link_to 'Bids', bids_path %></h3>
+        <h3><%= link_to 'Rush Slides', rush_interviews_path %></h3>
+        <h3><%= link_to 'Interviews', interview_times_path %></h3>
+        <h3><%= link_to 'Questionnaires', interview_questionnaires_path %></h3>
+        <% if current_user.multiple_have_permissions?(['admin','president','writer','second_vp','recruitment']) %>
+            <h3><%= link_to 'New Text Message', new_text_message_path %></h3>
+            <h3><%= link_to 'View Old Texts', text_messages_path %></h3>
+        <% end %>
+      </div>
+      <hr>
+    </div>
+<% end %>
+<% if current_user.multiple_have_permissions?(['admin','president','writer','second_vp']) %>
+    <div class="resources col-md-6">
+      <div style="color: #736f7e">
+        <h2>Alumni Info</h2>
+        <h3><%= link_to 'Create Alumni-News-Letters', new_alumni_news_letter_path %></h3>
+        <h3><%= link_to 'View Alumni-News-Letters', alumni_news_letters_path %></h3>
+        <h3><%= link_to 'New Composite', new_composite_path %></h3>
+        <h3><%= link_to 'Edit Old Composites', composites_path %></h3>
+        <h3><%= link_to 'New Paddle', new_paddle_path %></h3>
+        <h3><%= link_to 'Edit Old Paddle', paddles_path %></h3>
+      </div>
+      <hr>
+    </div>
+<% end %>
