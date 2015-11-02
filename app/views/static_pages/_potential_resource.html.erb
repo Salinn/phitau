@@ -2,7 +2,11 @@
   <div style="color: #736f7e">
     <h2>Questionnaires</h2>
       <h3>
+        <% if current_user.interview_questionnaires.any? %>
         <%= link_to "Questionnaire", edit_interview_questionnaire_path(current_user.interview_questionnaires.last.id) %>
+            <% else %>
+        <p>Please Pick a Time Slot</p>
+        <% end %>
       </h3>
   </div>
   <hr>
