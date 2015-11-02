@@ -11,13 +11,10 @@
         </div>
     <% end %>
 
-    <div class="field">
-      <%= f.label :event %><br>
-      <%= f.collection_select :event_id, @events, :id, :name %>
-    </div>
     <% @users.each do |user| %>
         <div class="posts_checkboxes">
-          <%= check_box_tag :user_ids, user.id, @attendance.users.include?(user) %>
+          <%= hidden_field_tag 'user_ids[]', nil %>
+          <%= check_box_tag 'user_ids[]', user.id, User.where(user_status: ['current brother','coop']).include?(user) %>
           <%= user_name(user) %><br>
         </div>
     <% end %>

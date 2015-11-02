@@ -1,4 +1,5 @@
 class Event < ActiveRecord::Base
+  has_one :attendance
   belongs_to :user
 
   # validates :start_time, presence: true
