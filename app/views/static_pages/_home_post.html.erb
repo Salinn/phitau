@@ -1,0 +1,17 @@
+<h5 style="float: right;">Posted on <%= post.created_at.strftime('%m/%d/%Y') %></h5>
+<br>
+<h1 class="card_header"><%= link_to post.title, post %></h1>
+<div class="col-xl-4 col-md-4 col-sm-4 col-xs-12">
+  <div class="img-responsive">
+    <%= (link_to (image_tag get_link(post)), get_img_path(post), :class => "post_img") %>
+    <% if get_gallery_path(post) %>
+        <h3 align="center"><%= link_to "Click Here for More #{post.title} Pictures", get_gallery_path(post)  %></h3>
+    <% end %>
+  </div>
+</div>
+<div class="col-xl-8 col-md-8 col-sm-8 col-xs-12">
+  <div>
+    <%= raw post.content %>
+  </div>
+</div>
+<div class="clear"> </div>

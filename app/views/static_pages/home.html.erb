@@ -1,40 +1,16 @@
-<div class="row">
-  <% unless @posts.previous_page or @top_card.nil? %>
-      <div class="col-md-8 col-md-offset-2 top-card-padding">
-        <div class="card">
-          <h1 class="card_header"><%= link_to @top_card.title, @top_card %></h1>
-          <div class="img_div">
-            <%= (link_to (image_tag get_link(@top_card)), get_img_path(@top_card), :class => "post_img") %>
-            <% if get_gallery_path(@top_card) %>
-                <h3 align="center"><%= link_to "Click Here for More #{@top_card.title} Pictures", get_gallery_path(@top_card)  %></h3>
-            <% end %>
-          </div>
-          <div class="post_text">
-            <%= raw @top_card.content %>
-          </div>
-          <div class="clear"> </div>
-        </div>
+<% unless @posts.previous_page or @top_card.nil? %>
+    <div class="col-xl-8 col-md-8 col-xs-12 col-xl-offset-2 col-md-offset-2 top-card-padding">
+      <div class="card">
+        <%= render 'static_pages/home_post', post: @top_card %>
       </div>
-  <% end %>
+    </div>
+<% end %>
 
-  <div class="col-md-8 col-md-offset-2">
+<div class="col-xl-8 col-md-8 col-xs-12 col-xl-offset-2 col-md-offset-2">
+  <div class="card">
     <% @posts.each do |post| %>
-        <div class="card">
-          <h5 style="float: right;">Posted on <%= post.created_at.strftime('%m/%d/%Y') %></h5>
-          <br>
-          <h1 class="card_header"><%= link_to post.title, post %></h1>
-          <div class="img_div">
-            <%= (link_to (image_tag get_link(post)), get_img_path(post), :class => "post_img") %>
-            <% if get_gallery_path(post) %>
-                <h3 align="center"><%= link_to "Click Here for More #{post.title} Pictures", get_gallery_path(post)  %></h3>
-            <% end %>
-          </div>
-          <div class="post_text">
-            <%= raw post.content %>
-          </div>
-          <div class="clear"> </div>
-          <hr>
-        </div>
+        <%= render 'static_pages/home_post', post: post %>
+        <hr>
     <% end %>
   </div>
 </div>
@@ -51,5 +27,4 @@
     </h3>
   </div>
 </div>
-
 <div class="clear"></div>
