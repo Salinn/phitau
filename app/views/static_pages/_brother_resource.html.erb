@@ -15,12 +15,19 @@
     <% if current_user.multiple_have_permissions?(['admin','president','philanthropy','community_service','recruitment', 'secretary']) %>
         <h3><%= link_to 'Create New Event', new_event_path, data: { no_turbolink: true } %></h3>
     <% end %>
-    <% if current_user.multiple_have_permissions?(['admin','president','philanthropy','community_service','recruitment', 'secretary']) %>
-        <h3><%= link_to 'Attendance', attendances_path %></h3>
-    <% end %>
   </div>
   <hr>
 </div>
+
+<div class="resources col-md-6">
+  <div style="color: #736f7e">
+    <h2>Pictures</h2>
+    <h3><%= link_to 'View Galleries', galleries_path %></h3>
+    <h3><%= link_to 'Upload New Photos', new_image_path %></h3>
+  </div>
+  <hr>
+</div>
+
 <div class="resources col-md-6">
   <div style="color: #736f7e">
     <h2>Users</h2>
