@@ -34,7 +34,7 @@ class Ability
       end
       if user.have_permissions?('recruitment')
         can [:create, :index], StandardsBoard
-        can [:update, :edit], StandardsBoard, :position_id => user.holds_positions?(position_id)
+        can [:update, :edit], StandardsBoard
         can [:create, :read, :show], TextMessage
         can [:create, :update], Event
         can :manage, InterviewTime
@@ -52,18 +52,18 @@ class Ability
       end
       if user.have_permissions?('community_service')
         can [:create, :index], StandardsBoard
-        can [:update, :edit], StandardsBoard, :position_id => user.holds_positions?(position_id)
+        can [:update, :edit], StandardsBoard
         can :manage, CommunityService
         can [:create, :update], Event
       end
       if user.have_permissions?('philanthropy')
         can [:create, :index], StandardsBoard
-        can [:update, :edit], StandardsBoard, :position_id => user.holds_positions?(position_id)
+        can [:update, :edit], StandardsBoard
         can [:create, :update], Event
       end
       if user.have_permissions?('secretary')
         can [:create, :index], StandardsBoard
-        can [:update, :edit], StandardsBoard, :position_id => user.holds_positions?(position_id)
+        can [:update, :edit], StandardsBoard
         can :manage, CommunityService
         can [:show, :index, :create, :update], Event
       end
