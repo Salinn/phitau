@@ -263,6 +263,15 @@ a.logo:hover{
   padding-bottom: 3rem;
 }
 
+.card-temp {
+  background: $White;
+  border-radius:3px;
+  animation:fly-in-from-left .5s 1s ease both;
+  transform-origin:top left;
+  margin: 0 auto;
+  padding-bottom: 3rem;
+}
+
 hr {
   display: block; height: 1px;
   border: 0; border-top: 1px solid #000000;
@@ -901,7 +910,7 @@ body {
   position:relative;
 }
 #header {
-  padding: 5rem;
+  height: 77px;
 }
 #content {
   padding-bottom: 13rem; /* Height of the footer element */

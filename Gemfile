@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
-ruby '2.0.0'
-gem 'rails', '4.0.0'
+ruby '2.2.3'
+gem 'rails', '4.2.4'
 gem 'capricorn', '0.2.25'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails', '3.1.4'

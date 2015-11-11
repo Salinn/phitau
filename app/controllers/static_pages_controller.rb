@@ -75,4 +75,7 @@ class StaticPagesController < ApplicationController
   def gamma_nu_50th_anniversary
 
   end
+  def fiftieth_info
+
+  end
 end
