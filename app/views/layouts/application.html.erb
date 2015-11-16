@@ -13,14 +13,7 @@
 <div id="wrapper">
   <div id="header"><%= render 'layouts/header' %></div>
   <div class="clearfix"></div>
-  <% if current_page?(root_url) %>
-      <div class="col-xl-8 col-md-8 col-xs-12 col-xl-offset-2 col-md-offset-2">
-        <div class="card-temp">
-          Come join us for the 50th anniversary this April 1st to the 3rd. For more information <%= link_to 'click here!', fiftieth_info_path%>
-        </div>
-      </div>
-  <% end %>
-  <div class="container">
+  <div class="container row">
     <% flash.each do |name, msg| %>
         <% if name == :alert %>
             <%= content_tag :div, msg, class: "alert alert-info" %>
