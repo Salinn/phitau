@@ -1,9 +1,9 @@
 module ApplicationHelper
   def get_link post
-    if post.image.nil?
+    if post.images.empty?
       'no-image.png'
     else
-      post.image.picture_url
+      post.images.last.picture_url
     end
   end
 

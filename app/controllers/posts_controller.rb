@@ -23,15 +23,13 @@ class PostsController < ApplicationController
 
   # GET /posts/new
   def new
-    @galleries = Gallery.all.reverse
     @post = Post.new
-    @post.build_image
+    @post.images.build
   end
 
   # GET /posts/1/edit
   def edit
-    @galleries = Gallery.all.reverse
-    @post.build_image
+    @post.images.build
   end
 
   # POST /posts
@@ -86,7 +84,7 @@ class PostsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
       params.require(:post).permit(:title,:content,:published, :image, :remote_image_url, :top_card, :author,
-        image_attributes: [:name, :picture, :remote_picture_url, :gallery_id])
+        images_attributes: [:name, :picture, :remote_picture_url, :gallery_id])
     end
 
     def top_card_check_and_fix

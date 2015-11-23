@@ -648,6 +648,15 @@ a.not-active:hover{
   max-height: 250px;
 }
 
+.square {
+  position: relative;
+  background: #D0CDCD;
+  width: 250px;
+  height: 250px;
+  display: inline-block;
+  padding: 5px;
+}
+
 .image_images img{
   width: 30rem;
   height: auto;

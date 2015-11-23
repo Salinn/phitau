@@ -13,7 +13,7 @@
 <div id="wrapper">
   <div id="header"><%= render 'layouts/header' %></div>
   <div class="clearfix"></div>
-  <div class="container row">
+  <div class="container">
     <% flash.each do |name, msg| %>
         <% if name == :alert %>
             <%= content_tag :div, msg, class: "alert alert-info" %>

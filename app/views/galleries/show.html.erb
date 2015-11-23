@@ -1,12 +1,12 @@
 <div class="row">
-<div>
-<h1 align="center">
-  <%= @gallery.name %>
-</h1>
-</div>
+  <div>
+    <h1 align="center">
+      <%= @gallery.name %>
+    </h1>
+  </div>
   <div class="gallery_images">
-<% @gallery.images.each do |image| %>
+    <% @gallery.images.each do |image| %>
         <a  href='<%= image.picture_url %>' data-title='<%= image.name %>' rel="lightbox[<%= @gallery.name %>]"><img src="<%= image.picture_url(:thumb) %>" /></a>
-<% end %>
-</div>
+    <% end %>
+  </div>
 </div>

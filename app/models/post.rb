@@ -1,8 +1,8 @@
 class Post < ActiveRecord::Base
-  has_one :image
+  has_many :images
   has_many :galleries
   
-  accepts_nested_attributes_for :image
+  accepts_nested_attributes_for :images
 
   acts_as_paranoid
 
