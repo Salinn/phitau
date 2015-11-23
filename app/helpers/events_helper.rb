@@ -7,7 +7,7 @@ module EventsHelper
     end
   end
 
-  def event_private(event)
+  def event_private?(event)
     if event.private_event
       'Required'
     else
